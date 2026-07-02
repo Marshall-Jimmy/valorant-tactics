@@ -180,6 +180,38 @@
 
 ---
 
+### Agent G：Native/Overlay 开发专家
+
+**职责**：
+- Electron 主进程开发（透明窗体、生命周期管理）
+- Win32 native addon 开发（鼠标穿透、layered window）
+- Riot Local API 集成（状态识别、轮询逻辑，仅国际服）
+- 反作弊合规审查（确保不触及 ACE/Vanguard 红线）
+- 全局快捷键注册与管理
+
+**激活条件**：
+- 需要实现 Overlay 功能时
+- 需要与游戏进程交互时
+- 需要开发 Electron 主进程功能时
+
+**输入**：
+- Overlay 功能需求描述
+- 平台兼容性要求
+
+**输出**：
+- Electron 主进程代码
+- Win32 native addon 模块
+- 反作弊合规评估报告
+
+**约束**：
+- 对局中不得保留 overlay 窗口（必须 close 销毁，不是 hide）
+- 不读内存、不 inject、不 hook
+- 国服版本不使用 Riot Local API
+- overlay 窗口设置鼠标穿透（WS_EX_TRANSPARENT）
+- exe 文件名和 product 名称不含 overlay/aim/trigger 等敏感词
+
+---
+
 ## 2. Agent 协作流程
 
 ### 2.1 新特工上线更新流程
@@ -331,6 +363,9 @@
 | 框架升级 | A | B, D | A |
 | 重大 Bug 修复 | B | F | B |
 | 性能优化 | B | A, F | A |
+| Overlay 功能开发 | G | B, A | G |
+| 游戏进程交互 | G | A | G |
+| 反作弊合规审查 | G | A | G |
 
 ---
 
@@ -355,6 +390,7 @@
 [Agent-D] deploy: 上传 v1.2.0 到 OSS
 [Agent-E] spider: 修复 isoox.cn 反爬机制
 [Agent-F] test: 修复跨浏览器兼容性测试
+[Agent-G] feat: 添加 Overlay 窗口和 F4 快捷键
 ```
 
 ### 5.3 Issue 标签规范
@@ -367,6 +403,7 @@
 | `agent/devops` | 部署相关问题 | D |
 | `agent/arch` | 架构相关问题 | A |
 | `agent/qa` | 测试相关问题 | F |
+| `agent/native` | Native/Overlay 相关问题 | G |
 
 ---
 

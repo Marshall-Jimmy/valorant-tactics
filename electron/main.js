@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, globalShortcut } = require('electron');
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
@@ -8,6 +8,100 @@ process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
 
 let mainWindow;
 let server;
+
+// ============ Overlay 功能 ============
+let overlayWindow = null;
+let valorantProcessWatcher = null;
+
+// 检查 Valorant 是否在运行
+function isValorantRunning() {
+  try {
+    // 通过 PowerShell 检查 VALORANT-Win64-Shipping 进程
+    const { execSync } = require('child_process');
+    const result = execSync('tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" /NH', { encoding: 'utf-8' });
+    return result.includes('VALORANT-Win64-Shipping');
+  } catch {
+    return false;
+  }
+}
+
+// 创建/切换 Overlay 窗口
+function toggleOverlay() {
+  if (overlayWindow && !overlayWindow.isDestroyed()) {
+    // 已存在 → 销毁
+    overlayWindow.close();
+    overlayWindow = null;
+    console.log('[Overlay] 关闭');
+  } else {
+    // 不存在 → 创建
+    overlayWindow = new BrowserWindow({
+      width: 800,
+      height: 600,
+      transparent: true,
+      frame: false,
+      alwaysOnTop: true,
+      skipTaskbar: true,
+      hasShadow: false,
+      resizable: true,
+      enableLargerThanScreen: true,
+      webPreferences: {
+        nodeIntegration: false,
+        contextIsolation: true,
+        webSecurity: false,
+      },
+      show: false,
+    });
+
+    // 加载 overlay 页面
+    if (server) {
+      overlayWindow.loadURL(`http://127.0.0.1:${server.address().port}/overlay.html`);
+    } else {
+      overlayWindow.loadFile(path.join(DIST_DIR, 'overlay.html'));
+    }
+
+    overlayWindow.once('ready-to-show', () => {
+      overlayWindow.show();
+      console.log('[Overlay] 显示');
+    });
+
+    overlayWindow.on('closed', () => {
+      overlayWindow = null;
+      console.log('[Overlay] 销毁');
+    });
+
+    // 游戏退出时自动关闭 overlay
+    startValorantWatcher();
+  }
+}
+
+// 监视 Valorant 进程，退出时自动关闭 overlay
+function startValorantWatcher() {
+  if (valorantProcessWatcher) clearInterval(valorantProcessWatcher);
+  valorantProcessWatcher = setInterval(() => {
+    if (!isValorantRunning() && overlayWindow && !overlayWindow.isDestroyed()) {
+      console.log('[Overlay] 检测到 Valorant 退出，自动关闭 overlay');
+      overlayWindow.close();
+      overlayWindow = null;
+      clearInterval(valorantProcessWatcher);
+      valorantProcessWatcher = null;
+    }
+  }, 3000); // 每 3 秒检查一次
+}
+
+// 注册 F4 全局快捷键
+function registerShortcuts() {
+  const ret = globalShortcut.register('F4', () => {
+    toggleOverlay();
+  });
+
+  if (!ret) {
+    console.error('[Overlay] F4 快捷键注册失败，可能被其他程序占用');
+  } else {
+    console.log('[Overlay] F4 快捷键已注册，按 F4 切换 Overlay');
+  }
+}
+
+// ============ 原有主窗口逻辑 ============
 
 // MIME 类型映射
 const MIME_TYPES = {
@@ -103,6 +197,7 @@ app.whenReady().then(async () => {
   const port = await startServer();
   console.log(`Local server running at http://127.0.0.1:${port}`);
   createWindow(port);
+  registerShortcuts();
 });
 
 app.on('activate', async () => {
@@ -114,6 +209,7 @@ app.on('activate', async () => {
 
 app.on('window-all-closed', () => {
   if (server) server.close();
+  globalShortcut.unregisterAll();
   if (process.platform !== 'darwin') {
     app.quit();
   }

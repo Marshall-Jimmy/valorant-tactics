@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=device-width, initial-scale=1.0">
+  <title>Valorant Tactics - Overlay</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: transparent;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: #e4e4e7;
+      overflow: hidden;
+      user-select: none;
+      -webkit-app-region: drag;
+    }
+    .overlay-container {
+      padding: 16px;
+      background: rgba(9, 9, 11, 0.85);
+      border: 1px solid rgba(63, 63, 70, 0.5);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      margin: 8px;
+      height: calc(100vh - 16px);
+      display: flex;
+      flex-direction: column;
+    }
+    .overlay-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(63, 63, 70, 0.5);
+      -webkit-app-region: no-drag;
+    }
+    .overlay-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #a78bfa;
+    }
+    .overlay-hint {
+      font-size: 12px;
+      color: #71717a;
+    }
+    .overlay-body {
+      flex: 1;
+      overflow-y: auto;
+      padding-top: 12px;
+    }
+    .placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 12px;
+      color: #52525b;
+    }
+    .placeholder-icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .placeholder-icon svg {
+      width: 64px;
+      height: 64px;
+      color: #52525b;
+    }
+    .placeholder-text {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay-container">
+    <div class="overlay-header">
+      <div class="overlay-title">Valorant Tactics</div>
+      <div class="overlay-hint">F4 to close</div>
+    </div>
+    <div class="overlay-body">
+      <div class="placeholder">
+        <div class="placeholder-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line x1="12" y1="2" x2="12" y2="5"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="5" y2="12"/>
+            <line x1="19" y1="12" x2="22" y2="12"/>
+          </svg>
+        </div>
+        <div class="placeholder-text">Overlay feature in development</div>
+        <div class="placeholder-text">Lineup info and tactical panel coming in future updates</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
