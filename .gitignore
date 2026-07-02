@@ -47,6 +47,7 @@ next-env.d.ts
 # Electron release artifacts
 /release/
 /release2/
+/release3/
 *.exe
 *.blockmap
 
