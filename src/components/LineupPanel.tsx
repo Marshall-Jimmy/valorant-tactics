@@ -892,17 +892,19 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
             {/* Image carousel */}
             {selectedLineup.media?.detail_images?.length > 0 && (
               <div className="relative">
+                {(() => {
+                  const detailImg = selectedLineup.media.detail_images[detailImageIndex];
+                  const detailImgPath = detailImg?.local ? `/lineups/images/${detailImg.local}` : detailImg?.url;
+                  return (
                 <div
                   className="relative w-full aspect-video bg-zinc-950 overflow-hidden cursor-zoom-in group"
                   onClick={() => openLightbox(detailImageIndex)}
                 >
                   {!imageErrors.has(detailImageIndex) ? (
                     <>
-                      const detailImg = selectedLineup.media.detail_images[detailImageIndex];
-                      const detailImgPath = detailImg.local ? `/lineups/images/${detailImg.local}` : detailImg.url;
                       <img
                         src={detailImgPath}
-                        alt={detailImg.label}
+                        alt={detailImg?.label ?? ''}
                         className="w-full h-full object-contain"
                         onError={() => {
                           setImageErrors((prev) => new Set(prev).add(detailImageIndex));
@@ -940,6 +942,8 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
                     </div>
                   )}
                 </div>
+                );
+                })()}
 
                 {/* 左右切换按钮 - 悬浮在图片上方两侧 */}
                 {selectedLineup.media.detail_images.length > 1 && (
