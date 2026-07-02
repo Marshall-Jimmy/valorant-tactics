@@ -16,6 +16,7 @@ interface AgentMarkerProps {
   transform: CoordinateTransform;
   displayName: string;
   onDragStart: (e: React.MouseEvent, id: string) => void;
+  onClick: (e: React.MouseEvent, id: string) => void;
 }
 
 /**
@@ -30,6 +31,7 @@ export const AgentMarker = React.memo(function AgentMarker({
   transform,
   displayName,
   onDragStart,
+  onClick,
 }: AgentMarkerProps) {
   const agent = agentsData[placed.agentType];
   if (!agent) return null;
@@ -42,6 +44,7 @@ export const AgentMarker = React.memo(function AgentMarker({
     <div
       key={placed.id}
       onMouseDown={(e) => onDragStart(e, placed.id)}
+      onClick={(e) => onClick(e, placed.id)}
       style={{
         position: 'absolute',
         left: screenPos.x,

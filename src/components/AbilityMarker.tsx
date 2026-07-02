@@ -14,6 +14,7 @@ interface AbilityMarkerProps {
   scaleFactor: number;
   transform: CoordinateTransform;
   onDragStart: (e: React.MouseEvent, id: string) => void;
+  onClick: (e: React.MouseEvent, id: string) => void;
 }
 
 /**
@@ -29,6 +30,7 @@ export const AbilityMarker = React.memo(function AbilityMarker({
   scaleFactor,
   transform,
   onDragStart,
+  onClick,
 }: AbilityMarkerProps) {
   const ability = placed.ability.abilityData;
   if (!ability) return null;
@@ -144,6 +146,7 @@ export const AbilityMarker = React.memo(function AbilityMarker({
     <div
       key={placed.id}
       onMouseDown={(e) => onDragStart(e, placed.id)}
+      onClick={(e) => onClick(e, placed.id)}
       style={{
         position: 'absolute',
         left: screenPos.x,

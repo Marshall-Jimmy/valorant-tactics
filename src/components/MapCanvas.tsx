@@ -369,12 +369,24 @@ export function MapCanvas() {
     setDragTarget({ type: 'ability', id });
   }, [currentTool, isScreenshotMode, setSelectedElement]);
 
+  const onAbilityClick = useCallback((e: React.MouseEvent, id: string) => {
+    if (isScreenshotMode) return;
+    e.stopPropagation();
+    setSelectedElement(id, 'ability');
+  }, [isScreenshotMode, setSelectedElement]);
+
   const onAgentDragStart = useCallback((e: React.MouseEvent, id: string) => {
     if (currentTool !== 'select' || isScreenshotMode) return;
     e.stopPropagation();
     setSelectedElement(id, 'agent');
     setDragTarget({ type: 'agent', id });
   }, [currentTool, isScreenshotMode, setSelectedElement]);
+
+  const onAgentClick = useCallback((e: React.MouseEvent, id: string) => {
+    if (isScreenshotMode) return;
+    e.stopPropagation();
+    setSelectedElement(id, 'agent');
+  }, [isScreenshotMode, setSelectedElement]);
 
   const getAgentName = (type: string) => {
     const translated = t(`agents.${type}.name`);
@@ -519,6 +531,14 @@ export function MapCanvas() {
         ref={canvasRef}
         className="flex-1 overflow-hidden bg-zinc-950 cursor-crosshair relative touch-none"
         style={{ minHeight: 0 }}
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if ((e.key === 'Delete' || e.key === 'Backspace') && selectedElementId) {
+            e.preventDefault();
+            if (selectedElementType === 'ability') removePlacedAbility(selectedElementId);
+            else if (selectedElementType === 'agent') removePlacedAgent(selectedElementId);
+          }
+        }}
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -561,10 +581,10 @@ export function MapCanvas() {
 
             {/* Abilities and Agents - rendered at canvas level using memo components */}
             {placedAbilities.map((placed) => (
-              <AbilityMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} scaleFactor={scaleFactor} transform={transform} onDragStart={onAbilityDragStart} />
+              <AbilityMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} scaleFactor={scaleFactor} transform={transform} onDragStart={onAbilityDragStart} onClick={onAbilityClick} />
             ))}
             {placedAgents.map((placed) => (
-              <AgentMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} transform={transform} displayName={getAgentName(placed.agentType)} onDragStart={onAgentDragStart} />
+              <AgentMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} transform={transform} displayName={getAgentName(placed.agentType)} onDragStart={onAgentDragStart} onClick={onAgentClick} />
             ))}
 
             {/* Drawing Layer (extracted component) */}
