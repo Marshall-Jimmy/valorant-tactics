@@ -58,14 +58,14 @@
       "output": "release"
     },
     "files": [
-      "dist/**/*",
+      "out/**/*",
       "electron/**/*",
       "package.json"
     ],
     "extraResources": [
       {
-        "from": "dist",
-        "to": "dist"
+        "from": "out",
+        "to": "out"
       }
     ],
     "win": {

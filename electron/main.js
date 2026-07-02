@@ -1,7 +1,7 @@
 const { app, BrowserWindow, Menu, globalShortcut, Tray, nativeImage, ipcMain, screen } = require('electron');
 const path = require('path');
-const http = require('http');
 const fs = require('fs');
+const http = require('http');
 
 // 禁用安全警告
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
@@ -191,7 +191,7 @@ const MIME_TYPES = {
   '.webm': 'video/webm',
 };
 
-const DIST_DIR = path.join(__dirname, '..', 'dist');
+const DIST_DIR = path.join(__dirname, '..', 'out');
 
 // 启动本地 HTTP 服务器
 function startServer() {
