@@ -1112,13 +1112,17 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
                       : 'border-transparent hover:border-zinc-500'
                   }`}
                 >
-                  const thumbPath = img.local ? `/lineups/images/${img.local}` : img.url;
-                  <img
-                    src={thumbPath}
-                    alt={img.label}
-                    className="w-full h-full object-cover"
-                    onError={handleImageFallback}
-                  />
+                  {(() => {
+                    const thumbPath = img.local ? `/lineups/images/${img.local}` : img.url;
+                    return (
+                      <img
+                        src={thumbPath}
+                        alt={img.label}
+                        className="w-full h-full object-cover"
+                        onError={handleImageFallback}
+                      />
+                    );
+                  })()}
                 </button>
               ))}
             </div>
