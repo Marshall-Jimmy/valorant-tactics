@@ -22,6 +22,7 @@ export interface AgentData {
 // Ability Types
 export interface AbilityInfo {
   name: string;
+  name_cn?: string;
   iconPath: string;
   type: AgentType;
   index: number;
@@ -128,6 +129,11 @@ export interface PlacedAgent {
   state: 'alive' | 'dead';
 }
 
+export interface PlacedUltOrb {
+  id: string;
+  position: { x: number; y: number };
+}
+
 export interface DrawingElement {
   id: string;
   type: 'line' | 'arrow' | 'freehand' | 'text';
@@ -158,7 +164,7 @@ export type InteractionState =
   | 'lineupPlacing'
   | 'dragging';
 
-export type ToolType = 'select' | 'ability' | 'agent' | 'draw' | 'erase' | 'lineup' | 'text';
+export type ToolType = 'select' | 'ability' | 'agent' | 'draw' | 'erase' | 'lineup' | 'text' | 'ultOrb';
 
 export interface TextElement {
   id: string;

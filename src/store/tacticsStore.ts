@@ -5,6 +5,7 @@ import {
   Strategy, 
   PlacedAbility, 
   PlacedAgent, 
+  PlacedUltOrb,
   DrawingElement,
   ToolType,
   AbilityInfo,
@@ -90,6 +91,7 @@ interface TacticsState {
   // Placed Elements
   placedAbilities: PlacedAbility[];
   placedAgents: PlacedAgent[];
+  placedUltOrbs: PlacedUltOrb[];
   drawings: DrawingElement[];
   
   // Strategies
@@ -186,6 +188,8 @@ interface TacticsState {
   addPlacedAgent: (agent: PlacedAgent) => void;
   removePlacedAgent: (id: string) => void;
   updatePlacedAgent: (id: string, updates: Partial<PlacedAgent>, recordUndo?: boolean) => void;
+  addPlacedUltOrb: (orb: PlacedUltOrb) => void;
+  removePlacedUltOrb: (id: string) => void;
   addDrawing: (drawing: DrawingElement) => void;
   removeDrawing: (id: string) => void;
   clearDrawings: () => void;
@@ -244,6 +248,7 @@ export const useTacticsStore = create<TacticsState>()(
       selectedElementType: null,
       placedAbilities: [],
       placedAgents: [],
+      placedUltOrbs: [],
       drawings: [],
       strategies: [],
       currentStrategy: null,
@@ -276,7 +281,17 @@ export const useTacticsStore = create<TacticsState>()(
       abilityVisibilityFilter: [], // 空=全部显示
       
       // Actions
-      setCurrentMap: (map) => set({ currentMap: map }),
+      setCurrentMap: (map) => set((state) => ({
+        currentMap: map,
+        placedAbilities: [],
+        placedAgents: [],
+        drawings: [],
+        placedUltOrbs: [],
+        selectedElementId: null,
+        selectedElementType: null,
+        undoStack: [],
+        redoStack: [],
+      })),
       setIsAttack: (isAttack) => set({ isAttack }),
       setShowSpawnBarrier: (show) => {
         set({ showSpawnBarrier: show });
@@ -590,6 +605,12 @@ export const useTacticsStore = create<TacticsState>()(
         }
         return result;
       }),
+      addPlacedUltOrb: (orb) => set((state) => ({
+        placedUltOrbs: [...state.placedUltOrbs, orb],
+      })),
+      removePlacedUltOrb: (id) => set((state) => ({
+        placedUltOrbs: state.placedUltOrbs.filter(o => o.id !== id),
+      })),
       addDrawing: (drawing) => set((state) => {
         const action: UndoAction = { type: 'addDrawing', drawing };
         return {
@@ -626,6 +647,7 @@ export const useTacticsStore = create<TacticsState>()(
         return { 
           placedAbilities: [], 
           placedAgents: [], 
+          placedUltOrbs: [],
           drawings: [],
           currentStrategy: null,
           selectedElementId: null,

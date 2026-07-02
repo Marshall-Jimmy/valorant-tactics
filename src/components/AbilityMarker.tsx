@@ -43,19 +43,36 @@ export const AbilityMarker = React.memo(function AbilityMarker({
   switch (ability.type) {
     case 'circle': {
       const size = ability.size * scaleFactor * zoom;
-      content = (
-        <div
-          style={{
-            width: size,
-            height: size,
-            borderRadius: '50%',
-            border: `2px solid ${ability.outlineColor}`,
-            backgroundColor: ability.fillColor || 'transparent',
-            opacity: ability.opacity !== undefined ? ability.opacity / 100 : 0.5,
-            boxSizing: 'border-box',
-          }}
-        />
-      );
+      // 如果有图标路径，显示技能图标而非纯色圆圈
+      if (ability.iconPath) {
+        content = (
+          <img
+            src={ability.iconPath}
+            alt="ability"
+            style={{
+              width: size,
+              height: size,
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 2px rgba(0,0,0,0.5))',
+            }}
+            onError={handleImageFallback}
+          />
+        );
+      } else {
+        content = (
+          <div
+            style={{
+              width: size,
+              height: size,
+              borderRadius: '50%',
+              border: `2px solid ${ability.outlineColor}`,
+              backgroundColor: ability.fillColor || 'transparent',
+              opacity: ability.opacity !== undefined ? ability.opacity / 100 : 0.5,
+              boxSizing: 'border-box',
+            }}
+          />
+        );
+      }
       break;
     }
     case 'square': {

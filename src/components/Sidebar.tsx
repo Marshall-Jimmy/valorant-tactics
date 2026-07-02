@@ -6,7 +6,7 @@ import { useSettingsStore } from '@/store/settingsStore';
 import { agentsData, roleNames, roleColors } from '@/data/agents';
 import { AgentRole, AgentType } from '@/types';
 import { useLanguage } from './I18nProvider';
-import { Users, Zap, Shield, Target, Pencil, Trash2, Eraser, X, Minus, ArrowUp, Type, Search } from 'lucide-react';
+import { Users, Zap, Shield, Target, Pencil, Trash2, Eraser, X, Minus, ArrowUp, Type, Search, Star } from 'lucide-react';
 import Image from 'next/image';
 import { handleImageFallback } from '@/utils/image';
 
@@ -37,7 +37,7 @@ export function Sidebar({ onClose }: SidebarProps) {
   const [selectedRole, setSelectedRole] = useState<AgentRole | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [mounted, setMounted] = useState(false);
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const sidebarPosition = useSettingsStore((s) => s.sidebarPosition);
 
   useEffect(() => {
@@ -54,6 +54,7 @@ export function Sidebar({ onClose }: SidebarProps) {
     placedAbilities,
     placedAgents,
     drawings,
+    placedUltOrbs,
     clearDrawings,
     clearAll,
     drawColor,
@@ -90,10 +91,16 @@ export function Sidebar({ onClose }: SidebarProps) {
     const slotKey = abilitySlotKeys[index];
     if (!slotKey) return '';
     const translated = t(`agents.${type}.abilities.${slotKey}`);
-    if (translated === `agents.${type}.abilities.${slotKey}`) {
-      return agentsData[type]?.abilities[index]?.name || '';
+    if (translated !== `agents.${type}.abilities.${slotKey}`) {
+      return translated;
     }
-    return translated;
+    // i18n 翻译未命中时，根据当前语言选择 name_cn 或 name
+    const ability = agentsData[type]?.abilities[index];
+    if (!ability) return '';
+    if (currentLanguage === 'zh' && ability.name_cn) {
+      return ability.name_cn;
+    }
+    return ability.name;
   };
 
   const filteredAgents = Object.values(agentsData).filter(
@@ -408,6 +415,22 @@ export function Sidebar({ onClose }: SidebarProps) {
                 </button>
               </div>
 
+              {/* Ult Orb Tool */}
+              <div className="mt-3">
+                <button
+                  onClick={() => setCurrentTool('ultOrb')}
+                  className={`w-full py-2 px-3 rounded-md flex items-center justify-center gap-2 transition-colors ${
+                    currentTool === 'ultOrb'
+                      ? 'bg-purple-500/20 border border-purple-500 text-purple-400'
+                      : 'bg-zinc-800 hover:bg-zinc-700 border border-zinc-700'
+                  }`}
+                  title={t('ui.ultOrbTool')}
+                >
+                  <Star className="w-4 h-4" />
+                  <span className="text-xs">{t('ui.ultOrbTool')}</span>
+                </button>
+              </div>
+
               {/* Color Picker */}
               <div className="mt-3">
                 <h4 className="text-xs text-zinc-400 mb-1.5">{t('draw.color')}</h4>
@@ -469,7 +492,7 @@ export function Sidebar({ onClose }: SidebarProps) {
                 </button>
                 <button
                   onClick={clearAll}
-                  disabled={placedAbilities.length === 0 && placedAgents.length === 0 && drawings.length === 0}
+                  disabled={placedAbilities.length === 0 && placedAgents.length === 0 && drawings.length === 0 && placedUltOrbs.length === 0}
                   className="w-full py-2 px-3 rounded-md bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 text-red-400"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -493,6 +516,10 @@ export function Sidebar({ onClose }: SidebarProps) {
                 <div className="flex justify-between">
                   <span>{t('ui.draw')}:</span>
                   <span className="text-white">{drawings.length}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>{t('ui.ultOrbTool')}:</span>
+                  <span className="text-white">{placedUltOrbs.length}</span>
                 </div>
               </div>
             </div>

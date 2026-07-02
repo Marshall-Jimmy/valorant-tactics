@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { I18nProvider } from '@/components/I18nProvider';
+import { ToastContainer } from '@/components/Toast';
 
 export const metadata: Metadata = {
   title: "jimaVaroTactics - 无畏契约战术规划工具",
@@ -51,6 +52,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-zinc-950 text-white overflow-hidden font-sans" suppressHydrationWarning>
         <I18nProvider>{children}</I18nProvider>
+        <ToastContainer />
       </body>
     </html>
   );

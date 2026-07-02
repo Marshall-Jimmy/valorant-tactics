@@ -5,7 +5,7 @@ import { useTacticsStore } from '@/store/tacticsStore';
 import { mapsData, getMapScale } from '@/data/maps';
 import { agentsData } from '@/data/agents';
 import { v4 as uuidv4 } from 'uuid';
-import { Trash2, RotateCw, RotateCcw, Copy, Repeat, Heart, Undo2, Redo2, Camera, FlipHorizontal } from 'lucide-react';
+import { Trash2, RotateCw, RotateCcw, Copy, Repeat, Heart, Undo2, Redo2, Camera, FlipHorizontal, Star } from 'lucide-react';
 import { LanguageSelector, useLanguage } from './I18nProvider';
 import { ContextMenu, ContextMenuItem } from './ContextMenu';
 import { useToast } from './Toast';
@@ -95,10 +95,10 @@ export function MapCanvas() {
   const {
     currentMap, isAttack, showSpawnBarrier, showRegionNames, showUltOrbs,
     currentTool, selectedAbility, selectedAgent, isAlly,
-    placedAbilities, placedAgents, drawings,
+    placedAbilities, placedAgents, placedUltOrbs, drawings,
     selectedElementId, selectedElementType, isScreenshotMode,
     zoom, setZoom,
-    addPlacedAbility, addPlacedAgent, addDrawing, removeDrawing,
+    addPlacedAbility, addPlacedAgent, addPlacedUltOrb, removePlacedUltOrb, addDrawing, removeDrawing,
     removePlacedAbility, removePlacedAgent,
     updatePlacedAbility, updatePlacedAgent,
     setSelectedElement, setScreenshotMode,
@@ -242,6 +242,9 @@ export function MapCanvas() {
   });
 
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    // 截图模式下忽略鼠标事件，避免干扰截图
+    if (isScreenshotMode) return;
+
     // 鼠标中键拖动地图（所有模式都支持）
     if (e.button === 1 || (e.button === 0 && e.shiftKey)) {
       setIsDraggingCanvas(true);
@@ -317,10 +320,15 @@ export function MapCanvas() {
     } else if (currentTool === 'agent' && selectedAgent) {
       addPlacedAgent({ id: uuidv4(), agentType: selectedAgent, position: worldPos, isAlly, state: 'alive' });
       setSelectedAgent(null);
+    } else if (currentTool === 'ultOrb') {
+      addPlacedUltOrb({ id: uuidv4(), position: worldPos });
     } else if (currentTool === 'select') {
       setSelectedElement(null, null);
+    } else {
+      // 点击空白区域 - 取消选中（兜底分支）
+      setSelectedElement(null, null);
     }
-  }, [currentTool, selectedAbility, selectedAgent, isAlly, pan, screenToWorld, addPlacedAbility, addPlacedAgent, setSelectedElement, drawings, removeDrawing, addToast, drawMode, snapToGrid, appMode, updateTempLineupData, setLineupEditorMode, isAttack, setSelectedAgent]);
+  }, [currentTool, selectedAbility, selectedAgent, isAlly, pan, screenToWorld, addPlacedAbility, addPlacedAgent, addPlacedUltOrb, setSelectedElement, drawings, removeDrawing, addToast, drawMode, snapToGrid, appMode, updateTempLineupData, setLineupEditorMode, isAttack, setSelectedAgent, isScreenshotMode]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
     const rect = canvasRef.current?.getBoundingClientRect();
@@ -519,17 +527,17 @@ export function MapCanvas() {
         <LanguageSelector />
         <div className="w-px h-5 bg-zinc-700 mx-0.5 sm:mx-1 shrink-0" />
         <span className="text-xs text-zinc-500 whitespace-nowrap hidden sm:inline">
-          {currentTool === 'select' ? `${t('ui.selectMode')} (S)` : currentTool === 'draw' ? `${t('ui.drawMode')} (Q) - ${t('ui.clickToErase')}` : currentTool === 'erase' ? t('ui.eraseMode') : currentTool === 'ability' ? t('ui.placeAbility') : currentTool === 'text' ? t('ui.textTool') : t('ui.placeAgent')}
+          {currentTool === 'select' ? `${t('ui.selectMode')} (S)` : currentTool === 'draw' ? `${t('ui.drawMode')} (Q) - ${t('ui.clickToErase')}` : currentTool === 'erase' ? t('ui.eraseMode') : currentTool === 'ability' ? t('ui.placeAbility') : currentTool === 'text' ? t('ui.textTool') : currentTool === 'ultOrb' ? t('ui.ultOrbTool') : t('ui.placeAgent')}
         </span>
         <span className="text-xs text-zinc-500 whitespace-nowrap sm:hidden">
-          {currentTool === 'select' ? t('ui.select') : currentTool === 'draw' ? t('ui.draw') : currentTool === 'erase' ? t('ui.erase') : currentTool === 'ability' ? t('ui.ability') : t('ui.agent')}
+          {currentTool === 'select' ? t('ui.select') : currentTool === 'draw' ? t('ui.draw') : currentTool === 'erase' ? t('ui.erase') : currentTool === 'ability' ? t('ui.ability') : currentTool === 'ultOrb' ? t('ui.ultOrbTool') : t('ui.agent')}
         </span>
       </div>
 
       {/* Canvas */}
       <div
         ref={canvasRef}
-        className="flex-1 overflow-hidden bg-zinc-950 cursor-crosshair relative touch-none"
+        className="flex-1 overflow-hidden bg-zinc-950 cursor-crosshair relative touch-none no-select"
         style={{ minHeight: 0 }}
         tabIndex={0}
         onKeyDown={(e) => {
@@ -586,6 +594,51 @@ export function MapCanvas() {
             {placedAgents.map((placed) => (
               <AgentMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} transform={transform} displayName={getAgentName(placed.agentType)} onDragStart={onAgentDragStart} onClick={onAgentClick} />
             ))}
+
+            {/* Placed Ult Orbs */}
+            {placedUltOrbs.map((orb) => {
+              const screenPos = transform.worldToScreen(orb.position.x, orb.position.y);
+              const orbSize = 24 * zoom;
+              return (
+                <div
+                  key={orb.id}
+                  style={{
+                    position: 'absolute',
+                    left: screenPos.x,
+                    top: screenPos.y,
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: 10,
+                    cursor: currentTool === 'erase' ? 'pointer' : 'crosshair',
+                  }}
+                  onClick={(e) => {
+                    if (currentTool === 'erase') {
+                      e.stopPropagation();
+                      removePlacedUltOrb(orb.id);
+                      addToast('info', t('ui.erase'));
+                    }
+                  }}
+                >
+                  <div
+                    style={{
+                      width: orbSize,
+                      height: orbSize,
+                      backgroundColor: '#fbbf24',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 0 8px rgba(251, 191, 36, 0.5)',
+                      border: '2px solid #f59e0b',
+                      boxSizing: 'border-box',
+                    }}
+                  >
+                    <Star
+                      style={{ width: orbSize * 0.55, height: orbSize * 0.55, color: '#92400e', fill: '#92400e' }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
 
             {/* Drawing Layer (extracted component) */}
             <DrawingLayer
