@@ -39,21 +39,18 @@ function toggleOverlay() {
     // 计算右侧贴边位置
     const primaryDisplay = screen.getPrimaryDisplay();
     const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
-    const overlayWidth = 280;
-    const overlayHeight = Math.min(600, Math.round(screenHeight * 0.8));
 
     overlayWindow = new BrowserWindow({
-      width: overlayWidth,
-      height: overlayHeight,
+      width: screenWidth,
+      height: screenHeight,
       transparent: true,
       frame: false,
       alwaysOnTop: true,
       skipTaskbar: true,
       hasShadow: false,
-      resizable: true,
-      enableLargerThanScreen: true,
-      x: screenWidth - overlayWidth,
-      y: Math.round((screenHeight - overlayHeight) / 2),
+      resizable: false,
+      x: 0,
+      y: 0,
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
