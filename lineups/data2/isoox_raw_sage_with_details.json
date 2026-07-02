@@ -1,0 +1,3324 @@
+[
+  {
+    "id": 3735,
+    "title": "B厅封 中市场",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厅出手，封锁中市场路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/d85122a4a9b9219b54b81aeb160ee9d94a96117a4da85578c801e205ae713df1.jpg",
+    "view_count": 4,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 7,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3735",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/416aa8f0751c72d206214604441c380f9f906336023b373d62f88c727a169f7d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/44da7271a6693874b98d426358ac4cac32a71381ffdd78dba6e20e46e71670d4.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/1b92018d6c149893ccfbd581252fc79fa2259f264974297fc75a2e4a73f0bcf6.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/4be29ae27de74e028689955da0a9754c3abe80701bd2221167b2129131aac00c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3773,
+    "title": "A厅封 中凹槽",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁中凹槽路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/b03687b4d78840e2f9587cec6244253f8f00be574bd84be4b9f2764ed7c57633.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3773",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/09dd8f05e8e01dbbd40137c72643acbca7c91095a8b224c0ecb32e292e31d4ac.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/ceab89dacdaae9520069327ff6d09ccfe33051309e8e4f5e396fd9c7e734ebf3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/707f57dffe5a730862f06a73b7d066c5a3596ecf26cb3547b19cb78889168828.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3007,
+    "title": "B厅封 中市场",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厅出手，封锁中市场路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/d85122a4a9b9219b54b81aeb160ee9d94a96117a4da85578c801e205ae713df1.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3007",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/416aa8f0751c72d206214604441c380f9f906336023b373d62f88c727a169f7d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/44da7271a6693874b98d426358ac4cac32a71381ffdd78dba6e20e46e71670d4.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/1b92018d6c149893ccfbd581252fc79fa2259f264974297fc75a2e4a73f0bcf6.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/4be29ae27de74e028689955da0a9754c3abe80701bd2221167b2129131aac00c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2944,
+    "title": "A厅封 A高台",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/a9b0d59f18a93a5f90af3522fc09b65c429968548aab1238cd91d45b841b2de1.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2944",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/9e0151ab31c7a4a27749f42f343d0176874a099b9f13a82715feeeddcce1fcc4.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/760d7542e33be9bb5a59c663c7883520797c6893e75f4dad18a2fa0f8919d789.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/0b14336060aafe4d454dc5cf56d9c9a6fa49df303342ca83e0db74563749900a.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2824,
+    "title": "A厅封 中凹槽",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁中凹槽路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/b03687b4d78840e2f9587cec6244253f8f00be574bd84be4b9f2764ed7c57633.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2824",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/09dd8f05e8e01dbbd40137c72643acbca7c91095a8b224c0ecb32e292e31d4ac.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ceab89dacdaae9520069327ff6d09ccfe33051309e8e4f5e396fd9c7e734ebf3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/707f57dffe5a730862f06a73b7d066c5a3596ecf26cb3547b19cb78889168828.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2396,
+    "title": "B厅封 中市场",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厅出手，封锁中市场路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/de338de3712d9f239c44455d9eb2627a08c550a0f6f5f6d84d7c6409cefdba6a.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2396",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/4a08ba83c5a19b7b1cc84818c44c4d1ddf24e2b8358951fad46c3470af0abbd9.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/ed0dfe159c46e202d84d59eb43c5a358fbfcc36336b60e68256168b2bb20fbce.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/edda32f8835c4d65f63ed1c53e000916744e020ee64873d866acbb1f6ffed31c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2385,
+    "title": "A厅封 A高台",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/5ae50124d2a3e1d9947a06d3e301b380cc2ca587f39dbbb40a07b3056f9279d8.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2385",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/b67661ed63c7cc5d6d2b825788a714c16b47cc89e35f1628a588c266645956dc.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/4328b06d1b372cc69399d7164765f6af6976f67c504fe660187eef4eb688c6a5.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/f38e698de933cce7ed9d44e4d41e214ac31bc611ab2ddf6b59db6ba4bc27b0ba.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1412,
+    "title": "B大封 B木堆",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B大出手，封锁B木堆路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/849d708e222949197702732b375fb6a84af83292451107845883f96bedda79af.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1412",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/945a9b55ea5f84a7ae79b864a5ee1897c34304b009d0d92b0c06f2eccad6760f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d7da99bd496dbccd9fe0b2c55ce9bacb5e8594b14f294e99a1eaf531f049e4d2.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/93f1e0f2f80f71eba35803015a37a5322fda7e358479149e3d1da433774a0c9c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 445,
+    "title": "B大封 B包",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B大出手，封锁 B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/fba9b48f2ac19469742bb58b6919369ad9dffce63592275b2fdcf5bd1dcc215e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/445",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/66764044e87aa2f1c3986086ee07a94c00e92408590c18e4cb1cbf9210592553.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/3828d047c9dc7eba29150e6af2deceb5d9ccca699f824ecf2743b8e1b5804aad.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ed21d2811fdcc265761ba3d04b6cf12816baeaf2995708d1228f990736b6ab32.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b26b43e49ddd57fae3c49ff80fbad931f004ba295bfc2d7670a9fd79146a01ab.jpg"
+      }
+    ]
+  },
+  {
+    "id": 428,
+    "title": "B厅封 中凹槽",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B厅出手，封锁 中凹槽路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/f34c86521bb2b91fbe4f29457a3de9594bfdc218e773f092b4e96ffd50326fda.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/428",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/594f8aa15b6dcc675ee9891f7941b4c5efdf665b2aadc258de92ed418586ed95.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4e1d981c31fa6fd9c04d057ec65f31a772f23246c30af53d7f8dd8681a45cb4d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/bd51d0cf6d7e1758c0e73b12a5261adbbc1ccb6c1ae43e0a1c3a3678d700acae.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/6b6eaf2e7987a401434a23efcfecf70f1dcc99e756744829366fcbafef8a10fc.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5818,
+    "title": "A包封 A大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封住A大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/3f74118a7a77abe4681768b7d897e74a57b0feac1423cfb0948eb7824b566a70.jpg",
+    "view_count": 2,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 2,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5818",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/bb06f50ee8244a3abc94d485e5d85c5828b18507a317013f3a5b8593cc4a0cc2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b7b6cb09849886e109a27d0e2384b4311077fbdbdb003d2d7cca3498946efc43.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/b80eb8c26d3e510ecb532c93fdc4fd229a9eb96dbbee8550cf36135c1856ab08.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fa3392a5af57fc1dc4bb4f166bdd05ee1d016b347758a650a2c7626e51872ebc.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/7132435899965e37a8c91b3a0e2e559e41807f825ce7b1bc5732129e5045d3ce.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f7b9afdf0eae0e8eb39364852918b14496d885336c2f05d46fa5f5b8c1966d60.jpg"
+      },
+      {
+        "index": "07",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/25d14350b29043e3d61bde9148619c90fe094fb0732a2bc3f9359689f3ebe9b0.jpg"
+      },
+      {
+        "index": "08",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/164143a4dfa87d029cc1f44857de9161ddcdc60333c14b59baf67205cb94b7e4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3811,
+    "title": "船屋封 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "船屋出手，封住B大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/29/b5d41e54c3fbb69ec88cadd186e003a31518d48484f2decb35a8210728ce226f.jpg",
+    "view_count": 2,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 2,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3811",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/6aa64ce3fa1b08915bd2fc1fca3c76a61b71bdc490c923ca1408b142829a1710.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/2664731771e15b182dd323123f73791d983562f75f0991707b3c90306d9c618f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/3ca50a7ce6d7b187522d8903490943843eed70b8368ae04cfbe448e824124d57.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5815,
+    "title": "A包封 A大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封住A大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/3f74118a7a77abe4681768b7d897e74a57b0feac1423cfb0948eb7824b566a70.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5815",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/bb06f50ee8244a3abc94d485e5d85c5828b18507a317013f3a5b8593cc4a0cc2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b7b6cb09849886e109a27d0e2384b4311077fbdbdb003d2d7cca3498946efc43.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/b80eb8c26d3e510ecb532c93fdc4fd229a9eb96dbbee8550cf36135c1856ab08.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fa3392a5af57fc1dc4bb4f166bdd05ee1d016b347758a650a2c7626e51872ebc.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/7132435899965e37a8c91b3a0e2e559e41807f825ce7b1bc5732129e5045d3ce.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f7b9afdf0eae0e8eb39364852918b14496d885336c2f05d46fa5f5b8c1966d60.jpg"
+      },
+      {
+        "index": "07",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/03/25d14350b29043e3d61bde9148619c90fe094fb0732a2bc3f9359689f3ebe9b0.jpg"
+      },
+      {
+        "index": "08",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/164143a4dfa87d029cc1f44857de9161ddcdc60333c14b59baf67205cb94b7e4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3686,
+    "title": "B包封 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，封住B大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/29/bd0354e785eb0c23791f3628ea2c8b88ddddab1c55265b9732b190368c8641a9.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3686",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/9aaba7f10faaea5dcc7ca7ccfc67ffdae21adce96cee558b8cff83a6377323d7.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/7f0467aec893dec347fff7a804d4eac28b38aa7d61a807e1b67e5929e04bbf1e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/720d05d32ce8801305776a3d1bbead26c0f55d0011fcfa0ed982e4688bb9f075.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3162,
+    "title": "B包封 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，封住B大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/bd0354e785eb0c23791f3628ea2c8b88ddddab1c55265b9732b190368c8641a9.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3162",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/9aaba7f10faaea5dcc7ca7ccfc67ffdae21adce96cee558b8cff83a6377323d7.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/7f0467aec893dec347fff7a804d4eac28b38aa7d61a807e1b67e5929e04bbf1e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/720d05d32ce8801305776a3d1bbead26c0f55d0011fcfa0ed982e4688bb9f075.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3061,
+    "title": "A高台封 A大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A高台出手，封住A大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/0adb51a50708c3fbb69c0417f6946b7f7e758a8f3d3176ddf17bd78db3a2ad2e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3061",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/367fafa53689287d60fda79fb105fd1aee7c10be3b29798b3761811e6e391992.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/430ee4bac3dcec27a086841b6e89c65226f97e2cda7222f1fe7ff22a07a77064.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/a508cd1ee1194daeef169b3ef3af7883cf434dc75db5c317e0ee6b51e23be784.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2915,
+    "title": "船屋封 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "船屋出手，封住B大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/b5d41e54c3fbb69ec88cadd186e003a31518d48484f2decb35a8210728ce226f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2915",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/6aa64ce3fa1b08915bd2fc1fca3c76a61b71bdc490c923ca1408b142829a1710.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/2664731771e15b182dd323123f73791d983562f75f0991707b3c90306d9c618f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/3ca50a7ce6d7b187522d8903490943843eed70b8368ae04cfbe448e824124d57.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2887,
+    "title": "A高台封 A花园",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A高台出手，封锁A花园路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/6db114cb941ffd9b8e5054a26f8996fad5df82cc7076f45650eaf1741c8059a6.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2887",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/821a554d950d78bef0ba37dc9dac3320f82e3f9923eb35210887d971f7b90134.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/b82296daed500f0cfcd57263f9d06eb2adf2c12dac1c79c534298f15d3fe0114.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/5f554da8d7d0d97a020482430be5f97a8a41daed897d3ce45e7a31116c4462d5.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2827,
+    "title": "A发电机封 A大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A发电机出手，封住A大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/20a2d9f2d1c30e080e5e9b2ddf4b8d62515a2462b873e19c565f271bb495eb4a.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2827",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/9af87e7853f388f36d8f558e3a707762ca74ee079981338cbbf4eeff71aecc9d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/a81eecd74361c201370456028d3b2dad7791dfed63d33800285c3311d67c22c4.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/c14104a0a053f720287e97c7df42155a936f15d1e4bb0a3af74e09910286532e.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1492,
+    "title": "A门封",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A门出手，封锁A门路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/48a24b85d11ca381aa7ccb430960d625de4ad3e50fe5c3e27b5f08b292e5f24e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1492",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/7fbae1d24d6b50f50d485bcdcd9b322de299f4192b9af5cd0435a3d5e043dc55.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/95a411042d7bdb64746f4885365d21ce8ea8f9c6bdd0e188889f229df3054d62.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": ""
+      }
+    ]
+  },
+  {
+    "id": 1423,
+    "title": "A高台封 A大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A高台出手，封住A大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/68eebc9e859e3b59715ea7dec1ede9afb784c3ba5d7be01cb5693384664da0e6.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1423",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/367fafa53689287d60fda79fb105fd1aee7c10be3b29798b3761811e6e391992.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ee512c84a3273d0a5ff9378bc8d73dc458bb0ee8c9b2579427c9ba9452a26076.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c398a9318ae14e7528cf2bce897021469024782705eefede4d37f7f17b1a1ee4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1422,
+    "title": "B楼梯封 中路上方",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B楼梯出手，封锁中路上方路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/37fe63cd0222accec93ae7a550cf1b88d5355a21fe4db31d2c4334c06983cde8.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1422",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c090d995eb81d0e61affa93ad8ba3ebe03ef65403109fe2f2dd3765b9d48b194.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b6debe8194a249a3db6e678116cc63614eaf49adee9634942d3f13f28dafeb5a.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f780c2e3787deac7969d9b906cad2d6f6a643d3e4b843bade06f54a77ecae501.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2282,
+    "title": "B厅封 B包",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厅出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/0e95c38ec93c3ed0384c8188e4c77a2a2674c299e814f88d461801f72bd3a068.jpg",
+    "view_count": 2,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 2,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2282",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/8d7f43204d6e65fe105eb92f5793128d150bc4aa284a54aba5feee75ab62bc55.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/a840c805a8549ab648a48f5e1ee20d4cb6dbb07ca46c074e41492bec5b4fb153.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/3a6b8b29f84afc1ca3ab61585da49805ba5069b08975969e025c212f18701dc0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6245,
+    "title": "封B默认下包点",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "从B厅摊位角落出手，薄冰会封住B默认下包点附近，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e2b6380bb90e6e6a199c753bbf4e692e41d08544e01341424def6c6c36ec21eb.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6245",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到B厅摊位旁的角落。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a424e2cae800d54f08e57607804ef22cf184f782a628ecaa0a435de6ff563494.jpg"
+      },
+      {
+        "index": "02",
+        "text": "对准绿色屏幕右下角。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/e9f032ee4f68577010e9790e8401160064dca85ec744ddace1b36387a2b7fe74.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接左键丢出薄冰，会封住B默认下包点附近。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/76c6d9bd2a87c81787d4f077c3e20eceaa1c65dd5ecb744aa4b4109222237db0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3696,
+    "title": "A坡封 中路上方",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A坡出手，封锁中路上方路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/fae29c5fdfe4c99aef725b872e5975b1d7ab262ad2774ac8fc6810129cc6e865.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3696",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/0344d99856654499f92760abe0607b5d99dea722e1d473cebcac56c6ac6a84fd.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/23e070a9bbaffbf9060ee06e13fbf7795b725e3992f2ce5b7e9c71b8bec51c74.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/29/bfdcf015685701a45d3400d5dd74e9ff9048a0325a6fa5288beb8da93de1e117.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3492,
+    "title": "A厅封 A坡",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A坡路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/780264c1d791e693a5b6967da2d1dc6e1fcd0d9b5fa110d06dd0419f1d54d617.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3492",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/94f3280507fc6481c14e85975a07f6056376431a8c5c0919041e6e0da43da534.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/31335a5636fdcae1b5461103a9dac87d9d73a6e4375fc460f3c80a37f6160366.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/9b035d5273644cc1b90660d24ee4c2699d6bbed3f6704f4c07700972d0315f97.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3454,
+    "title": "B厅封 B包",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厅出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/0e95c38ec93c3ed0384c8188e4c77a2a2674c299e814f88d461801f72bd3a068.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3454",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/8d7f43204d6e65fe105eb92f5793128d150bc4aa284a54aba5feee75ab62bc55.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/a840c805a8549ab648a48f5e1ee20d4cb6dbb07ca46c074e41492bec5b4fb153.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/3a6b8b29f84afc1ca3ab61585da49805ba5069b08975969e025c212f18701dc0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3390,
+    "title": "A厅封 A高台",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/d137b65ca2226407d797b933494efbecbc689962f48e1012937e480d3e3bca65.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3390",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f96a3162c3be00fb0631f5b7f669b71b704161338b5ca75367c749aa3299a4ef.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/54aedafbab3648e49eb3f945c3dc4fea032be0f235b356dfc6110c47d5942369.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b0851fcdd63d3bd28a126cd14f0cc29701706e837b5bbf8766eca31c4cad8279.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3282,
+    "title": "B厅封 B高台",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厅出手，封锁B高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/96420337f00fe41345daaa6e44eeb1fb8ee273fa48d8a679d4dc2d6c73426a1e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3282",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/1ceb2805482173a66af22979b0626358e094f402cbf9b21db13e251a18cbc83c.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/4a9041af0d9573c69a3f7ecafe141a5fe466a36316e8b9249b51b7ead94ca57b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/bff44635a96a72e393123808cc79b158db727cc5ebe4d1e974362fcb9d594b46.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2990,
+    "title": "A坡封 中路上方",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A坡出手，封锁中路上方路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/fae29c5fdfe4c99aef725b872e5975b1d7ab262ad2774ac8fc6810129cc6e865.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2990",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/0344d99856654499f92760abe0607b5d99dea722e1d473cebcac56c6ac6a84fd.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/23e070a9bbaffbf9060ee06e13fbf7795b725e3992f2ce5b7e9c71b8bec51c74.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/bfdcf015685701a45d3400d5dd74e9ff9048a0325a6fa5288beb8da93de1e117.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2950,
+    "title": "A厅封 A包",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/7d995fea8b6f152abb9205d2cdba0bb36b9f1538c90f46c7ada79ed9cf7f3c19.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2950",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/620450bd1f0d9c78074a0407afaf80734438ae561a92cf5432baa9b47cefede6.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/dac8080be576abb6ee6c0b9662f6da6e93964a8112dbe87c43a6f1a36f59743d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/64bc1d95dd10edd9e206d51048949cae6053ed86be58ecbba1ce1d54a0b2fd14.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2387,
+    "title": "A厅封 A坡",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A坡路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/780264c1d791e693a5b6967da2d1dc6e1fcd0d9b5fa110d06dd0419f1d54d617.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2387",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/94f3280507fc6481c14e85975a07f6056376431a8c5c0919041e6e0da43da534.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/31335a5636fdcae1b5461103a9dac87d9d73a6e4375fc460f3c80a37f6160366.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/9b035d5273644cc1b90660d24ee4c2699d6bbed3f6704f4c07700972d0315f97.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2310,
+    "title": "A厅封 A高台",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/d137b65ca2226407d797b933494efbecbc689962f48e1012937e480d3e3bca65.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2310",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/857fedf98db55528e8281cb26e67d03a6281d42c2ebaa73ab135c716464f286b.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/f710bd50ac4685a75355508f09f32ed6c37dc4f79dbfd4a9b2ea026961b1bd60.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/7211b27cda87b83e06514cb0b9730075d9e67ae2a0dc0ee3e58f4a8f91c6fa46.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/b92b0cd5789c901e0ebb9adb50baead3ce5f4f3ae232829f94ec87a45398e88f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2228,
+    "title": "B厅封 B高台",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厅出手，封锁B高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/96420337f00fe41345daaa6e44eeb1fb8ee273fa48d8a679d4dc2d6c73426a1e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2228",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/1ceb2805482173a66af22979b0626358e094f402cbf9b21db13e251a18cbc83c.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/4a9041af0d9573c69a3f7ecafe141a5fe466a36316e8b9249b51b7ead94ca57b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/bff44635a96a72e393123808cc79b158db727cc5ebe4d1e974362fcb9d594b46.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6248,
+    "title": "封A默认下包点",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "从进攻方出生点这条线前出手，薄冰会封住A默认下包点附近，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/08e4ca41ad17509b888831d6ed2034f07a1fb67ee2f5be10756aad3c822d1307.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6248",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到进攻方出生点这条线前。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f4537796ac8239cce66960a0a75ebb8984668dc4c5fd4f22749275e925495c42.jpg"
+      },
+      {
+        "index": "02",
+        "text": "让薄冰界面右侧拐角对准两条线之间的下缘。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/6c5db507f79a603640490cb5e378f333e726cd24184206bdbc5cd2f242d6b41d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接左键丢出薄冰，会封住A默认下包点附近。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/37da1eb861ca8d5ba7eb7a080460b56dda0d3ee157de0fca88d2279c38d2cb4b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 425,
+    "title": "A包封 A落点",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封锁 A落点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/b577d620dd80cf55711c13dad5b672c5bf045cc6188e1bad7b2ff0ee1571b4a8.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/425",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/55f84c21acda1ca25835263f9a348d81614665c1f741f0edd14cc0c770db51de.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/cc6b12680a8a60c1c21bdf479a45a6c192db16ffcb352096418fee2e0b4ab3a8.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ae1a292bf3c94aba2fc16913ce4d2daa429dd3fe28f6de55b16e08dcfc141d18.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d0a5a2a864c6d7ee53e74e40154437d0f65563051b2acc3ff7d5cef2b6abd6af.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0c2742802a7501ec90c179cfd7d6f8f8e0cc8634e8a5bec664d36c9331f7ee26.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1406,
+    "title": "A厅封 A塔",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A厅出手，封锁A塔路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/7705821e00a7506c72aaa97362a400a918ab3da355200aaab435d13d8b7daaa9.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1406",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/baf250b476281828e4c4abd92516c9dfd9229ec5969a306969e855e84f41283c.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/fd87d54f01760150d9e97494f9213898de72439da7bd808494e57f48cb20569d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/bd79fc9017719d2454dc89c9737f26619812e4f08682302e8c39978a0479e3fb.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1399,
+    "title": "A小封 A灯位",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A小出手，封锁A灯位路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/269f1c15108547e840ddc1bfb44210b4e77502cdb9491e04d5c4ed766e14e554.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1399",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/809c4fc7287b468c23b940528106c6c090a8285d88f01aad9ce9ce3381f10cc4.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/47d71b0c6c36b8a734886be26418ff975a5a8fd6c4ed79dd2472b21fc81d77bb.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/7c7cbb6df87967eb69a161ec334dec9ace2d4e9479f83cdb55d20b49559e1215.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1365,
+    "title": "B长封 B厅",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B长出手，封住B厅通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/38b7261710a1f9f0940c3f3bdac3d709d89f2c1eec4f6a9a9170b84d6316dd52.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1365",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/9833445ba920edddb3eeca3f5901b6772ff869da6f864ae0e203d52540365c76.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/3766c1bb1bf7f2eed727baf43917cc2b6756998bf1d67f681724eebb5d44fce2.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/590bfd305bcda4c73e54f10d342bf2c619505d667c43548ece63417b0f4894d4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5133,
+    "title": "B包封 A小",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B包出手，封住A小通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/4ecf448619e82b0455932b04da1fe49d80f9ddb37ec1cc8bd518dab9bbdc7ba6.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5133",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/da309c0824d896ba7d396f4602bded88b8c0b2feefcf7e0e59ee2a0ae8d32c42.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/b7fee35774f0d6f47e986226a05a5c34cb748dbd66e3f5629b6557dc65dfa683.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/6cf76b2beae4d72cfc2a632a691e905c2827d2382b0ea87b8ccfec8b515837be.jpg"
+      }
+    ]
+  },
+  {
+    "id": 382,
+    "title": "A包封",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封锁 A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/a14b8c3a9bc5bcf7400152730087f0904f56c2879555a88e1b60d5fc7fe0d87e.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/382",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/349725b7ffda34339dca140dd63e9f3ea5fa80e1e68e30756fafcfad89670c45.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d89b7163a64c0c17f85cd21c4e75811bfc8257ef9f2a4b053e752838974208c9.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b92f811a775ce5839f04ec5b1ecf9f78ffffd2ee98dd6119a7a61d7442902935.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f560f39c1115f3dd17c51e0b3612e145e2b1bab8d6b48516f06ec74c442d0ed1.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/bd8636fd0a76ba21ef43150938b80c15e5337b38a97f8bd491b1028f5396df5b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1991,
+    "title": "B前点封 B拐",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B前点出手，封住B拐通路，方便进点和站上墙位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/714ef0f2df76223eb259e8e77f46b75092f7954e49f6a271d3744df002d4d22b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1991",
+    "steps": [
+      {
+        "index": "01",
+        "text": "在B前点按图示放出冰墙。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2b69f578317781f5d40a9bfef46d7c83625a2621adb3ad58f58d71fa07913cab.jpg"
+      },
+      {
+        "index": "02",
+        "text": "让冰墙与B拐墙体之间留出小缝隙。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2d4d6bc4d67ae8a71d0034d1e8ce0e5e4b3b96c183c43b2125a7845b0eb0ee6d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "随后按图示站上冰墙完成过点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/d58fa77d08863c665bee9647f642e2e8693dff79783c0b6d0a4f3dd93016503d.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/257e2563e27104a7eaddd9eeaec25a0a4f2d86c93b8e31da84fdf13ce9b14c24.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6250,
+    "title": "封B默认下包点",
+    "map_id": 5,
+    "map_cn": "微风岛屿",
+    "map_en": "Breeze",
+    "map_key": "breeze",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "从中路炮位出手，薄冰会封住B默认下包点附近，适合下包后拖时间，而且这套瞄点容错比较高。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e5b305040257f6c059c949cf17098efc1d247a03c678aa912b9cf52cbb994312.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6250",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到墙上最低那条标记线的位置。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/c8325183e62876f7ae4340e4eb4f5f32f9e14d687e31580ddb65fa92dea7d319.jpg"
+      },
+      {
+        "index": "02",
+        "text": "让技能条右侧尖端对准炮位右边屋顶的左边缘。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5097cb7624494723696fe06f14e90a8c80e0c8685a5a830fd6f692780c2dc6c8.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接左键丢出薄冰，会封住B默认下包点附近。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/aef305fb2c3be4c28f27b4a73f88632592f499903073d646fa2e0bdeb7d414a9.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6242,
+    "title": "封A默认下包点",
+    "map_id": 5,
+    "map_cn": "微风岛屿",
+    "map_en": "Breeze",
+    "map_key": "breeze",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "从A厅岩石顶出手，薄冰会封住A默认下包点附近，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/87737a707000dce8a5692fca526e7ac59ce2bbb7e727dbc9e7d0065b7a1f244d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6242",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站上A厅岩石顶。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/32383e544170a330372ab2a02b92f9d1d893ae1081323a382e7a68394c16fc05.jpg"
+      },
+      {
+        "index": "02",
+        "text": "对准图中的黄色叶片。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0c44841fe6d3a15d25d6927f2238a48b312d32d0681bc161db7f4f9700bef831.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接左键丢出薄冰，会封住A默认下包点附近。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/52260f03fcdddc8d800fe4812cd11846af9e880fd478c0b9de911a691ef99676.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1404,
+    "title": "A金字塔封 A默认下包点",
+    "map_id": 5,
+    "map_cn": "微风岛屿",
+    "map_en": "Breeze",
+    "map_key": "breeze",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A金字塔出手，处理A默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/673e1f3a048fc620ce0a97fce756510fd9c032cc8c4176b44d39af6a67dc9613.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1404",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ad7ca16e3b474236d4fbf5ae08ebca492b281af3dbf83dc394a6bdf4ccd258fd.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/52bd8003c1bc68275f76a20d93fe7731d731f62c32f0c34d7a42771f95ee2a0e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/3e1abc8c46a4b50aa0dae0864d24fad4e5e68ad1bb8e38cdad7f160dab6f7c54.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/d3f3f8c58a75186b7b55892735764ced6e14e27fae67a9e8ff71e9703c4df063.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/edb9e5ae44d30726e3bdc00fcefaa1b49fd4de4f4381abb3dbdbfee3b8c5daf6.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ef4cdc16c75a6c7ccec2fc9c827b62e4e2d5ee62d4a1fb73afe51816bad72649.jpg"
+      }
+    ]
+  },
+  {
+    "id": 923,
+    "title": "中连接烧 A前点",
+    "map_id": 5,
+    "map_cn": "微风岛屿",
+    "map_en": "Breeze",
+    "map_key": "breeze",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "中连接出手，压制A前点附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/98b9097378bab964b97715fc7bc3f2f3327d106f75b0ec85ecf52ac9c44e44f4.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/923",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/4f5b2ecb41ca29f7c799c074084ae06cb5022d66abbe2b8809b19ce01944ad5e.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/0cffa22ee4555e27589d9d583272298f6a1d219c980d96b9410c1fec5a8699d3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/b9bfabef98de3880a0c5e9eb3b45da2da8699c8ee328c70352d67d31dd7a08a8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 397,
+    "title": "A包封 A默认下包点",
+    "map_id": 6,
+    "map_cn": "幽邃地窟",
+    "map_en": "Abyss",
+    "map_key": "abyss",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封锁 A默认下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/722ef8de64cc3d2b848dcd664ea476b8b883fd63f8e01fc3ab1a46b7c6acd26f.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 5,
+    "heat_score": 51,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/397",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/6200c85211adbd8165f4d3f68e8ecdb4060ecbe0564b88ad304e4e4c1cf2bd5f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/95c5eff121f82d1d709b1a85727ea148d7c3e514af3fdf9d4c748c4120895fd1.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8293d34cded395246a327e53672e1f26a4a22b4a81349973be7252a75dec83d4.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/92d03268bb284f743f90aba9fd6c551140ac51457183ff380607002b155c46ca.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/cfa057f7a7840eface277830e05ce9b189248d72dc62932d715554928afd052d.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d8bd671ad222e47684a845c53f3dde42b42c26e82373bfa80f0c3dd55665013f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5569,
+    "title": "B塔封 B大",
+    "map_id": 6,
+    "map_cn": "幽邃地窟",
+    "map_en": "Abyss",
+    "map_key": "abyss",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B塔出手，封住B大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/8199e7b70512da814c2f54b6365c1456d3064b2e13849c0e52c3f6487b2eeb12.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5569",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/29adf7488263427fa72231264b2c9ad7e255865cff425090f55c84f9bf26ff04.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/9b33b9ea51a9ef55c698b98a915f646e4e9e3d0ff56cadaf2922cb8b69acb94c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/e39878609961e4c638cc957eaedbed7c61c0b972a68dd6a4c7e0eb9a6f1b900f.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/09938d4b88fabd684296b7faf8d8881f2535d2c4caa77485a210f3135cea0d34.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/83d55cf8bc328cbe851d817ea8403a3b09b72b0099d08e10272ff08708cc2ae7.jpg"
+      }
+    ]
+  },
+  {
+    "id": 964,
+    "title": "B包烧 B鸟巢",
+    "map_id": 6,
+    "map_cn": "幽邃地窟",
+    "map_en": "Abyss",
+    "map_key": "abyss",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B包出手，压制B鸟巢附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/c153996ec09ade5b7e9554e5d14190fd8cb7865a5e4e92c2de09860929828735.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/964",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/993af179ca32593ebb1145f1eb03db8f40b60df35cd0b48a1d2234533188f4d9.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/50f6f45078e9e8f12fa707e4ebb8e210e910c9d9dcbefcdf81740e870e00a037.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/29bee5a378fda03d86281474692de0d3fd93a50015546737b745442e5524c259.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/107eab74c3583dd807d50cfd666c326b65550d56085a6ce4183752a933b50e4b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2900,
+    "title": "A大封 B默认下包点",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A大出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/293338746e498f70f621d98491f496ff1c6092c012e805bb8a908d3c057d489f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2900",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/a597c3bb17da54e3cf4a0f8b7cd8be6fe701d409a33b1eb7005105c11ae374d9.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f83d1845383fd397fc5259e76cce917297c888132beee409372c91ea1d752cf0.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/829f7ab42f5953ef96877ddcc07ed9152f0125da4bbb2abb24e3cae80f8ece4c.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/330524d9a6765299554ae878aa3306ce8422aa245b7459d85cf89611db273da0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 886,
+    "title": "A树根封 A碎石区",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A树根出手，封锁A碎石区路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/d01b1fa49d89b3cc37f4f47e0e3bfccb2085141d0a356b26d9adada3b7e9f04e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/886",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a790c8d1d4bb6e2c652d8705798e2f24675af6a1b5c511184ee9385980c09237.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/7a61eca88f4601d17150d722158aab20e2dd67db4e8fc45ddcf1b1329bccf4a2.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/7068d8dde788c41e5bcf26c0e4948ecddebf21d3e81abdeb3f31958b2bedd618.jpg"
+      }
+    ]
+  },
+  {
+    "id": 464,
+    "title": "A大封",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A大出手，封锁 A大路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/df7af02ff95dd00edff7f59e3268bd101a7c115ef92bfd2a7aee131db3664287.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/464",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/e82f17b443c58f5ab03ff47d73718cd242aa258097001f772b5fe61339c1567b.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f1636a63d68806f944db9f2b3c599b671176672f20fab2db37778d003d196392.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/582e8fedef343f1ceacda8c35dede57322ee1560709a97130f299991bc6a06b4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 411,
+    "title": "B上层封 B默认下包点",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B上层出手，封锁 B默认下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/5674851e10139f779fb1468b7ed33161c0a7fdf51359f63c8b20bb3a2b2bb35e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/411",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/3289168dcceba3753a6831d98d0f792ad3faa9a71e848a634327b56a0987a7a0.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5ca10c3db33f776dd9ed3e05d47b5712e83cd2ba804f8175b348f3ffdb549778.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/dc1ff65a3a9eed9633d99bc623a422503ac70b0b4c19ac5b0fb8c98c817acbf8.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a561d2f6dbc5c34c847641d713e59cfb07308804b6e6c83929c1dc41b56d31a7.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/e113e419ed762b863492a5cc4b77455267815102949f57294ddad2ee96d8db64.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/793bec7e3df9bdf00ed587f23a7b8d892551a9a13774f0a840882edc74530c81.jpg"
+      },
+      {
+        "index": "07",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b17bb6429fdfe162f2cbbbe18449a2148f64f25560b388b201c243a3adc0af7e.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3482,
+    "title": "B包封 B默认下包点",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/05b593e9a2b5cc78d00c28727f6b5869e8ba8884faad48c761341b7e26ae30b5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3482",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/8ed601379260de32142a579e1b0f547d67107efc22b4737fc14e60eba477b442.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/b1bad3618c4be5b5a9214fc0aa0de706068526d179924ffb2194f99aedd7c07b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/1304ff1dfdf361b071dcbcb2d92dbc84c99ed8f38673ae4369bf6b1d93b7ca36.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/fc52aa23b9d13c7a7d3bf43ef4709ce1352a7151ab8654b1d1f482789f0dcc98.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2847,
+    "title": "B包封 B默认下包点",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/05b593e9a2b5cc78d00c28727f6b5869e8ba8884faad48c761341b7e26ae30b5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2847",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/8ed601379260de32142a579e1b0f547d67107efc22b4737fc14e60eba477b442.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/b1bad3618c4be5b5a9214fc0aa0de706068526d179924ffb2194f99aedd7c07b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/1304ff1dfdf361b071dcbcb2d92dbc84c99ed8f38673ae4369bf6b1d93b7ca36.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/fc52aa23b9d13c7a7d3bf43ef4709ce1352a7151ab8654b1d1f482789f0dcc98.jpg"
+      }
+    ]
+  },
+  {
+    "id": 358,
+    "title": "A包封 A大",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封锁 A大路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/103b64b4b11f9f2d5fadd5b2a37966593781f4a7639ff052604d0b0b745465fc.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/358",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d6ecba8fe7048b7201cfb56e3c0adf4e58878fde7e52111a18cc6bba2b2ab170.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0ba0d59bd5795691ffcb0bee889ce7aee9acf8c8ed3361bc224f2453e3790b9c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/6e93ba3bc0e26b47d5e03014c3f7c938acfd75a6f808c7ec51bcecd0a38bbf76.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7c3f8aed34ab112ae4731fbc5e854c36f1ca1ac2dbadaf77fd2dc78b7e9bc725.jpg"
+      }
+    ]
+  },
+  {
+    "id": 294,
+    "title": "A包封",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封锁 A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/66a145ab470610ae959d197d002e9900c178b014b014531effeed6d35ab63e84.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/294",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/df5856973c1d98ffc9fd8035e8cdaedff40203e8de91b97fa17f2e09f6b94fb5.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5de2fe1e439fa464d7d934ad6a7cd381fca030ea244888041c7f827167b64fa9.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/bedcfb548271bc8028a0f9a6307f405a9c44b2ff2786cfd421f5b7dd2ec0d22c.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5009e05c82cb5934f0b5ebda5de8ebd137e6ad940b9de18309c0997f7eee744f.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/70f290af8fed969cffe0bda2d31e572665b1ee0d71acd2ad982b8da9c10ecd15.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b73f8a6b1c984ca9a559c1a8c07581cc4039232f19e955222d4fc0e51d484577.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5674,
+    "title": "中路上方封 A包",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "中路上方出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/a3db919b234f3f627cccf5f0711679ac6370556a2c3ae6243a64eb00e9bf4e95.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5674",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/ab9cf0823c424ddb3fd433618ed7364f55a36278d0c820903141d0278816eb7d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/5bec766fdfdd99482f3dbca4951bb665f4bdcf1b63c4471b6d722764eb4cd970.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/9037ecab025b7c144487bea578f34c18e583bd534bde74e999372fe1f71c8286.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3861,
+    "title": "B包封 A大",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B包出手，封住A大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e699d96ce5b002a3e3bfbda129524447e23e0f8b3f0e49c874959ab057fdd022.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3861",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/52f08c36ef07aacf97946272d03184e1aef5c5e15d6307105b2d2b4cbf9c3afe.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/ed4404c59768da8187fea60b3056dc112300e8d52573422a354f060269983dc2.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/255cff44e425b100fc8e90782d446e60f09077b91870881daa8825edba86c265.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6244,
+    "title": "封B角落下包点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "从B坡角落出手，薄冰会封住B角落下包点附近，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/7cbba4bd0aea8d29faace7a97b4baead70dbe4d5414c3d8e505dc7bca85b0386.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6244",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到B坡角落。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2d4b151484c39ab8c76d8138f458f5ba773e8841343bbc190eb0492af3090206.jpg"
+      },
+      {
+        "index": "02",
+        "text": "让薄冰瞄点按图对准屋顶瓦片，这套瞄点比较像素级，需要多练。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/49e90262a6ef8feb18e087a56dbb6053bd63a699641140dd90664cc8033b6045.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接左键丢出薄冰，会封住B角落下包点附近。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/020d9c79ac72bec1b4f51e2f6d2d54bfb566a9573508de508dbf344f64653702.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1921,
+    "title": "B大封 B默认下包点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B大出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/73c9decb74b2bf152eef781f9227fae565dfd16698bd5606d8c87f4a1252eedc.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1921",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/874b6b8d3222310162c58fbaec5d0d21f908743f0da742828693e36a5eabbf37.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/70d75f313141241f5d02a9c9cebef08cdcae314e9b7114c0d371355936bf22bb.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/e56fb285957d6c71f5f825ff329733c1ca8f0c32b7605ee0b76bc449169ea73d.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/58bbaaa53527c1341f67783e740b6c30d3f3dc8fa365937e3989cb50a368c257.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1369,
+    "title": "A大封 A花海",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "A大出手，封锁A花海路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/5b77fbb63572ea78d4529148204eab525ade28df91c352debdb3bb6b6b4bc809.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1369",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/20740923a0df0cd6c28172cf6a37b8e5f0973e5afa81c8b102f33cacf3518fca.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/283d6ad2b0f085a81ca92e9ab4b956f618772eb5fb7c0556bf65a70a5b2738b2.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/3b242201b0e68a1b0a3578552967416b2e2a474247b371248559bc8c81c626d3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 599,
+    "title": "中连接封 B默认下包点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "中连接出手，封锁B默认下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/16e353a811c6325d7dac127dedb31edb058f6a3ab43ec1c7df6b307dc6c2c0fc.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/599",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5c6721acdae8bed1e780ef62a0fa97f46972725abe155b36095e3e7ea4564043.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/844a608906b48afa14d51ea082ccba436f15b89f96e973405b6025602450388c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/867d7334153e277f216a647baa06efbccbe4b0eadaf4b51cb054997fe9029939.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d7b2eb776259404d6482d01843767ea1d5f28216487a2e323dc7f805468fd4f8.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/47be6bc2a0910bf0f9f8eead8a07accae60e922a0a02cfa34c27ad8b1a744421.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/71feda2487acccd80709cf958ec52caa6e2a73a002acbaeb3b0ee74ce5638572.jpg"
+      }
+    ]
+  },
+  {
+    "id": 300,
+    "title": "中连接封",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "中连接出手，封锁 中连接路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/274db16258595b6ba11abd32d0b6bfea49560ee079d898d23277e0b4fcfd8fbf.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/300",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/1cffe84142b4762eda443388eee3cbac694dd85c05d471ea7715bd4fdc762344.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/e770e6dbd1f262b24ae87172d29e76b3adea420aa2616d82b3c5491e7bda5dbe.jpg"
+      },
+      {
+        "index": "03",
+        "text": "轻点，按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/3d8448f5daa8a408fefdfb295720772fc286f840e44a958b4e5eba8869a24b5b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1523,
+    "title": "B发电机封 B连",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B发电机出手，封锁B连路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/2cbb04bf7f6cf7fd263ec1956db855f9c356d0c3b83e2e16c56050e6e6feb406.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1523",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f498e1ec7141d9e24439ae85a0a88f10b50b6c469d2b9cc4a93e780a48c43dc3.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/553e5e727843de1db93a29f880155b0a4181c523307bd0f9206817132006886c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/970c886221ecfc82c7e87545033d3946e4b12104b606d9e34cd6584fa03c1c9e.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/cd3d96453415fdea238d863561f8f101527ff143a1dc1d2538da28da5c6d8539.jpg"
+      }
+    ]
+  },
+  {
+    "id": 959,
+    "title": "B包封 B大",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，封住B大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/2b2adc3063ef541cd4223db7c8f67e41e730954f703d755e7be71fa1dbf6aef7.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/959",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/17fcb41293f82817df45c5c3ea5eba1398e7cb3bb3ab9eef9b61b9843c59f4e5.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/6dd8f43964e2e506df9e8a5bc2720f56094732316b16aaba244f800c6e7cbe7b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/873ba342de6719dcce7b744b6ffac61037aad25ab30824ab77ff1d2315a8558d.jpg"
+      }
+    ]
+  },
+  {
+    "id": 463,
+    "title": "B塔封 B连",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B塔出手，封锁 B连路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/7c1d36e9d17fae368065fab2e716c591fa591e284f0bc53121eb383cfb01a5bc.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/463",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ffec26292700517038c2ee2aaa1226e2ced5a5416a29f01e7d64819afe68646f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0b5d8db54b77322c8152d215addbfc80508a91c44cf4f961203506938ea84fe4.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ba7f026f189fe7947b9f708dad911b569611622f17cb138c1a606bbb5d44f993.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/13eb3a1191b807c0ee6acffd9bd93d7be0b79e46a9b1c5b7430d48d03c6a1825.jpg"
+      }
+    ]
+  },
+  {
+    "id": 385,
+    "title": "B包封",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，封锁 B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/6691203bf46d3469825f5d26c04ef085732294acb00f09d33db7e17ab656a690.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/385",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/89e549191f7210ec32fab596c20bb4276429f59fb52d6622a6d273ef378f836b.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/dcd3fb667cbdf4d6d71df5c7f51872075a7319a622ca384a8809fbfff4dfc27b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": ""
+      }
+    ]
+  },
+  {
+    "id": 381,
+    "title": "A包封 A掩体",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封锁 A掩体路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/0ce7b0960f92e847c92adfe8c32362bf91e27beb62d4f96880276be5b97bf939.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/381",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d4b8aca53a053949c60ab21e7066209e83a7aa97447936d634d85b22ca440646.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/9d512016ccbc03b6892d36898669a7bc2b57f7723b9c4f50fd29fd73fe6f6411.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fa5933d117c8621818489231fd4a0a669abdec87f8e05ac42fbc952ee3c320a8.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8741d6fb0d2c49e58ed292fb2cd823644f98154e0272b1fedcf7c96389943ee8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "title": "B桥封 B默认下包点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B桥出手，封锁 B默认下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e75fe56d8c05bfeb88441435dfe003b8d2730d6ce89c12050d43d62b96222cfc.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/303",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/6c9823fb361adc73404c2bb20820c91196638b12192e6b18faa71cabf0d0a45e.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/002af444b3b65e2efbccb2835e79c4721ccd0fe913931cb9bdf95a8d718b8264.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f97d40c22328c38196294b5495c2a120f38ea02d5f7046187c5b2e51fb22d0c2.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7c184b63053bff0eae72c644cead7834757b9ca90bfd31b5995e33092969c7c2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2924,
+    "title": "攻方出生点封 A高台",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "进攻方出生点出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/63d4c31d19efe679f0ecf1944d53c24b5ba51e4846c80a70c32e243f109e8c07.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2924",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/3262aabb017f9742f3d1c06261f286668cbadb868b64434a27cf52c46f69d4df.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/5d41b6c7087edc29d18e466994b10e05e7f3e002d9fb5a4821063eca7c7d048e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/0baaeb9dbd132a8ce2cc634466178eacab9b9966cae9cda3077018c3b3b46c9d.jpg"
+      }
+    ]
+  },
+  {
+    "id": 928,
+    "title": "A包封",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "A包出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/df8fd5ae8ed68ed807ee39b90a2002df5e08ba00ca38aaf6ed05f2f0dadd1a15.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/928",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/76ced4a7126fd1a74a7ff8cc0a606c5487d270eae9865065146a7166b8104f45.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/8393ae8ba6a72e824d499bceec01cf9b38e03e42ad14498485beb25af99a47a1.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/841d9bbc56d4f2794cd96dbe67af3c6025eafe41aa45393997ddda96e6814b9c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5791,
+    "title": "B包封 B默认下包点",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/0bb0985cf951bc3fc4569304c5b68942acf90549983f93d039e3e4e1bc8733f7.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5791",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0a65e4d624c8d2b3fc7065e29e58777f2c3dfa402006147cdf2e37ec0d879873.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/525d3866007949baab5f400b2b0f409ec75dff4cfcd974df8bd76da1f3e30acd.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/a8d85f5c49af7fd8e63b5b1502497a686334df6177ac67bddc14cf2ca17960c3.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8e8da2ad8d82dc24f95ffe1de4304228dc23804cddcafc9736f1a31a8f833fe9.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/5a8c633f786ce448a367a0f82887ae82005c1e425ba20a08037bc96a4e09adf2.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/567c2c79f5474b17be0a30f8eb054fb7496778a6569f2130eb117952d1adf223.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5072,
+    "title": "封A默认下包点",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "在A包按图下包后立墙封住拆包位，适合拖延默认包拆除时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/0215a1cc8570b56d23ea6662b36e45e40feacc211f414774ee134b8d7bb9fb33.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5072",
+    "steps": [
+      {
+        "index": "01",
+        "text": "先跳到图示标记位下包，面向窗外；如果来不及，也可把包下在两扇窗附近。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/e6d56083f20c5e3d9923439e659f6df77f44b8ec272b2d77e3e7f690e9314faf.jpg"
+      },
+      {
+        "index": "02",
+        "text": "放置冰墙，让墙体中心正对爆能器前方。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/0ddd8b726e2f525b627d49a14b4e58b87612c6bbf8e96961592fda9f01a5e8f9.jpg"
+      },
+      {
+        "index": "03",
+        "text": "这样对手拆包时两边都得额外拆两格墙体，回到A大慢慢拖时间即可。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/132b0e23a3003227bc5bc0108bb342dc8f9b511a2d331c076ffee71851da14d3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3108,
+    "title": "B厨房封 中路上方",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 102,
+    "ability_name": "薄冰",
+    "description": "B厨房出手，封锁中路上方路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/a65f4b22f79ddd187db42bb870d5012137e05406882d24dd60fab51b10478654.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3108",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/998d8fce48c72c3f94618ffe2431bca8e6e57b86ea9301f3dc0bd34475bda344.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/10cddf49209aa2ff3ea205083ad7f63b621cfa426c19fc842f6bc3659e585d46.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/160a96a41c0bc331d357cd206cf02b6a88a7fc762d8c96f3aa956d6f76dcf38f.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/3d52358f1dd2bb663d692e07da25a9c3b1f9d487b7ab6dc2fd0dde15c93099a9.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1856,
+    "title": "B厅封 B包",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B厅出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/150152c4d3c32212953c58549c9b156b5eef4386bf2a6160de5419745837f3f1.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1856",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/5cc0c23973680d94fc370fc2ecdf032bda0b630ca7b1048761a76085b6fc8686.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f0557fbe159cd47f2d7164066d8c5679226b9c2f9715b939f5d49ed8ea127f98.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/260d0c25aef16b18565ab7bfbac8c4962bc7645e04cb8a9bfa40bb30f1f20b29.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f700ac898bdf21ba191e2993c3978a8b54335f3dfe2eac894f37103df4923151.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f7c62650160646c9e423c031db9b937dcc15c8ea3686edc567d6a6e7e9e0c7c3.jpg"
+      },
+      {
+        "index": "06",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/52f210fd83b3e87a537361ae485eec958493eb71775f93b50b1fd82ae82acc46.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1467,
+    "title": "中蓝箱封 中路上方",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "中蓝箱出手，封锁中路上方路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/8bf3cf9bb15728964e74ee89d567560da42a69e7f4d3cec06551f8940d4774ae.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1467",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b8d6af09156c69889ea0ed490ae81e9945c284f4c51b2a00fb70615476d4c1ac.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d866a58a160ea02140a153a4325ee08837ea5b0710a6025d40e0cd57b54fc3aa.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/369c6e39a7994992ded383f2a6e1611815fc6247e5a3ca904249770aef390c0c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 454,
+    "title": "B包封 B黄箱",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 26,
+    "agent_name": "贤者",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 101,
+    "ability_name": "玉城",
+    "description": "B包出手，封锁 B黄箱路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/0ec00f6323ad52ff4fb9449c69a0fe10249988fe930138df3257b4fe4fcca6c0.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/454",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fa1372293b07cb9cd8fbf9a04dd355eec4e85e38c017037d8fa25012bf77df4f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d2b7c677be308f8f67a8b609b6d6394314c09f3b2483621b40fb9f41b754aa8a.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/584ebcb57e6b89eda342515ddee6040a3ad9c3ec77264912e6e9d0aae2d523a0.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/afcd5c6dc69eb71e9e4205f87cb41b7e120803253af4bd8eff577c8565d388c1.jpg"
+      }
+    ]
+  }
+]

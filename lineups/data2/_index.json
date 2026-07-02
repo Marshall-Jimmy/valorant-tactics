@@ -1,0 +1,86 @@
+{
+  "source": "val.isoox.cn",
+  "last_updated": "2026-05-20",
+  "total_agents": 13,
+  "total_lineups": 1684,
+  "agents": [
+    {
+      "name_cn": "猎枭",
+      "key": "sova",
+      "lineup_count": 240,
+      "maps_count": 10
+    },
+    {
+      "name_cn": "奇乐",
+      "key": "killjoy",
+      "lineup_count": 139,
+      "maps_count": 10
+    },
+    {
+      "name_cn": "蝰蛇",
+      "key": "viper",
+      "lineup_count": 230,
+      "maps_count": 10
+    },
+    {
+      "name_cn": "炼狱",
+      "key": "brimstone",
+      "lineup_count": 225,
+      "maps_count": 10
+    },
+    {
+      "name_cn": "夜露",
+      "key": "fade",
+      "lineup_count": 238,
+      "maps_count": 10
+    },
+    {
+      "name_cn": "贤者",
+      "key": "sage",
+      "lineup_count": 78,
+      "maps_count": 10
+    },
+    {
+      "name_cn": "黑梦",
+      "key": "deadlock",
+      "lineup_count": 200,
+      "maps_count": 10
+    },
+    {
+      "name_cn": "K/O",
+      "key": "kayo",
+      "lineup_count": 102,
+      "maps_count": 9
+    },
+    {
+      "name_cn": "盖可",
+      "key": "gekko",
+      "lineup_count": 87,
+      "maps_count": 9
+    },
+    {
+      "name_cn": "钢锁",
+      "key": "lock",
+      "lineup_count": 42,
+      "maps_count": 8
+    },
+    {
+      "name_cn": "不死鸟",
+      "key": "phoenix",
+      "lineup_count": 36,
+      "maps_count": 9
+    },
+    {
+      "name_cn": "霓虹",
+      "key": "neon",
+      "lineup_count": 12,
+      "maps_count": 5
+    },
+    {
+      "name_cn": "维斯",
+      "key": "vyse",
+      "lineup_count": 55,
+      "maps_count": 8
+    }
+  ]
+}

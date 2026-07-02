@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "agent": "fade",
+    "agent_cn": "蕾影",
+    "source": "",
+    "coordinate_system": {
+      "type": "pixel",
+      "width": 2000,
+      "height": 2000,
+      "normalized_range": [0, 1]
+    },
+    "last_updated": "2026-05-19",
+    "total_lineups": 0,
+    "maps_count": 10
+  },
+  "maps": {
+    "abyss": {
+      "name_cn": "幽邃地窟",
+      "name_en": "Abyss",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "ascent": {
+      "name_cn": "亚海姆城",
+      "name_en": "Ascent",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "bind": {
+      "name_cn": "纽交所",
+      "name_en": "Bind",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "breeze": {
+      "name_cn": "微风海岸",
+      "name_en": "Breeze",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "haven": {
+      "name_cn": "裂隙圣地",
+      "name_en": "Haven",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "icebox": {
+      "name_cn": "冰河矿坑",
+      "name_en": "Icebox",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "lotus": {
+      "name_cn": "莲落古城",
+      "name_en": "Lotus",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "pearl": {
+      "name_cn": "珠光大厦",
+      "name_en": "Pearl",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "sunset": {
+      "name_cn": "落日无间",
+      "name_en": "Sunset",
+      "lineup_count": 0,
+      "abilities": {}
+    },
+    "fracture": {
+      "name_cn": "森寒冬宫",
+      "name_en": "Fracture",
+      "lineup_count": 0,
+      "abilities": {}
+    }
+  }
+}

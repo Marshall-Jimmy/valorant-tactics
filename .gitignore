@@ -1,6 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.*
@@ -10,32 +8,97 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
+# Testing
 /coverage
 
-# next.js
+# Next.js build output
 /.next/
 /out/
+/dist/
 
-# production
+# Production
 /build
 
-# misc
+# Misc
 .DS_Store
 *.pem
+Thumbs.db
 
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Environment files
 .env*
+!.env.example
 
-# vercel
+# Vercel
 .vercel
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# TRAE workspace metadata
+.trae/
+
+# Electron release artifacts
+/release/
+*.exe
+*.blockmap
+
+# Debug HTML files
+public/debug_*.html
+*.debug.html
+
+# Lineups: raw scraped data (intermediate, not for repo)
+lineups/data/
+lineups/images/
+
+# Public lineup images (large webp, served via OSS)
+public/lineups/images/
+
+# Map splash images (large jpg, decorative only)
+public/maps/splash/
+public/maps/icons/
+
+# Data backups
+*.bak
+
+# Screenshots (local only)
+/screenshots/
+
+# Scrapers cache
+*.pyc
+__pycache__/
+
+# Unused root-level scripts / drafts
+/deploy.bat
+/deploy.ps1
+/serve-dist.ps1
+/server.js
+
+# Unused draft documents
+/doc/
+/docs/
+jimaVaroTacts_*.srt
+jimaVaroTacts_*.html
+jimaVaroTacts_*.md
+抖音视频脚本.md
+数据导入导出安全评估报告.md
+
+# OSS config scripts (contain credentials)
+scripts/upload-to-oss.js
+scripts/upload-site-to-oss.js
+scripts/merge-coordinates.js
+scripts/check-oss-config.js
+scripts/check-oss-full.js
+scripts/config-oss-website.js
+scripts/fix-oss-inline.js
+scripts/fix-oss-mime.js
+scripts/fix-oss-website.js
+scripts/replace-oss-paths.js
+scripts/merge-coordinates-strategy.md
+scripts/gen-docx.js

@@ -1,0 +1,1441 @@
+[
+  {
+    "id": 6078,
+    "title": "A厅烧 A连",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A厅出手，压制A连附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/8692e62ab57f7bb987b519087772a52d6a74f0f8414b2fa968598b1a994e53dd.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 5,
+    "heat_score": 50,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6078",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ab69d0cc6691a7ebab4ca37558a42f31d7497c218b146cb3ab5e44c2133c298a.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fdf1a211bbb8de18b8755939786c6a97f898dbae6273244954bb0bb9e22c1e15.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/95950f191a5b6a87300137630e1b7f4f4b3e408de4ec0bdad4dc88409dc95388.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4564,
+    "title": "A厅烧 A发电机",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A厅出手，压制A发电机附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/d7d333f233d8bbb516d9ab2e818b1e80dacae90314095d9c3b38639abe5efaa2.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/4564",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/640bb10ca9b001ca844bdc92f8393b1c3a305560183eedc482d69fc191b52cef.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/638c8c0868b539c73542ae5f3940cf1f09881ea99bf6df328a7ff018dd677894.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/d4fac4d6ba81d4fdd5082c896a1cb8028b308d03cdc6bb678a8301c912d23bdd.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1011,
+    "title": "B大烧 B包",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B大出手，压制B包附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/a5cde1e3ffd01f01053ceae87eed1ab95033026b12a36d05c85998e083dae413.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1011",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b20937664ad3f08c6dc6b663e58d7b7723426ec44866c4918afe05ee3a130b0b.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ece6520d21c1fda23225e2cbd6a2ba7a70ab63e9c7a9860c37600df8d85bc34d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d35cc60522f1092245ce575efc990a15b44932c650e7342e15d8daf9a5155146.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5660,
+    "title": "B大烧 B默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B大出手，压制B默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/c4ee8c3a158b127a85b58347b2d5769291306ebd5208bfa5932a62018b927af2.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5660",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/883e7a763984e9dfa8c3dfcdebcdb84cddfc4de81de37f783a56862dd6fe6b5a.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/3ede2df073ba989d3d8992c62ecacc2dadf60d67950861eefae04eb659b5052c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/3f9ddc72649b31a290d78b37a169ab87b95a51dc930c721da6af00a471082365.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6081,
+    "title": "A发电机烧 A默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A发电机出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/89d9c04f7efe66b1d882bd01e931aa03dd265fb5767dd733c2d124609e33deba.jpg",
+    "view_count": 2,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 2,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6081",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/88ff476bbe338255ced742c788011a87e2c8e5dd7de2bf1d30841d5383231f97.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/32dad5bf81581c4742c6a735c130de5352f5b6fb9f001d9d564586af57f6bb80.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/e0d2d8335532a63f380b852b88c174b87a8c76e12955c389521ffb874e000975.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5382,
+    "title": "A高台烧 A默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A高台出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/d3d93c9e2274e5d8fcea64fdc286a8e8cd5f76e24adb08c607ec48f9b6dd5214.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5382",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/1ce8d4379c711410cd34f466745208791e42ba47c6f10038940e14ddf2f6359d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/1164ddc976dde7db691ef37d378f9fec310b0cea64f1609729f46c0c5dad7abf.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/481792c69c43d4639ec16fc7a13a35f8e2fa9cb4ea805ff2a27bd5e98e3eb2f8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5376,
+    "title": "B包烧 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B包出手，压制B大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/b8db7df83b4eb7c3e41e9aa3fb21f9d0f30e23199d56f78f235b7c9c578df35c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5376",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/16828fca705468077c92121eff4a07e3d13f9545b669c0b4bbb2b99739452b3d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/bc58eb1a1d1f9e92e9eced037af1f98def8765190a01c969b975d3fafc6a00f3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c52155141e1aca31e010d231cf15d6a34fbdb7c715107512a06dbae4ef46fdb9.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/b37c32d2b4bcc5403b7cdc5482e82d499198793ef50f56e2073a3e702f225f74.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3170,
+    "title": "A连烧 A默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A连出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/204b0e49fd2de816b2df9c988119999e7617ea6223fd49e0e3a8d08df9656ff6.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3170",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/cce7518f88c0cb1d601d8b70fbde8aa8b47616046b5c6a9a96fe60aaef052ea4.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/48b20ce691d7f65917cfa65517d47b4f2e97836dcbcd530ee0cd123e7547fb8d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/dc8c9cb97862142f60ea60be8aff335827a7a21001500f40384dd9756e8f0da1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2961,
+    "title": "A高台烧 A默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A高台出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/4224614e15ff857e3f94da0fde76e249f4bc34acc05e758bdab6c1dce1024f6f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2961",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/74ee558c7e693d890d3035ca97398bebd02bc41a646434c85308da9ea6622500.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/6e9a449ce0881d6bb5f641e886d0b19206ecc58cc6d1da72d0c5fe9400bc371f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/e55274a23bdc73541fce2f91aca58cf0f54e677647df28e17e90a489dc3f1708.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1097,
+    "title": "A前点烧 A大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A前点出手，压制A大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/0d248cccba37cf23a33a3ee028c103cbd8842a04fd81186ebfacfbcfef5c649c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1097",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0ca706f4fdf6d841e16bc50e1cf1f2b6b707c0e6a997ad3b1282ac04730b99ad.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/14dae9a95965b365a5eeb8a1654d0907a866e07d83e9104cf1f1a0fa6fd6265e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/73c924da9d5b54b953e34467db1a7ba1b1ca5b018e8852af5e06f37de53e3449.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/0ecef38ca4bdb45897587f51d54ffaa3227e21babe7c6759dab80269644c5c39.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/41a1771e27ec43f58d9e88f3471867c72ba0a317e8a4d1447849ce6096c8204b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1000,
+    "title": "A高台烧 A默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A高台出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/6c9147de32dd55173c41b3697129515a6bf6d5c9f9cdad82a881fec5f8754d2f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1000",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/813894652779d31cb7fe19f5bd44887743e90bb6a2f3be48276c7a7b4445279e.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8e67241ad4bf952a4dd0884fbb9c1a1aca507b9b741a16f1a3d8076112f7318b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2b26a850ed542df8cfade46b31a5dfdda055338f69a0ca550044e589ea2a2496.jpg"
+      }
+    ]
+  },
+  {
+    "id": 586,
+    "title": "B道烧 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B道出手，压制B大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/2bd39ca57df551fb38078d44d57d60741e1ab7891d9b17505ecd805f23d9777b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/586",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4da1cc6b8c09cf713859b07265c8945371c2007940bf8dfca7b6d39ec01669c2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f62972a93efe8ca3b64b13573ea6af34309d23c0ef92ec1be96799e4f9bd3fd3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b4831c779b97a5dd01ebf40593a13c415ca3cc0616ee6347a18269fe8f9c459c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 549,
+    "title": "A包烧 A酒桶位",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A包出手，压制A酒桶位附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/4b6038f55927caf73638b5c4a6049d4724e9e0b01575d015b29b411e0f568781.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/549",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d3cfae4b979d24061ead57a708ad94463fb8c8110a8365c203dcef2a2503f349.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5c4eb0670eb014a4e9e78218e894daccee7a4875aee7cc082f9b9ccba9ece66f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/dee807b1c2b6bf1dfe6bc6c90dc9a7b527cd1a4ec25b96f06bbd5e368948bb27.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/029df8b5793c2b85ad663646976bbcacea6ac260d7e1c661ebcf96613b6952fa.jpg"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "烧A大吸球位",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "从A前点出手烧A大吸球位和右侧站位，适合开局卡听球声时先逼退吸球敌人。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/24/46dcae04f670745e29efbed50007574b64b36294d542342cf71c99d17455a523.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/22",
+    "steps": [
+      {
+        "index": "01",
+        "text": "贴到A前点铁丝网和石头之间的角落站稳。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/24/ab314fb850e66fe2e74de10572ae157ded6bcc5c798122ae25a1a32d5710bdf2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "继续按图调整站位，确保完全卡进角落。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/cdb3237d644ea52935bf4a20913b37f1bb9cd2132580bb63a6c74263be471d9f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "让火热手感投掷图标右侧三角顶端对准深色砖块顶部。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a4164841d74545d9181bbb04b2b011b29bf07a7fa63b4eaf569eccc66a17423c.jpg"
+      },
+      {
+        "index": "04",
+        "text": "直接出手，火焰会烧满A大法球位右侧区域，可接闪补枪。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/cfcda1f8ea3519df216c08176e0bbf9fcbd49368660df6dfe6050cfd57ac69f5.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1948,
+    "title": "A厅烧 A高台",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A厅出手，压制A高台附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/ea36c9c8f05a4d19f97b717bdd06a584f013b918d4ae32e16aac02b43b25bbc9.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1948",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/1cb9fbde0a86f595975a9360b27d48d8b0053804abd57726e5650d964220d1a9.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/c283ce4717b5c332be284824163e498bae7cc06ffde2c8a235e672491c9d1350.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8ba02dbe9b4a994110a7b8061a64a04db5d6e6b1db933e5eaee6ebf219a2f167.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/5a68d3a975572f4ebabf3e282486636d81555409dd1837b400dcecbb280856a8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 477,
+    "title": "A大烧 A包",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A大出手，压制 A包附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/f464e0e8f07e2f709ff89d7531a5a297542a055abcf0f625449a7b1b916e290d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/477",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/da4f746b9a35f753fa2eff71f46cc2600e418ef3b9761fe7c5fb6b05a544f7f6.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b40b13c509dbe6092681b8766a2b5a0b546725bdb08694b447bdaead2f08fc0e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b27ed22bc169759c44deb80db4afc6c5ae757a91d3e2a19e167fe33ab9667e38.jpg"
+      }
+    ]
+  },
+  {
+    "id": 629,
+    "title": "A高台烧 A大",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A高台出手，压制A大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/8d4e806e6fb67e9fa9043b73bcf0cd7ede4e9e24e81dd8b6559cec1bb1f048b5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/629",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/10014ae95349891a6c73d8f352624a1fd9aa62411e3fcbcea30ca53655734993.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8c0d546a134e9406de7ecef16464ded63f5bbe83941775712c81732479feee5b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/71943c372cc4c59b5cdec238fce855273492a86a29a2f548ca7148a2cb41e0ef.jpg"
+      }
+    ]
+  },
+  {
+    "id": 482,
+    "title": "A落点烧 A包",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A落点出手，压制 A包附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/19934136f513d69079f30a3d1bf3eea3012ef963ec058f77072fc0061987afa4.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/482",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/990462abb18fecb379256decf8366670b56eadd226d893b0a8deec813abbc832.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fd8697b5ba2768aa39aceca1c9a717557a41ba574ac4dddbb03d9562ea5bfe76.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/3e31ff294fc4fc41f9c727e3aeb4fbb444e6beb66c0d9951f11d217daf7ad28a.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2818,
+    "title": "B小烧 B包",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B小出手，压制B包附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/1e0c22279c9b6c536c7c690e1ee380045636a2a399fcc64a2605aac4a425b8f2.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2818",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ea4e0e9e75318419f03aebe79b627506d418337178bba12c0b45098d3c6dc724.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/6f2543b6db06c4ba1a658b4382c2b8041870906a74b956cbfd5a37330af7d914.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/9226005b312df96d2e9237c8bbd8ca73f9a52de0b9a41528a002a7b0ce4c430f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 625,
+    "title": "A小烧 A车位",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A小出手，压制A车位附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/860bf9bcaf9546dae4961fef64d946b6d53a598852ab591a75ec64699fc95cd4.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/625",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ea6b2cca85d4820c9a4f0ce909f055df1436ed7e4eefa02d4b404e9aa1820118.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/80d67934977692dc7dccac3409593381639879a7e2d6607a48823faa5f2a261e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7273c1ca6b985673cf412e6925e6e5d516d9ca9c28f4bca0a330ad6cabbd2b41.jpg"
+      }
+    ]
+  },
+  {
+    "id": 491,
+    "title": "A短烧 A箱后",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A短出手，压制 A箱后附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/2c3186afba288a81f32803fd44c3567e9cd2a1f7bf8ae7c713616ea035c2adfe.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/491",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/45cf33119441a1626ab3d797e3e5678ac5d20ed1d8613c5143acbe3d36e8862d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/9883dd33ab30bbce277d26b666c5125250f03c836c11754d3be136ed5fe53179.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0cbe9603a66e97bd7b88e0f5262ecfa67a02f67ae901fa2cdc564451f82d9139.jpg"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "清B窗口左侧",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "从B连出手清理B窗口左侧，方便队友进点时只需要补另一侧窗口。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/24/313ca405d52ce209a501c213d4b4ab2c76ecc1dc263a13559450bf6c942eb098.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/19",
+    "steps": [
+      {
+        "index": "01",
+        "text": "贴住封锁线和拱门这处站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4350a801a67e797e4fe153ace93bc081b5b2c5fab0a339725e631ddf4d0e81e6.jpg"
+      },
+      {
+        "index": "02",
+        "text": "看向太阳能板左上角，准备跳投火热手感。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8795838a24174c06117621a4c5cc26e38deff708a18874f8643d4c04292eccef.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手，火焰会清掉B窗口左侧。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/34b498ac8264d378cb9675f0e010700e3dc56f137144398065bf5b74e67d864c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6169,
+    "title": "B包火球",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B包出手，压制B包附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/49dfe5e1bde1f02547345491ae75584c9edd0cffb92fd712c0222de2c333067a.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6169",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/322941e568bfd6da16ec39cae3bacaa86e94ac11048b4bbfffa7cef50db73011.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/2fbf3172619e290752ccf6cfee47addae8b001f57000d15df6d1ce3e5a2eed66.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4abc82a75dde73a5f9bd453c49b99de9794e8d3cfdaefa66b7ae9276a47e255f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 818,
+    "title": "A灯位烧 A死点",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A灯位出手，压制A死点附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/978b35cd215ad0c637b89a3d690fda9d06aeedb2d66948dddb36a8f25c50021f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/818",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ceee7610134180947b185c3dab96d67d50e64f69856d0fe6ae078d66ab70a56c.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/3635f5634e0d9b8fb96a5f6f1bd32ffc6a16d6f614f24cf908867ee33c575408.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/30159c6e479b274d45913a785cf9d3801f5fcd44b81698f327c29ee85dc9793d.jpg"
+      }
+    ]
+  },
+  {
+    "id": 435,
+    "title": "B包烧 B大",
+    "map_id": 5,
+    "map_cn": "微风岛屿",
+    "map_en": "Breeze",
+    "map_key": "breeze",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B包出手，压制 B大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/ade60c9a4fabfbde96b9461f760da9225a7e452700f2ed4681be45565bc5394d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/435",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/83adfdd402e644488c14e5e49b1df2739ccbd085e567a4dacb22b6e4eef9f3cf.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b2f4383fd31cec42c3bf09340ffb9c22052c16f9b10b689659a77d8194a72eb6.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4e664129c05b14f178991b2f6aaf8115eb6caae97d282c45c40d67fd647cf389.jpg"
+      }
+    ]
+  },
+  {
+    "id": 606,
+    "title": "A大烧 A包后点",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A大出手，压制A包后点附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/723bdd6c8bc53d40f5c600c9f82b2ea7cb68890f8ddfe190f24c9885a0cf60c2.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/606",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0a7291c011f5a2f077733bb07e167504fc58d3168210952ec9a7771e2d9aafd2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4c542f60fe97e4ab886b66c2777e179e4011e605f83df1a4bdc2f0a573cd7d26.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a1dabd8fd74de314759c30d73afa6f09086236cb9f25a0daa0716c7913cc0b60.jpg"
+      }
+    ]
+  },
+  {
+    "id": 638,
+    "title": "C转角烧 C大",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "C转角出手，压制C大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e7347f0b7b1d9fdd5fd8fa0e7a509fccc2a9aaf993c0af44589cfd233d97ad15.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/638",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0132c088b7123a0caca93ba916f23350348472de8ff31dd474e4eab80a37ed23.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ad3f263c92cb92ade079f944e32c264cfbe0b8b143d2bd1486ed372551c26863.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2d71b3635621a0fe5429befee7471ff7ee3d5b9db0ef564d1ddf3ad3ef81d0a5.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4810,
+    "title": "A大烧 A默认下包点",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A大出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/6cb41f5e5bf2572b492ad50cb06e7ef3e651e076e575580e125b5908c9882101.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/4810",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/20dd6b2045e54362c259941919e0440015030168f997ff179021ca11566cab77.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/00bde5160ab9c747be246277d9799f7f89d2b77f3b7429e08e916f3e1a3ff821.jpg"
+      },
+      {
+        "index": "03",
+        "text": "正常左键出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8fb71306c75d12f6a533f77c4f7e5fb4eab35ba049819ded98fcddb7da354db1.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2906,
+    "title": "A大烧 A包",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A大出手，压制A包附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/b11531f6c4cd8f8155c025ae78dd8299b174a472ad392d3ce162c58d1ea46329.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2906",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c82f5ce0caf760e1c3b769db72b2e830cf92d55413d685f0bfc4743cb753b998.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f566addf315b1fb1b39b4035bf99bda7d427d139142f34cfb5a185459a0c6d6a.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/97c8f44f8c965e0214077ce2a8a1390380342927a992cfa39847be30eb5531d9.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2829,
+    "title": "B大烧 A默认下包点",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B大出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/cd4a65f805b72b0d3a87e76c966a74b66149ac577a34784e17d2cb5046410002.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2829",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/a1a95fe3d83a3ee29e7b8b0f952cb9a4d09bb2375ba9f2de392e71615938281b.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/a5b244db133e956b512916a237cced76a1f9a7cf8accc166278fe46815d926dd.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": ""
+      }
+    ]
+  },
+  {
+    "id": 3030,
+    "title": "B市场烧 B默认下包点",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B市场出手，压制B默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/3dc37a2f17321fb7a0c36ee73bad7211fc00c31308701e84ed33add49586bcb9.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3030",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/033de2f5088532410f776a57724339698c14b0fac572aa67674aa9ffedfa3b23.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/25bf30bdbeb33f2213e7c418e1bcda4469b0e06a9f806fb00e3b51cabcc2e52f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/4984547877d5ecb3316621c194d8a01c769a149057e708191c8f72075da6149d.jpg"
+      }
+    ]
+  },
+  {
+    "id": 598,
+    "title": "A餐厅烧 A大",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A餐厅出手，压制A大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/a2faf6dde3b006c30f8f172ec1cda43cde5c175be68d74eeead897f8b3231be1.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/598",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0788cead761fecc488669fba793964d3ff50cc4f8ac65d1aac48ec6cebf6dd1e.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b2177d80922eecbc91cc0f8964c9b1ee00e65eeee160f2d51820b6bcaafdd41e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/24167ba17514267e49c0b87a9bfdc8006388a37ccb9358b65afe183de96b61d3.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/547b9235a9ab47b4e7bcba698d3e92bcbf17363bbbba6dc4461b10b85640e1a0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 469,
+    "title": "A包烧 A大",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A包出手，压制 A大附近，适合拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/1c86e938a27aca42ef57143c1a8e6ecc2333350c4e07a469ca82471e5aa4bffa.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/469",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b99926b6771f13e24f61585213ee937425fdc2b0cb4a8b70e803451a31be03ce.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/547d8d005b59c825f479050b0a3958b53036bb7374342143f1c3175f221022ce.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d53a89ed29c82515124ac0061e4d9f93508a84f8dfefbea69b7359d880b91a0b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5608,
+    "title": "B绿箱烧 B默认下包点",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "B绿箱出手，压制B默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/3a669ffeeb56c215b8b974556e906eb0117b1e15febf8a42317647796d3630f2.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5608",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/e9f16a375b9b83a5b8b55b9802f1b2ee5af5cb71469cb203fc68bc594b607afe.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/48ce7ecfc5ff7349c4fea1510e6d00aca9478d53d1838185f9bc2d5beac082f0.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/cecf1212e31304d389bafcc9662a672cf34fbcfad5b882d07ed0543daaad3622.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1037,
+    "title": "A大烧 A默认下包点",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A大出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/7ca42951ba56a4b3514d6d7a3402248f7c70de584cb70776f65c63abffe131d0.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1037",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/666d4dd8824f639e32f742bf2b71f0633ca995220da315bdb5f449aaa0d6e9b6.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/0ca612d54c2da5eb7d1312f50cd5e1e73bc78cf93247820f1cca57bce8d30e5b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/27d9b53deefb7d7bace05af6bcd5cc9fc6d3689238cc9cd9d2af8e381d63afa7.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1971,
+    "title": "A大屏烧 A默认下包点",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 17,
+    "agent_name": "不死鸟",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 66,
+    "ability_name": "火热手感",
+    "description": "A大屏出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/8c7099e8e1b798b095b57a138e2420de767de546c0629be32f5df21bea6772e3.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1971",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ea4574a628d4ab0e880dd1a50f4cfb08ce1ee072ab2f6cad0f8e62de79f91fab.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ab72b58a3b4b30aead53164f434c8ec5adcefd551d8906a5855efe70402781a5.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/60ae37d36ae462b253fbbd3de978bc0f50200f2fe1fe7be62c283c589d2cbc93.jpg"
+      }
+    ]
+  }
+]

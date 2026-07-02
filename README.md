@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Valorant Tactics (jimaVaroTactics)
 
-## Getting Started
+面向《无畏契约》(Valorant) 玩家的战术规划与点位学习工具。
 
-First, run the development server:
+**在线版**: [varotactics.netlify.app](https://varotactics.netlify.app)
+
+## 功能
+
+| 模式 | 说明 |
+|------|------|
+| **点位模式 (Lineup)** | 12+ 张地图 x 15+ 特工的完整点位库，支持图片/视频教学、筛选、收藏 |
+| **战略模式 (Strategy)** | 在地图上自由绘制战术路线、放置特工/技能图标、Undo/Redo |
+
+## 技术栈
+
+| 层级 | 技术 |
+|------|------|
+| 框架 | Next.js 16 (App Router, 静态导出) |
+| 语言 | TypeScript 5 |
+| 样式 | Tailwind CSS 4 |
+| UI | Radix UI |
+| 状态管理 | Zustand 5 |
+| 国际化 | i18next |
+| 校验 | Zod 4 |
+| 桌面端 | Electron 42 |
+
+## 快速开始
 
 ```bash
+# 安装依赖
+npm install
+
+# 本地开发
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 构建
+npm run build
+
+# Electron 开发模式
+npm run electron:dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 项目结构
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/            # Next.js App Router
+├── components/     # React 组件
+├── data/           # 静态数据 (agents, maps, lineups)
+├── store/          # Zustand 状态管理
+├── types/          # TypeScript 类型
+├── schemas/        # Zod 校验
+├── hooks/          # 自定义 Hooks
+├── i18n/           # 国际化配置
+└── utils/          # 工具函数
+public/
+├── maps/           # 地图 SVG 资源
+├── agents/         # 特工头像
+├── abilities/      # 技能图标
+└── lineups/        # 点位数据 + 图片
+scrapers/           # 数据爬虫脚本
+scripts/            # 部署脚本
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 数据来源
 
-## Learn More
+| 数据类型 | 来源 |
+|----------|------|
+| 点位数据 | [val.isoox.cn](https://val.isoox.cn), [lkval.com](https://lkval.com) |
+| 地图 SVG | [SunkenInTime/icarus](https://github.com/SunkenInTime/icarus) |
+| 地图元数据 | [valorant-api.com](https://valorant-api.com) |
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

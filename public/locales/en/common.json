@@ -1,0 +1,213 @@
+{
+  "app": {
+    "title": "Valorant Tactics - Strategy Planning Tool",
+    "description": "Valorant strategy planning and position marking tool"
+  },
+  "ui": {
+    "undo": "Undo",
+    "redo": "Redo",
+    "screenshot": "Screenshot",
+    "clear": "Clear",
+    "loading": "Loading...",
+    "loadingMap": "Loading map...",
+    "select": "Select",
+    "draw": "Draw",
+    "erase": "Erase",
+    "ability": "Ability",
+    "agent": "Agent",
+    "tools": "Tools",
+    "selectMode": "Select Mode",
+    "drawMode": "Draw Mode",
+    "eraseMode": "Erase Mode",
+    "placeAbility": "Place Ability",
+    "placeAgent": "Place Agent",
+    "shortcut": {
+      "select": "S",
+      "draw": "Q"
+    },
+    "screenshotFailed": "Screenshot failed, please try again",
+    "drawColor": "Brush Color",
+    "drawThickness": "Line Thickness",
+    "clearDrawings": "Clear Drawings",
+    "drawingCount": "Drawings",
+    "clickToErase": "Click line to delete",
+    "freehand": "Freehand",
+    "line": "Line",
+    "arrow": "Arrow",
+    "duplicate": "Duplicated",
+    "textTool": "Text Annotation",
+    "textPlaceholder": "Enter text...",
+    "placed": {
+      "ability": "Placed Abilities",
+      "agent": "Placed Agents"
+    },
+    "dragToDelete": "Drag here to delete"
+  },
+  "sidebar": {
+    "tabs": {
+      "agents": "Agents",
+      "abilities": "Abilities",
+      "tools": "Tools"
+    },
+    "drawingTools": "Drawing Tools",
+    "selectTool": "Select Tool",
+    "clearDrawings": "Clear Drawings",
+    "search": "Search agents..."
+  },
+  "map": {
+    "selector": {
+      "title": "Select Map",
+      "current": "Current Maps",
+      "rotation": "Rotation Maps",
+      "outOfPlay": "Out of Play"
+    },
+    "layers": {
+      "ultimateOrb": "Ultimate Orb",
+      "spawnBarrier": "Spawn Barrier",
+      "regionNames": "Region Names",
+      "grid": "Grid"
+    }
+  },
+  "toolbar": {
+    "select": "Select",
+    "agent": "Agent",
+    "ability": "Ability",
+    "draw": "Draw"
+  },
+  "roles": {
+    "duelist": "Duelist",
+    "controller": "Controller",
+    "initiator": "Initiator",
+    "sentinel": "Sentinel"
+  },
+  "team": {
+    "ally": "Ally",
+    "enemy": "Enemy",
+    "attack": "Attack",
+    "defense": "Defense"
+  },
+  "zoom": {
+    "in": "Zoom In",
+    "out": "Zoom Out",
+    "reset": "Reset"
+  },
+  "strategy": {
+    "create": "Create New Strategy",
+    "namePlaceholder": "Strategy Name",
+    "current": "Current Strategy",
+    "save": "Save",
+    "export": "Export",
+    "import": "Import Strategy",
+    "importPlaceholder": "Or paste JSON data",
+    "saved": "Saved Strategies",
+    "noSaved": "No saved strategies",
+    "attack": "Attack",
+    "defense": "Defense",
+    "load": "Load",
+    "delete": "Delete",
+    "collapse": "Collapse",
+    "expand": "Expand",
+    "rename": "Rename",
+    "label": "Strategy",
+    "manage": "Strategy Manager"
+  },
+  "abilities": {
+    "slot": {
+      "c": "C",
+      "q": "Q",
+      "e": "E",
+      "x": "X"
+    }
+  },
+  "draw": {
+    "color": "Brush Color",
+    "thickness": "Line Thickness",
+    "thin": "Thin",
+    "medium": "Medium",
+    "thick": "Thick"
+  },
+  "context": {
+    "delete": "Delete",
+    "rotateCW": "Rotate CW",
+    "rotateCCW": "Rotate CCW",
+    "duplicate": "Duplicate",
+    "toggleTeam": "Toggle Team",
+    "toggleState": "Toggle State"
+  },
+  "lineup": {
+    "mode": "Lineups",
+    "strategyMode": "Strategy",
+    "title": "Lineup Lookup",
+    "loading": "Loading lineups...",
+    "searchPlaceholder": "Search lineups...",
+    "filter": {
+      "all": "All",
+      "attack": "Attack",
+      "defense": "Defense"
+    },
+    "noData": "No lineup data",
+    "noResults": "No matching lineups",
+    "watchVideo": "Watch Video",
+    "source": "Source",
+    "imageError": "Image failed to load",
+    "custom": "Custom",
+    "addNew": "Add Lineup",
+    "standPosition": "Stand Position",
+    "landingPosition": "Landing Position",
+    "pending": "Pending",
+    "titlePlaceholder": "Lineup title",
+    "editLineup": "Edit Lineup",
+    "step1Place": "Step 1: Click map to place stand position",
+    "step2Place": "Step 2: Click map to place landing position",
+    "videoUrlOptional": "Video URL (optional)",
+    "abilityC": "C Owl Drone",
+    "abilityQ": "Q Ability",
+    "abilityE": "E Ability",
+    "abilityX": "X Ultimate",
+    "standScreenshot": "Stand Screenshot",
+    "clickUpload": "Click to Upload",
+    "detailImage": "Detail Image",
+    "saveLineup": "Save Lineup",
+    "cancelEdit": "Cancel",
+    "favorite": "Favorite",
+    "unfavorite": "Unfavorite",
+    "myFavorites": "My Favorites",
+    "markerDisplay": "Marker Display",
+    "hide": "Hide",
+    "mouseCoordScreen": "Mouse Coord (Screen)",
+    "worldCoord": "World Coord",
+    "selectedPoint": "Selected Point"
+  },
+  "mapCanvas": {
+    "flip": "Flip Side",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "resetView": "Reset View"
+  },
+  "settings": {
+    "title": "Settings",
+    "resetToDefault": "Reset to Default",
+    "shortcuts": "Shortcuts",
+    "duplicateElement": "Duplicate Element",
+    "deleteElement": "Delete Element",
+    "undo": "Undo",
+    "redo": "Redo",
+    "grid": "Grid",
+    "showGrid": "Show Grid",
+    "snapToGrid": "Snap to Grid",
+    "gridSize": "Grid Size",
+    "drawing": "Drawing",
+    "defaultColor": "Default Color",
+    "defaultStrokeWidth": "Default Stroke Width",
+    "mapLayers": "Map Layers (Default)",
+    "other": "Other",
+    "language": "Language",
+    "showDebugPanel": "Show Debug Panel",
+    "autoSaveHint": "Settings are automatically saved to local storage"
+  },
+  "error": {
+    "renderError": "Component Render Error",
+    "unknownError": "Unknown Error",
+    "retry": "Retry"
+  }
+}

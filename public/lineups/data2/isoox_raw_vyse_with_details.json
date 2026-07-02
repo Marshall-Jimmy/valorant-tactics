@@ -1,0 +1,2337 @@
+[
+  {
+    "id": 6102,
+    "title": "A厅封 A高台",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A厅出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/120388ae65f54c6a95fbbc5ec4c28a2dbd3f3d852b520b242d36cf03e1977cf5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6102",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/bbb23ed6ba26a44d6bdb015f21660ea908a7155691ff92e253a0499d23f99332.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/b7b79f139ca02e990a6b70fbd24ba304d783e2c086e156a51776f86da1ac2cec.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/dd589e115f757c745c84bbe9528fbb32c460eecd88c92ce94c67e1e14df079ad.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6100,
+    "title": "A厅封 A包",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A厅出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/3024602f25c3dd0b7ffdf9eff4ee0dee9040f642068b5e2151ce44028db80085.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6100",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/4b9149b9910963ec29fbc32bac0b65122d37a58821c03887a72431dd826746c1.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/1744bb00f274ccd23787158a5d025c826b9b34029e1c40981e66cf9ca4fd3db2.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/a22038f427197b015ce80328391983bffd897a84219dcce63102926d677d06dc.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5939,
+    "title": "A厅封 A发电机",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A厅出手，封锁A发电机路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/421afeea198c95843ca4f2d1c6d6b03afc24e203181d7e70ad425354730bdf2e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5939",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/62c1a0dda48afd22afcde44edcaa8249c8ed588be8543b6b27148c5e405674d9.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/17d7bb57bd9d170c65af9f840192e9ef41d98e1b43a0c41a9a9c47799fe2ebed.jpg"
+      },
+      {
+        "index": "03",
+        "text": "轻点，按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b9d9da2d06cdc309eea6b354f2a6bc8c068e05b928b430159c336f633677649f.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8dbf1aa139dfec1d2b1e3cd0be4e812979b0faeb1062e194ed259dcd1b9fd83e.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5872,
+    "title": "A酒桶位封 A高台",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A酒桶位出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/893302f1efbec76abce980c0bc152396d5c90c1833c6e6e4816631140ec202d3.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5872",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/70b72a5843cd8d0ded5a414d6fefda0e0c673cb3f8c8c7ec0875c3a88b557a84.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b7858b0377c047e7e7f46d905c6e2008a96018b7f5bd5b6fc642f745162b5ea3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/a30db0549d3e8d894a91ca1ad11cfce21111f8750a3c87376e2af1416ec1148d.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/7280edaad2d7408478411b1036c53551cde5cb0299e4841988455ef134817483.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8e0afa43e30dd7e7409b08ae9218fc27808fc4cc3a62196297d134ba86fa0af3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5869,
+    "title": "B大封 B角落下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B大出手，封锁B角落下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/de9182143da6099342f36f2215fe85c748b6fd730ee30a382b1d452a7d6f2490.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5869",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/faa4a93f4c93fe61bfeb07896b2e4e221829ba5c4cebeb980300db86324332c7.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/34033f80cbef751fed33cc6d6d26bab4e79a762e4ff1b169ad6161b717bac466.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/45b8b8d9d21f2212104445fbece61695a5fbb7df591b935985c03867051bbedf.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/ccd93ab6ff01b611d88c85caed60ad507a1eee1d6481e880d0ddd6c739a1a18f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5855,
+    "title": "B大封 B木堆",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B大出手，封锁B木堆路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/df9d998608c5acce58e77c204bc458d8dddb5d3352158ffb93e04a810f2454d8.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5855",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b745e49b2ed7fda8767c63ddcce8f19dddf31213e6503294d8a57ecf876f187d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/634c710df321bddfa8b37b16d22579e991e2c0061e0ef5fe9b9fef1a3365df11.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/24bafa9715525e1ed17d3c037cc638acbad47b725c1d85803f8ca6ec6da65b9e.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/11f093623336d99b546fe4f50f1c843a7e7223282efd3ef68424fe529925abe6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5578,
+    "title": "A厅封 A包",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A厅出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/b9e8f5b321bdaf8837eb49f84b45264b543d381569323dff1ad31c447b915c89.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5578",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/a9c550188bbba6249db1f16ee8f107819c98e8df5c0edfea84b80ce9b73bfd91.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/6bb4ddb36ffc144c9f7f44fd2a53c0009ba88b74036c88e36912c6ba5f872cc3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/05154514580cfd75998484a10849c9e1590b4cad4597498841b763091ce8638f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5479,
+    "title": "B厅封 中市场",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B厅出手，封锁中市场路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/7b0065585f54777824cd54519451b20e15654f36f7b94026850668a0b5cbc9f5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5479",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/a0843d3cdeb4623d5529519c498bea7ebecb6b1e47302ac94e787532ab2e1641.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/14530ea2e4170280a57f232d847938e5a5c09c4d4e1d8629bdff7eb0329ee0fe.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/2df8f24cda6cd0a14cfbcc5c2407ea5a26414bb488d7cecd8b2623da291080a7.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5350,
+    "title": "B大封 B楼梯",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B大出手，封锁B楼梯路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/499b50a0db9a2479371c9c6155011bfece22dd884f41926cc3d4df0b57a94a2c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5350",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/4c6489c54a05b69a253b42355081973df42db6fe0487c5c6d1e18ccff50aacc9.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/91a1ae216369d52f3b2b7887eed44ea6c6601af9407c0157ab175e276568e813.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d51922e94d31d29be6e911252343b97e92e4c8767c8715c1fde19884d7d15da4.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/a64c5ff2da240f191fd52fc86f92ae8f41da42e6ccc86d4e2a3e7aec24c9223a.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/f6aee18d3b06ed46d230e04c770e8dfaa48cf9a97e824bb739bd95976a163391.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5347,
+    "title": "中连接封 B默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "中连接出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/317b0f1f86b60c23cba5719a5a074502eedecea326a73d5974eecb887ab329ce.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5347",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/0704362905aa86e726a01b14fc9a3f9baff288500c999ff6f1e04e973d88649b.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f49b9d3e7162713dfb0abdb19347f80a1dd63a8dba61e90890bb801baacffaf5.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/dfb9f5aad5d271c5a3d0139c2813c9c1bca03970270af1bee5d47b1e89ccfc60.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/ccb3ed314dd78765057a88adb5a154cf5cf9aad85bd978f5ff8275b1690c27e0.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/3136b03c41dd2566f911bbf5c95595fa829cfeefbef592614a88ece6909c10eb.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5333,
+    "title": "中连接封 中凹槽",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "中连接出手，封锁中凹槽路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/32927e9cc7fa7b1be4d663ce0d53a29c4e529a088d93eb6780dee956533e8654.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5333",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/937a8e6cf7bb86ae38429ea92bdc70f5b9d0b6bdf03d36b3d111bd1c7058113a.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/7ee4208d00ce2a4e49041bf64c94fb8e9d75126ab3e85a813c7df85ac52a978b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0af7bbd3e4b51f6473935a6e080206339cfcd5a69cc42a184cad26568f17371f.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/4b9eef516b1e24d534ad7a78e9299875bcf55e08b5583897aa27dba42abcbc85.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ff7d9070ae422c96b3b9a3911ff6feff57312e5c43b5ec752bb9425b6a0128aa.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5285,
+    "title": "封A发电机",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "从A大出手，封A发电机，适合限制防守方借发电机掩体前顶。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/901b5e5f5a9be646adbdb402b863bd3fe77529354b3f2e7593f10cdbf6c2d7bf.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5285",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示角落。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/7a4ee41b366a5f153e3d88ce9d3ac848e0e9ec04ccd66380a144b7d4474636b6.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星瞄到图示拐角上方一点的位置。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8ebc06d9b0b18e88ce15283afe319deed0b6878b635ce6f28d2e08e8f3c4cc3f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手，剃刀藤蔓会落到A发电机。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ca16c33e875d01b4a9b806198c6f17daaf6d76b06d9ceafea93fa5fce0865144.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6216,
+    "title": "守方出生点剃刀藤蔓",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "守方出生点出手，封锁守方出生点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/aa9a9753b4ec3de1453754ad92ec885e07ef467714d4490711cd5c3f0ce35d5c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6216",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/c0a5b1f5d35d45d6c62f327d3330304373ad7abb6de8aca5e37a0e7ceef7ce42.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/eb25d1f6036eba8b3dda54b8d9a11a5632b4cc72b976bfb909ca072c6ea43311.jpg"
+      },
+      {
+        "index": "03",
+        "text": "正常左键出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d0d8fd29025bc75307a50853a5da7c4a947a2ec9a3bc7da9b2b25f2c12153cc0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5865,
+    "title": "A高台封 A树",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A高台出手，封锁A树路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/85f14b21697f70f0c8a1f39b3348a479b1936f10e2782a3324bc81777abe0923.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5865",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/5e0d479aa10cbf8ab0502e96d0c87e9b48356ece52e17a5aa705d8ef340f9cff.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/93d51ef80a8db1fabab6f1852c9329c90b42196d3d4ab1bddbbea6cb31bac6b8.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c02f035c90706fa5512cecb04f02ae025920f652576011cad3c5aa5667b622ea.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/10b1317f776c279f1a6bbbdd9b2b899a33575c1be902b393319e0222ae63fb58.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5801,
+    "title": "B前点封 A前点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B前点出手，封锁A前点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/cfba5a98abbe43bc0121733e7e429fde92663a6b6447006b235a5cbf5fc2b73d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5801",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/2b3cd3bc4f0a760b251790cca91a0a7e7f6c67f704c74bdfd0e05d7eae509cf8.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/5b29db245964e84d607cbe2e0e72473f9139cd42c22a333f80789048f4d40869.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/8398db8e84a97db6fdaaa9a0134ac1f7a96d1aabd65a6535443efb0d2e16732f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5790,
+    "title": "守方出生点封 A前点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "防守方出生点出手，封锁A前点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/e1dcbce3d45297475a9a6bcd9b0ba4adcc76c3c5662b26aba3e3c03038b65393.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5790",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/6d753a7bd86b91928905544a0d54a4938174a8e2950e2682686ef49a15205a95.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/36c1657ece41e88eb473f5265c19dea2c7f3d8c82074ece7b396c5e3b84794f3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/4eb5be173845e3e9ad4e96d73b5dee1d609225c0f6d2a80a12baca64bf61946a.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/4ef9ef554a146e445260e1339c14948b9b805c40b81ee605581776b3ffd8ec1f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5463,
+    "title": "A包封 A厅",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A包出手，封住A厅通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/8b3f3b6eea43d47ff219ca6017eedb02f4f5beef49937e7b6b6e43d733421e1e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5463",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/1d2aac1066f48c41854de2f1e2d3a0c4f29d85595948b29ed969b5c27fc5cf36.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c6b4ab741dbc015dcf3321f72edfbeaa5dda6c623dbed9df496eba04c988c260.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/e6b49ca58f94d16eb1ce896cdebdaac6e1678f6e0f6f2558715ce645d1a0f26f.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/acd44e8eab29fbb0e9e763cff4f16845a18bec45ae64099a7e365486847bd5a7.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5384,
+    "title": "A发电机封 A高台",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A发电机出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/691f7d97db7a3684e5739729de2e6254ca10c1bed4d07c6fa4cc68f52d0a4618.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5384",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/db6c3b3bb6a4487811b3fef05c89ba588af0f5373eaaf559df535a1e597b1cbe.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fb5fe439e0cc47fde70c5e414b171f90d3123fc3b9d4e048b8db39498b608613.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/335d335a093bb3057f7f3aa810340caa8d77dca5cc6c8eee1bc9fae6489cccf2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5378,
+    "title": "B木堆封 B默认下包点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B木堆出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/ab556bcf35c1b306bb99b35016ed05de97f89137a0ee3858585da6af2e957c2f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5378",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b0a4cd9c3729c4c321a3396e2f092c490cdef7bf622e225e337126e7e119ad90.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/2b6e6b53b577b348406a0f7169c0a4d9556cf2a09cab6fc0e709888f2ed0b3cb.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0ab38ae7a6ab374266d559295596c8425f9920dd2a33e60ebc6a7ac52d4b6926.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/ca1823a934e47ba2b6ff8968ee42d9b3eea5a90b378505a438c0c970b27b5ff1.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/74276c9fa630d69b7b3e8d7227e6495e90a418867c883b7c43388ae2c72c97ab.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5345,
+    "title": "A连封 中庭",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A连出手，封锁中庭路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/79feb0ddb515f3179a6d728d8f23d16107f284351e4d57ab66562b9c04ab36f0.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5345",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0c763afb79711b8979209b3055f2c566e761d9a67733bfb559b10225e56a0bf5.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/1cb1292a1d0c7d883ce000ea4552cc5568d2a6327baaa2eb6d94b8e8fc826837.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/47cbddf286762567cf2edeb47b5cca534419e83e87acb399179ffd376e793978.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8881daee903e4a91404c88144d151980af306b6b74ef1f455b4d98618dcb46d4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5341,
+    "title": "B前点封 A厅",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B前点出手，封住A厅通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/eb101c296deda131766e0872381b6f3b622ea9e8ef2d3738d16be25489093937.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5341",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/a3a24aa7396410e1ee2ecdf35f37f7ba825bac1fe9509a0b183d2ea7f1f07d22.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/032a660dd90847e74dbf6ab2509ff54b94c0236401830d23d7d2716a7fdcf828.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/4ca1e67761d641342a3d83bb40d1e3facb1fb5dc7f1e579f7f440d4295f7bcd4.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/65df233758567ecf6d6e6544b936a942c16af8253020a40c847fed90590aba7b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5336,
+    "title": "守方出生点封 中连接",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "防守方出生点出手，封锁中连接路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/0f606ccecaf037aa3e93890df29244ae4cc3cc58f0c1020cefaaa8a84108e593.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5336",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/98ed8a211df85dbe100138228e2df79e872ddff3eb20775eed44e98569cd92e7.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0c6b278a2ec94d6f766fc6fcb68f4daec7f2797e3ad16d78e66895c1fa6b8dcd.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b3717abc4dc08980719484deecf6aa05cda33de339838b31b8f20a625b70f4e4.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/00bd8679ac1d211842b170bddcbf30271f4f53fa8cd8457b6bced4c1cc8437b8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5326,
+    "title": "船屋封 中猫道",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "船屋出手，封锁中猫道路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/fcb449d7f8d3d9a8d44c73850cd6d8cf090a530c12ef16128b586796360d153d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5326",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/1346ccaf0917adf63e09eb84465c87deb47ea1b9f1f3ebe8907810b75b247d67.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d5d720acc7deca91c4f3642b3b08bdc1b99c16b855e87532e46bc031c90af463.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/ad5d23fc84293b760aa4e72f6f62595d03482307040adccb2f1c676748659907.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/dc5fc9af495b8c7e07edb3779ef81f87b03f66b5bc1c3e3a3fd54ce56f895f3a.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3827,
+    "title": "B包封 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B包出手，封住B大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/29/072dc5e31f6157fcc09aa9844c1eace27f6be5e966fbf5217ee31b62579f3d0e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3827",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/87f324d4e68baf89179f79b0dd080d4bf8a07cb769c19ff3792aa711a12cf05e.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/051e039810217b031aac4003f3eda71a9590289005ba4c4fbcfc4dfe15f787c3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/de931f2cca6c48641a8ac7022e0dc6c69a43d5115f6343bed2f3ee0616fd9939.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/4a658a70f679956db9104a44935ac4dfe418ca83e64745aedbddd357ef130223.jpg"
+      }
+    ]
+  },
+  {
+    "id": 480,
+    "title": "A厅封 A包下",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A厅出手，封锁 A包下路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/15cdde1b883f5040d72c4673b3b1e24cbfeb505739cfee92d1ec66bafae8cf1f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/480",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/1d8466e91e1100feee630c994c3db27acc7f5484986128e761f117bec581c630.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/57cae68ecdad542942462c01e26330c1c305ab5a5a2a2b1f6cad8182258b2b72.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/aabf53c69c6a7668fab7b230b852b391b6a5aa0f211097e2eb37d62fb3f15a6f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5573,
+    "title": "攻方出生点 桥位封 B塔",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点 桥位出手，封锁B塔路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/398e6a5fdbef64417d56012584fb1c9fa9f81ad77d9b6d576f6538ecaced043f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5573",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/811fedccfcd3a0c546bb9689c6f1b0f44fbeba3f0d112f161180796e3dd66e5f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/cc6fe1e2e12b9809b3e876c451febaf81da2b97e00e7ce288a1c1d81c4c4685f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f0c0cbed477b83dcde462edd2950cd74a65d2e1f8fa60bf3f2e651d48cf429b4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5206,
+    "title": "B大封 B箱后",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B大出手，封锁B箱后路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/034396d10891724d07b03e52bf5da07402d1145f8dc5c2b1f8270b6edae85fc6.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5206",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/7dbadad9c7e9bb6b6dc99f20dc1c09dfba47315a44d14328ac39efaf500a547d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/ec428ac68dab4d553f1e4741eac20a19a70cdf86c3f28914fba2bda089a0576d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/94b79544e42045c4a84005fd1ce156e784d0c41b77af7494d1359d0c589a7b24.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5198,
+    "title": "攻方出生点封 A包",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/5401b3c40bef70fe931d37b3fcb3f613f3f029d4d7f2de0aeddf88cfb9f827a0.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5198",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/80602da614b34eebd970b9f9649d19ddb333aecb2a7335e99633b492e387d2c1.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/755872db9c4a7282a496065f93e6a81540322788e845ef2346a06a9642987da3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/5569920276c41344c745cb30959a80897ea667525cbf0c8538d40969a491583d.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/261f8e8ed25afe59cba454f856cd99c8e6fc41731c8a0b6bbf7c526f58c66e32.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/2fc5e230f95dcf93f6073d2bce40645a16fc33288e86eee3d6f09415d44ce84c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3450,
+    "title": "B大封 B包",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B大出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/191019de85aeaadae58fe6970416c129c8112ba99db04243530d3e6d26d0236b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3450",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/98df87d38f968dd5a12af98973fb3eca4642685f91c4c0c8855e8bc07cda7b09.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/48272d2f30331ed608c877cb7db40d75771a7d0222e4dc3bcd4192992d0f012d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/0916edc5a840c53038ea12ffecde8aff725d029282c6461e065c62b4724eee90.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7606100972e34df152b5b8a92f6d9ab99294e5e7094f2abb49034dbc367fa738.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0fa106f6f5a7f97eac5f01cfa3a8fc5671b12f020632ee4a2e80fa10a2a61a44.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2760,
+    "title": "B大封 B包",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B大出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/191019de85aeaadae58fe6970416c129c8112ba99db04243530d3e6d26d0236b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2760",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/98df87d38f968dd5a12af98973fb3eca4642685f91c4c0c8855e8bc07cda7b09.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/48272d2f30331ed608c877cb7db40d75771a7d0222e4dc3bcd4192992d0f012d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/0916edc5a840c53038ea12ffecde8aff725d029282c6461e065c62b4724eee90.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7606100972e34df152b5b8a92f6d9ab99294e5e7094f2abb49034dbc367fa738.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0fa106f6f5a7f97eac5f01cfa3a8fc5671b12f020632ee4a2e80fa10a2a61a44.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1965,
+    "title": "B大封 B塔",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B大出手，封锁B塔路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/d5a846dd7ed630b76f3105f5f41ad06b3a206abd2cbbbc61a2edbddf127d4b18.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1965",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7dbadad9c7e9bb6b6dc99f20dc1c09dfba47315a44d14328ac39efaf500a547d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/46d4c030f9b9f83b3ecf5bbf1ea6e95bb4e997499e27f293ef8bbf03c9d81fee.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4c19905d2f5244d328a13a9885badf91f1de5c70a90e4c32dfa116a28e785a58.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1822,
+    "title": "攻方出生点封 A包",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/011d4ed40aa3e08083bb1a2734856e257406ae38653f8ca7fde194fc63d86bfd.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1822",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d69492a1771d90cc702b3db9662933f128cb65020e651592e907ab49d5199959.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/c35c1f55b607933ad0759d8f360f37e9f8a437e939f040117a6a98d258028a41.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ca4fc7d0c7b82235e0466d05c927eacddca151cfa0b7f32d24125e21157d3d29.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1824,
+    "title": "攻方出生点封 B箱后",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点出手，封锁B箱后路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/d33beb894378deda3bccda6901ef410616403e88e90fdcc569dfe384b6d4877b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1824",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/667db6a0f30b6e1f0c15ff5d0dd653f12095db773398f29594ee7392022c9505.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/047adfae65fcfe112451542021a4a3b42dcf4f0d93edd985163bb61dbb353be5.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/25ba62b17a6fbf8ce8d54f748d18e237b74a6ee23220a0537e45f5d59ba77b61.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1468,
+    "title": "攻方出生点封 A包",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/a8c285fe765e83686291e06564606f7bcbd0ab6089ed6f31af82de0a5778cbef.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1468",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d69492a1771d90cc702b3db9662933f128cb65020e651592e907ab49d5199959.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0efc45bc9dff9961258f6fab770202bcd4d585d22c76d241ebfeead35ba8a1c3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b360792bf25a2eb9ae394ba4f4d847f361d16f4831ea069bd8a224d0dd8f5768.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1035,
+    "title": "攻方出生点 桥位封 B餐厅",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点 桥位出手，封住B餐厅通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/d63d4d90059ba465e70c2647718e77ef05e4b468a83667552be6ae9e8e76b57b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1035",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/811fedccfcd3a0c546bb9689c6f1b0f44fbeba3f0d112f161180796e3dd66e5f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/5bc93de01a9da97bc92d486ec5f922cd9d972397dc6ce79ad85fd13a5638e992.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/61d2da5ff46429d97ce868edd0bbdda32c56488242bb5c95a2184a9bb592e728.jpg"
+      }
+    ]
+  },
+  {
+    "id": 996,
+    "title": "攻方出生点封 A落点",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点出手，封锁A落点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/59e51249a03fd007f73b197601102206dfd05ccd326281ac176b7da115dda19b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/996",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/d69492a1771d90cc702b3db9662933f128cb65020e651592e907ab49d5199959.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/64149a50f7f20b3363e4b322d75c9a75860eac388a66f8afce2a8ecc9fe26a26.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/87c887b5648d9107850e2eb95f179486887c4d4d5634f98762b7f62d779c6175.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3416,
+    "title": "A小封 A塔",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A小出手，封锁A塔路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/f4175616f5324f1c580aa84f829d02bc54814cd4bacb4457dd3346a1c1576c6c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3416",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/281f5eb0aa1fe8abcda3fad843fd544c208973b38038d35a0ed3861871f1abf2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/0df299544a4a5723a46dc64cde1cac392c181de100c1f228ca0756d32a039e2a.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/f5f2d09b7bb2bab1795611ad58aa53183ea475c4fc2c63e0e2cae44ee09e073c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2783,
+    "title": "A小封 A塔",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A小出手，封锁A塔路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/f4175616f5324f1c580aa84f829d02bc54814cd4bacb4457dd3346a1c1576c6c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2783",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/281f5eb0aa1fe8abcda3fad843fd544c208973b38038d35a0ed3861871f1abf2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/0df299544a4a5723a46dc64cde1cac392c181de100c1f228ca0756d32a039e2a.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f5f2d09b7bb2bab1795611ad58aa53183ea475c4fc2c63e0e2cae44ee09e073c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 675,
+    "title": "B长封 B厅",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B长出手，封住B厅通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/11da97e454ba761eaae807b765291e175e6bb978b837eaf0b0ff7db41fba162a.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/675",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/080aa14af13dbfb3af125cf250da7df4873fa5bd614de5d2e879eeb5f1d1c7a8.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/490892f0212cde5c2880c12312215e7b9742c419f4431dffc29aaeb2f2f2c5db.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4bc1f52153d04b16ab75651d869c950bc756e7780bf8fb7882dc6f2cf33f7a1b.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4a090257142f2ef678ae97d9f4abf46bd9dd927963e0ad07d10f9d2d4762c166.jpg"
+      }
+    ]
+  },
+  {
+    "id": 462,
+    "title": "A短封 A灯位",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A短出手，封锁 A灯位路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/b2af37f0bafb169f922d3b196d18c4043c674255f14361a1aaf019b60f0344e2.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/462",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/78da65a2146febdbf1f774109e2b815ac610a47046c07df5059f00fc3403d3fb.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/13f27eaaf68dc6f5645ee65e9a5a11c5ef9dc872ec3201807e5b7be9f2ca846e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fea5646d71671c3e4f955ab1eced79b21da1a230dcb552a53e72060eb01afd53.jpg"
+      }
+    ]
+  },
+  {
+    "id": 876,
+    "title": "C厅封 C包",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "C厅出手，封锁C包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/7e17206bc02e36b9081123940227545c81d18510394647b7a70d7ec14fb34c5d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/876",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/2ebfa466db2137072078f9be1ad60b5c5715d8bd5982c39c2e21b9594613ebef.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/30b43d924bcbaea9156ea8c79f2531a315030cf4060f0e81c6ec5cdcd97847b6.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/9c8e6a5acd50de1ab798df631332c0ba4de7b8c56817a3054a0b82c28be068f1.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/83a9d2b5e45bc30e5745d55fbfd21dbbd4cfba949fa7979365ac12371b0dfe64.jpg"
+      }
+    ]
+  },
+  {
+    "id": 457,
+    "title": "C厅封 C转角",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "C厅出手，封锁 C转角路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/eb8468b8c69bc65429587a5918a569a117b4d5a20863dd679d71273414204b48.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/457",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f9cac1b7e4562f34ea398f44e52a94a06ff2d552bdc5a3c45caf38a696441b12.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/122761bccbb85e78062cb608ac8e8b01bec4b3fae5abcb2c0a06efb2d8414c41.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/50ae83c84dd03595e9b20ec2fcec73998320c8c8f0036127f8a6479f6558899a.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8a423615cd1149598f3cfcaec013d58eef1a28d4abdfdb98b4b7d05e4cc78758.jpg"
+      }
+    ]
+  },
+  {
+    "id": 484,
+    "title": "A包封 C转角",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "A包出手，封锁 C转角路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/78d671205e9b8f1cba69371e292175b87993c86d149febace6b06e5841a8c2ca.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/484",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a82ca9024cbdcf815d6b564b8fb7485d3126e8d99150f584fbae246218baceea.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/6cc670e08fa97da4d616fec40cc614550b51c0bf17c0067a05bb7d723253a540.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7ac31d2a8a983df858d5643312dda96bbc913d72281400612b79ef547279ffe9.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1424,
+    "title": "中路上方封 中路下方",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "中路上方出手，封锁中路下方路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/197e2bbaea840d49a0609fb8b414ed60e5a355f96c4e2673af2c6dcf2c3a8bba.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1424",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/9ada7efc7556fedf884d5eb6b5e9e89ed1f53c2cef7bdba1a4b8850128d4d003.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/9d5233e86f401cfcb516cda6c4c2ad390626bb15714116a599bb9aedce7117f9.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/34e27b28c35a8eb7b13c02c75bfc33fd9d99fda4f2cf5b7a209d50f8529959c2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 467,
+    "title": "B商店封 B厅",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B商店出手，封锁 B厅路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/0367162efe42d34b42ae1926f3d0936636b6fd3c2398b11125592d374eb94fc2.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/467",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d2bba5b2749096d729cbe53427f51a8c8d902ddfa7ddb288a05877c859372a1a.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/783df667c7fedcfe72cf5b521f1628bd1939b24646375b328141cde0ebab27c7.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0aeb82e9e63eb5e1d7bfe3f8597de2699b42c7bf5483c64179f3978b477f995a.jpg"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "封A包后点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "从A餐厅角落出手，双剃刀藤蔓覆盖A包后点，适合拖下包或逼退后点敌人。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/24/1bb2c3c7b4541c22d0e43967c84097e69553d76ef0262f97277fa02f616eea10.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/23",
+    "steps": [
+      {
+        "index": "01",
+        "text": "贴到A餐厅这个角落站稳。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/24/fe6c60a0cf8cc6f468b22a0afe06b7a40b230fdb7b9b3870b030cc54fd2437a5.jpg"
+      },
+      {
+        "index": "02",
+        "text": "先把投掷框右上角放到技能界面上方，再让画面里这条线的左边缘卡住烟囱拐角。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b517f9196455fe7cfba54c6a5a2c4f406beed23a3f911839dc1e6307fc4f36c0.jpg"
+      },
+      {
+        "index": "03",
+        "text": "不要跳也不要蹲，连续打出两发剃刀藤蔓。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d5c5af2dfe21d5b4bbcd86b5173673ba4c2341b91dcfd8b3ff0600e65311c8b7.jpg"
+      },
+      {
+        "index": "04",
+        "text": "两片藤蔓会同时封住A包后点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2091505e0423c92c9c4b7bf220c9b2823fb74b1d51143e4ea04d9ee1c9ce3009.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3465,
+    "title": "B包封 B连",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B包出手，封锁B连路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e641cd7a8f9cc1056533b04fbe74db80c1341e9dcbcd966f88d8d20587ae59a7.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3465",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/020e701bf4f46c0c81197aa7ac420781a26e0c50e045cf3f196d35fe473f2f32.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/801d45ddd4ecbd8ec3809a93639c9c56f7856934f7d716f2e51eec7220f9f35c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/28/e9c12342978ab0c238dd40efb3c5b7660b8509593c3c7f2c0ba0c0fb300c5eca.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a1e4e98d7905ae82ed42e0e2cd75444983f257726dd5ce429fd4e12625e1f48f.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7412277769783cfcdcd63c33f958beacbb5ee03c72fb4697f30afbaa6a12b945.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2873,
+    "title": "B包封 B连",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B包出手，封锁B连路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e641cd7a8f9cc1056533b04fbe74db80c1341e9dcbcd966f88d8d20587ae59a7.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2873",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/020e701bf4f46c0c81197aa7ac420781a26e0c50e045cf3f196d35fe473f2f32.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/801d45ddd4ecbd8ec3809a93639c9c56f7856934f7d716f2e51eec7220f9f35c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/e9c12342978ab0c238dd40efb3c5b7660b8509593c3c7f2c0ba0c0fb300c5eca.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a1e4e98d7905ae82ed42e0e2cd75444983f257726dd5ce429fd4e12625e1f48f.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/7412277769783cfcdcd63c33f958beacbb5ee03c72fb4697f30afbaa6a12b945.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1593,
+    "title": "防守方档案室封 A高台",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "防守方档案室出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/c5122530888eff3f0c9d375b88d0be8b651dc37d7b124174d31e56b82d9c57b3.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1593",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0b1d7399bbea9f487119aac66ab99503c9c342055cfcc3f180f2c2ccb5237a9c.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/dfbe0b7841f5d2f24c65de7a1dac2fc21fe229906ca0fa96968fd339c17d50b5.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/6c23c041bd477e72aa1ac0204178475345b018f180165fba65767018b5dc7d00.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/97191fbcd5a9c3a9f914cf22e6253f67986cb85f932917c05e161a0ecd86e127.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1261,
+    "title": "B包封 A楼梯",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B包出手，封锁A楼梯路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/dd3e957aca3d7c8f582ff92de53b273b679dc5d4bee39195f7af2cbc7589a0b3.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1261",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/1e651f22c81d6e752ebec1f38492d316214516cf788facabf970b3f84c179d92.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/95b63e1ed5d4061e0830e645cdac7cf258d32051f3613dc923b1ceeb481291d6.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b193a2412ab82f27436880c3e01a6a3e46fdc3ea0f7f165b8e04e359c38d54c8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 676,
+    "title": "守方出生点封 B前点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "防守方出生点出手，封锁B前点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/49f5d35ce9e6c6f213be22a290470a1ab6ddb0f2b43cc290a306bd4985b00fd7.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/676",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2ad081f3c8133c256f6f7b3dea39a66e9ea66cd729d5dbbe5f62b2e16e0e53cf.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/92672b32fa9b862474093ad799c5a3b0219637442cfa4990bf718a06758c9dad.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/c04667e4d5f5b28cc9d47b5508daffdf36f50154b4dd2b5f762169853f0e7ee8.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5ba141ecdcb5f445820e29b103cae8446e720bc6cb5ce89cc627df5c3bc11aad.jpg"
+      }
+    ]
+  },
+  {
+    "id": 436,
+    "title": "B包封 A连",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B包出手，封锁 A连路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/38741fdb41034992af9876acd062279ba555a3476ac84311dc3e9ecb4f7f8191.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/436",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8dfab408e059095ba835895698167f6793f55415175da2af9bde2c3eee96f3a2.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2d9f4648d42682568a7f2a871d8d0d5ca6128cd2e28c2760cb04315216d10aef.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/895e4a9e7991c5a7f2aead2af99055051b64c9c0ea0f78dc7788fbf9f2e75180.jpg"
+      }
+    ]
+  },
+  {
+    "id": 336,
+    "title": "防守方档案室封 A默认下包点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "防守方档案室出手，封锁 A默认下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/384d43e71486dd7b93da6a1fa4352abad070f3b4ec18aa9b0ee1239f2caa38b8.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/336",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/e01dc3ca22c65d0ce7c0ae189c368a582cd62c01f1238801463d2fc28241e212.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/481615aeec48967e1a2fdf10c835702a1c33b75608edac7b892cdfc364eaa639.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8f4075d45103de0203e52543c9cab56b0826aba1e8811d33017a946e0ddc1f34.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1085,
+    "title": "攻方出生点封 B黄箱",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "进攻方出生点出手，封锁B黄箱路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/3910b7eafcb036e9d605ad58df79c56abff91e05d61cded781dbb8ffd2d047d7.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1085",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/62f01f533107146b09219a870bf3e36a209165426fb9f946895f80e76840e051.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/c4b03657f0a53d7a81769683b7e66842c33360b692cb9adc2ad2b1bac15f4e92.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f45bf54d62322c38de19d169ae02426e070db6b32e38c5b516d384a975a68581.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5589,
+    "title": "B包封 B黄箱",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 15,
+    "agent_name": "维斯",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 57,
+    "ability_name": "剃刀藤蔓",
+    "description": "B包出手，封锁B黄箱路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/a75ccbef4f7df93335608aaf7b557d7d6b412d728604644e99f23382bdb6c482.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 1,
+    "heat_score": 10,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5589",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b1b4992187ffc7ce259d72162176389247af0a88a458eec31ad3bbe8c6b41a43.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/0893e27182ed44ce0a24a687c59dd2e7e82fcd151f501ffa98dd6307c14a408d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "半蓄力，直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/59a691e3691ad1aed1b85a8d28b1bcd0840a92a26bc69f507773f3d4696a71b8.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/4d700998705ada5a2847accc88b7d1c4f205a839decea00004755ebcd2a16607.jpg"
+      }
+    ]
+  }
+]

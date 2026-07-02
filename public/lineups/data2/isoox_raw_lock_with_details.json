@@ -1,0 +1,1675 @@
+[
+  {
+    "id": 5769,
+    "title": "B厅封 B包",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/96a28615d8a540a371ede38d9dbc77d3cabfbef1dd70ebad29e307aa6f4a3cd3.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 4,
+    "heat_score": 40,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5769",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/c9f78f1a0383e7dec0821b4090827587989406e30cc9b5f22795cc91492a641d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/e87b858be3b2397921440b3f5dbe1fa02f9a14616c513dc5f2d9d3ed4199d1f0.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/a3fc1ca3cbc19237224566b604512d8177d377450da2b606d9bd867e94ee8819.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6108,
+    "title": "B大封 防守方出生点",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B大出手，影响防守方出生点一带走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/37afd045ba9abf096fbaaee83723c1a764c985d05af10783c7100dbeeb089214.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6108",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/d131220a2da66a841c0c54a2ed5be17cb34ba6f353b29b053dc446a7963bf213.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/9c94b55b1b19fc1aa042da94f61df171369ff9bccdf31ebb634daad7c94b8c53.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f355583c11dcba499e293068a9d05975455343f1d51407dc47d117216d162672.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6106,
+    "title": "A大封 A树",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A树路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/7757b5e5fb8bc5752f67a54f37de487eefa47f4163f65bac17c693d31af352a1.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6106",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/e6ef2b060a1d4ed5db9f163171fd66d19e372707d23baa030a1fe33ac78b070d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/bc32dda98d303d06abea7fd39bad2736359a838bac2087e545f7017fd7bd137e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/6d487e691687fb4a2b435293210a914f1b4b3da2dd342e1a45d96d944d638547.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5749,
+    "title": "攻方出生点封 中凹槽",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "进攻方出生点出手，封锁中凹槽路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/c0b4126c8293e61afb8a193af203b7768df0a796ac6e8cd92a46a4084d03d714.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5749",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/661de3e87c7c130ef4db50907ac8996239ba9e41e76cf734057bd1f9bad62699.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ffa5fafd12605ad2ef6a29aad198c7e9abfe1319651c607e507542153816a6cf.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/5c0f4073bff3ce8136a67e22e424dfd20b02af29cf301bc8c8786202d53116eb.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5575,
+    "title": "A大封 A高台",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/f30b9a13eca4eda8a79cdb99cffade03ce91888ae06a669461b0c291a39a8183.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5575",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/0210557ae1cbfa3afda1c8f0d9d03ee633db9c5eb054a1fd9e779bda9ba7854c.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ceda7bb2fa8e0addfabe6352a6a46b2590d15ab1527fe3b53472780237775d15.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/17394597ec5d9fadf0064ccf794676fdc0bf5755eb3340bb7ccfcdf4dfb187e5.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5271,
+    "title": "中砖封 中饼",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "中砖出手，封锁中饼路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/237c34d6f3e79e6245293f50e5d7516b790c217ff3b642e6d2334622fe193fd4.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5271",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/ff1d0e19609f3765e933ca62ec3daac42ee79b5fec59c8ca7148e825d2016921.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/cf29d3f8c697e7a4a6758e90561b138339386d5673139544871c10df16a65c8f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f236deadb60a93512c0979e9e39fe46ac6169bf8c42f42e67d6f11be13697ee6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5266,
+    "title": "A大封 A花园",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A花园路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/9e8f3b298570db7dea10723d48a69d085c64b64a6dc6cdc90991731da9d809c5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5266",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b7dcec047165cbda6f8789f7387cb648e611d0e08c2e48158d3ded7b531f9ea8.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/fb3c9313b6c6ae4e04275bf32d991421122451f3d91b4720ac1b4f69d1fc88c8.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/2c7436f7ec201e45eed0274665d0cbfb6c9587b8f3a77abe9c87d4361ea13a9e.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3856,
+    "title": "B厅封 中市场",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁中市场路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/6ae0faeb7b63a32014da30c177a5fce66fb6d62a7747f3804b867810febd16a5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3856",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8ed270fa781615158a68ac181097cd273e24f41d5c5c102b72a87b6e30fc881f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/2f2851853b3967775bfa454cea08934dd6071fc27f64fba7917f8e2f1e0f07b7.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/8536d5e93fef05393b3a987171a938714530efe3dd0d1fd446ed41f09c5ec529.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2996,
+    "title": "A大封 A包下",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A包下路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/d301aba3c8068b6bec32c51b352f6bc7b37071b4b53a7e626db5e185b953b7c0.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2996",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/b1ac7d95cfbe6cc6c7370c4582bdde03955d915eebf82fafadf13dda63361b9d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/bd5c4bf1454ae1e731e093fbb6e12378715118d19e14c37547660a24f8da49b9.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/75f4f845efe50c945c15517a767ede90375909cf9b68f078aa172db60f4a3228.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2942,
+    "title": "B厅封 B道",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁B道路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/6f2555f7ea4f6c6690826d78110e3b64a11c88a8af0f50d107eb9567b8c7c1ce.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2942",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/55ae9ee8116943adee81f9dbc7c3b965e1c2a0d145bf7abdffe370acc8d51ba6.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/c8b8be76180cfd4754bc94858c7c28d27e398c5388027667d48c991d3a6b74ab.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/e92caadab30708a1d981210e82edf92352f2073d893583a417e20c1f1ce5af6f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2881,
+    "title": "A厅封 A包",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A厅出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/5cf14c9368ed97877c47dc6b63500e53e315ca107b65ae6d59f4ea926f628813.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2881",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/ea2ff2435b3160f875ff043376b988d24f308ecc35b8893743b89a99dffaeed7.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/cc4f139e6d6b2622b86c1ef256101d3e9082e3bc6a94ca0250e5afd083609299.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/8565f0146282a3735cab74ffe7ec28b794894e4ace847b4861a3301a87b1d6e4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1530,
+    "title": "B大封 B楼梯",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B大出手，封锁B楼梯路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/e2dd2af7bbbfec07c8e6cd0af3edeb84123cf43eedfdb47f107c22255a305402.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1530",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/dfd454e3f4e066c41a0f66b24b4d8a3abd739c08e0b288fc782ae6940e22d359.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/4f14d15ac1bcaa7c6c06f0e84ca4f677c36e95a2781c2f6151964ac6c7847845.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f755209de53aaefa6546e257c293a070d99187b6dadab5d731951ed3218f9558.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5863,
+    "title": "A树封 A酒桶位",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A树出手，封锁A酒桶位路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/51ca869de4f3c001082cb0c2c5d21f5765ce0812d4415beabdc7bd9dad6f6f92.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5863",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/af2dbeb0453639bc1d11952b8ef6bce9b724636f84e6f2c0656af7e336148927.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/59a20c006cd7a723f9687a5bfbfe4ef1bc03ecf4dd544a14237aeace04310f07.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/aa17771032707a2528182784971f01eed97eb49c3deaa225d6991d2c25a591c6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5775,
+    "title": "A包封 A厅",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A包出手，封住A厅通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/da97ea20e4ed3863484fb8d280fa4f98a1b986339f2cfc6a2a7ab156fa9399d6.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5775",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/e5eef5d92852bf282baf54b646c0667f3f1820bbc997277d6f7a1b23e2c2a635.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/07c77f4a2aef8c4b64f15d7ad3802db84add8726a11c4ec654dd1b682ba1f024.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/8a398847960e6bfffe50386cb24f9a04d0ea196d73bbaa2ffd1019146418aee9.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5370,
+    "title": "A包封 A大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A包出手，封住A大通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/21cbd49cab25b0447ec37eacf4044049f6e199454e9d76b1c1ce8ab108e8fb08.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5370",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/2966e9349f331979de6be98c37c5797ef95ff91fdba0a74f1122ff66b8f7552e.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/e2ecc7ac39d65328fd05346792fe2c5fb9b10d0a623af09f3bd40c720b3d93cd.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/4eebb80eeedece23c7699e6ae86f76fd4ad60ddde9f8df02e4e7a4b3b92c9466.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5273,
+    "title": "A高台封 A包",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A高台出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/64698c6159d969e59e137f5a01fe87db261aec1f5753ec6241d068914bf2c814.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5273",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/83cb5728adc3e1ca2eb91ace8169dba4121f584211d5e8b3a85369b3f9d58d42.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8d47f4421b1a92fc6effc98d8d08fd1734ead072dca55ee055d403bebfe8d714.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/618bb4735c0a9524be17ad16677743f98d7040c5c68d6fe6bf219c5e3e8abb93.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4882,
+    "title": "A包封 A花园",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A包出手，封锁A花园路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/b48f4f4bfea18e8b9a62888171068fb0d1e45907e2efc781c04515fd4d98a04d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/4882",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/cea00d345b8b5cd8a3e7fd6268d16e1f9fc66f2ca6acd2f70a8240693c3acfcb.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c99e54a6e1372f16b0f7cd2ba122e16fdedda7150822f6d668623b35db5d5eb6.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/55268e7e6790aa9402df082bcb27a4fc8d99146d61139e4e4afce893ff73855a.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2321,
+    "title": "A高台封 A发电机",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A高台出手，封锁A发电机路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/f3f35b03f6057d55992f40148d92f11a55f3dad08506cd70b4d62f9aaefcb085.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2321",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/41035c2e10ac20d24b9ddf994c355e13f62b934e8b89f2322a915468637a77ff.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b48a76b09867db6c2fd5380cf52c6399771e3132cea73177cbce47469542e650.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/47fff410e2f285c1391828bb188a86a1bc6ed35e121a9ca0952d5e5fa6bfed1a.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/d73e11d2a832bc7af0f40fcd729d069bd5acd442b3fa43fe8e886492fed15443.jpg"
+      }
+    ]
+  },
+  {
+    "id": 974,
+    "title": "A花园封 中凹槽",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A花园出手，封锁中凹槽路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/976b057b0ab23c21157e6d672ff8da2e8d04d72e636fbed47069fdf22f4eec80.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/974",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/714c281664842e5cc649c8f15c1d42d33bbf4149f673c6b4ebcdea79ab88a067.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f8c67df5d839d97ec1210f7877b834682db445ff438b125fa4b4a6a0c3ffae0c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/0f294ea3ce1d9326ed2df644b329c44892f86e96eb4de70c2e06409ad37ba14f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5107,
+    "title": "B厅封 B包",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/00819974af66a957b20f82262030a3bd4cf887ff2ff5dec5b04cd9abeec1995b.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5107",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/645b7f454aec9ac8d941dc68dfed7e60e8e05ed8c82d70c138242834309a23cd.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/63d73650d7c74d86735392508d82f6cfdd883a23e4e7ef1cb71a7494e7f8a72c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/ddbd5781f7b4d1b82ae870523cde3f666aeca4de00eec1c9565126bf0bad6ca0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3873,
+    "title": "A厅封 A高台",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A厅出手，封锁A高台路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/7b08ba148de42cad62b89fabc6f309c29ef0965560556728988d339adea0c835.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3873",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/719732503f139ab4ccd404a26ef46a6400b837df4aa1caaaf4b5bf92c809b7b6.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/e2a954496413aa7ad1044386e64ec8f51eadebcc866be4d12fc32de000ceb4de.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/a9850239bfa18f832af4ad8e6a578ac0a9a12d755cd03d604c4b4d94081eca58.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3870,
+    "title": "B厅封 B后点",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁B后点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e356b5d44195c70f9dcea08473e5780adabbf01ea7ff411a7cc1e66d1ac78c83.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3870",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b1e7e55d6cad5e2bc98cb618df17b4bdbed1b6fa6e5fae79be6b170bcb35aa6f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a65799c7344d3cc23b54339b15a3e61142555dc7827fb7de46e337c0d9653acc.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/67879562e5b4d9f01405d866aab5e83d6744be77d4384bec4fddcf0375050b3f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2839,
+    "title": "B厅封 B包",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/7374daebcca970686ed4b3b60648df97525c6f1e48787bf2bcb0a8c240b524aa.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2839",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/12b61108b0a64acff98f8e557984bc673d0ff824d0d07188f5579c2e1e3d5b23.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/859832e08956b0de66fc6984cc3529901793c42cbca3b79d46d5ec21bd9b7d56.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b90c9cc63cf0d3e3bf8f59c5dadd076b17be9b5fe65ca4cc0df5cf2c17290d1a.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2336,
+    "title": "B大封 B发电机",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B大出手，封锁B发电机路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/8de442999e53fa108b5460393355bb09ec59cd4e52a07410e2929ccb36c074cb.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2336",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/9f71f78f4d067150fee91c323e4a8679e0e36606c4b53fe0c9b0f733756e428f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/d6abf7403bc756604f3c31569f0d0e08e9551063951ae4148012d00bcbdee26e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ec7c90640d475f5e33e8271b9748410375179b2d546795e2900ddd6120934537.jpg"
+      }
+    ]
+  },
+  {
+    "id": 672,
+    "title": "B长凳封 B餐厅",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B长凳出手，封住B餐厅通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/8b53dea17159e084b5ad5799c21b84dc1ad682306ffde23f7f3f7d91cd554af6.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/672",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/9d9514b704830448a93e32740fb55caceadfb13dbafc67915b7aa6aabc81e754.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/199d9e34fc002851beb445ae431144db2641a565ca088c7fe7a6a7563e5734ec.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a082a5a0732f8eecd770c007063558c87659929bb9e02e1171e6d9da9cfe8077.jpg"
+      }
+    ]
+  },
+  {
+    "id": 596,
+    "title": "B大封 B塔",
+    "map_id": 3,
+    "map_cn": "裂变峡谷",
+    "map_en": "Fracture",
+    "map_key": "fracture",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B大出手，封锁B塔路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/af527fa98f2672b0eee59db12535b25fb58e25310d563e3a317a6e2339466af3.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/596",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5b1d31deb341cb14d200faf9c3968a17885d0b9de1559cd2ce758c0f8afa5746.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/2bc21de5b6b70cf5d38f0ae3fbb1b5c637250426fb486ed0103f4d7a8b3a5963.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/cc4cd2be5521f7057cdaef84e2e1102639bd7aa41b60caef2130c20bb86ed4fc.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3047,
+    "title": "B连封 B窗口",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B连出手，封住B窗口通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/27/d4eced0b07184f724c6770dcd33154c8c7ac1f6f5cc07f80327f4fccb4f720e0.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/3047",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/577beffa486063cca4164693dfefac1d55cdff2ff16a02aeb54c65b55d79f15c.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/27/5cba16f40f381bdaa69fadc3a46c99aedc5c41966b65252ea73b962dae2acc60.jpg"
+      },
+      {
+        "index": "03",
+        "text": "正常左键出手。",
+        "image_url": ""
+      }
+    ]
+  },
+  {
+    "id": 2778,
+    "title": "A小封 A门",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A小出手，封锁A门路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/3d0d8df7a3128b395f569269d90e55c5028779ffe90149a99b7122de705b7c6b.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2778",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/8e7d0b99df84f6d65a15d680ee954cff810cfe5db45cb085a242f91637e68fee.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/495f3dddd136b854909246c02266cef897ac06c4cae9c695b773200a32f52157.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/3c8d6c63d2e7dc9ce75a942f81fa0e4969ab772e4dc14435e2797ba9dfb66f94.jpg"
+      }
+    ]
+  },
+  {
+    "id": 994,
+    "title": "B厅封 B传送门",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁B传送门路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/7779aad9766b51bcd2a1e87482f1062cc13a4439b24c23d30eb9093d2e7d04a9.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/994",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/9b6dc7c7fb01ef62b7ea842052145478c7c0e68da3fd6ae56359ce2c26a52ffc.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b0fe74d5f7b02e79fd73a016f83dd5ab1a8b19467fbaa7017214ad4b0ab3563d.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/71b7a24b45f5b057849ccf1a505ef9dda4592b3743ba6085a06e84c2c4160c08.jpg"
+      }
+    ]
+  },
+  {
+    "id": 669,
+    "title": "B小封 B包后点",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B小出手，封锁B包后点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/b33b17d753bad0c13b95eba228c0e9962c240a27b113f2ec3f159720da2d5933.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/669",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/627f267f27227f73753e1bb8d5f4e8bcd7ac01b318fec2af2cdefded34af062a.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/39ee1a91f9590a0524b9f20f2c2b7ae83f44a92a73ad065c7fb86b21dd7a102b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0046b120d681a953aaba7f4042ce0e0b961dd60f545162b0362401477d5f098f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6042,
+    "title": "B包封 B前点",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B包出手，封锁B前点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/0ee670ef056595cceb687542d92d508418f5de60345f40ea706a6dc1f66d9bc3.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6042",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/05805deabbfd5b2c40c81a2fb108f27c432acb94a658deed4ff6c664b33651d0.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/a5ff571fcc6f5fae7f7e2013f753bba3a96b315b5b47327e93862f56cfd32569.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/5db944657885337e72604ce731f63a617c9e96f82d5fcab8f7c95f44d0e85fbe.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2848,
+    "title": "守方出生点封 A默认下包点",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "防守方出生点出手，处理A默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/07638684c0c38252bbd9cfac15de575827cc8b08c82e6b5f64bffbd77a4cb7d5.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2848",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/78b5930818aeb1fc8532979868819f9a6cb8e3c2568cb5f600acab6c3d75c5f5.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/84399bff1bf2abd1f73dc477e1be257ab4174c518b6260694740b7014f7bf09c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8ada6771fab560d04b977eb762bb4ab0c804126f7463ef9c0616de02b2b281e0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1077,
+    "title": "B包封 B窗口",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B包出手，封住B窗口通路，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/f9113c3f3be4c81a24093cfe6088fc566051de8a18a622be7d92a64296e08147.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1077",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/214ebfd780f9936756a456e754a5168744556f2702513ef507fc65a8733bc01f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/61bff87c8925d1d430e01899054d9d1bf870ca60557795773751e6a323adc94f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/a36aee052d60eeb67a1a13918f975a88fde48104e8db639a315929547b5d478d.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/21c1c52da7f519a25a6262557d69cbc438a101c19ba5ecf1346e84b2322df152.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/7c3f4108761681439ecd8801d27ffaf637857d33b9a3e86aaba095e5b115a766.jpg"
+      }
+    ]
+  },
+  {
+    "id": 997,
+    "title": "B厅封 B包",
+    "map_id": 4,
+    "map_cn": "源工重镇",
+    "map_en": "Bind",
+    "map_key": "bind",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B厅出手，封锁B包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/c35663ad1dcf2d2c48d50547d2a513c9715e913b1be60c37497ec5c29734f58c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/997",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b6ea673db8a053835dfd6fc489f03c313bf80cd30cb609d56b3dee7f43845246.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/13b1aad9ea30db5418e59dd72f94cbb259d78bcfa38759a2d8578f9c106c3335.jpg"
+      },
+      {
+        "index": "03",
+        "text": "轻点，直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/3f58904661c488cf604f7757e2dab250732a2f470692602278c95ca8b64ba5ee.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/a19cf0a5ecfc1b97a3ad6da0795ba7a605c6bd9c416c3bd7a67f08e0476e3c5d.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2821,
+    "title": "A树根封 B默认下包点",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A树根出手，处理B默认下包点附近位置。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/9be370f21c52b2b78dd07063adcb5b8713bd2c55f32856e98751c0c9a1dfdff1.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/2821",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0767b22a863f8fd2e9c29d46f9f5714bd001f37b1a05ea18a0b06532d7107baf.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/00fc57deacdafd1a993f19b582fa419e80ca85abc99daf3addb5473082992a7e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/6aa4424e2dddb72041e06e943cab840d4a957f2ce67fbc83cd52929ce15e89ae.jpg"
+      }
+    ]
+  },
+  {
+    "id": 520,
+    "title": "C大封 C默认下包点",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "C大出手，封锁C默认下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/b01e1e598a5fdc5e5526e9207be653bce96246eb8f4da752ac0eabb7ff06a67f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/520",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/fd42b11d40c514579d3e2e2262dfcaae2fc1f84d8c7f919f1069f00afe7f0159.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/75213fb60f478a0ba1f4e59b05e011dc2055328387874884ee3f0699b22997f5.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/40af5458fdb969627cd9676148f056b895b8ae99769ec845ab978288b9814586.jpg"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "B大口捕网",
+    "map_id": 8,
+    "map_cn": "日落之城",
+    "map_en": "Sunset",
+    "map_key": "sunset",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "B包点内拖慢进攻方进点",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/24/6d59ced8a815e9918e162d309b00be228812d1e9d46dec98f67b301947005983.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/14",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/8a4683d12ed3b2fa7d42978925ab7a07c83834af8578bec629707ef9236db166.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/04abe0f1b29a993f3e94ee8d79e9c0f247089a695f76891ce9625a72722af7e9.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手，对B大进来的人有拖延阻挡效果",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/f7175b370337e24eb788dee08387ea4812496745c7fab7e22dd9b43a5d95c6dc.jpg"
+      }
+    ]
+  },
+  {
+    "id": 624,
+    "title": "A大封 A连",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A连路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/ddb834f8ed18cee421417d1f9fe94347ef7dd1c10d33ac15dcc7ce1bdc37756f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/624",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/ef85273bd4dfa1616e74ebbf7822aa3a3b6b06e53e50c351f764bb013475064f.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/bf7602e41949db6fda7d16f854910b44507946817085f297b17f014ac8a13cf9.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/00075dba6a561d483c81234cbcfc8e62bcb39cfa479ea7dc223d2ac14981cf08.jpg"
+      }
+    ]
+  },
+  {
+    "id": 617,
+    "title": "A大封 A包后点",
+    "map_id": 9,
+    "map_cn": "深海明珠",
+    "map_en": "Pearl",
+    "map_key": "pearl",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A包后点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/c9661b6ba0b70e53bdb9ac69348d2adcbf21fb1c4982ba50b2a2f2675749cc5f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/617",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4293f7b7d95b56221ede5e839ccfa8d96fff7ce65302d2cf48aec82ef0c28552.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/181c5e61d260f1f15f0112e5a716ab8d4bfabd1c4ef94bae16ca81d7b7bfe3c6.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/00e59250088078585fefc41ac349176a370c3b43d65789e52918834f9abfb067.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6056,
+    "title": "A大封 A包",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A包路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/9132ca749f1aec14e572d983ee2d82b336cc58b2906a55d429e63361d1e52033.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/6056",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/f9a5788779a6acc3fcd00743e73282f398ec29e5fb9c8f39e3fdd87f1393ddc8.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/d0a0892c9cb7a750b19d67de3af590f0bba7d344139b84394c757fdcec0d9feb.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/9677f830dff4b6129fb9feddfca46f67213990154edf88639b8d5fdb303b8591.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1027,
+    "title": "A大封 A默认下包点",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "A大出手，封锁A默认下包点路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/1d05c9b338c25d59449ee5b7d31d71e39580e0c5b2535f5925bd954b27bbc15e.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1027",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/1b4aa933f0eb0bde634a4a99e410cc579200d72b910dceab06655ff58e4c3b48.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/fad5cdc5c268ca2d757de37f1103c0f57800b9bf42f31afeabd7c1485d1913f7.jpg"
+      },
+      {
+        "index": "03",
+        "text": "左键直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/0e3c95353c63c9683491c9c674c720fe80e19497dd60412fa7f0a1aeea829cc2.jpg"
+      },
+      {
+        "index": "04",
+        "text": "按后续步骤图确认弹道和落点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/9f4af542c57c0dc6e41ce7f190a6c9696eb03da5bd101c281cbefea5fc0d5801.jpg"
+      },
+      {
+        "index": "05",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/d08039cafb08668ef05b3ecf528bee9e2c914d38c6d0325219beee286a6b5e77.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5200,
+    "title": "中蓝箱封 中路锅炉",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 4,
+    "agent_name": "钢锁",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 15,
+    "ability_name": "重力捕网",
+    "description": "中蓝箱出手，封锁中路锅炉路线，限制对手走位。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/4fb9e29a7fd1b7d9b6af2090c1e772d56e453328fd8320c727165a067f37943f.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5200",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/d6926527f8a4a940f314ec24b2c61fe3ab9b79f60281c6cfc76858eff360610d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/237cc142f859b8c439c2e90d41c7eeea50fd2f9ee8a048ed544e56cf423def0a.jpg"
+      },
+      {
+        "index": "03",
+        "text": "跳投出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/fbc1d0d970dcc656aaf63f7a45ab50f9688ca51ba0f19fb56ddce906e163240c.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/a15865179c0e8fa3221f5db36c669b769a733bec399aa3bfae14f8c569f7def1.jpg"
+      }
+    ]
+  }
+]

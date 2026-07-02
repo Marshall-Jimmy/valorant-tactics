@@ -1,0 +1,10 @@
+.git
+.next
+out
+release
+node_modules
+lineups/diylineups
+scripts
+docs
+electron
+*.md

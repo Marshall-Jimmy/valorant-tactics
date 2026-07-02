@@ -1,0 +1,480 @@
+[
+  {
+    "id": 1967,
+    "title": "B大震 中市场",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "B大出手，震退中市场附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/94b33278e9bf47cdbf11e339b0c3a7335edf2a621faa7adb793c258c3652a52d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 5,
+    "heat_score": 50,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1967",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/10756f9ec23e1b18c9cc4c93ee128219d8ddde5230ff7ced8526a0238dc4b4b3.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/08567159f11749af15d9d37de288664518f13b9ff391d32724dc0b02c60d459b.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/69a5968aeaa5c40c650e6c1696e3b51fe3e47e9557a4cc90c6feda585c328c5b.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1465,
+    "title": "A大震 A连",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "A大出手，震退A连附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/fdcf94241df96999785432cb6f8e1303d586d0e6aa9374d50d1b5ee0ee56dce4.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1465",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/1289a177eecc28d73e4e4be33cb7994c3a31bf926c287c2e4732302baaf26687.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b3f2110c1d1fc07a02f4cb75045ca6a5da2d47cdebb8bb78c733b965d75cdd23.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/84ad2e402aba36acb628f1a2cda7e1e942a50eacd4c0e24f731eab15a45151fb.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5799,
+    "title": "B前点震 B大",
+    "map_id": 1,
+    "map_cn": "亚海悬城",
+    "map_en": "Ascent",
+    "map_key": "ascent",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "B前点出手，震退B大附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/571a779a760dcb883b042249c85fbd69c3bda59402d04bd081390ff1476f15d0.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 5,
+    "heat_score": 50,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5799",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/2c608699bcaadd8c2f72a637ec4a7f5262474a2f917817edb4582904e9b7bcee.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/b2e1ec8c9e7ab87a8f027f97d097919a67d870eb6c9588ae196f78a5120a8e4f.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/c224960ba067622664464f689feb3f94bd7570445d3c2bd53b25b6d2ca51d2ee.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/97d23c76ea13e8ee6c91eff846dd6fe450ea2847c4fa1d6e4c91c8fe52465592.jpg"
+      }
+    ]
+  },
+  {
+    "id": 421,
+    "title": "A坡震 A大",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "A坡出手，震退 A大附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/ef4a987907100c14853ff48afc358b1efc049bf205dbaac35609523f4dd2b85c.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/421",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/5b965afdd2783e082cd87661e22feb447992895afdc8ff70ddac7defd089a50d.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/8b98d2881cc6858690b2bec4483dea370363c4083a048877588611eec535c65c.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/774bb8925faf48374dc122f72144cb88e00db0f5963ad767ddb2bf7db1f95eb0.jpg"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "震A坡架枪",
+    "map_id": 2,
+    "map_cn": "霓虹町",
+    "map_en": "Split",
+    "map_key": "split",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "从A大出手震A坡架枪位，适合配合拉枪拿首杀，或接快线直接提速进A。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/24/7ca00da6ba8148b8ddd2b2710ce23a8f68fbef5b61071775b6fa0beb35344d76.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/17",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站在A大任意安全位置即可准备出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/9460811b1d49b19dc5d95fcacc46b06d16394988bb5cb1e2a8e4bcc78cecc055.jpg"
+      },
+      {
+        "index": "02",
+        "text": "把准星对准图中的灰色线条参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/4865e5020f969fe8a6213403e38e7417780c5deb6c7c9c6b7345634ccf41e448.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接打出闪电弹球，命中后可拉枪补掉A坡敌人，或接快线强冲A包。",
+        "image_url": ""
+      }
+    ]
+  },
+  {
+    "id": 922,
+    "title": "B包震",
+    "map_id": 6,
+    "map_cn": "幽邃地窟",
+    "map_en": "Abyss",
+    "map_key": "abyss",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "B包出手，震退B包附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/be4fa4ad297fdb77b225deddd46fe44f5a13f521bfa8fd5da0f14bdb770de405.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/922",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/3d0652117dc401b3398506b903841878c27b0ac5fee480caa150becf3bf8b8c9.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/71b91c070ef85fee71b15ffed91fe63a5d92d1ef5829b7e40b22dea209cfcad3.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/fef76d674e191ce5eb0e1b35cd5a33d74bfecca59784b71fdc9042017a87608f.jpg"
+      },
+      {
+        "index": "04",
+        "text": "",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/998ad25aef47fe85266aa7fe70b898e19091cf0a61c6714285a0ee276284b1ad.jpg"
+      }
+    ]
+  },
+  {
+    "id": 356,
+    "title": "A厅震 A大",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "A厅出手，震退 A大附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/2226531156709d66c805b836534383aa0056ca4e528175421d83ed5ef62bf837.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/356",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/14f369b0ac721b69e1d5fad6c1c0b77f0ca9d518b9a8e8fccebafa30aabdf60b.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/44d398aa7ace624114038906a86535e42f13c63cd1f97b116ccb149946fd9934.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/84505ac9e81b9d339f1bd8d92af788593d552ac02c7d6ac0f7341595e3a1c655.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1887,
+    "title": "C转角震 C厅",
+    "map_id": 7,
+    "map_cn": "莲华古城",
+    "map_en": "Lotus",
+    "map_key": "lotus",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "C转角出手，震退C厅附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/16f939ed9f6af6a20293f63461b3298c61e8c5d44412bfeb67c4fdab63d12855.jpg",
+    "view_count": 1,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 1,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1887",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/99b72abf1ca3f257ff3ba26d5b8739485b333d82ffe3a5c93275ebd8c7e00be0.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/dfcff307797810a08c432dd2e0b924b9d295ef19323b5a7aad97dcb4736c1704.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/25/3f4bef254e826099346200e05cae7464a63ec421f889014ee8ddaff9a589f72e.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1053,
+    "title": "A大震 A包",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "A大出手，震退A包附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/3a93ec69f2ef37176e78c6e19444818063998f3ff748efb4f854d94e3511c60d.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1053",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/873dd7857f61399efc09914badf46d19c3136ba5fd31e0c4da619b2d52da5db7.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/caab6f8aa88051b25ec10cbc8d73336cee9cb6f01e36a5c64d58415dcaa097cf.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/31/490ed315036e7cfecadcd6c2b16d24a34210b7694c019c1f0876551d53bc475f.jpg"
+      }
+    ]
+  },
+  {
+    "id": 950,
+    "title": "A大震 A默认下包点",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 1,
+    "side_name": "进攻",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "A大出手，压制A默认下包点，适合下包后拖时间。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/25/e340feaa583e36de45d9d906be996203cc3fff2d8bf7476be0cb4da7b83a9818.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/950",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/02bd440f5af15d53623fc2e9d0068971c1a9566fb094de10083a4189b376f8e4.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/11512c69df0fbb930fb0e02808452af294f539cb4be8ae61d72bc9d8d173e83a.jpg"
+      },
+      {
+        "index": "03",
+        "text": "直接出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/f709b790a3b283e2147c1326e798365797bf2edde1bcb9977181234d611b619d.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5887,
+    "title": "A包震 A吊索",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "A包出手，震退A吊索附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/30/d67109324ec49f2c71c0c11c76ab36d2ba541e8d3d577ede4025635522feabfc.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/5887",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/b2ddcf071d6e4048bb0f98ab37b3a6bea076e77d154b97c91b551b2be189d502.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/30/857679de2f29182c8206d0532d1e4d66519a844844bba81789dd755d5438548e.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/5027c4b1ad2538eb403f0e9a09d9a9ae66c79bfa66f29bdf14da6d1441cd6ec8.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1520,
+    "title": "中蓝箱震 中路锅炉",
+    "map_id": 10,
+    "map_cn": "森寒冬港",
+    "map_en": "Icebox",
+    "map_key": "icebox",
+    "agent_id": 23,
+    "agent_name": "霓虹",
+    "side_id": 2,
+    "side_name": "防守",
+    "ability_id": 90,
+    "ability_name": "闪电弹球",
+    "description": "中蓝箱出手，震退中路锅炉附近对手。",
+    "cover_image": "https://assets.isoox.cn/valorant/app/images/lineup-cover/2026/03/26/da657b09e72858935651bb90f5fef938bc581708773a1e95a0b5cc40892540a4.jpg",
+    "view_count": 0,
+    "fav_count": 0,
+    "rating_score": 0,
+    "heat_score": 0,
+    "tags": [],
+    "source_url": "https://val.isoox.cn/posts/1520",
+    "steps": [
+      {
+        "index": "01",
+        "text": "站到图示站位。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/550ab5964cc14b20ce4337359615c849283f8cd9ed9056fca7ac55972f31a4f1.jpg"
+      },
+      {
+        "index": "02",
+        "text": "准星对准图示参考点。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/05/02/c504413c1a317691c3e9a2a7663f524ad9eb53f5773d044f8832636bc12148f6.jpg"
+      },
+      {
+        "index": "03",
+        "text": "按图示出手。",
+        "image_url": "https://assets.isoox.cn/valorant/app/images/lineup-step/2026/03/26/693116b7e7d1f3aa7194a921cc4144e51f023c1a4c4ed89878102ed772a85ffc.jpg"
+      }
+    ]
+  }
+]

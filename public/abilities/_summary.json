@@ -1,0 +1,884 @@
+[
+  {
+    "agent": "Gekko",
+    "role": "先锋",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Wingman",
+        "file": "ability1.png",
+        "size": "6.9"
+      },
+      {
+        "slot": "E技能",
+        "name": "Dizzy",
+        "file": "ability2.png",
+        "size": "7.8"
+      },
+      {
+        "slot": "C技能",
+        "name": "Mosh Pit",
+        "file": "grenade.png",
+        "size": "6.3"
+      },
+      {
+        "slot": "X大招",
+        "name": "Thrash",
+        "file": "ultimate.png",
+        "size": "6.8"
+      }
+    ]
+  },
+  {
+    "agent": "Fade",
+    "role": "先锋",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Seize",
+        "file": "ability1.png",
+        "size": "6.0"
+      },
+      {
+        "slot": "E技能",
+        "name": "Haunt",
+        "file": "ability2.png",
+        "size": "5.6"
+      },
+      {
+        "slot": "C技能",
+        "name": "Prowler",
+        "file": "grenade.png",
+        "size": "5.1"
+      },
+      {
+        "slot": "X大招",
+        "name": "Nightfall",
+        "file": "ultimate.png",
+        "size": "7.4"
+      }
+    ]
+  },
+  {
+    "agent": "Breach",
+    "role": "先锋",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Flashpoint",
+        "file": "ability1.png",
+        "size": "5.6"
+      },
+      {
+        "slot": "E技能",
+        "name": "Fault Line",
+        "file": "ability2.png",
+        "size": "7.8"
+      },
+      {
+        "slot": "C技能",
+        "name": "Aftershock",
+        "file": "grenade.png",
+        "size": "6.0"
+      },
+      {
+        "slot": "X大招",
+        "name": "Rolling Thunder",
+        "file": "ultimate.png",
+        "size": "7.1"
+      }
+    ]
+  },
+  {
+    "agent": "Deadlock",
+    "role": "哨卫",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Sonic Sensor",
+        "file": "ability1.png",
+        "size": "7.3"
+      },
+      {
+        "slot": "C技能",
+        "name": "Barrier Mesh",
+        "file": "grenade.png",
+        "size": "4.6"
+      },
+      {
+        "slot": "E技能",
+        "name": "GravNet",
+        "file": "ability2.png",
+        "size": "7.6"
+      },
+      {
+        "slot": "X大招",
+        "name": "Annihilation",
+        "file": "ultimate.png",
+        "size": "5.9"
+      }
+    ]
+  },
+  {
+    "agent": "Tejo",
+    "role": "先锋",
+    "abilities": [
+      {
+        "slot": "E技能",
+        "name": "Guided Salvo",
+        "file": "ability2.png",
+        "size": "6.2"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Special Delivery",
+        "file": "ability1.png",
+        "size": "6.7"
+      },
+      {
+        "slot": "X大招",
+        "name": "Armageddon",
+        "file": "ultimate.png",
+        "size": "8.9"
+      },
+      {
+        "slot": "C技能",
+        "name": "Stealth Drone",
+        "file": "grenade.png",
+        "size": "5.2"
+      }
+    ]
+  },
+  {
+    "agent": "Raze",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Blast Pack",
+        "file": "ability1.png",
+        "size": "2.6"
+      },
+      {
+        "slot": "E技能",
+        "name": "Paint Shells",
+        "file": "ability2.png",
+        "size": "5.0"
+      },
+      {
+        "slot": "C技能",
+        "name": "Boom Bot",
+        "file": "grenade.png",
+        "size": "5.7"
+      },
+      {
+        "slot": "X大招",
+        "name": "Showstopper",
+        "file": "ultimate.png",
+        "size": "6.3"
+      }
+    ]
+  },
+  {
+    "agent": "Chamber",
+    "role": "哨卫",
+    "abilities": [
+      {
+        "slot": "E技能",
+        "name": "Rendezvous",
+        "file": "ability2.png",
+        "size": "5.9"
+      },
+      {
+        "slot": "C技能",
+        "name": "Trademark",
+        "file": "grenade.png",
+        "size": "6.8"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Headhunter",
+        "file": "ability1.png",
+        "size": "2.9"
+      },
+      {
+        "slot": "X大招",
+        "name": "Tour De Force",
+        "file": "ultimate.png",
+        "size": "5.8"
+      }
+    ]
+  },
+  {
+    "agent": "KAY/O",
+    "role": "先锋",
+    "abilities": [
+      {
+        "slot": "C技能",
+        "name": "FRAG/ment",
+        "file": "grenade.png",
+        "size": "10.8"
+      },
+      {
+        "slot": "Q技能",
+        "name": "FLASH/drive",
+        "file": "ability1.png",
+        "size": "5.8"
+      },
+      {
+        "slot": "E技能",
+        "name": "ZERO/point",
+        "file": "ability2.png",
+        "size": "5.4"
+      },
+      {
+        "slot": "X大招",
+        "name": "NULL/cmd",
+        "file": "ultimate.png",
+        "size": "5.2"
+      }
+    ]
+  },
+  {
+    "agent": "Skye",
+    "role": "先锋",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Trailblazer",
+        "file": "ability1.png",
+        "size": "5.9"
+      },
+      {
+        "slot": "E技能",
+        "name": "Guiding Light",
+        "file": "ability2.png",
+        "size": "3.8"
+      },
+      {
+        "slot": "C技能",
+        "name": "Regrowth",
+        "file": "grenade.png",
+        "size": "6.1"
+      },
+      {
+        "slot": "X大招",
+        "name": "Seekers",
+        "file": "ultimate.png",
+        "size": "8.4"
+      }
+    ]
+  },
+  {
+    "agent": "Cypher",
+    "role": "哨卫",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Cyber Cage",
+        "file": "ability1.png",
+        "size": "5.4"
+      },
+      {
+        "slot": "E技能",
+        "name": "Spycam",
+        "file": "ability2.png",
+        "size": "4.1"
+      },
+      {
+        "slot": "C技能",
+        "name": "Trapwire",
+        "file": "grenade.png",
+        "size": "3.0"
+      },
+      {
+        "slot": "X大招",
+        "name": "Neural Theft",
+        "file": "ultimate.png",
+        "size": "4.6"
+      }
+    ]
+  },
+  {
+    "agent": "Sova",
+    "role": "先锋",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Shock Bolt",
+        "file": "ability1.png",
+        "size": "3.9"
+      },
+      {
+        "slot": "E技能",
+        "name": "Recon Bolt",
+        "file": "ability2.png",
+        "size": "6.6"
+      },
+      {
+        "slot": "C技能",
+        "name": "Owl Drone",
+        "file": "grenade.png",
+        "size": "3.1"
+      },
+      {
+        "slot": "X大招",
+        "name": "Hunter's Fury",
+        "file": "ultimate.png",
+        "size": "5.4"
+      }
+    ]
+  },
+  {
+    "agent": "Miks",
+    "role": "控场",
+    "abilities": [
+      {
+        "slot": "C技能",
+        "name": "M-pulse",
+        "file": "grenade.png",
+        "size": "7.8"
+      },
+      {
+        "slot": "E技能",
+        "name": "Waveform",
+        "file": "ability2.png",
+        "size": "7.9"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Harmonize",
+        "file": "ability1.png",
+        "size": "6.0"
+      },
+      {
+        "slot": "X大招",
+        "name": "Bassquake",
+        "file": "ultimate.png",
+        "size": "7.9"
+      }
+    ]
+  },
+  {
+    "agent": "Killjoy",
+    "role": "哨卫",
+    "abilities": [
+      {
+        "slot": "C技能",
+        "name": "Nanoswarm",
+        "file": "grenade.png",
+        "size": "7.7"
+      },
+      {
+        "slot": "Q技能",
+        "name": "ALARMBOT",
+        "file": "ability1.png",
+        "size": "7.1"
+      },
+      {
+        "slot": "E技能",
+        "name": "TURRET",
+        "file": "ability2.png",
+        "size": "4.1"
+      },
+      {
+        "slot": "X大招",
+        "name": "Lockdown",
+        "file": "ultimate.png",
+        "size": "9.9"
+      }
+    ]
+  },
+  {
+    "agent": "Harbor",
+    "role": "控场",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "High Tide",
+        "file": "ability1.png",
+        "size": "5.6"
+      },
+      {
+        "slot": "C技能",
+        "name": "Storm Surge",
+        "file": "grenade.png",
+        "size": "4.7"
+      },
+      {
+        "slot": "E技能",
+        "name": "Cove",
+        "file": "ability2.png",
+        "size": "8.0"
+      },
+      {
+        "slot": "X大招",
+        "name": "Reckoning",
+        "file": "ultimate.png",
+        "size": "4.7"
+      }
+    ]
+  },
+  {
+    "agent": "Vyse",
+    "role": "哨卫",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Shear",
+        "file": "ability1.png",
+        "size": "5.3"
+      },
+      {
+        "slot": "E技能",
+        "name": "Arc Rose",
+        "file": "ability2.png",
+        "size": "5.2"
+      },
+      {
+        "slot": "C技能",
+        "name": "Razorvine",
+        "file": "grenade.png",
+        "size": "6.0"
+      },
+      {
+        "slot": "X大招",
+        "name": "Steel Garden",
+        "file": "ultimate.png",
+        "size": "5.0"
+      }
+    ]
+  },
+  {
+    "agent": "Viper",
+    "role": "控场",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Poison Cloud",
+        "file": "ability1.png",
+        "size": "4.3"
+      },
+      {
+        "slot": "E技能",
+        "name": "Toxic Screen",
+        "file": "ability2.png",
+        "size": "5.1"
+      },
+      {
+        "slot": "C技能",
+        "name": "Snake Bite",
+        "file": "grenade.png",
+        "size": "4.1"
+      },
+      {
+        "slot": "X大招",
+        "name": "Viper's Pit",
+        "file": "ultimate.png",
+        "size": "4.8"
+      }
+    ]
+  },
+  {
+    "agent": "Phoenix",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "C技能",
+        "name": "Blaze",
+        "file": "grenade.png",
+        "size": "5.0"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Hot Hands",
+        "file": "ability1.png",
+        "size": "3.8"
+      },
+      {
+        "slot": "E技能",
+        "name": "Curveball",
+        "file": "ability2.png",
+        "size": "3.4"
+      },
+      {
+        "slot": "X大招",
+        "name": "Run it Back",
+        "file": "ultimate.png",
+        "size": "5.2"
+      }
+    ]
+  },
+  {
+    "agent": "Veto",
+    "role": "哨卫",
+    "abilities": [
+      {
+        "slot": "E技能",
+        "name": "Interceptor",
+        "file": "ability2.png",
+        "size": "23.7"
+      },
+      {
+        "slot": "C技能",
+        "name": "Crosscut",
+        "file": "grenade.png",
+        "size": "17.3"
+      },
+      {
+        "slot": "X大招",
+        "name": "Evolution",
+        "file": "ultimate.png",
+        "size": "25.9"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Chokehold",
+        "file": "ability1.png",
+        "size": "19.0"
+      }
+    ]
+  },
+  {
+    "agent": "Astra",
+    "role": "控场",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Nova Pulse",
+        "file": "ability1.png",
+        "size": "6.8"
+      },
+      {
+        "slot": "E技能",
+        "name": "Nebula  / Dissipate",
+        "file": "ability2.png",
+        "size": "6.2"
+      },
+      {
+        "slot": "C技能",
+        "name": "Gravity Well",
+        "file": "grenade.png",
+        "size": "7.4"
+      },
+      {
+        "slot": "X大招",
+        "name": "Astral Form / Cosmic Divide",
+        "file": "ultimate.png",
+        "size": "8.1"
+      },
+      {
+        "slot": "Passive",
+        "name": "Astral Form",
+        "file": "passive.png",
+        "size": "3.7"
+      }
+    ]
+  },
+  {
+    "agent": "Brimstone",
+    "role": "控场",
+    "abilities": [
+      {
+        "slot": "C技能",
+        "name": "Stim Beacon",
+        "file": "grenade.png",
+        "size": "4.6"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Incendiary",
+        "file": "ability1.png",
+        "size": "4.2"
+      },
+      {
+        "slot": "E技能",
+        "name": "Sky Smoke",
+        "file": "ability2.png",
+        "size": "2.3"
+      },
+      {
+        "slot": "X大招",
+        "name": "Orbital Strike",
+        "file": "ultimate.png",
+        "size": "7.0"
+      }
+    ]
+  },
+  {
+    "agent": "Iso",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Undercut",
+        "file": "ability1.png",
+        "size": "7.7"
+      },
+      {
+        "slot": "X大招",
+        "name": "Kill Contract",
+        "file": "ultimate.png",
+        "size": "7.2"
+      },
+      {
+        "slot": "E技能",
+        "name": "Double Tap",
+        "file": "ability2.png",
+        "size": "6.0"
+      },
+      {
+        "slot": "C技能",
+        "name": "Contingency",
+        "file": "grenade.png",
+        "size": "8.3"
+      }
+    ]
+  },
+  {
+    "agent": "Clove",
+    "role": "控场",
+    "abilities": [
+      {
+        "slot": "C技能",
+        "name": "Pick-me-up",
+        "file": "grenade.png",
+        "size": "3.2"
+      },
+      {
+        "slot": "E技能",
+        "name": "Ruse",
+        "file": "ability2.png",
+        "size": "3.3"
+      },
+      {
+        "slot": "X大招",
+        "name": "Not Dead Yet",
+        "file": "ultimate.png",
+        "size": "3.1"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Meddle",
+        "file": "ability1.png",
+        "size": "3.4"
+      }
+    ]
+  },
+  {
+    "agent": "Neon",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "E技能",
+        "name": "High Gear",
+        "file": "ability2.png",
+        "size": "5.2"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Relay Bolt",
+        "file": "ability1.png",
+        "size": "4.3"
+      },
+      {
+        "slot": "C技能",
+        "name": "Fast Lane",
+        "file": "grenade.png",
+        "size": "5.1"
+      },
+      {
+        "slot": "X大招",
+        "name": "Overdrive",
+        "file": "ultimate.png",
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "agent": "Yoru",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "C技能",
+        "name": "FAKEOUT",
+        "file": "grenade.png",
+        "size": "4.8"
+      },
+      {
+        "slot": "Q技能",
+        "name": "BLINDSIDE",
+        "file": "ability1.png",
+        "size": "6.4"
+      },
+      {
+        "slot": "E技能",
+        "name": "GATECRASH",
+        "file": "ability2.png",
+        "size": "5.9"
+      },
+      {
+        "slot": "X大招",
+        "name": "DIMENSIONAL DRIFT",
+        "file": "ultimate.png",
+        "size": "8.2"
+      }
+    ]
+  },
+  {
+    "agent": "Waylay",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "E技能",
+        "name": "Refract",
+        "file": "ability2.png",
+        "size": "5.6"
+      },
+      {
+        "slot": "C技能",
+        "name": "Saturate",
+        "file": "grenade.png",
+        "size": "8.2"
+      },
+      {
+        "slot": "Q技能",
+        "name": "Lightspeed",
+        "file": "ability1.png",
+        "size": "4.7"
+      },
+      {
+        "slot": "X大招",
+        "name": "Convergent Paths",
+        "file": "ultimate.png",
+        "size": "6.6"
+      }
+    ]
+  },
+  {
+    "agent": "Sage",
+    "role": "哨卫",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Slow Orb",
+        "file": "ability1.png",
+        "size": "8.1"
+      },
+      {
+        "slot": "E技能",
+        "name": "Healing Orb",
+        "file": "ability2.png",
+        "size": "2.7"
+      },
+      {
+        "slot": "C技能",
+        "name": "Barrier Orb",
+        "file": "grenade.png",
+        "size": "2.7"
+      },
+      {
+        "slot": "X大招",
+        "name": "Resurrection",
+        "file": "ultimate.png",
+        "size": "5.3"
+      }
+    ]
+  },
+  {
+    "agent": "Reyna",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Devour",
+        "file": "ability1.png",
+        "size": "5.7"
+      },
+      {
+        "slot": "E技能",
+        "name": "Dismiss",
+        "file": "ability2.png",
+        "size": "6.9"
+      },
+      {
+        "slot": "C技能",
+        "name": "Leer",
+        "file": "grenade.png",
+        "size": "4.4"
+      },
+      {
+        "slot": "X大招",
+        "name": "Empress",
+        "file": "ultimate.png",
+        "size": "8.6"
+      }
+    ]
+  },
+  {
+    "agent": "Omen",
+    "role": "控场",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Paranoia",
+        "file": "ability1.png",
+        "size": "4.4"
+      },
+      {
+        "slot": "E技能",
+        "name": "Dark Cover",
+        "file": "ability2.png",
+        "size": "3.7"
+      },
+      {
+        "slot": "C技能",
+        "name": "Shrouded Step",
+        "file": "grenade.png",
+        "size": "4.5"
+      },
+      {
+        "slot": "X大招",
+        "name": "From the Shadows",
+        "file": "ultimate.png",
+        "size": "4.7"
+      }
+    ]
+  },
+  {
+    "agent": "Jett",
+    "role": "决斗",
+    "abilities": [
+      {
+        "slot": "Q技能",
+        "name": "Updraft",
+        "file": "ability1.png",
+        "size": "3.3"
+      },
+      {
+        "slot": "E技能",
+        "name": "Tailwind",
+        "file": "ability2.png",
+        "size": "2.6"
+      },
+      {
+        "slot": "C技能",
+        "name": "Cloudburst",
+        "file": "grenade.png",
+        "size": "3.9"
+      },
+      {
+        "slot": "X大招",
+        "name": "Blade Storm",
+        "file": "ultimate.png",
+        "size": "4.9"
+      },
+      {
+        "slot": "Passive",
+        "name": "Drift",
+        "file": "passive.png",
+        "size": "24.5"
+      }
+    ]
+  }
+]

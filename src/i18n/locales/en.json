@@ -1,0 +1,180 @@
+{
+  "common": {
+    "menu": "Menu",
+    "search": "Search",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "undo": "Undo",
+    "redo": "Redo",
+    "screenshot": "Screenshot",
+    "strategy": "Strategy",
+    "settings": "Settings"
+  },
+  "ui": {
+    "undo": "Undo",
+    "redo": "Redo",
+    "screenshot": "Screenshot",
+    "screenshotFailed": "Screenshot failed",
+    "select": "Select",
+    "clear": "Clear",
+    "erase": "Erase",
+    "selectMode": "Select Mode",
+    "drawMode": "Draw Mode",
+    "eraseMode": "Erase Mode",
+    "clickToErase": "Click to erase",
+    "placeAbility": "Place Ability",
+    "placeAgent": "Place Agent",
+    "textTool": "Text",
+    "draw": "Draw",
+    "ability": "Ability",
+    "agent": "Agent",
+    "loadingMap": "Loading map...",
+    "textPlaceholder": "Enter text...",
+    "dragToDelete": "Drag here to delete",
+    "freehand": "Freehand",
+    "line": "Line",
+    "arrow": "Arrow"
+  },
+  "agent": {
+    "select": "Select Agent",
+    "duelist": "Duelist",
+    "controller": "Controller",
+    "initiator": "Initiator",
+    "sentinel": "Sentinel"
+  },
+  "map": {
+    "select": "Select Map",
+    "layers": {
+      "spawnBarrier": "Spawn Barrier",
+      "regionNames": "Region Names",
+      "ultimateOrb": "Ultimate Orb",
+      "grid": "Grid"
+    }
+  },
+  "team": {
+    "ally": "Ally",
+    "enemy": "Enemy"
+  },
+  "lineup": {
+    "title": "Lineups",
+    "mode": "Lineup Mode",
+    "strategyMode": "Strategy Mode",
+    "strategy": "Strategy",
+    "filter": {
+      "all": "All",
+      "attack": "Attack",
+      "defense": "Defense"
+    },
+    "loading": "Loading lineups...",
+    "noData": "No lineup data",
+    "noResults": "No results found",
+    "watchVideo": "Watch Video",
+    "custom": "Custom",
+    "addNew": "Add New Lineup",
+    "standPosition": "Stand Position",
+    "landingPosition": "Landing Position",
+    "title": "Title",
+    "side": "Side",
+    "ability": "Ability",
+    "videoUrl": "Video URL",
+    "saveLineup": "Save Lineup",
+    "cancelEdit": "Cancel",
+    "favorite": "Favorite",
+    "unfavorite": "Unfavorite",
+    "myFavorites": "My Favorites",
+    "worldCoord": "World Coordinates",
+    "mouseCoordScreen": "Screen Coordinates",
+    "selectedPoint": "Selected Point",
+    "searchPlaceholder": "Search lineups...",
+    "addLineup": "Add Lineup",
+    "markerDisplay": "Marker Display",
+    "hide": "Hide",
+    "source": "Source",
+    "imageError": "Failed to load image"
+  },
+  "mapCanvas": {
+    "flip": "Flip Map",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "resetView": "Reset View"
+  },
+  "zoom": {
+    "in": "Zoom In",
+    "out": "Zoom Out",
+    "reset": "Reset"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "defaultMap": "Default Map",
+    "shortcuts": "Keyboard Shortcuts",
+    "duplicateElement": "Duplicate",
+    "deleteElement": "Delete",
+    "undo": "Undo",
+    "redo": "Redo",
+    "grid": "Grid Settings",
+    "showGrid": "Show Grid",
+    "snapToGrid": "Snap to Grid",
+    "gridSize": "Grid Size",
+    "drawing": "Drawing Settings",
+    "defaultColor": "Default Color",
+    "defaultStrokeWidth": "Stroke Width",
+    "mapLayers": "Default Map Layers",
+    "other": "Other Settings",
+    "showDebugPanel": "Show Debug Info",
+    "resetToDefault": "Reset to Default",
+    "autoSaveHint": "Settings are automatically saved"
+  },
+  "video": {
+    "player": "Video Player",
+    "loadError": "Failed to load video",
+    "openInBilibili": "Open in Bilibili",
+    "timestamp": "Timestamp"
+  },
+  "toolbar": {
+    "select": "Select",
+    "agent": "Agent",
+    "ability": "Ability",
+    "draw": "Draw"
+  },
+  "roles": {
+    "duelist": "Duelist",
+    "controller": "Controller",
+    "initiator": "Initiator",
+    "sentinel": "Sentinel"
+  },
+  "sidebar": {
+    "tabs": {
+      "agents": "Agents",
+      "abilities": "Abilities",
+      "tools": "Tools"
+    },
+    "search": "Search agents...",
+    "drawingTools": "Drawing Tools"
+  },
+  "strategy": {
+    "create": "Create Strategy",
+    "current": "Current Strategy",
+    "save": "Save",
+    "export": "Export",
+    "import": "Import",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "saved": "Saved Strategies",
+    "noSaved": "No saved strategies",
+    "namePlaceholder": "Enter strategy name...",
+    "importPlaceholder": "Paste strategy JSON data...",
+    "rename": "Rename",
+    "load": "Load",
+    "delete": "Delete",
+    "attack": "Attack",
+    "defense": "Defense"
+  }
+}
