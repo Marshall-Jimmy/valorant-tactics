@@ -413,6 +413,15 @@ export function StrategyPanel() {
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
+                      {/* Splash thumbnail */}
+                      {strategy.splashUrl && (
+                        <img
+                          src={strategy.splashUrl}
+                          alt=""
+                          className="w-8 h-5 rounded object-cover shrink-0 border border-zinc-700/50"
+                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                        />
+                      )}
                       {/* Sequence number badge */}
                       <span className={`inline-flex items-center justify-center w-5 h-5 rounded text-[10px] font-bold shrink-0 ${
                         currentStrategy?.id === strategy.id

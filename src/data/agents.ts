@@ -37,7 +37,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     role: 'duelist',
     name: '捷风',
     iconPath: '/agents/jett.png',
-    abilities: createDefaultAbilities('jett', 'Jett', ['Cloudburst', 'Updraft', 'Tailwind', 'Blade Storm'], ['云雾', '上升气流', '顺风', '刃风暴']),
+    abilities: createDefaultAbilities('jett', 'Jett', ['Cloudburst', 'Updraft', 'Tailwind', 'Blade Storm'], ['瞬云', '凌空', '逐风', '飓刃']),
   },
 
   raze: {
@@ -45,7 +45,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     role: 'duelist',
     name: '雷兹',
     iconPath: '/agents/raze.png',
-    abilities: createDefaultAbilities('raze', 'Raze', ['Boom Bot', 'Blast Pack', 'Paint Shells', 'Showstopper'], ['爆炸机器人', '爆破包', '涂料弹壳', '终结秀']),
+    abilities: createDefaultAbilities('raze', 'Raze', ['Boom Bot', 'Blast Pack', 'Paint Shells', 'Showstopper'], ['花车巡游', '惊喜翻腾', '彩雷飞溅', '晚安焰火']),
   },
 
   phoenix: {
@@ -54,7 +54,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '不死鸟',
     iconPath: '/agents/phoenix.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('phoenix', 'Phoenix', ['Blaze', 'Hot Hands', 'Curveball', 'Run it Back'], ['烈焰', '灼热之手', '弧光球', '浴火重生']);
+      const abilities = createDefaultAbilities('phoenix', 'Phoenix', ['Blaze', 'Hot Hands', 'Curveball', 'Run it Back'], ['火冒三丈', '火热手感', '闪光曲球', '再火一回']);
       abilities[0].abilityData = {
         type: 'square',
         width: 5,
@@ -80,7 +80,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '亚星卓',
     iconPath: '/agents/astra.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('astra', 'Astra', ['Gravity Well', 'Nova Pulse', 'Nebula', 'Cosmic Divide'], ['重力之阱', '新星脉冲', '星云', '宇宙分裂']);
+      const abilities = createDefaultAbilities('astra', 'Astra', ['Gravity Well', 'Nova Pulse', 'Nebula', 'Cosmic Divide'], ['重力之阱', '新星脉冲', '星云', '星界形态']);
       // 亚星卓: C=重力之阱, Q=新星脉冲, E=星云(烟雾), X=宇宙分裂
       // index 0=C, 1=Q, 2=E, 3=X
       // 星云是E技能，在 index 2（对应 ability2.png）
@@ -129,7 +129,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '铁臂',
     iconPath: '/agents/breach.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('breach', 'Breach', ['Aftershock', 'Flashpoint', 'Fault Line', 'Rolling Thunder'], ['余震', '闪光弹', '断层线', '翻滚雷鸣']);
+      const abilities = createDefaultAbilities('breach', 'Breach', ['Aftershock', 'Flashpoint', 'Fault Line', 'Rolling Thunder'], ['剧震余波', '闪点爆破', '山崩地陷', '惊雷卷地']);
       abilities[0].abilityData = {
         type: 'square',
         width: 3 * inGameMetersDiameter,
@@ -164,7 +164,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '蝰蛇',
     iconPath: '/agents/viper.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('viper', 'Viper', ['Snake Bite', 'Noxious Vision', 'Toxic Screen', 'Viper\'s Pit'], ['蛇吻', '瘴云', '毒幕', '蝰腹']);
+      const abilities = createDefaultAbilities('viper', 'Viper', ['Snake Bite', 'Noxious Vision', 'Toxic Screen', 'Viper\'s Pit'], ['蛇吻', '破云', '毒幕', '蝰腹']);
       // 蝰蛇: C=蛇吻, Q=瘴云, E=毒幕(烟雾), X=蝰腹
       // index 0=C, 1=Q, 2=E, 3=X
       // 毒幕是E技能，在 index 2（对应 ability2.png）
@@ -199,7 +199,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     role: 'duelist',
     name: '夜露',
     iconPath: '/agents/yoru.png',
-    abilities: createDefaultAbilities('yoru', 'Yoru', ['FAKEOUT', 'BLINDSIDE', 'GATECRASH', 'DIMENSIONAL DRIFT'], ['欺瞒', '致盲', '破门而入', '次元潜行']),
+    abilities: createDefaultAbilities('yoru', 'Yoru', ['FAKEOUT', 'BLINDSIDE', 'GATECRASH', 'DIMENSIONAL DRIFT'], ['出其不意', '攻其不备', '不请自来', '神鬼不觉']),
   },
 
   sova: {
@@ -208,7 +208,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '猎枭',
     iconPath: '/agents/sova.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('sova', 'Sova', ['Owl Drone', 'Shock Bolt', 'Recon Bolt', "Hunter's Fury"], ['猎枭无人机', '震荡箭', '侦察箭', '猎手之怒']);
+      const abilities = createDefaultAbilities('sova', 'Sova', ['Owl Drone', 'Shock Bolt', 'Recon Bolt', "Hunter's Fury"], ['枭型无人机', '雷击箭', '寻敌箭', '狂猎之怒']);
       abilities[1].abilityData = {
         type: 'circle',
         iconPath: abilities[1].iconPath,
@@ -240,7 +240,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '斯凯',
     iconPath: '/agents/skye.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('skye', 'Skye', ['Regrowth', 'Trailblazer', 'Guiding Light', 'Seekers'], ['治愈', '追踪者', '引导之光', '寻猎者']);
+      const abilities = createDefaultAbilities('skye', 'Skye', ['Regrowth', 'Trailblazer', 'Guiding Light', 'Seekers'], ['愈生之息', '辟林之虎', '引路之隼', '追猎之灵']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -258,7 +258,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: 'K/O',
     iconPath: '/agents/kay_o.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('kayo', 'kay_o', ['FRAG/ment', 'FLASH/drive', 'ZERO/point', 'NULL/cmd'], ['碎片', '闪光驱动', '零点', '空指令']);
+      const abilities = createDefaultAbilities('kayo', 'kay_o', ['FRAG/ment', 'FLASH/drive', 'ZERO/point', 'NULL/cmd'], ['碎片溢出', '闪存过载', '零点嗅探', '无效命令']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -290,7 +290,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '奇乐',
     iconPath: '/agents/killjoy.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('killjoy', 'Killjoy', ['Nanoswarm', 'ALARMBOT', 'TURRET', 'Lockdown'], ['纳米蜂群', '警报机器人', '炮塔', '锁定']);
+      const abilities = createDefaultAbilities('killjoy', 'Killjoy', ['Nanoswarm', 'ALARMBOT', 'TURRET', 'Lockdown'], ['纳米蜂群', '自动哨兵', '哨戒炮台', '全面封锁']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -334,7 +334,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '炼狱',
     iconPath: '/agents/brimstone.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('brimstone', 'Brimstone', ['Stim Beacon', 'Incendiary', 'Sky Smoke', 'Orbital Strike'], ['振奋信标', '燃烧弹', '空投烟幕', '天基光束']);
+      const abilities = createDefaultAbilities('brimstone', 'Brimstone', ['Stim Beacon', 'Incendiary', 'Sky Smoke', 'Orbital Strike'], ['振奋信标', '燃烧榴弹', '空投烟幕', '天基光束']);
       // 炼狱: C=振奋信标, Q=燃烧榴弹, E=空投烟幕(烟雾), X=天基光束
       // index 0=C, 1=Q, 2=E, 3=X
       // 空投烟幕是E技能，在 index 2（对应 ability2.png）
@@ -377,7 +377,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '零',
     iconPath: '/agents/cypher.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('cypher', 'Cypher', ['Trapwire', 'Cyber Cage', 'Spycam', 'Neural Theft'], ['绊线', '网络牢笼', '间谍摄像头', '神经窃取']);
+      const abilities = createDefaultAbilities('cypher', 'Cypher', ['Trapwire', 'Cyber Cage', 'Spycam', 'Neural Theft'], ['震慑绊线', '赛博囚笼', '战术监控', '神经取析']);
       abilities[0].abilityData = {
         type: 'resizableSquare',
         width: 3,
@@ -404,7 +404,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '尚勃勒',
     iconPath: '/agents/chamber.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('chamber', 'Chamber', ['Trademark', 'Headhunter', 'Rendezvous', 'Tour De Force'], ['商标', '猎头', '会面', '强力之击']);
+      const abilities = createDefaultAbilities('chamber', 'Chamber', ['Trademark', 'Headhunter', 'Rendezvous', 'Tour De Force'], ['贵宾限行', '金牌猎头', '闪转自如', '孤高火力']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -429,7 +429,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '黑梦',
     iconPath: '/agents/fade.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('fade', 'Fade', ['Prowler', 'Seize', 'Haunt', 'Nightfall'], ['潜行', '封锁', '惊魂', '暗夜降临']);
+      const abilities = createDefaultAbilities('fade', 'Fade', ['Prowler', 'Seize', 'Haunt', 'Nightfall'], ['黯兽', '幽爪', '诡眼', '夜临']);
       abilities[1].abilityData = {
         type: 'circle',
         iconPath: abilities[1].iconPath,
@@ -462,7 +462,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '霓虹',
     iconPath: '/agents/neon.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('neon', 'Neon', ['Fast Lane', 'Relay Bolt', 'High Gear', 'Overdrive'], ['极速通道', '闪电弹', '高速档', '过载']);
+      const abilities = createDefaultAbilities('neon', 'Neon', ['Fast Lane', 'Relay Bolt', 'High Gear', 'Overdrive'], ['高速通道', '闪电弹球', '充能疾驰', '超限暴走']);
       abilities[0].abilityData = {
         type: 'square',
         width: 3.5 * inGameMeters,
@@ -517,7 +517,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     role: 'duelist',
     name: '芮娜',
     iconPath: '/agents/reyna.png',
-    abilities: createDefaultAbilities('reyna', 'Reyna', ['Leer', 'Devour', 'Dismiss', 'Empress'], ['凝视', '吞噬', '驱逐', '女皇']),
+    abilities: createDefaultAbilities('reyna', 'Reyna', ['Leer', 'Devour', 'Dismiss', 'Empress'], ['睥睨', '噬尽', '逐散', '女皇旨令']),
   },
 
   sage: {
@@ -553,13 +553,13 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '暮蝶',
     iconPath: '/agents/clove.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('clove', 'Clove', ['Ruse', 'Meddle', 'Mythic', 'Clergy'], ['残迹', '整妆', '霞幕', '追魂']);
+      const abilities = createDefaultAbilities('clove', 'Clove', ['Ruse', 'Meddle', 'Mythic', 'Clergy'], ['虹吸', '整蛊', '霞染', '化蝶']);
       // 暮蝶: C=残迹, Q=整妆(毒球), E=霞幕(封烟), X=追魂
       // 图标顺序: [grenade(C), ability1(Q), ability2(E), ultimate(X)]
       // 霞幕是E技能，在 index 2（对应 ability2.png）
       abilities[2] = {
         name: 'Mythic',
-        name_cn: '霞幕',
+        name_cn: '霞染',
         iconPath: '/abilities/clove/ability2.png',
         type: 'clove',
         index: 2,
@@ -583,7 +583,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '壹决',
     iconPath: '/agents/iso.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('iso', 'Iso', ['Contingency', 'Undercut', 'Double Tap', 'Kill Contract'], ['偶发事件', '下切', '双击', '击杀契约']);
+      const abilities = createDefaultAbilities('iso', 'Iso', ['Contingency', 'Undercut', 'Double Tap', 'Kill Contract'], ['绝对屏障', '稳态剥离', '战斗心流', '决斗通牒']);
       abilities[0].abilityData = {
         type: 'square',
         width: 4.5 * inGameMeters,
@@ -617,7 +617,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '钢锁',
     iconPath: '/agents/deadlock.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('deadlock', 'Deadlock', ['Barrier Mesh', 'Sonic Sensor', 'GravNet', 'Annihilation'], ['屏障网', '声波感应器', '引力网', '湮灭']);
+      const abilities = createDefaultAbilities('deadlock', 'Deadlock', ['Barrier Mesh', 'Sonic Sensor', 'GravNet', 'Annihilation'], ['重力捕网', '声感陷阱', '阻域屏障', '断魂索道']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -642,7 +642,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '盖可',
     iconPath: '/agents/gekko.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('gekko', 'Gekko', ['Mosh Pit', 'Wingman', 'Dizzy', 'Thrash'], ['mosh坑', '僚机', '眩晕', '碎裂']);
+      const abilities = createDefaultAbilities('gekko', 'Gekko', ['Mosh Pit', 'Wingman', 'Dizzy', 'Thrash'], ['炫晕光波', '嗨爆全场', '顽皮搭档', '无敌超鲨']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -703,7 +703,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '维斯',
     iconPath: '/agents/vyse.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('vyse', 'Vyse', ['Razorvine', 'Shear', 'Arc Rose', 'Steel Garden'], ['荆棘', '剪切', '电弧玫瑰', '钢铁花园']);
+      const abilities = createDefaultAbilities('vyse', 'Vyse', ['Razorvine', 'Shear', 'Arc Rose', 'Steel Garden'], ['剃刀藤蔓', '裁断', '弧光玫瑰', '铁棘禁园']);
       abilities[0].abilityData = {
         type: 'square',
         width: 1 * inGameMeters,
@@ -735,7 +735,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '钛狐',
     iconPath: '/agents/tejo.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('tejo', 'Tejo', ['Stealth Drone', 'Special Delivery', 'Guided Salvo', 'Armageddon'], ['隐匿无人机', '特殊投送', '制导齐射', '末日']);
+      const abilities = createDefaultAbilities('tejo', 'Tejo', ['Stealth Drone', 'Special Delivery', 'Guided Salvo', 'Armageddon'], ['潜袭爬虫', '特快专递', '精准投放', '末日审判']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -774,7 +774,7 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '幻棱',
     iconPath: '/agents/waylay.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('waylay', 'Waylay', ['Saturate', 'Lightspeed', 'Refract', 'Convergent Paths'], ['饱和', '光速', '折射', '聚合之路']);
+      const abilities = createDefaultAbilities('waylay', 'Waylay', ['Saturate', 'Lightspeed', 'Refract', 'Convergent Paths'], ['光棱闪爆', '光速飞跃', '溯流回光', '时光修罗场']);
       abilities[0].abilityData = {
         type: 'circle',
         iconPath: abilities[0].iconPath,
@@ -832,11 +832,11 @@ export const agentsData: Record<AgentType, AgentData> = {
     name: '米克斯',
     iconPath: '/agents/miks.png',
     abilities: (() => {
-      const abilities = createDefaultAbilities('miks', 'miks', ['Kudzu', 'Thorns', 'Smoke', 'Alpha Strain'], ['葛藤', '荆棘', '烟雾', '阿尔法菌株']);
+      const abilities = createDefaultAbilities('miks', 'miks', ['Kudzu', 'Thorns', 'Smoke', 'Alpha Strain'], ['电音脉冲', '共振谐律', '声波帷幕', '音脉强袭']);
       // 米克斯E技能是烟雾，在 index 2（对应 ability2.png）
       abilities[2] = {
         name: 'Smoke',
-        name_cn: '烟雾',
+        name_cn: '声波帷幕',
         iconPath: '/abilities/miks/ability2.png',
         type: 'miks',
         index: 2,

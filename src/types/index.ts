@@ -151,6 +151,7 @@ export interface Strategy {
   placedAbilities: PlacedAbility[];
   placedAgents: PlacedAgent[];
   drawings: DrawingElement[];
+  splashUrl?: string;
   createdAt: number;
   updatedAt: number;
 }

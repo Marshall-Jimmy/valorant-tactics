@@ -37,6 +37,7 @@ import {
   Lineup,
   LineupAbility,
 } from '@/data/lineups';
+import { getMapName } from '@/data/maps';
 import { useToast } from '@/components/Toast';
 import { validateImageFile, validateBase64Image, LIMITS } from '@/schemas';
 
@@ -334,6 +335,20 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
             <X className="w-5 h-5" />
           </button>
         )}
+      </div>
+
+      {/* Map Splash Banner */}
+      <div className="relative h-24 -mx-3 -mt-3 mb-3 overflow-hidden rounded-lg">
+        <img
+          src={`/maps/splash/${currentMap}_splash.png`}
+          alt={currentMap}
+          className="w-full h-full object-cover"
+          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent" />
+        <div className="absolute bottom-2 left-3 text-sm font-medium text-zinc-200">
+          {getMapName(currentMap as any)}
+        </div>
       </div>
 
       {/* Agent Selector */}

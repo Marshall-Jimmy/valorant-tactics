@@ -860,6 +860,7 @@ export const useTacticsStore = create<TacticsState>()(
           placedAbilities: state.placedAbilities,
           placedAgents: state.placedAgents,
           drawings: state.drawings,
+          splashUrl: `/maps/splash/${state.currentMap}_splash.png`,
           createdAt: Date.now(),
           updatedAt: Date.now(),
         };
@@ -890,6 +891,7 @@ export const useTacticsStore = create<TacticsState>()(
           placedAbilities: state.placedAbilities,
           placedAgents: state.placedAgents,
           drawings: state.drawings,
+          splashUrl: `/maps/splash/${state.currentMap}_splash.png`,
           updatedAt: Date.now(),
         };
         set((s) => ({

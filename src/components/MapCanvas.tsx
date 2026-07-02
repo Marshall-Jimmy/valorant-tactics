@@ -526,6 +526,18 @@ export function MapCanvas() {
           }
         },
       });
+
+      // 添加地图名称水印
+      const ctx = canvas.getContext('2d')!;
+      const padding = 16;
+      const fontSize = 14;
+      ctx.font = `${fontSize}px sans-serif`;
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'bottom';
+      const mapName = mapData?.name || currentMap;
+      ctx.fillText(`Valorant Tactics | ${mapName}`, canvas.width - padding, canvas.height - padding);
+
       const link = document.createElement('a');
       link.download = `tactics-${currentMap}-${Date.now()}.png`;
       link.href = canvas.toDataURL('image/png');
