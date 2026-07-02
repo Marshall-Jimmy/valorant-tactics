@@ -191,6 +191,8 @@ const MIME_TYPES = {
 const DIST_DIR = path.join(__dirname, '..', 'out');
 
 // 启动本地 HTTP 服务器
+const PORT = process.env.VT_PORT ? parseInt(process.env.VT_PORT, 10) : 3777;
+
 function startServer() {
   return new Promise((resolve) => {
     server = http.createServer((req, res) => {
@@ -219,9 +221,10 @@ function startServer() {
     });
 
     // 监听随机端口
-    server.listen(0, '127.0.0.1', () => {
+    server.listen(PORT, '127.0.0.1', () => {
       const port = server.address().port;
       lastPort = port;
+      console.log(`[Server] 运行在 http://127.0.0.1:${port}`);
       resolve(port);
     });
   });
