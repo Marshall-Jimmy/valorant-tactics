@@ -1032,19 +1032,23 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
           </div>
 
           {/* Main image */}
-          <div
-            className="relative w-screen h-screen flex items-center justify-center animate-modal-in"
-            onClick={(e) => e.stopPropagation()}
-          >
+          {(() => {
             const lightboxImg = selectedLineup.media.detail_images[lightboxImageIndex];
-            const lightboxImgPath = lightboxImg.local ? `/lineups/images/${lightboxImg.local}` : lightboxImg.url;
-            <img
-              src={lightboxImgPath}
-              alt={lightboxImg.label}
-              className="max-w-screen max-h-screen object-contain cursor-zoom-out"
-              style={{ maxWidth: '100vw', maxHeight: '100vh' }}
-            />
-          </div>
+            const lightboxImgPath = lightboxImg?.local ? `/lineups/images/${lightboxImg.local}` : lightboxImg?.url;
+            return (
+            <div
+              className="relative w-screen h-screen flex items-center justify-center animate-modal-in"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={lightboxImgPath}
+                alt={lightboxImg?.label ?? ''}
+                className="max-w-screen max-h-screen object-contain cursor-zoom-out"
+                style={{ maxWidth: '100vw', maxHeight: '100vh' }}
+              />
+            </div>
+            );
+          })()}
 
           {/* Image label - 移到顶部避免与缩略图条重叠 */}
           <div className="absolute top-16 left-0 right-0 text-center pointer-events-none z-20">
