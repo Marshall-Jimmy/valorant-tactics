@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, globalShortcut, Tray, nativeImage } = require('electron');
+const { app, BrowserWindow, Menu, globalShortcut, Tray, nativeImage, ipcMain } = require('electron');
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
@@ -50,6 +50,7 @@ function toggleOverlay() {
         nodeIntegration: false,
         contextIsolation: true,
         webSecurity: false,
+        preload: path.join(__dirname, 'preload.js'),
       },
       show: false,
     });
@@ -75,6 +76,38 @@ function toggleOverlay() {
     startValorantWatcher();
   }
 }
+
+// ============ Overlay IPC Handlers ============
+
+// 从主窗口 localStorage 读取 overlay 数据
+ipcMain.handle('get-overlay-data', async () => {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    try {
+      const data = await mainWindow.webContents.executeJavaScript(`
+        (function() {
+          try {
+            var raw = localStorage.getItem('vt-overlay-data');
+            return raw ? JSON.parse(raw) : null;
+          } catch(e) { return null; }
+        })()
+      `);
+      return data;
+    } catch (e) {
+      console.error('[Overlay] 读取主窗口数据失败:', e);
+      return null;
+    }
+  }
+  return null;
+});
+
+// 关闭 overlay 窗口
+ipcMain.on('close-overlay', () => {
+  if (overlayWindow && !overlayWindow.isDestroyed()) {
+    overlayWindow.close();
+    overlayWindow = null;
+    console.log('[Overlay] 通过 IPC 关闭');
+  }
+});
 
 // 监视 Valorant 进程，退出时自动关闭 overlay
 function startValorantWatcher() {

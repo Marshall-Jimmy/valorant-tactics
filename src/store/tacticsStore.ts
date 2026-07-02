@@ -27,6 +27,8 @@ import {
   LIMITS,
 } from '@/schemas';
 import { useSettingsStore } from './settingsStore';
+import { agentsData } from '@/data/agents';
+import { getMapById } from '@/data/maps';
 
 // Undo/Redo action types
 export type ActionType = 'addAbility' | 'removeAbility' | 'updateAbility' 
@@ -991,3 +993,58 @@ export const useTacticsStore = create<TacticsState>()(
     }
   )
 );
+
+// ============ Overlay 数据同步 ============
+/**
+ * @agent Native/Overlay 开发专家
+ * @last-modified 2026-07-03
+ * @description 监听 tacticsStore 关键字段变化，将速查数据写入 localStorage。
+ *   供 Electron overlay 窗口通过 IPC 读取。
+ */
+
+const ABILITY_SLOT_KEYS = ['C', 'Q', 'E', 'X'] as const;
+
+function buildOverlayData(state: TacticsState): object | null {
+  const agentId = state.lineupAgentId;
+  const mapId = state.currentMap;
+
+  const agentInfo = agentsData[agentId];
+  const mapInfo = getMapById(mapId);
+
+  if (!agentInfo || !mapInfo) return null;
+
+  const abilities = agentInfo.abilities.map((ab, idx) => ({
+    key: ABILITY_SLOT_KEYS[idx] || '?',
+    name_cn: ab.name_cn || ab.name,
+    iconPath: ab.iconPath,
+  }));
+
+  return {
+    agent: {
+      type: agentInfo.type,
+      name: agentInfo.name,
+      iconPath: agentInfo.iconPath,
+    },
+    abilities,
+    map: {
+      key: mapInfo.id,
+      name: mapInfo.name,
+      name_en: mapInfo.name_en,
+    },
+  };
+}
+
+if (typeof window !== 'undefined') {
+  useTacticsStore.subscribe(
+    (state) => {
+      try {
+        const data = buildOverlayData(state);
+        if (data) {
+          localStorage.setItem('vt-overlay-data', JSON.stringify(data));
+        }
+      } catch {
+        // 静默失败，不影响主功能
+      }
+    }
+  );
+}
