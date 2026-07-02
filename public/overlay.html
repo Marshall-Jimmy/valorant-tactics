@@ -238,7 +238,8 @@
       top: 0; left: 0; right: 0; bottom: 0;
       z-index: 9999;
       display: flex; align-items: center; justify-content: center;
-      background: rgba(0, 0, 0, 0.85);
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       pointer-events: auto;
@@ -248,12 +249,26 @@
 
     .lightbox.visible { opacity: 1; }
 
+    /* 内容容器 - 固定大小居中 */
+    .lightbox-content {
+      position: relative;
+      width: 45vw;
+      height: 40vh;
+      min-width: 320px;
+      min-height: 240px;
+      max-width: 700px;
+      max-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .lightbox-img {
-      max-width: 85vw;
-      max-height: 80vh;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
     }
 
     .lightbox-close {
@@ -295,8 +310,8 @@
       color: #fff;
     }
 
-    .lightbox-nav.prev { left: 16px; }
-    .lightbox-nav.next { right: 16px; }
+    .lightbox-nav.prev { left: 8px; }
+    .lightbox-nav.next { right: 8px; }
 
     .lightbox-counter {
       position: absolute;
@@ -320,6 +335,87 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    /* 点位坐标预览页 */
+    .lineup-preview {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(167, 139, 250, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .lineup-preview .map-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(228, 228, 231, 0.15);
+      font-size: 48px;
+    }
+
+    /* 站位标记 */
+    .coord-marker {
+      position: absolute;
+      width: 12px; height: 12px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .coord-marker.start {
+      background: #4ade80;
+      box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+    }
+
+    .coord-marker.end {
+      background: #a78bfa;
+      box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+    }
+
+    .coord-label {
+      position: absolute;
+      top: 100%; left: 50%;
+      transform: translateX(-50%);
+      margin-top: 4px;
+      font-size: 11px;
+      white-space: nowrap;
+      padding: 1px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .coord-marker.start .coord-label {
+      background: rgba(74, 222, 128, 0.2);
+      color: #4ade80;
+    }
+
+    .coord-marker.end .coord-label {
+      background: rgba(167, 139, 250, 0.2);
+      color: #a78bfa;
+    }
+
+    /* 连线 */
+    .coord-line {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* 页面指示 */
+    .lightbox-page-label {
+      position: absolute;
+      top: 8px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2px 10px;
+      border-radius: 8px;
+      pointer-events: none;
     }
 
     /* 右上角水印 */
@@ -349,7 +445,7 @@
     <button class="lightbox-close" id="lbClose">&times;</button>
     <button class="lightbox-nav prev" id="lbPrev">&#9664;</button>
     <button class="lightbox-nav next" id="lbNext">&#9654;</button>
-    <img class="lightbox-img" id="lbImg" src="" alt="">
+    <div class="lightbox-content" id="lbContent"></div>
     <div class="lightbox-title" id="lbTitle"></div>
     <div class="lightbox-counter" id="lbCounter"></div>
   </div>
@@ -367,7 +463,7 @@
     var pollTimer = null;
 
     // Lightbox state
-    var lbImages = [];
+    var lbPages = [];  // { type: 'coords', data: lineup } or { type: 'image', src: url }
     var lbIndex = 0;
     var lbTitle = '';
 
@@ -383,12 +479,28 @@
 
     /* ---------- Lightbox ---------- */
 
-    function openLightbox(images, title, startIndex) {
-      lbImages = images.filter(function(url) { return url && url.length > 0; });
-      if (lbImages.length === 0) return;
-      lbTitle = title || '';
-      lbIndex = startIndex || 0;
-      renderLightbox();
+    function openLightbox(lineup) {
+      lbTitle = lineup.title || '';
+
+      // 构建页面列表：第0页是坐标预览，后面是图片
+      lbPages = [];
+
+      // 第0页：坐标预览（如果有坐标）
+      if (lineup.coordinates) {
+        lbPages.push({ type: 'coords', data: lineup });
+      }
+
+      // 图片页
+      var images = [];
+      if (lineup.standImage) images.push(lineup.standImage);
+      if (lineup.detailImages) images = images.concat(lineup.detailImages);
+      images.forEach(function(url) {
+        if (url) lbPages.push({ type: 'image', src: url });
+      });
+
+      if (lbPages.length === 0) return;
+      lbIndex = 0;
+      renderLightboxPage();
       var lb = document.getElementById('lightbox');
       lb.style.display = 'flex';
       // 触发 reflow 后添加 visible class（用于动画）
@@ -402,16 +514,39 @@
     }
 
     function navigateLightbox(dir) {
-      lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
-      renderLightbox();
+      lbIndex = (lbIndex + dir + lbPages.length) % lbPages.length;
+      renderLightboxPage();
     }
 
-    function renderLightbox() {
-      document.getElementById('lbImg').src = lbImages[lbIndex];
-      document.getElementById('lbImg').alt = lbTitle;
+    function renderLightboxPage() {
+      var page = lbPages[lbIndex];
+      var content = document.getElementById('lbContent');
+
+      if (page.type === 'coords') {
+        // 渲染坐标预览
+        var coords = page.data.coordinates;
+        var x1 = coords.start[0] * 100, y1 = coords.start[1] * 100;
+        var x2 = coords.end[0] * 100, y2 = coords.end[1] * 100;
+
+        content.innerHTML =
+          '<div class="lineup-preview">' +
+            '<div class="map-placeholder">&#9878;</div>' +
+            '<svg class="coord-line" viewBox="0 0 100 100" preserveAspectRatio="none">' +
+              '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="rgba(167,139,250,0.3)" stroke-width="0.3" stroke-dasharray="1,1"/>' +
+            '</svg>' +
+            '<div class="coord-marker start" style="left:' + x1 + '%;top:' + y1 + '%"><div class="coord-label">站位</div></div>' +
+            '<div class="coord-marker end" style="left:' + x2 + '%;top:' + y2 + '%"><div class="coord-label">落点</div></div>' +
+            '<div class="lightbox-page-label">坐标预览</div>' +
+          '</div>';
+      } else if (page.type === 'image') {
+        content.innerHTML = '<img class="lightbox-img" src="' + escAttr(page.src) + '" alt="' + escAttr(lbTitle) + '">';
+      }
+
+      // 更新标题和计数器
       document.getElementById('lbTitle').textContent = lbTitle;
-      if (lbImages.length > 1) {
-        document.getElementById('lbCounter').textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+      var total = lbPages.length;
+      if (total > 1) {
+        document.getElementById('lbCounter').textContent = (lbIndex + 1) + ' / ' + total;
         document.getElementById('lbCounter').style.display = '';
         document.getElementById('lbPrev').style.display = '';
         document.getElementById('lbNext').style.display = '';
@@ -491,11 +626,9 @@
 
           // 查看图片按钮
           var imgBtnHtml = '';
-          var allImages = [];
-          if (l.standImage) allImages.push(l.standImage);
-          if (l.detailImages && l.detailImages.length > 0) allImages = allImages.concat(l.detailImages);
-          if (allImages.length > 0) {
-            imgBtnHtml = '<button class="view-img-btn" data-images="' + escAttr(JSON.stringify(allImages)) + '" data-title="' + escAttr(l.title) + '">查看图片 (' + allImages.length + ')</button>';
+          var hasImages = !!(l.standImage || (l.detailImages && l.detailImages.length > 0));
+          if (hasImages) {
+            imgBtnHtml = '<button class="view-img-btn" data-idx="' + idx + '">查看图片</button>';
           }
 
           return '<div class="lineup-item' + (isActive ? ' active' : '') + '" data-idx="' + idx + '">' +
@@ -567,11 +700,10 @@
       document.querySelectorAll('.view-img-btn').forEach(function(btn) {
         btn.addEventListener('click', function(e) {
           e.stopPropagation();
-          try {
-            var images = JSON.parse(this.getAttribute('data-images'));
-            var title = this.getAttribute('data-title');
-            openLightbox(images, title, 0);
-          } catch(err) {}
+          var idx = parseInt(this.getAttribute('data-idx'), 10);
+          if (!isNaN(idx) && lineupData[idx]) {
+            openLightbox(lineupData[idx]);
+          }
         });
       });
 
