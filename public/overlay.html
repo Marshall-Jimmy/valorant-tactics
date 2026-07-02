@@ -14,7 +14,7 @@
       user-select: none;
     }
 
-    /* 全局鼠标穿透（面板区域通过 JS 设置 pointer-events: auto） */
+    /* 全局鼠标穿透 */
     body { pointer-events: none; }
 
     /* 右侧贴边速查面板 */
@@ -47,17 +47,9 @@
       overflow-x: hidden;
     }
 
-    /* 自定义滚动条 */
-    .overlay-panel::-webkit-scrollbar {
-      width: 4px;
-    }
-    .overlay-panel::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .overlay-panel::-webkit-scrollbar-thumb {
-      background: rgba(167, 139, 250, 0.25);
-      border-radius: 2px;
-    }
+    .overlay-panel::-webkit-scrollbar { width: 4px; }
+    .overlay-panel::-webkit-scrollbar-track { background: transparent; }
+    .overlay-panel::-webkit-scrollbar-thumb { background: rgba(167, 139, 250, 0.25); border-radius: 2px; }
 
     /* 特工信息区 */
     .agent-section {
@@ -78,241 +70,136 @@
       flex-shrink: 0;
     }
 
-    .agent-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      min-width: 0;
-    }
+    .agent-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .agent-name { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .map-name { font-size: 12px; color: rgba(228, 228, 231, 0.6); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .map-name .map-en { color: rgba(228, 228, 231, 0.35); font-size: 11px; margin-left: 3px; }
 
-    .agent-name {
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.2;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .map-name {
-      font-size: 12px;
-      color: rgba(228, 228, 231, 0.6);
-      line-height: 1.2;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .map-name .map-en {
-      color: rgba(228, 228, 231, 0.35);
-      font-size: 11px;
-      margin-left: 3px;
-    }
-
-    /* 技能标签区 */
-    .abilities-row {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      flex-shrink: 0;
-      margin-bottom: 12px;
-    }
+    /* 技能标签 */
+    .abilities-row { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; margin-bottom: 12px; }
 
     .ability-tag {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #fff;
-      line-height: 1.2;
+      display: flex; align-items: center; gap: 4px;
+      padding: 3px 8px; border-radius: 6px;
+      font-size: 12px; font-weight: 600; color: #fff; line-height: 1.2;
     }
 
-    .ability-tag .tag-key {
-      font-size: 11px;
-      opacity: 0.7;
-    }
-
+    .ability-tag .tag-key { font-size: 11px; opacity: 0.7; }
     .ability-tag.key-c { background: rgba(16, 185, 129, 0.25); color: #6ee7b7; }
     .ability-tag.key-q { background: rgba(59, 130, 246, 0.25); color: #93c5fd; }
     .ability-tag.key-e { background: rgba(168, 85, 247, 0.25); color: #c4b5fd; }
     .ability-tag.key-x { background: rgba(245, 158, 11, 0.25); color: #fcd34d; }
 
     /* 分隔线 */
-    .divider {
-      height: 1px;
-      background: rgba(167, 139, 250, 0.15);
-      margin: 8px 0;
-      flex-shrink: 0;
-    }
+    .divider { height: 1px; background: rgba(167, 139, 250, 0.15); margin: 8px 0; flex-shrink: 0; }
 
     /* 收藏点位标题 */
     .fav-title {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 600;
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600;
       color: rgba(228, 228, 231, 0.5);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-      flex-shrink: 0;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      margin-bottom: 8px; flex-shrink: 0;
     }
+    .fav-title .star { color: #facc15; font-size: 13px; }
 
-    .fav-title .star {
-      color: #facc15;
-      font-size: 13px;
-    }
-
-    /* 收藏点位列表 */
-    .lineup-list {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      flex: 1;
-      min-height: 0;
-    }
+    /* 点位列表 */
+    .lineup-list { display: flex; flex-direction: column; gap: 4px; flex: 1; min-height: 0; }
 
     .lineup-item {
-      padding: 8px 10px;
-      border-radius: 8px;
+      padding: 8px 10px; border-radius: 8px;
       border: 1px solid transparent;
       background: rgba(255, 255, 255, 0.03);
-      cursor: pointer;
-      transition: all 0.15s ease;
+      cursor: pointer; transition: all 0.15s ease;
     }
 
-    .lineup-item:hover {
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .lineup-item.active {
-      border-color: rgba(167, 139, 250, 0.5);
-      background: rgba(167, 139, 250, 0.08);
-    }
+    .lineup-item:hover { background: rgba(255, 255, 255, 0.06); }
+    .lineup-item.active { border-color: rgba(167, 139, 250, 0.5); background: rgba(167, 139, 250, 0.08); }
 
     .lineup-item-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 6px;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 6px;
     }
 
     .lineup-item-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: #e4e4e7;
-      line-height: 1.3;
-      flex: 1;
-      min-width: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-size: 13px; font-weight: 600; color: #e4e4e7;
+      line-height: 1.3; flex: 1; min-width: 0;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
-    .lineup-item-tags {
-      display: flex;
-      gap: 4px;
-      flex-shrink: 0;
-    }
+    .lineup-item-tags { display: flex; gap: 4px; flex-shrink: 0; }
 
     .lineup-tag {
-      font-size: 10px;
-      font-weight: 600;
-      padding: 1px 5px;
-      border-radius: 4px;
-      line-height: 1.4;
+      font-size: 10px; font-weight: 600;
+      padding: 1px 5px; border-radius: 4px; line-height: 1.4;
     }
 
-    .lineup-tag.side-attack {
-      background: rgba(239, 68, 68, 0.2);
-      color: #fca5a5;
-    }
-
-    .lineup-tag.side-defense {
-      background: rgba(59, 130, 246, 0.2);
-      color: #93c5fd;
-    }
-
-    .lineup-tag.side-unknown {
-      background: rgba(255, 255, 255, 0.1);
-      color: rgba(228, 228, 231, 0.5);
-    }
-
-    .lineup-tag.ability-tag-sm {
-      font-size: 10px;
-      padding: 1px 5px;
-      border-radius: 4px;
-    }
-
+    .lineup-tag.side-attack { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+    .lineup-tag.side-defense { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+    .lineup-tag.side-unknown { background: rgba(255, 255, 255, 0.1); color: rgba(228, 228, 231, 0.5); }
+    .lineup-tag.ability-tag-sm { font-size: 10px; padding: 1px 5px; border-radius: 4px; }
     .lineup-tag.ability-tag-sm.key-c { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
     .lineup-tag.ability-tag-sm.key-q { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
     .lineup-tag.ability-tag-sm.key-e { background: rgba(168, 85, 247, 0.2); color: #c4b5fd; }
     .lineup-tag.ability-tag-sm.key-x { background: rgba(245, 158, 11, 0.2); color: #fcd34d; }
 
-    /* 点位描述 */
     .lineup-item-desc {
-      font-size: 11px;
-      color: rgba(228, 228, 231, 0.4);
-      line-height: 1.3;
-      margin-top: 4px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-size: 11px; color: rgba(228, 228, 231, 0.4);
+      line-height: 1.3; margin-top: 4px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
-    /* 步骤列表（展开） */
+    /* 查看图片按钮 */
+    .view-img-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      margin-top: 6px; padding: 3px 8px;
+      font-size: 11px; font-weight: 500;
+      color: rgba(167, 139, 250, 0.7);
+      background: rgba(167, 139, 250, 0.08);
+      border: 1px solid rgba(167, 139, 250, 0.15);
+      border-radius: 5px; cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .view-img-btn:hover {
+      color: rgba(167, 139, 250, 1);
+      background: rgba(167, 139, 250, 0.15);
+      border-color: rgba(167, 139, 250, 0.3);
+    }
+
+    /* 步骤列表 */
     .lineup-steps {
-      margin-top: 6px;
-      padding-top: 6px;
+      margin-top: 6px; padding-top: 6px;
       border-top: 1px solid rgba(167, 139, 250, 0.1);
     }
 
     .step {
-      font-size: 12px;
-      color: rgba(228, 228, 231, 0.6);
-      line-height: 1.5;
-      padding-left: 14px;
+      font-size: 12px; color: rgba(228, 228, 231, 0.6);
+      line-height: 1.5; padding-left: 14px;
       position: relative;
     }
 
     .step::before {
       content: attr(data-index);
-      position: absolute;
-      left: 0;
+      position: absolute; left: 0;
       color: rgba(167, 139, 250, 0.6);
-      font-weight: 600;
-      font-size: 11px;
+      font-weight: 600; font-size: 11px;
     }
 
-    /* 上/下导航箭头 */
+    /* 导航箭头 */
     .nav-arrows {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 8px;
-      flex-shrink: 0;
+      display: flex; align-items: center;
+      justify-content: center; gap: 8px;
+      margin-top: 8px; flex-shrink: 0;
     }
 
     .nav-arrow {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
+      width: 28px; height: 28px; border-radius: 6px;
       border: 1px solid rgba(167, 139, 250, 0.2);
       background: rgba(167, 139, 250, 0.05);
       color: rgba(167, 139, 250, 0.6);
-      font-size: 14px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.15s ease;
-      line-height: 1;
+      font-size: 14px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s ease; line-height: 1;
     }
 
     .nav-arrow:hover {
@@ -321,51 +208,24 @@
       color: rgba(167, 139, 250, 0.9);
     }
 
-    .nav-counter {
-      font-size: 11px;
-      color: rgba(228, 228, 231, 0.4);
-      min-width: 30px;
-      text-align: center;
-    }
+    .nav-counter { font-size: 11px; color: rgba(228, 228, 231, 0.4); min-width: 30px; text-align: center; }
 
     /* 空状态 */
-    .empty-state {
-      text-align: center;
-      padding: 16px 0;
-    }
-
-    .empty-icon {
-      font-size: 24px;
-      opacity: 0.3;
-      margin-bottom: 6px;
-    }
-
-    .empty-text {
-      font-size: 12px;
-      color: rgba(228, 228, 231, 0.4);
-      line-height: 1.5;
-    }
+    .empty-state { text-align: center; padding: 16px 0; }
+    .empty-icon { font-size: 24px; opacity: 0.3; margin-bottom: 6px; }
+    .empty-text { font-size: 12px; color: rgba(228, 228, 231, 0.4); line-height: 1.5; }
 
     /* 底部关闭按钮 */
-    .footer {
-      margin-top: 10px;
-      flex-shrink: 0;
-    }
+    .footer { margin-top: 10px; flex-shrink: 0; }
 
     .close-btn {
-      display: block;
-      width: 100%;
-      padding: 6px 0;
-      font-size: 11px;
-      font-weight: 600;
+      display: block; width: 100%; padding: 6px 0;
+      font-size: 11px; font-weight: 600;
       color: rgba(167, 139, 250, 0.5);
       border: 1px solid rgba(167, 139, 250, 0.15);
-      border-radius: 8px;
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      letter-spacing: 0.5px;
-      text-align: center;
+      border-radius: 8px; background: transparent;
+      cursor: pointer; transition: all 0.15s ease;
+      letter-spacing: 0.5px; text-align: center;
     }
 
     .close-btn:hover {
@@ -374,81 +234,223 @@
       background: rgba(167, 139, 250, 0.06);
     }
 
-    /* placeholder 状态 */
-    .placeholder {
-      text-align: center;
-      padding: 24px 16px;
+    /* placeholder */
+    .placeholder { text-align: center; padding: 24px 16px; }
+    .placeholder-icon { font-size: 28px; opacity: 0.3; margin-bottom: 8px; }
+    .placeholder-text { font-size: 13px; color: rgba(228, 228, 231, 0.5); line-height: 1.5; }
+    .placeholder-hint { font-size: 11px; color: rgba(228, 228, 231, 0.3); margin-top: 4px; }
+
+    /* ============================================ */
+    /*            中央图片展示 Lightbox            */
+    /* ============================================ */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      pointer-events: auto;
+      opacity: 0;
+      transition: opacity 0.2s ease;
     }
 
-    .placeholder-icon {
-      font-size: 28px;
-      opacity: 0.3;
-      margin-bottom: 8px;
+    .lightbox.visible { opacity: 1; }
+
+    .lightbox-img {
+      max-width: 85vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     }
 
-    .placeholder-text {
+    .lightbox-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .lightbox-nav.prev { left: 16px; }
+    .lightbox-nav.next { right: 16px; }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: 16px; left: 50%;
+      transform: translateX(-50%);
       font-size: 13px;
-      color: rgba(228, 228, 231, 0.5);
-      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.5);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 4px 12px;
+      border-radius: 12px;
     }
 
-    .placeholder-hint {
-      font-size: 11px;
-      color: rgba(228, 228, 231, 0.3);
-      margin-top: 4px;
+    .lightbox-title {
+      position: absolute;
+      bottom: 48px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 600;
+      max-width: 60vw;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* 右上角水印 */
+    .watermark {
+      position: fixed;
+      top: 16px; right: 20px;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 12px; font-weight: 600;
+      color: rgba(167, 139, 250, 0.35);
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
   </style>
 </head>
 <body>
 
+  <!-- 右上角水印 -->
+  <div class="watermark">Valorant Tactics</div>
+
+  <!-- 右侧面板 -->
   <div class="overlay-panel" id="panel">
     <div id="content"></div>
   </div>
 
+  <!-- 中央图片展示 -->
+  <div class="lightbox" id="lightbox" style="display:none;">
+    <button class="lightbox-close" id="lbClose">&times;</button>
+    <button class="lightbox-nav prev" id="lbPrev">&#9664;</button>
+    <button class="lightbox-nav next" id="lbNext">&#9654;</button>
+    <img class="lightbox-img" id="lbImg" src="" alt="">
+    <div class="lightbox-title" id="lbTitle"></div>
+    <div class="lightbox-counter" id="lbCounter"></div>
+  </div>
+
   <script>
-    /**
-     * Overlay 右侧贴边速查卡
-     * - 通过 window.electronAPI.getOverlayData() 从主窗口读取数据
-     * - 数据结构: { agent, abilities, map, lineups[], favoriteIds[] }
-     * - 支持收藏点位切换、滚轮切换、步骤展开
-     */
+    /* =============================================
+     *  Overlay 右侧速查卡 + 中央图片 Lightbox
+     * ============================================= */
 
-    const slotClassMap = {
-      'C': 'key-c',
-      'Q': 'key-q',
-      'E': 'key-e',
-      'X': 'key-x',
-    };
+    var slotClassMap = { 'C': 'key-c', 'Q': 'key-q', 'E': 'key-e', 'X': 'key-x' };
+    var sideClassMap = { 'attack': 'side-attack', 'defense': 'side-defense' };
 
-    const sideClassMap = {
-      'attack': 'side-attack',
-      'defense': 'side-defense',
-    };
+    var currentLineupIndex = 0;
+    var lineupData = [];
+    var overlayData = null;
+    var pollTimer = null;
 
-    let currentLineupIndex = 0;
-    let lineupData = [];
-    let overlayData = null;
-    let pollTimer = null;
+    // Lightbox state
+    var lbImages = [];
+    var lbIndex = 0;
+    var lbTitle = '';
 
-    // 安全的 HTML 转义
     function esc(str) {
       if (!str) return '';
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
     function escAttr(str) {
       if (!str) return '';
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
+      return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
+
+    /* ---------- Lightbox ---------- */
+
+    function openLightbox(images, title, startIndex) {
+      lbImages = images.filter(function(url) { return url && url.length > 0; });
+      if (lbImages.length === 0) return;
+      lbTitle = title || '';
+      lbIndex = startIndex || 0;
+      renderLightbox();
+      var lb = document.getElementById('lightbox');
+      lb.style.display = 'flex';
+      // 触发 reflow 后添加 visible class（用于动画）
+      requestAnimationFrame(function() { lb.classList.add('visible'); });
+    }
+
+    function closeLightbox() {
+      var lb = document.getElementById('lightbox');
+      lb.classList.remove('visible');
+      setTimeout(function() { lb.style.display = 'none'; }, 200);
+    }
+
+    function navigateLightbox(dir) {
+      lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+      renderLightbox();
+    }
+
+    function renderLightbox() {
+      document.getElementById('lbImg').src = lbImages[lbIndex];
+      document.getElementById('lbImg').alt = lbTitle;
+      document.getElementById('lbTitle').textContent = lbTitle;
+      if (lbImages.length > 1) {
+        document.getElementById('lbCounter').textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+        document.getElementById('lbCounter').style.display = '';
+        document.getElementById('lbPrev').style.display = '';
+        document.getElementById('lbNext').style.display = '';
+      } else {
+        document.getElementById('lbCounter').style.display = 'none';
+        document.getElementById('lbPrev').style.display = 'none';
+        document.getElementById('lbNext').style.display = 'none';
+      }
+    }
+
+    // Lightbox events
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    document.getElementById('lbPrev').addEventListener('click', function() { navigateLightbox(-1); });
+    document.getElementById('lbNext').addEventListener('click', function() { navigateLightbox(1); });
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    // 键盘: Esc 关闭, 左右切换
+    document.addEventListener('keydown', function(e) {
+      var lb = document.getElementById('lightbox');
+      if (lb.style.display === 'none') return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+
+    /* ---------- Overlay 渲染 ---------- */
 
     function renderPlaceholder() {
       document.getElementById('content').innerHTML =
@@ -466,35 +468,22 @@
         return;
       }
 
-      // 构建特工信息区
       var mapNameHtml = esc(data.map.name);
-      if (data.map.name_en) {
-        mapNameHtml += ' <span class="map-en">' + esc(data.map.name_en) + '</span>';
-      }
+      if (data.map.name_en) mapNameHtml += ' <span class="map-en">' + esc(data.map.name_en) + '</span>';
 
-      // 技能标签
       var abilitiesHtml = data.abilities.map(function(ab) {
         var keyClass = slotClassMap[ab.key] || 'key-c';
-        return '<span class="ability-tag ' + keyClass + '">' +
-          '<span class="tag-key">' + esc(ab.key) + '</span> ' +
-          esc(ab.name_cn) +
-        '</span>';
+        return '<span class="ability-tag ' + keyClass + '"><span class="tag-key">' + esc(ab.key) + '</span> ' + esc(ab.name_cn) + '</span>';
       }).join('');
 
-      // 收藏点位
       lineupData = data.lineups || [];
-      if (currentLineupIndex >= lineupData.length) {
-        currentLineupIndex = Math.max(0, lineupData.length - 1);
-      }
+      if (currentLineupIndex >= lineupData.length) currentLineupIndex = Math.max(0, lineupData.length - 1);
 
       var favSectionHtml = '';
       if (lineupData.length === 0) {
         favSectionHtml =
           '<div class="fav-title"><span class="star">&#9733;</span> 收藏点位</div>' +
-          '<div class="empty-state">' +
-            '<div class="empty-icon">&#9734;</div>' +
-            '<div class="empty-text">暂无收藏<br>请在主界面收藏点位</div>' +
-          '</div>';
+          '<div class="empty-state"><div class="empty-icon">&#9734;</div><div class="empty-text">暂无收藏<br>请在主界面收藏点位</div></div>';
       } else {
         var itemsHtml = lineupData.map(function(l, idx) {
           var isActive = idx === currentLineupIndex;
@@ -513,6 +502,15 @@
             stepsHtml += '</div>';
           }
 
+          // 查看图片按钮
+          var imgBtnHtml = '';
+          var allImages = [];
+          if (l.standImage) allImages.push(l.standImage);
+          if (l.detailImages && l.detailImages.length > 0) allImages = allImages.concat(l.detailImages);
+          if (allImages.length > 0) {
+            imgBtnHtml = '<button class="view-img-btn" data-images="' + escAttr(JSON.stringify(allImages)) + '" data-title="' + escAttr(l.title) + '">查看图片 (' + allImages.length + ')</button>';
+          }
+
           return '<div class="lineup-item' + (isActive ? ' active' : '') + '" data-idx="' + idx + '">' +
             '<div class="lineup-item-header">' +
               '<div class="lineup-item-title">' + esc(l.title) + '</div>' +
@@ -521,12 +519,10 @@
                 '<span class="lineup-tag ' + sideClass + '">' + esc(sideLabel) + '</span>' +
               '</div>' +
             '</div>' +
-            descHtml +
-            stepsHtml +
+            descHtml + imgBtnHtml + stepsHtml +
           '</div>';
         }).join('');
 
-        // 导航箭头（多于 1 个点位时显示）
         var navHtml = '';
         if (lineupData.length > 1) {
           navHtml =
@@ -543,8 +539,7 @@
           navHtml;
       }
 
-      var panel = document.getElementById('content');
-      panel.innerHTML =
+      document.getElementById('content').innerHTML =
         '<div class="agent-section">' +
           '<img class="agent-icon" src="' + escAttr(data.agent.iconPath) + '" alt="agent" onerror="this.style.display=\'none\'">' +
           '<div class="agent-info">' +
@@ -556,30 +551,23 @@
         '<div class="divider"></div>' +
         favSectionHtml +
         '<div class="divider"></div>' +
-        '<div class="footer">' +
-          '<button class="close-btn" id="closeBtn">F4 关闭</button>' +
-        '</div>';
+        '<div class="footer"><button class="close-btn" id="closeBtn">F4 关闭</button></div>';
 
-      // 绑定事件
       bindEvents();
       updateScrollClass();
     }
 
     function bindEvents() {
-      // 关闭按钮
       var closeBtn = document.getElementById('closeBtn');
-      if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-          if (window.electronAPI && window.electronAPI.closeOverlay) {
-            window.electronAPI.closeOverlay();
-          }
-        });
-      }
+      if (closeBtn) closeBtn.addEventListener('click', function() {
+        if (window.electronAPI && window.electronAPI.closeOverlay) window.electronAPI.closeOverlay();
+      });
 
       // 点位点击
-      var items = document.querySelectorAll('.lineup-item');
-      items.forEach(function(item) {
-        item.addEventListener('click', function() {
+      document.querySelectorAll('.lineup-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          // 如果点击的是查看图片按钮，不切换点位
+          if (e.target.classList.contains('view-img-btn')) return;
           var idx = parseInt(this.getAttribute('data-idx'), 10);
           if (!isNaN(idx) && idx !== currentLineupIndex) {
             currentLineupIndex = idx;
@@ -588,84 +576,68 @@
         });
       });
 
-      // 上/下导航
+      // 查看图片按钮
+      document.querySelectorAll('.view-img-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          try {
+            var images = JSON.parse(this.getAttribute('data-images'));
+            var title = this.getAttribute('data-title');
+            openLightbox(images, title, 0);
+          } catch(err) {}
+        });
+      });
+
+      // 导航
       var navUp = document.getElementById('navUp');
       var navDown = document.getElementById('navDown');
-      if (navUp) {
-        navUp.addEventListener('click', function(e) {
-          e.stopPropagation();
-          switchLineup(-1);
-        });
-      }
-      if (navDown) {
-        navDown.addEventListener('click', function(e) {
-          e.stopPropagation();
-          switchLineup(1);
-        });
-      }
+      if (navUp) navUp.addEventListener('click', function(e) { e.stopPropagation(); switchLineup(-1); });
+      if (navDown) navDown.addEventListener('click', function(e) { e.stopPropagation(); switchLineup(1); });
     }
 
     function switchLineup(direction) {
       if (lineupData.length === 0) return;
       currentLineupIndex = (currentLineupIndex + direction + lineupData.length) % lineupData.length;
       if (overlayData) renderOverlay(overlayData);
-      // 滚动选中项到可见区域
       var activeItem = document.querySelector('.lineup-item.active');
-      if (activeItem) {
-        activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-      }
+      if (activeItem) activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }
 
     function updateScrollClass() {
       var panel = document.getElementById('panel');
-      if (panel.scrollHeight > panel.clientHeight) {
-        panel.classList.add('has-scroll');
-      } else {
-        panel.classList.remove('has-scroll');
-      }
+      if (panel.scrollHeight > panel.clientHeight) panel.classList.add('has-scroll');
+      else panel.classList.remove('has-scroll');
     }
 
-    // 滚轮切换点位
+    // 滚轮切换点位（仅在面板上）
     document.getElementById('panel').addEventListener('wheel', function(e) {
-      if (lineupData.length > 1) {
-        e.preventDefault();
-        switchLineup(e.deltaY > 0 ? 1 : -1);
-      }
+      if (lineupData.length > 1) { e.preventDefault(); switchLineup(e.deltaY > 0 ? 1 : -1); }
     }, { passive: false });
 
-    // 加载数据
+    /* ---------- 数据加载 ---------- */
+
     async function loadOverlayData() {
       try {
         if (window.electronAPI && window.electronAPI.getOverlayData) {
           var data = await window.electronAPI.getOverlayData();
-          if (data) {
-            renderOverlay(data);
-          } else {
-            renderPlaceholder();
-          }
+          if (data) renderOverlay(data);
+          else renderPlaceholder();
         } else {
-          // 非 Electron 环境
           renderPlaceholder();
         }
       } catch (e) {
-        console.error('[Overlay] 加载数据失败:', e);
+        console.error('[Overlay] 数据加载失败:', e);
         renderPlaceholder();
       }
     }
 
-    // 定期轮询数据更新（每 2 秒）
     function startPolling() {
       if (pollTimer) clearInterval(pollTimer);
-      pollTimer = setInterval(function() {
-        loadOverlayData();
-      }, 2000);
+      pollTimer = setInterval(loadOverlayData, 2000);
     }
 
     // 初始化
-    loadOverlayData().then(function() {
-      startPolling();
-    });
+    loadOverlayData().then(startPolling);
   </script>
-
 </body>
 </html>

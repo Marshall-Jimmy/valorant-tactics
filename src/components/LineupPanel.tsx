@@ -113,6 +113,8 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
     for (const [abilityKey, ability] of Object.entries(mapData.abilities)) {
       for (const l of ability.lineups) {
         if (!favIds.has(l.id)) continue;
+        const standImg = l.media?.stand_image;
+        const detailImgs = l.media?.detail_images;
         allLineups.push({
           id: l.id,
           title: l.title,
@@ -125,6 +127,8 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
             end: l.coordinates.end.normalized as [number, number],
           },
           steps: (l as any).steps || [],
+          standImage: standImg?.local ? `/lineups/images/${standImg.local}` : standImg?.url || '',
+          detailImages: detailImgs?.map((img: any) => img?.local ? `/lineups/images/${img.local}` : img?.url || '') || [],
         });
       }
     }

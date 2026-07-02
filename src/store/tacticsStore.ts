@@ -85,6 +85,8 @@ export interface OverlayLineupInfo {
     end: [number, number];
   };
   steps: string[];
+  standImage?: string;  // 站位截图 URL
+  detailImages?: string[];  // 细节图 URL 数组
 }
 
 interface TacticsState {
