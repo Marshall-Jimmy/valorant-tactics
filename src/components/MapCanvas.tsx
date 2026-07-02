@@ -5,7 +5,7 @@ import { useTacticsStore } from '@/store/tacticsStore';
 import { mapsData, getMapScale } from '@/data/maps';
 import { agentsData } from '@/data/agents';
 import { v4 as uuidv4 } from 'uuid';
-import { Trash2, RotateCw, RotateCcw, Copy, Repeat, Heart, Undo2, Redo2, Camera, FlipHorizontal, Star } from 'lucide-react';
+import { Trash2, RotateCw, RotateCcw, Copy, Repeat, Heart, Undo2, Redo2, Camera, FlipHorizontal } from 'lucide-react';
 import { LanguageSelector, useLanguage } from './I18nProvider';
 import { ContextMenu, ContextMenuItem } from './ContextMenu';
 import { useToast } from './Toast';
@@ -371,11 +371,14 @@ export function MapCanvas() {
   }, [dragTarget, isOverDeleteZone, isDrawing, currentDrawing, drawColor, drawStrokeWidth, addDrawing, removePlacedAbility, removePlacedAgent, drawMode]);
 
   const onAbilityDragStart = useCallback((e: React.MouseEvent, id: string) => {
-    if (currentTool !== 'select' || isScreenshotMode) return;
-    e.stopPropagation();
-    setSelectedElement(id, 'ability');
-    setDragTarget({ type: 'ability', id });
-  }, [currentTool, isScreenshotMode, setSelectedElement]);
+    if (isScreenshotMode) return;
+    // Allow drag if already selected or in select tool mode
+    if (selectedElementId === id || currentTool === 'select') {
+      e.stopPropagation();
+      setSelectedElement(id, 'ability');
+      setDragTarget({ type: 'ability', id });
+    }
+  }, [currentTool, isScreenshotMode, selectedElementId, setSelectedElement]);
 
   const onAbilityClick = useCallback((e: React.MouseEvent, id: string) => {
     if (isScreenshotMode) return;
@@ -384,11 +387,14 @@ export function MapCanvas() {
   }, [isScreenshotMode, setSelectedElement]);
 
   const onAgentDragStart = useCallback((e: React.MouseEvent, id: string) => {
-    if (currentTool !== 'select' || isScreenshotMode) return;
-    e.stopPropagation();
-    setSelectedElement(id, 'agent');
-    setDragTarget({ type: 'agent', id });
-  }, [currentTool, isScreenshotMode, setSelectedElement]);
+    if (isScreenshotMode) return;
+    // Allow drag if already selected or in select tool mode
+    if (selectedElementId === id || currentTool === 'select') {
+      e.stopPropagation();
+      setSelectedElement(id, 'agent');
+      setDragTarget({ type: 'agent', id });
+    }
+  }, [currentTool, isScreenshotMode, selectedElementId, setSelectedElement]);
 
   const onAgentClick = useCallback((e: React.MouseEvent, id: string) => {
     if (isScreenshotMode) return;
@@ -493,7 +499,33 @@ export function MapCanvas() {
     if (!mapEl) { setScreenshotMode(false); return; }
     try {
       const html2canvas = await getHtml2Canvas();
-      const canvas = await html2canvas(mapEl, { background: '#09090b', useCORS: true });
+      const canvas = await html2canvas(mapEl, {
+        background: '#09090b',
+        useCORS: true,
+        onclone: (clonedDoc) => {
+          // html2canvas does not support CSS lab() color function (used by Tailwind v4).
+          // Replace lab() values in computed styles of cloned elements to prevent parse errors.
+          const allElements = clonedDoc.querySelectorAll('*');
+          const getCS = clonedDoc.defaultView?.getComputedStyle;
+          if (getCS) {
+            for (let i = 0; i < allElements.length; i++) {
+              const el = allElements[i] as HTMLElement;
+              try {
+                const cs = getCS(el);
+                for (let j = 0; j < cs.length; j++) {
+                  const prop = cs[j];
+                  const val = cs.getPropertyValue(prop);
+                  if (val.includes('lab(')) {
+                    el.style.setProperty(prop, 'inherit');
+                  }
+                }
+              } catch {
+                // skip elements that throw in cloned doc
+              }
+            }
+          }
+        },
+      });
       const link = document.createElement('a');
       link.download = `tactics-${currentMap}-${Date.now()}.png`;
       link.href = canvas.toDataURL('image/png');
@@ -588,11 +620,12 @@ export function MapCanvas() {
             </div>
 
             {/* Abilities and Agents - rendered at canvas level using memo components */}
+            {/* Hide selection highlight when any Radix Dialog is open (e.g. Settings) */}
             {placedAbilities.map((placed) => (
-              <AbilityMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} scaleFactor={scaleFactor} transform={transform} onDragStart={onAbilityDragStart} onClick={onAbilityClick} />
+              <AbilityMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id && !document.querySelector('[data-radix-dialog-content]')} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} scaleFactor={scaleFactor} transform={transform} onDragStart={onAbilityDragStart} onClick={onAbilityClick} />
             ))}
             {placedAgents.map((placed) => (
-              <AgentMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} transform={transform} displayName={getAgentName(placed.agentType)} onDragStart={onAgentDragStart} onClick={onAgentClick} />
+              <AgentMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id && !document.querySelector('[data-radix-dialog-content]')} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} transform={transform} displayName={getAgentName(placed.agentType)} onDragStart={onAgentDragStart} onClick={onAgentClick} />
             ))}
 
             {/* Placed Ult Orbs */}
@@ -618,24 +651,16 @@ export function MapCanvas() {
                     }
                   }}
                 >
-                  <div
+                  <img
+                    src="/map-tools/spike.svg"
+                    alt="Spike"
                     style={{
                       width: orbSize,
                       height: orbSize,
-                      backgroundColor: '#fbbf24',
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: '0 0 8px rgba(251, 191, 36, 0.5)',
-                      border: '2px solid #f59e0b',
-                      boxSizing: 'border-box',
+                      objectFit: 'contain',
+                      filter: 'drop-shadow(0 0 4px rgba(251, 191, 36, 0.5))',
                     }}
-                  >
-                    <Star
-                      style={{ width: orbSize * 0.55, height: orbSize * 0.55, color: '#92400e', fill: '#92400e' }}
-                    />
-                  </div>
+                  />
                 </div>
               );
             })}
