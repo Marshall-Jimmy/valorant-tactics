@@ -60,7 +60,7 @@ function toggleOverlay() {
       show: false,
     });
 
-    // 加载 overlay 页面
+    // 加载 overlay 页面（始终通过 HTTP 服务器，确保资源路径正常）
     if (server) {
       overlayWindow.loadURL(`http://127.0.0.1:${server.address().port}/overlay.html`);
     } else {
