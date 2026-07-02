@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, globalShortcut } = require('electron');
+const { app, BrowserWindow, Menu, globalShortcut, Tray, nativeImage } = require('electron');
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
@@ -8,6 +8,8 @@ process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
 
 let mainWindow;
 let server;
+let tray = null;
+let lastPort = null;
 
 // ============ Overlay 功能 ============
 let overlayWindow = null;
@@ -88,6 +90,30 @@ function startValorantWatcher() {
   }, 3000); // 每 3 秒检查一次
 }
 
+// ============ 系统托盘 ============
+
+function createTray() {
+  // 创建一个简单的 16x16 托盘图标（紫色圆点）
+  const icon = nativeImage.createFromBuffer(
+    Buffer.from('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAABFSURBVDhPxZDRDYAgDERhQNoQElOwAHE3IKhvAVnSAFHZAB1YQelAExKAVzIBd4gV+wUULMzOmOxOzzMztjLnIJfv2GXR2/wI6muOHzUWswbAAAAAElFTkSuQmCC', 'base64')
+  );
+
+  tray = new Tray(icon);
+  tray.setToolTip('Valorant Tactics');
+
+  const contextMenu = Menu.buildFromTemplate([
+    { label: '打开主窗口', click: () => { if (mainWindow) mainWindow.show(); else createWindow(lastPort); } },
+    { label: '切换 Overlay (F4)', click: toggleOverlay },
+    { type: 'separator' },
+    { label: '退出', click: () => { app.isQuitting = true; app.quit(); } },
+  ]);
+
+  tray.setContextMenu(contextMenu);
+  tray.on('double-click', () => {
+    if (mainWindow) mainWindow.show();
+  });
+}
+
 // 注册 F4 全局快捷键
 function registerShortcuts() {
   const ret = globalShortcut.register('F4', () => {
@@ -157,6 +183,7 @@ function startServer() {
     // 监听随机端口
     server.listen(0, '127.0.0.1', () => {
       const port = server.address().port;
+      lastPort = port;
       resolve(port);
     });
   });
@@ -188,6 +215,14 @@ function createWindow(port) {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  // 主窗口关闭时隐藏而不是退出
+  mainWindow.on('close', (e) => {
+    if (!app.isQuitting) {
+      e.preventDefault();
+      mainWindow.hide();
+    }
+  });
 }
 
 app.whenReady().then(async () => {
@@ -198,6 +233,12 @@ app.whenReady().then(async () => {
   console.log(`Local server running at http://127.0.0.1:${port}`);
   createWindow(port);
   registerShortcuts();
+  createTray();
+});
+
+app.on('before-quit', () => {
+  app.isQuitting = true;
+  if (tray) tray.destroy();
 });
 
 app.on('activate', async () => {
@@ -208,9 +249,6 @@ app.on('activate', async () => {
 });
 
 app.on('window-all-closed', () => {
-  if (server) server.close();
-  globalShortcut.unregisterAll();
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  // 不退出 app，保持在后台运行（托盘 + F4）
+  // 只在显式退出时才 quit
 });
