@@ -76,19 +76,16 @@
     .map-name .map-en { color: rgba(228, 228, 231, 0.35); font-size: 11px; margin-left: 3px; }
 
     /* 技能标签 */
-    .abilities-row { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; margin-bottom: 12px; }
-
-    .ability-tag {
-      display: flex; align-items: center; gap: 4px;
-      padding: 3px 8px; border-radius: 6px;
-      font-size: 12px; font-weight: 600; color: #fff; line-height: 1.2;
+    .abilities-row {
+      display: flex; flex-direction: column; gap: 2px;
+      flex-shrink: 0; margin-bottom: 12px; padding-left: 46px;
     }
 
-    .ability-tag .tag-key { font-size: 11px; opacity: 0.7; }
-    .ability-tag.key-c { background: rgba(16, 185, 129, 0.25); color: #6ee7b7; }
-    .ability-tag.key-q { background: rgba(59, 130, 246, 0.25); color: #93c5fd; }
-    .ability-tag.key-e { background: rgba(168, 85, 247, 0.25); color: #c4b5fd; }
-    .ability-tag.key-x { background: rgba(245, 158, 11, 0.25); color: #fcd34d; }
+    .ability-tag {
+      font-size: 12px; color: rgba(228, 228, 231, 0.5); line-height: 1.4;
+    }
+
+    .ability-tag .tag-key { color: rgba(228, 228, 231, 0.3); font-weight: 400; margin-right: 4px; }
 
     /* 分隔线 */
     .divider { height: 1px; background: rgba(167, 139, 250, 0.15); margin: 8px 0; flex-shrink: 0; }
@@ -130,18 +127,11 @@
     .lineup-item-tags { display: flex; gap: 4px; flex-shrink: 0; }
 
     .lineup-tag {
-      font-size: 10px; font-weight: 600;
-      padding: 1px 5px; border-radius: 4px; line-height: 1.4;
+      font-size: 10px; color: rgba(228, 228, 231, 0.35);
     }
 
-    .lineup-tag.side-attack { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
-    .lineup-tag.side-defense { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
-    .lineup-tag.side-unknown { background: rgba(255, 255, 255, 0.1); color: rgba(228, 228, 231, 0.5); }
-    .lineup-tag.ability-tag-sm { font-size: 10px; padding: 1px 5px; border-radius: 4px; }
-    .lineup-tag.ability-tag-sm.key-c { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
-    .lineup-tag.ability-tag-sm.key-q { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
-    .lineup-tag.ability-tag-sm.key-e { background: rgba(168, 85, 247, 0.2); color: #c4b5fd; }
-    .lineup-tag.ability-tag-sm.key-x { background: rgba(245, 158, 11, 0.2); color: #fcd34d; }
+    .lineup-tag.side-tag { margin-left: 4px; }
+    .lineup-tag.ability-tag-sm { }
 
     .lineup-item-desc {
       font-size: 11px; color: rgba(228, 228, 231, 0.4);
@@ -369,8 +359,7 @@
      *  Overlay 右侧速查卡 + 中央图片 Lightbox
      * ============================================= */
 
-    var slotClassMap = { 'C': 'key-c', 'Q': 'key-q', 'E': 'key-e', 'X': 'key-x' };
-    var sideClassMap = { 'attack': 'side-attack', 'defense': 'side-defense' };
+
 
     var currentLineupIndex = 0;
     var lineupData = [];
@@ -472,8 +461,7 @@
       if (data.map.name_en) mapNameHtml += ' <span class="map-en">' + esc(data.map.name_en) + '</span>';
 
       var abilitiesHtml = data.abilities.map(function(ab) {
-        var keyClass = slotClassMap[ab.key] || 'key-c';
-        return '<span class="ability-tag ' + keyClass + '"><span class="tag-key">' + esc(ab.key) + '</span> ' + esc(ab.name_cn) + '</span>';
+        return '<span class="ability-tag"><span class="tag-key">' + esc(ab.key) + '</span> ' + esc(ab.name_cn) + '</span>';
       }).join('');
 
       lineupData = data.lineups || [];
@@ -487,8 +475,7 @@
       } else {
         var itemsHtml = lineupData.map(function(l, idx) {
           var isActive = idx === currentLineupIndex;
-          var sideClass = sideClassMap[l.side] || 'side-unknown';
-          var abilityClass = slotClassMap[l.abilityKey] || 'key-c';
+
           var sideLabel = l.side_cn || l.side || '';
           var descHtml = l.description ? '<div class="lineup-item-desc">' + esc(l.description) + '</div>' : '';
 
@@ -515,8 +502,8 @@
             '<div class="lineup-item-header">' +
               '<div class="lineup-item-title">' + esc(l.title) + '</div>' +
               '<div class="lineup-item-tags">' +
-                '<span class="lineup-tag ability-tag-sm ' + abilityClass + '">' + esc(l.abilityKey || '?') + '</span>' +
-                '<span class="lineup-tag ' + sideClass + '">' + esc(sideLabel) + '</span>' +
+                '<span class="lineup-tag">' + esc(l.abilityKey || '?') + '</span>' +
+                '<span class="lineup-tag">' + esc(sideLabel) + '</span>' +
               '</div>' +
             '</div>' +
             descHtml + imgBtnHtml + stepsHtml +
