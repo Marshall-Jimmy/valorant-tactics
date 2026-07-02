@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTacticsStore } from '@/store/tacticsStore';
+import { useSettingsStore } from '@/store/settingsStore';
 import { MapCanvas } from '@/components/MapCanvas';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { Sidebar } from '@/components/Sidebar';
@@ -23,10 +24,11 @@ export default function Home() {
   const currentStrategy = useTacticsStore((state) => state.currentStrategy);
   const appMode = useTacticsStore((state) => state.appMode);
   const setAppMode = useTacticsStore((state) => state.setAppMode);
+  const sidebarPosition = useSettingsStore((s) => s.sidebarPosition);
   const { t } = useLanguage();
 
   return (
-    <div className="flex h-screen w-screen bg-zinc-950 overflow-hidden">
+    <div className={`flex h-screen w-screen bg-zinc-950 overflow-hidden ${sidebarPosition === 'right' ? 'flex-row-reverse' : ''}`}>
       {/* Mobile Sidebar Overlay */}
       {showMobileSidebar && (
         <div
@@ -38,7 +40,10 @@ export default function Home() {
       {/* Mobile Sidebar */}
       <div className={`
         fixed lg:relative z-50 lg:z-auto h-full transition-transform duration-300 ease-in-out
-        ${showMobileSidebar ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        ${sidebarPosition === 'right'
+          ? showMobileSidebar ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'
+          : showMobileSidebar ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+        }
       `}>
         {appMode === 'lineup' ? (
           <LineupPanel onClose={() => setShowMobileSidebar(false)} />
@@ -138,9 +143,12 @@ export default function Home() {
       {/* Strategy Panel Modal */}
       {showStrategyPanel && (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/50 p-4 animate-overlay-in">
-          <div className="bg-zinc-900 rounded-lg border border-zinc-800 shadow-2xl w-full max-w-[600px] max-h-[80vh] overflow-hidden animate-modal-in">
-            <div className="flex items-center justify-between p-4 border-b border-zinc-800">
-              <h2 className="text-lg font-semibold">策略管理</h2>
+          <div className="bg-zinc-900 rounded-xl border border-zinc-800 shadow-2xl w-full max-w-[600px] max-h-[80vh] overflow-hidden animate-modal-in">
+            <div className="flex items-center justify-between p-4 border-b border-zinc-800 bg-zinc-900/50">
+              <div>
+                <h2 className="text-lg font-semibold text-white">{t('strategy.title')}</h2>
+                <p className="text-xs text-zinc-500 mt-0.5">{t('strategy.description')}</p>
+              </div>
               <button onClick={() => setShowStrategyPanel(false)} className="p-1.5 hover:bg-zinc-800 rounded-md transition-colors text-zinc-400 hover:text-white">
                 <X className="w-5 h-5" />
               </button>

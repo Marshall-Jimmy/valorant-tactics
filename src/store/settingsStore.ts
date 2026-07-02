@@ -24,6 +24,8 @@ export interface UserSettings {
   showDebugPanel: boolean;
   /** 语言偏好 */
   language: 'zh' | 'en';
+  /** 侧边栏位置 */
+  sidebarPosition: 'left' | 'right';
   /** 地图图层默认显示 */
   defaultLayers: {
     spawnBarrier: boolean;
@@ -45,6 +47,7 @@ interface SettingsStore extends UserSettings {
   setDrawStrokeWidth: (value: number) => void;
   setShowDebugPanel: (value: boolean) => void;
   setLanguage: (value: 'zh' | 'en') => void;
+  setSidebarPosition: (value: 'left' | 'right') => void;
   setDefaultLayers: (layers: Partial<UserSettings['defaultLayers']>) => void;
   resetToDefaults: () => void;
 }
@@ -61,6 +64,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   drawStrokeWidth: 3,
   showDebugPanel: false,
   language: 'zh',
+  sidebarPosition: 'left',
   defaultLayers: {
     spawnBarrier: true,
     regionNames: false,
@@ -84,11 +88,26 @@ export const useSettingsStore = create<SettingsStore>()(
       setDrawStrokeWidth: (value) => set({ drawStrokeWidth: value }),
       setShowDebugPanel: (value) => set({ showDebugPanel: value }),
       setLanguage: (value) => set({ language: value }),
+      setSidebarPosition: (value) => set({ sidebarPosition: value }),
       setDefaultLayers: (layers) =>
         set((state) => ({
           defaultLayers: { ...state.defaultLayers, ...layers },
         })),
-      resetToDefaults: () => set(DEFAULT_SETTINGS),
+      resetToDefaults: () => {
+        set(DEFAULT_SETTINGS);
+        // Sync tacticsStore via dynamic import to avoid circular dependency
+        import('./tacticsStore').then(({ useTacticsStore }) => {
+          const ts = useTacticsStore.getState();
+          ts.setDrawColor(DEFAULT_SETTINGS.drawColor);
+          ts.setDrawStrokeWidth(DEFAULT_SETTINGS.drawStrokeWidth);
+          ts.setShowGrid(DEFAULT_SETTINGS.showGrid);
+          ts.setSnapToGrid(DEFAULT_SETTINGS.snapToGrid);
+          ts.setGridSize(DEFAULT_SETTINGS.gridSize);
+          ts.setShowSpawnBarrier(DEFAULT_SETTINGS.defaultLayers.spawnBarrier);
+          ts.setShowRegionNames(DEFAULT_SETTINGS.defaultLayers.regionNames);
+          ts.setShowUltOrbs(DEFAULT_SETTINGS.defaultLayers.ultOrbs);
+        });
+      },
     }),
     {
       name: 'valorant-tactics-settings',

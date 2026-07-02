@@ -1,8 +1,5 @@
 import { useCallback, useMemo } from 'react';
-
-// Coordinate system constants - matching Icarus project
-const NORMALIZED_HEIGHT = 1000;
-const WORLD_ASPECT_RATIO = 16 / 9;
+import { NORMALIZED_HEIGHT, WORLD_ASPECT_RATIO } from '@/data/lineups';
 
 export interface CoordinateTransform {
   worldToScreen: (worldX: number, worldY: number) => { x: number; y: number };

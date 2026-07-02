@@ -29,7 +29,7 @@
 | 框架 | Next.js 16.2.6 (App Router) |
 | 语言 | TypeScript 5 |
 | 样式 | Tailwind CSS 4 + PostCSS |
-| UI 组件 | Radix UI (Dialog, Dropdown, Slider, Tabs) |
+| UI 组件 | Radix UI (Dialog, Dropdown, Select, Slider, Tabs) |
 | 状态管理 | Zustand 5 |
 | 国际化 | i18next + react-i18next |
 | 截图 | html2canvas |
@@ -43,6 +43,7 @@
 - **图片无优化**：`images.unoptimized: true`（静态导出必需）
 - **资源走 OSS**：生产环境所有图片通过 `NEXT_PUBLIC_OSS_BASE_URL` 加载
 - **TypeScript 忽略构建错误**：`ignoreBuildErrors: true`（开发时允许类型错误）
+- **可复用组件规范**：所有表单控件使用 Radix UI 封装组件（`CustomSelect` / `CustomSlider` / `ToggleSwitch`），**禁止使用原生 `<select>` / `<input type="range">`**
 
 ---
 
@@ -56,6 +57,9 @@ valorant-tactics/
 │   │   ├── page.tsx            # 首页：双模式切换、侧边栏、工具栏
 │   │   └── globals.css         # 全局样式 + Tailwind v4 导入
 │   ├── components/             # React 组件（见下方详细列表）
+│   │   ├── CustomSelect.tsx    # Radix UI 自定义下拉选择器
+│   │   ├── CustomSlider.tsx    # Radix UI 自定义滑块
+│   │   └── ToggleSwitch.tsx    # 通用开关组件
 │   ├── data/                   # 静态数据（agents.ts, maps.ts, lineups.ts, mapCallouts.ts）
 │   ├── store/                  # Zustand 状态（tacticsStore.ts, settingsStore.ts）
 │   ├── types/                  # TypeScript 类型定义
@@ -63,6 +67,8 @@ valorant-tactics/
 │   ├── hooks/                  # 自定义 Hooks
 │   ├── i18n/                   # 国际化配置 + 翻译文件
 │   └── utils/                  # 工具函数
+│       ├── fileIO.ts           # JSON 下载/导入工具函数
+│       └── image.ts            # 图片本地优先+OSS降级加载
 ├── public/                     # 静态资源（地图 SVG、特工头像、技能图标）
 │   ├── abilities/
 │   ├── agents/
@@ -87,6 +93,9 @@ valorant-tactics/
 | `Sidebar.tsx` | 战略模式侧边栏：特工/技能/绘制工具选择 |
 | `StrategyPanel.tsx` | 策略管理弹窗：保存/加载/导入/导出 |
 | `SettingsPanel.tsx` | 设置面板：语言、快捷键、网格、图层 |
+| `CustomSelect.tsx` | Radix UI 自定义下拉选择器，替代原生 `<select>` |
+| `CustomSlider.tsx` | Radix UI 自定义滑块，替代原生 `<input type="range">` |
+| `ToggleSwitch.tsx` | 通用开关组件，用于布尔值切换 |
 | `tacticsStore.ts` | 全局状态：地图/工具/元素/策略/UndoRedo/点位编辑器 |
 
 ---
@@ -146,6 +155,15 @@ valorant-tactics/
 - 组件使用 `'use client'` 指令（Next.js App Router 需要）
 - 样式使用 Tailwind CSS 工具类
 - 状态使用 Zustand，避免 prop drilling
+
+### 5.1b 双 Store 同步机制
+
+项目使用 `tacticsStore`（运行时状态）和 `settingsStore`（持久化设置）两个 Zustand store。为了避免手动同步导致的不一致，**绘图画布的运行时设置**（网格显示、图层可见性、绘图工具等）遵循以下规范：
+
+- **单写入口**：所有运行时设置的修改通过 `tacticsStore` 的 setter 完成
+- **自动同步**：`tacticsStore` 的 setter 内部自动调用 `settingsStore.setState()` 将值持久化
+- **禁止反向写入**：不要在 `settingsStore` 中直接修改绘图画布相关的设置，始终通过 `tacticsStore` 修改
+- **读取灵活**：组件可以从任一 store 读取设置值，推荐从 `tacticsStore` 读取以保证运行时一致性
 
 ### 5.2 添加新特工点位数据
 
@@ -224,6 +242,29 @@ npm run electron:build:linux # Linux
 - 点位数据 JSON 定期备份到 `lineups/data2/.backups/`
 - 自定义点位通过导入/导出功能保存
 - 策略数据保存在 localStorage，建议定期导出
+
+### 7.4 Git 与版本控制
+
+**GitHub 仓库**: https://github.com/Marshall-Jimmy/valorant-tactics
+
+**.gitignore 规则要点**（提交代码前必须遵守）：
+- `public/lineups/images/` — 点位详情图片（大量 webp，通过 OSS 分发，不入库）
+- `public/maps/splash/`、`public/maps/icons/` — 地图装饰图片，不入库
+- `scripts/upload-to-oss.js`、`scripts/upload-site-to-oss.js` — 包含阿里云密钥，**严禁入库**
+- `lineups/data/`、`lineups/images/` — 原始爬取中间数据，不入库
+- `.env*` — 环境变量文件（除 `.env.example`）
+- `/doc/`、`/docs/` — 参赛/宣传文档，不入库
+- `*.bak` — 数据备份文件
+
+**Commit Message 规范**：
+```
+feat: 新增功能
+fix: 修复 Bug
+data: 更新数据
+refactor: 重构
+docs: 文档更新
+init: 初始提交
+```
 
 ---
 

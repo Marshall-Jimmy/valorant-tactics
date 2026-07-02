@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTacticsStore } from '@/store/tacticsStore';
+import { useSettingsStore } from '@/store/settingsStore';
 import { agentsData, roleNames, roleColors } from '@/data/agents';
 import { AgentRole, AgentType } from '@/types';
 import { useLanguage } from './I18nProvider';
@@ -37,6 +38,7 @@ export function Sidebar({ onClose }: SidebarProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [mounted, setMounted] = useState(false);
   const { t } = useLanguage();
+  const sidebarPosition = useSettingsStore((s) => s.sidebarPosition);
 
   useEffect(() => {
     setMounted(true);
@@ -119,6 +121,11 @@ export function Sidebar({ onClose }: SidebarProps) {
     const agent = agentsData[agentType];
     const ability = agent.abilities[abilityIndex];
     if (ability) {
+      // Toggle: click same ability again to deselect
+      if (selectedAbility?.type === agentType && selectedAbility?.index === abilityIndex && currentTool === 'ability') {
+        setSelectedAbility(null);
+        return;
+      }
       setSelectedAbility(ability);
       setCurrentTool('ability');
     }
@@ -127,7 +134,7 @@ export function Sidebar({ onClose }: SidebarProps) {
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
     return (
-      <div className="w-80 bg-zinc-900 border-r lg:border-r-0 lg:border-l border-zinc-800 flex flex-col h-full">
+      <div className={`w-80 bg-zinc-900 ${sidebarPosition === 'right' ? 'border-l border-zinc-800' : 'border-r lg:border-r-0 lg:border-l border-zinc-800'} flex flex-col h-full`}>
         <div className="flex border-b border-zinc-800">
           {(['agents', 'abilities', 'tools'] as const).map((tab) => (
             <div key={tab} className="flex-1 py-3 text-sm font-medium capitalize text-zinc-400 bg-zinc-800/50" />
@@ -148,7 +155,7 @@ export function Sidebar({ onClose }: SidebarProps) {
   }
 
   return (
-    <div className="w-72 sm:w-80 bg-zinc-900 border-r lg:border-r-0 lg:border-l border-zinc-800 flex flex-col h-full">
+    <div className={`w-72 sm:w-80 bg-zinc-900 ${sidebarPosition === 'right' ? 'border-l border-zinc-800' : 'border-r lg:border-r-0 lg:border-l border-zinc-800'} flex flex-col h-full`}>
       {/* Header with close button for mobile */}
       <div className="flex items-center justify-between p-3 border-b border-zinc-800 lg:hidden">
         <span className="font-bold text-white">{t('common.menu')}</span>

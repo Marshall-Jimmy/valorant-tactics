@@ -128,6 +128,9 @@
     "defaultStrokeWidth": "Stroke Width",
     "mapLayers": "Default Map Layers",
     "other": "Other Settings",
+    "sidebarPosition": "Sidebar Position",
+    "sidebarPositionLeft": "Left",
+    "sidebarPositionRight": "Right",
     "showDebugPanel": "Show Debug Info",
     "resetToDefault": "Reset to Default",
     "autoSaveHint": "Settings are automatically saved"
@@ -150,6 +153,10 @@
     "initiator": "Initiator",
     "sentinel": "Sentinel"
   },
+  "draw": {
+    "color": "Color",
+    "thickness": "Thickness"
+  },
   "sidebar": {
     "tabs": {
       "agents": "Agents",
@@ -157,7 +164,8 @@
       "tools": "Tools"
     },
     "search": "Search agents...",
-    "drawingTools": "Drawing Tools"
+    "drawingTools": "Drawing Tools",
+    "clearDrawings": "Clear Drawings"
   },
   "strategy": {
     "create": "Create Strategy",
@@ -175,6 +183,22 @@
     "load": "Load",
     "delete": "Delete",
     "attack": "Attack",
-    "defense": "Defense"
+    "defense": "Defense",
+    "title": "Strategy Management",
+    "description": "Create, save, and manage your tactical strategies",
+    "clearCurrent": "Clear Current",
+    "confirmClear": "Confirm Import",
+    "confirmClearDesc": "This strategy contains a large amount of data. Importing may take some time.",
+    "confirmImportBtn": "Confirm Import",
+    "dataValid": "Data validated successfully",
+    "dataValidWithWarning": "Can import (with warnings)",
+    "dataInvalid": "Data validation failed",
+    "map": "Map",
+    "abilities": "Abilities",
+    "agents": "Agents",
+    "drawings": "Drawings",
+    "size": "Size",
+    "version": "Version",
+    "createdAt": "Created"
   }
 }

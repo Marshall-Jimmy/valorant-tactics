@@ -58,6 +58,9 @@
 - 组件需标注 `'use client'`
 - 遵循 Zustand 状态管理规范
 - 样式使用 Tailwind 工具类
+- 表单控件使用 Radix UI 封装组件（`CustomSelect` / `CustomSlider` / `ToggleSwitch`），禁止使用原生 `<select>` / `<input type="range">`
+- 状态修改遵循"单写入口"原则：绘图画布的运行时设置通过 `tacticsStore` 修改，setter 内部自动同步到 `settingsStore` 持久化
+- 坐标常量统一从 `src/data/lineups.ts` 导入（如 `WORLD_WIDTH`、`NORMALIZED_HEIGHT` 等），不在组件或 store 中重复定义
 
 ---
 
@@ -88,6 +91,7 @@
 - 坐标使用 Normalized [0,1] 格式
 - 图片使用 WebP 格式
 - 数据变更需记录备份
+- 坐标常量（`WORLD_WIDTH`、`NORMALIZED_HEIGHT` 等）统一定义在 `src/data/lineups.ts`，不在其他文件中重复定义
 
 ---
 
@@ -117,6 +121,9 @@
 - 上传前需检查 MIME 类型
 - OSS 文件需设置 `Content-Disposition: inline`
 - 生产环境使用 `NEXT_PUBLIC_OSS_BASE_URL`
+- **严禁将包含阿里云密钥的脚本提交到 Git**（`scripts/upload-to-oss.js` 等）
+- 点位详情图片（webp）通过 OSS 分发，不入 Git 仓库
+- 提交前检查 `.gitignore` 规则，避免大文件或敏感信息入库
 
 ---
 

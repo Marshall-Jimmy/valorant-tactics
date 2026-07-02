@@ -4,7 +4,10 @@ import React from 'react';
 import { useSettingsStore } from '@/store/settingsStore';
 import { useTacticsStore } from '@/store/tacticsStore';
 import { useLanguage } from './I18nProvider';
-import { X, RotateCcw, Info, Keyboard, Grid3X3, Palette, Layers, Globe, Bug } from 'lucide-react';
+import { X, RotateCcw, Info, Keyboard, Grid3X3, Palette, Layers, Globe, Bug, PanelLeft, PanelRight } from 'lucide-react';
+import { CustomSelect } from './CustomSelect';
+import { CustomSlider } from './CustomSlider';
+import { ToggleSwitch } from './ToggleSwitch';
 
 interface SettingsPanelProps {
   onClose: () => void;
@@ -24,75 +27,28 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
     drawStrokeWidth,
     showDebugPanel,
     language,
+    sidebarPosition,
     defaultLayers,
-    setShowGrid,
-    setSnapToGrid,
-    setGridSize,
-    setDrawColor,
-    setDrawStrokeWidth,
     setShowDebugPanel,
     setLanguage,
-    setDefaultLayers,
+    setSidebarPosition,
     resetToDefaults,
   } = useSettingsStore();
 
-  // Sync with tacticsStore
+  // Sync with tacticsStore - getters for map filters
   const mapHue = useTacticsStore((s) => s.mapHue);
   const mapBrightness = useTacticsStore((s) => s.mapBrightness);
-  const tacticsStore = useTacticsStore();
-
-  // Wrapper functions to sync both stores
-  const handleSetShowGrid = (value: boolean) => {
-    setShowGrid(value);
-    tacticsStore.setShowGrid(value);
-  };
-
-  const handleSetSnapToGrid = (value: boolean) => {
-    setSnapToGrid(value);
-    tacticsStore.setSnapToGrid(value);
-  };
-
-  const handleSetDrawColor = (value: string) => {
-    setDrawColor(value);
-    tacticsStore.setDrawColor(value);
-  };
-
-  const handleSetDrawStrokeWidth = (value: number) => {
-    setDrawStrokeWidth(value);
-    tacticsStore.setDrawStrokeWidth(value);
-  };
-
-  const handleSetGridSize = (value: number) => {
-    setGridSize(value);
-    tacticsStore.setGridSize(value);
-  };
-
-  const handleSetDefaultLayers = (layers: Partial<typeof defaultLayers>) => {
-    setDefaultLayers(layers);
-    // Sync with tacticsStore
-    if (layers.spawnBarrier !== undefined) {
-      tacticsStore.setShowSpawnBarrier(layers.spawnBarrier);
-    }
-    if (layers.regionNames !== undefined) {
-      tacticsStore.setShowRegionNames(layers.regionNames);
-    }
-    if (layers.ultOrbs !== undefined) {
-      tacticsStore.setShowUltOrbs(layers.ultOrbs);
-    }
-  };
-
-  const handleResetToDefaults = () => {
-    resetToDefaults();
-    // Also reset tacticsStore
-    tacticsStore.setShowGrid(false);
-    tacticsStore.setSnapToGrid(false);
-    tacticsStore.setDrawColor('#ffffff');
-    tacticsStore.setDrawStrokeWidth(3);
-    tacticsStore.setShowSpawnBarrier(true);
-    tacticsStore.setShowRegionNames(false);
-    tacticsStore.setShowUltOrbs(true);
-    tacticsStore.setGridSize(50);
-  };
+  // TacticsStore setters now auto-sync to settingsStore, so we use them directly
+  const setShowGrid = useTacticsStore((s) => s.setShowGrid);
+  const setSnapToGrid = useTacticsStore((s) => s.setSnapToGrid);
+  const setGridSize = useTacticsStore((s) => s.setGridSize);
+  const setDrawColor = useTacticsStore((s) => s.setDrawColor);
+  const setDrawStrokeWidth = useTacticsStore((s) => s.setDrawStrokeWidth);
+  const setShowSpawnBarrier = useTacticsStore((s) => s.setShowSpawnBarrier);
+  const setShowRegionNames = useTacticsStore((s) => s.setShowRegionNames);
+  const setShowUltOrbs = useTacticsStore((s) => s.setShowUltOrbs);
+  const setMapHue = useTacticsStore((s) => s.setMapHue);
+  const setMapBrightness = useTacticsStore((s) => s.setMapBrightness);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 animate-overlay-in">
@@ -107,7 +63,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
           </div>
           <div className="flex items-center gap-1">
             <button 
-              onClick={handleResetToDefaults} 
+              onClick={resetToDefaults} 
               className="p-2 hover:bg-zinc-800 rounded-lg text-zinc-400 hover:text-white transition-colors" 
               title={t('settings.resetToDefault')}
             >
@@ -148,24 +104,22 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
           >
             <div className="space-y-3">
               <SettingRow label={t('settings.showGrid')}>
-                <ToggleSwitch checked={showGrid} onChange={handleSetShowGrid} />
+                <ToggleSwitch checked={showGrid} onChange={setShowGrid} />
               </SettingRow>
               <SettingRow label={t('settings.snapToGrid')}>
-                <ToggleSwitch checked={snapToGrid} onChange={handleSetSnapToGrid} />
+                <ToggleSwitch checked={snapToGrid} onChange={setSnapToGrid} />
               </SettingRow>
               <SettingRow label={t('settings.gridSize')}>
-                <div className="flex items-center gap-2">
-                  <input 
-                    type="range" 
-                    value={gridSize} 
-                    onChange={(e) => handleSetGridSize(Number(e.target.value))} 
-                    min={10} 
-                    max={100} 
-                    step={10}
-                    className="w-24 accent-blue-500" 
-                  />
-                  <span className="text-sm text-zinc-400 font-mono w-12">{gridSize}px</span>
-                </div>
+                <CustomSlider
+                  value={gridSize}
+                  onValueChange={setGridSize}
+                  min={10}
+                  max={100}
+                  step={10}
+                  showValue
+                  valueSuffix="px"
+                  className="w-48"
+                />
               </SettingRow>
             </div>
           </SettingSection>
@@ -175,7 +129,10 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             <div className="space-y-3">
               {/* 色调 */}
               <div>
-                <div className="text-xs text-zinc-500 mb-1.5">色调</div>
+                <div className="flex items-center gap-1.5 mb-2">
+                  <Palette className="w-3 h-3 text-zinc-500" />
+                  <span className="text-xs text-zinc-400 font-medium">色调</span>
+                </div>
                 <div className="grid grid-cols-4 gap-1.5">
                   {[
                     { label: '默认', value: '' },
@@ -189,7 +146,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
                   ].map((preset) => (
                     <button
                       key={preset.label}
-                      onClick={() => tacticsStore.setMapHue(preset.value)}
+                      onClick={() => setMapHue(preset.value)}
                       className={`px-2 py-1.5 text-xs rounded-md border transition-all flex items-center justify-center gap-1 ${
                         mapHue === preset.value
                           ? 'bg-purple-500/20 text-purple-400 border-purple-500'
@@ -204,39 +161,32 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
                   ))}
                 </div>
                 {/* 自定义色调滑块 */}
-                <div className="mt-2 flex items-center gap-2">
-                  <span className="text-xs text-zinc-500 shrink-0">色相</span>
-                  <input
-                    type="range"
-                    min="0"
-                    max="360"
-                    step="5"
+                <div className="mt-3 flex items-center gap-3">
+                  <span className="text-xs text-zinc-400 shrink-0 w-8">色相</span>
+                  <CustomSlider
                     value={(() => {
                       const m = mapHue?.match(/hue-rotate\((.+?)deg\)/);
                       return m ? parseFloat(m[1]) : 0;
                     })()}
-                    onChange={(e) => {
-                      const val = Number(e.target.value);
-                      if (val === 0) {
-                        tacticsStore.setMapHue('');
-                      } else {
-                        tacticsStore.setMapHue(`hue-rotate(${val}deg)`);
-                      }
+                    onValueChange={(val) => {
+                      if (val === 0) setMapHue('');
+                      else setMapHue(`hue-rotate(${val}deg)`);
                     }}
-                    className="flex-1 accent-blue-500"
+                    min={0}
+                    max={360}
+                    step={5}
+                    showValue
+                    valueSuffix="°"
                   />
-                  <span className="text-xs text-zinc-500 font-mono w-8 text-right">
-                    {(() => {
-                      const m = mapHue?.match(/hue-rotate\((.+?)deg\)/);
-                      return m ? `${Math.round(parseFloat(m[1]))}°` : '-';
-                    })()}
-                  </span>
                 </div>
               </div>
 
               {/* 亮度 / 对比度 */}
               <div>
-                <div className="text-xs text-zinc-500 mb-1.5">亮度 / 对比度</div>
+                <div className="flex items-center gap-1.5 mb-2">
+                  <Layers className="w-3 h-3 text-zinc-500" />
+                  <span className="text-xs text-zinc-400 font-medium">亮度 / 对比度</span>
+                </div>
                 <div className="grid grid-cols-4 gap-1.5">
                   {[
                     { label: '默认', value: 'brightness(1.1) contrast(1.15) saturate(1.1)' },
@@ -246,7 +196,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
                   ].map((preset) => (
                     <button
                       key={preset.label}
-                      onClick={() => tacticsStore.setMapBrightness(preset.value)}
+                      onClick={() => setMapBrightness(preset.value)}
                       className={`px-2 py-1.5 text-xs rounded-md border transition-all ${
                         mapBrightness === preset.value
                           ? 'bg-purple-500/20 text-purple-400 border-purple-500'
@@ -268,28 +218,25 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
           >
             <div className="space-y-3">
               <SettingRow label={t('settings.defaultColor')}>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5">
                   <input 
                     type="color" 
                     value={drawColor} 
-                    onChange={(e) => handleSetDrawColor(e.target.value)} 
-                    className="w-8 h-8 rounded-lg cursor-pointer border-2 border-zinc-700" 
+                    onChange={(e) => setDrawColor(e.target.value)} 
+                    className="w-9 h-9 rounded-lg cursor-pointer ring-2 ring-zinc-700 hover:ring-zinc-500 transition-all" 
                   />
-                  <span className="text-xs text-zinc-500 font-mono">{drawColor}</span>
+                  <span className="text-xs text-zinc-400 font-mono bg-zinc-800/60 px-2 py-0.5 rounded-md border border-zinc-700/50">{drawColor}</span>
                 </div>
               </SettingRow>
               <SettingRow label={t('settings.defaultStrokeWidth')}>
-                <div className="flex items-center gap-2">
-                  <input 
-                    type="range" 
-                    value={drawStrokeWidth} 
-                    onChange={(e) => handleSetDrawStrokeWidth(Number(e.target.value))} 
-                    min={1} 
-                    max={20} 
-                    className="w-24 accent-blue-500" 
-                  />
-                  <span className="text-sm text-zinc-400 font-mono w-8">{drawStrokeWidth}</span>
-                </div>
+                <CustomSlider
+                  value={drawStrokeWidth}
+                  onValueChange={setDrawStrokeWidth}
+                  min={1}
+                  max={20}
+                  showValue
+                  className="w-48"
+                />
               </SettingRow>
             </div>
           </SettingSection>
@@ -301,13 +248,13 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
           >
             <div className="space-y-2">
               <SettingRow label={t('map.layers.spawnBarrier')}>
-                <ToggleSwitch checked={defaultLayers.spawnBarrier} onChange={(v) => handleSetDefaultLayers({ spawnBarrier: v })} />
+                <ToggleSwitch checked={defaultLayers.spawnBarrier} onChange={(v) => setShowSpawnBarrier(v)} />
               </SettingRow>
               <SettingRow label={t('map.layers.regionNames')}>
-                <ToggleSwitch checked={defaultLayers.regionNames} onChange={(v) => handleSetDefaultLayers({ regionNames: v })} />
+                <ToggleSwitch checked={defaultLayers.regionNames} onChange={(v) => setShowRegionNames(v)} />
               </SettingRow>
               <SettingRow label={t('map.layers.ultimateOrb')}>
-                <ToggleSwitch checked={defaultLayers.ultOrbs} onChange={(v) => handleSetDefaultLayers({ ultOrbs: v })} />
+                <ToggleSwitch checked={defaultLayers.ultOrbs} onChange={(v) => setShowUltOrbs(v)} />
               </SettingRow>
             </div>
           </SettingSection>
@@ -318,15 +265,42 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             title={t('settings.other')}
           >
             <div className="space-y-3">
+              <SettingRow label={t('settings.sidebarPosition')}>
+                <div className="flex gap-1">
+                  <button
+                    onClick={() => setSidebarPosition('left')}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
+                      sidebarPosition === 'left'
+                        ? 'bg-blue-500/20 text-blue-400 border-blue-500/50'
+                        : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    <PanelLeft className="w-3.5 h-3.5" />
+                    {t('settings.sidebarPositionLeft')}
+                  </button>
+                  <button
+                    onClick={() => setSidebarPosition('right')}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
+                      sidebarPosition === 'right'
+                        ? 'bg-blue-500/20 text-blue-400 border-blue-500/50'
+                        : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    <PanelRight className="w-3.5 h-3.5" />
+                    {t('settings.sidebarPositionRight')}
+                  </button>
+                </div>
+              </SettingRow>
               <SettingRow label={t('settings.language')}>
-                <select 
-                  value={language} 
-                  onChange={(e) => setLanguage(e.target.value as 'zh' | 'en')} 
-                  className="input-field text-sm py-1.5"
-                >
-                  <option value="zh">中文</option>
-                  <option value="en">English</option>
-                </select>
+                <CustomSelect
+                  value={language}
+                  onValueChange={setLanguage}
+                  options={[
+                    { value: 'zh', label: '中文' },
+                    { value: 'en', label: 'English' },
+                  ]}
+                  className="min-w-[100px]"
+                />
               </SettingRow>
               <SettingRow label={t('settings.showDebugPanel')}>
                 <ToggleSwitch checked={showDebugPanel} onChange={setShowDebugPanel} />
@@ -391,25 +365,4 @@ function ShortcutKey({ label, value }: { label: string; value: string }) {
   );
 }
 
-function ToggleSwitch({
-  checked,
-  onChange,
-}: {
-  checked: boolean;
-  onChange: (v: boolean) => void;
-}) {
-  return (
-    <button
-      onClick={() => onChange(!checked)}
-      className={`relative w-11 h-6 rounded-full transition-all duration-200 ${
-        checked ? 'bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]' : 'bg-zinc-700'
-      }`}
-    >
-      <div
-        className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-all duration-200 shadow-sm ${
-          checked ? 'left-6' : 'left-1'
-        }`}
-      />
-    </button>
-  );
-}
+

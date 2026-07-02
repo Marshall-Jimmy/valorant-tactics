@@ -129,6 +129,9 @@
     "defaultStrokeWidth": "线条粗细",
     "mapLayers": "默认地图图层",
     "other": "其他设置",
+    "sidebarPosition": "侧边栏位置",
+    "sidebarPositionLeft": "左侧",
+    "sidebarPositionRight": "右侧",
     "showDebugPanel": "显示调试信息",
     "resetToDefault": "恢复默认",
     "autoSaveHint": "设置会自动保存"
@@ -151,6 +154,10 @@
     "initiator": "先锋",
     "sentinel": "哨卫"
   },
+  "draw": {
+    "color": "颜色",
+    "thickness": "粗细"
+  },
   "sidebar": {
     "tabs": {
       "agents": "特工",
@@ -158,7 +165,8 @@
       "tools": "工具"
     },
     "search": "搜索特工...",
-    "drawingTools": "绘制工具"
+    "drawingTools": "绘制工具",
+    "clearDrawings": "清除绘制"
   },
   "strategy": {
     "create": "创建策略",
@@ -176,6 +184,22 @@
     "load": "加载",
     "delete": "删除",
     "attack": "进攻",
-    "defense": "防守"
+    "defense": "防守",
+    "title": "策略管理",
+    "description": "创建、保存和管理你的战术策略",
+    "clearCurrent": "清空当前",
+    "confirmClear": "确认导入",
+    "confirmClearDesc": "此策略包含大量数据，导入可能需要一些时间。",
+    "confirmImportBtn": "确认导入",
+    "dataValid": "数据验证通过",
+    "dataValidWithWarning": "可以导入（有警告）",
+    "dataInvalid": "数据验证失败",
+    "map": "地图",
+    "abilities": "技能",
+    "agents": "特工",
+    "drawings": "绘图",
+    "size": "大小",
+    "version": "版本",
+    "createdAt": "创建于"
   }
 }

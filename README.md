@@ -46,6 +46,9 @@ npm run electron:dev
 src/
 ├── app/            # Next.js App Router
 ├── components/     # React 组件
+│   ├── CustomSelect.tsx   # Radix UI 自定义下拉选择器
+│   ├── CustomSlider.tsx   # Radix UI 自定义滑块
+│   └── ToggleSwitch.tsx   # 通用开关组件
 ├── data/           # 静态数据 (agents, maps, lineups)
 ├── store/          # Zustand 状态管理
 ├── types/          # TypeScript 类型
@@ -53,6 +56,8 @@ src/
 ├── hooks/          # 自定义 Hooks
 ├── i18n/           # 国际化配置
 └── utils/          # 工具函数
+    ├── fileIO.ts         # JSON 下载/导入工具函数
+    └── image.ts          # 图片本地优先+OSS降级加载
 public/
 ├── maps/           # 地图 SVG 资源
 ├── agents/         # 特工头像

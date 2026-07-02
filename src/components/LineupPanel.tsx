@@ -3,10 +3,13 @@
 import { useState, useEffect, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { useTacticsStore, type TempLineupData } from '@/store/tacticsStore';
+import { useSettingsStore } from '@/store/settingsStore';
 import { useLanguage } from './I18nProvider';
 import { useDebounce } from '@/hooks/useDebounce';
 import { VideoPlayer } from './VideoPlayer';
 import { handleImageFallback } from '@/utils/image';
+import { downloadJson, importJsonFile } from '@/utils/fileIO';
+import { CustomSelect } from './CustomSelect';
 
 import {
   Search,
@@ -55,6 +58,7 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
     lineupCoordinateOverrides, saveLineupCoordinateOverride,
   } = useTacticsStore();
   const { t } = useLanguage();
+  const sidebarPosition = useSettingsStore((s) => s.sidebarPosition);
 
   const [loadedData, setLoadedData] = useState<AgentLineupsData | null>(null);
   const [expandedAbilities, setExpandedAbilities] = useState<Set<string>>(new Set());
@@ -318,7 +322,7 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
   };
 
   return (
-    <div className="w-72 sm:w-80 bg-zinc-900 border-r lg:border-r-0 lg:border-l border-zinc-800 flex flex-col h-full">
+    <div className={`w-72 sm:w-80 bg-zinc-900 ${sidebarPosition === 'right' ? 'border-l border-zinc-800' : 'border-r lg:border-r-0 lg:border-l border-zinc-800'} flex flex-col h-full`}>
       {/* Header with close button for mobile */}
       <div className="flex items-center justify-between p-3 border-b border-zinc-800 lg:hidden">
         <span className="font-bold text-white">{t('lineup.title')}</span>
@@ -341,17 +345,15 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
           </div>
         ) : (
           <div className="flex items-center gap-2">
-            <select
+            <CustomSelect
               value={lineupAgentId}
-              onChange={(e) => setLineupAgentId(e.target.value)}
-              className="flex-1 bg-zinc-900 border border-zinc-700 rounded-md px-2 py-1.5 text-sm text-white focus:outline-none focus:border-blue-500"
-            >
-              {agents.map((agent) => (
-                <option key={agent.id} value={agent.id}>
-                  {agent.name_cn} ({agent.name_en})
-                </option>
-              ))}
-            </select>
+              onValueChange={setLineupAgentId}
+              options={agents.map((agent) => ({
+                value: agent.id,
+                label: `${agent.name_cn} (${agent.name_en})`,
+              }))}
+              className="flex-1"
+            />
           </div>
         )}
       </div>
@@ -369,14 +371,7 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
         {customLineups.length > 0 && (
           <button
             onClick={() => {
-              const json = exportCustomLineups();
-              const blob = new Blob([json], { type: 'application/json' });
-              const url = URL.createObjectURL(blob);
-              const a = document.createElement('a');
-              a.href = url;
-              a.download = `custom-lineups-${currentMap}.json`;
-              a.click();
-              URL.revokeObjectURL(url);
+              downloadJson(exportCustomLineups(), `custom-lineups-${currentMap}.json`);
             }}
             className="flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-medium rounded-md bg-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-700 border border-zinc-700 transition-colors"
             title="导出自定义点位"
@@ -387,14 +382,7 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
         {Object.keys(lineupCoordinateOverrides).length > 0 && (
           <button
             onClick={() => {
-              const json = exportCoordinateOverrides();
-              const blob = new Blob([json], { type: 'application/json' });
-              const url = URL.createObjectURL(blob);
-              const a = document.createElement('a');
-              a.href = url;
-              a.download = `coordinate-overrides-${currentMap}.json`;
-              a.click();
-              URL.revokeObjectURL(url);
+              downloadJson(exportCoordinateOverrides(), `coordinate-overrides-${currentMap}.json`);
             }}
             className="flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-medium rounded-md bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/50 transition-colors"
             title="导出手动添加的坐标"
@@ -404,25 +392,14 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
         )}
         <button
           onClick={() => {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = '.json';
-            input.onchange = (e) => {
-              const file = (e.target as HTMLInputElement).files?.[0];
-              if (!file) return;
-              const reader = new FileReader();
-              reader.onload = (ev) => {
-                const text = ev.target?.result as string;
-                const ok = importCoordinateOverrides(text);
-                if (ok) {
-                  addToast('坐标覆盖已导入', 'success');
-                } else {
-                  addToast('导入失败：JSON 格式错误', 'error');
-                }
-              };
-              reader.readAsText(file);
-            };
-            input.click();
+            importJsonFile((text) => {
+              const ok = importCoordinateOverrides(text);
+              if (ok) {
+                addToast('坐标覆盖已导入', 'success');
+              } else {
+                addToast('导入失败：JSON 格式错误', 'error');
+              }
+            });
           }}
           className="flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-medium rounded-md bg-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-700 border border-zinc-700 transition-colors"
           title="导入坐标覆盖 (JSON)"
@@ -505,24 +482,26 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
               className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-2 py-1.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
             />
             <div className="flex gap-2">
-              <select
+              <CustomSelect
                 value={tempLineupData.side}
-                onChange={(e) => updateTempLineupData({ side: e.target.value as 'attack' | 'defense' })}
-                className="flex-1 bg-zinc-900 border border-zinc-700 rounded-md px-2 py-1.5 text-sm text-white focus:outline-none focus:border-blue-500"
-              >
-                <option value="attack">进攻方</option>
-                <option value="defense">防守方</option>
-              </select>
-              <select
+                onValueChange={(v) => updateTempLineupData({ side: v as 'attack' | 'defense' })}
+                options={[
+                  { value: 'attack', label: '进攻方' },
+                  { value: 'defense', label: '防守方' },
+                ]}
+                className="flex-1"
+              />
+              <CustomSelect
                 value={tempLineupData.abilityKey}
-                onChange={(e) => updateTempLineupData({ abilityKey: e.target.value as 'C' | 'Q' | 'E' | 'X' })}
-                className="flex-1 bg-zinc-900 border border-zinc-700 rounded-md px-2 py-1.5 text-sm text-white focus:outline-none focus:border-blue-500"
-              >
-                <option value="C">C 枭型无人机</option>
-                <option value="Q">Q 技能</option>
-                <option value="E">E 技能</option>
-                <option value="X">X 大招</option>
-              </select>
+                onValueChange={(v) => updateTempLineupData({ abilityKey: v as 'C' | 'Q' | 'E' | 'X' })}
+                options={[
+                  { value: 'C', label: 'C 枭型无人机' },
+                  { value: 'Q', label: 'Q 技能' },
+                  { value: 'E', label: 'E 技能' },
+                  { value: 'X', label: 'X 大招' },
+                ]}
+                className="flex-1"
+              />
             </div>
             <input
               type="text"

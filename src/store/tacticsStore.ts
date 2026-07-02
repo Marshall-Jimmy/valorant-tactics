@@ -12,6 +12,12 @@ import {
 } from '@/types';
 import type { Lineup } from '@/data/lineups';
 import { 
+  WORLD_WIDTH, 
+  NORMALIZED_HEIGHT as WORLD_HEIGHT, 
+  MAP_DISPLAY_WIDTH as MAP_WIDTH, 
+  MAP_PADDING_X,
+} from '@/data/lineups';
+import { 
   validateStrategyImport, 
   validateCoordinateOverridesImport,
   DATA_VERSION,
@@ -19,6 +25,7 @@ import {
   getVersionWarning,
   LIMITS,
 } from '@/schemas';
+import { useSettingsStore } from './settingsStore';
 
 // Undo/Redo action types
 export type ActionType = 'addAbility' | 'removeAbility' | 'updateAbility' 
@@ -113,6 +120,18 @@ interface TacticsState {
   customLineups: Lineup[]; // User-created lineups
   favoriteLineups: number[]; // IDs of favorited lineups (both built-in and custom)
 
+  // Lineup coordinate overrides
+  lineupCoordinateOverrides: Record<number, { start: [number, number]; end: [number, number] }>;
+  saveLineupCoordinateOverride: (lineupId: number, start: [number, number], end: [number, number]) => void;
+  removeLineupCoordinateOverride: (lineupId: number) => void;
+  exportCoordinateOverrides: () => string;
+  importCoordinateOverrides: (jsonStr: string) => boolean;
+  startPlaceCoordinates: (lineupId: number) => void;
+  setMapHue: (hue: string) => void;
+  setMapBrightness: (brightness: string) => void;
+  toggleAbilityVisibility: (key: string) => void;
+  clearAbilityVisibilityFilter: () => void;
+  
   // Drawing settings
   drawColor: string;
   drawStrokeWidth: number;
@@ -193,11 +212,8 @@ interface TacticsState {
   importStrategy: (json: string) => Strategy | null;
 }
 
-// World coordinate constants
-export const WORLD_WIDTH = 1777.78;
-export const WORLD_HEIGHT = 1000;
-export const MAP_WIDTH = 1240;
-export const MAP_PADDING_X = (WORLD_WIDTH - MAP_WIDTH) / 2;
+// Re-export coordinate constants from lineups.ts for backward compatibility
+export { WORLD_WIDTH, WORLD_HEIGHT, MAP_WIDTH, MAP_PADDING_X };
 
 // Undo/Redo stack size limit
 const MAX_UNDO_STACK_SIZE = 50;
@@ -220,9 +236,6 @@ export const useTacticsStore = create<TacticsState>()(
       // Initial State
       currentMap: 'bind',
       isAttack: true,
-      showSpawnBarrier: true,
-      showRegionNames: false,
-      showUltOrbs: false,
       zoom: 1,
       currentTool: 'select',
       selectedAbility: null,
@@ -249,12 +262,15 @@ export const useTacticsStore = create<TacticsState>()(
       customLineups: [],
       favoriteLineups: [],
       lineupCoordinateOverrides: {} as Record<number, { start: [number, number]; end: [number, number] }>,
-      drawColor: '#4ade80',
-      drawStrokeWidth: 2,
+      drawColor: useSettingsStore.getState().drawColor,
+      drawStrokeWidth: useSettingsStore.getState().drawStrokeWidth,
       drawMode: 'freehand' as 'freehand' | 'line' | 'arrow',
-      showGrid: false,
-      snapToGrid: false,
-      gridSize: 50,
+      showGrid: useSettingsStore.getState().showGrid,
+      snapToGrid: useSettingsStore.getState().snapToGrid,
+      gridSize: useSettingsStore.getState().gridSize,
+      showSpawnBarrier: useSettingsStore.getState().defaultLayers.spawnBarrier,
+      showRegionNames: useSettingsStore.getState().defaultLayers.regionNames,
+      showUltOrbs: useSettingsStore.getState().defaultLayers.ultOrbs,
       mapHue: '',
       mapBrightness: 'brightness(1.1) contrast(1.15) saturate(1.1)',
       abilityVisibilityFilter: [], // 空=全部显示
@@ -262,9 +278,18 @@ export const useTacticsStore = create<TacticsState>()(
       // Actions
       setCurrentMap: (map) => set({ currentMap: map }),
       setIsAttack: (isAttack) => set({ isAttack }),
-      setShowSpawnBarrier: (show) => set({ showSpawnBarrier: show }),
-      setShowRegionNames: (show) => set({ showRegionNames: show }),
-      setShowUltOrbs: (show) => set({ showUltOrbs: show }),
+      setShowSpawnBarrier: (show) => {
+        set({ showSpawnBarrier: show });
+        useSettingsStore.getState().setDefaultLayers({ spawnBarrier: show });
+      },
+      setShowRegionNames: (show) => {
+        set({ showRegionNames: show });
+        useSettingsStore.getState().setDefaultLayers({ regionNames: show });
+      },
+      setShowUltOrbs: (show) => {
+        set({ showUltOrbs: show });
+        useSettingsStore.getState().setDefaultLayers({ ultOrbs: show });
+      },
       setZoom: (zoom) => set({ zoom }),
       setCurrentTool: (tool) => set({ currentTool: tool, selectedElementId: null, selectedElementType: null }),
       setSelectedAbility: (ability) => set({ selectedAbility: ability }),
@@ -453,12 +478,27 @@ export const useTacticsStore = create<TacticsState>()(
           : [...state.favoriteLineups, lineupId],
       })),
       isFavorite: (lineupId) => get().favoriteLineups.includes(lineupId),
-      setDrawColor: (color) => set({ drawColor: color }),
-      setDrawStrokeWidth: (width) => set({ drawStrokeWidth: width }),
+      setDrawColor: (color) => {
+        set({ drawColor: color });
+        useSettingsStore.getState().setDrawColor(color);
+      },
+      setDrawStrokeWidth: (width) => {
+        set({ drawStrokeWidth: width });
+        useSettingsStore.getState().setDrawStrokeWidth(width);
+      },
       setDrawMode: (mode) => set({ drawMode: mode }),
-      setShowGrid: (show) => set({ showGrid: show }),
-      setSnapToGrid: (snap) => set({ snapToGrid: snap }),
-      setGridSize: (size) => set({ gridSize: size }),
+      setShowGrid: (show) => {
+        set({ showGrid: show });
+        useSettingsStore.getState().setShowGrid(show);
+      },
+      setSnapToGrid: (snap) => {
+        set({ snapToGrid: snap });
+        useSettingsStore.getState().setSnapToGrid(snap);
+      },
+      setGridSize: (size) => {
+        set({ gridSize: size });
+        useSettingsStore.getState().setGridSize(size);
+      },
       setMapHue: (hue) => set({ mapHue: hue }),
       setMapBrightness: (brightness) => set({ mapBrightness: brightness }),
       toggleAbilityVisibility: (key: string) => set((state) => {

@@ -21,10 +21,8 @@ import { useTouchGestures } from '@/hooks/useTouchGestures';
 import { pointToSegmentDistance } from '@/utils/geometry';
 import { handleImageFallback } from '@/utils/image';
 import Image from 'next/image';
+import { WORLD_ASPECT_RATIO } from '@/data/lineups';
 import type { AgentLineupsData } from '@/data/lineups';
-
-// Coordinate system constants - matching Icarus project
-const WORLD_ASPECT_RATIO = 16 / 9;
 
 type DragTarget = {
   type: 'ability' | 'agent';
