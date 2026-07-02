@@ -17,46 +17,58 @@
     /* 全局鼠标穿透（面板区域通过 JS 设置 pointer-events: auto） */
     body { pointer-events: none; }
 
-    /* 右上角水印 */
-    .watermark {
+    /* 右侧贴边速查面板 */
+    .overlay-panel {
       position: fixed;
-      top: 16px;
-      right: 20px;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(167, 139, 250, 0.35);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* 左下角速查面板 */
-    .cheatsheet {
-      position: fixed;
-      bottom: 24px;
-      left: 24px;
-      width: 280px;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(167, 139, 250, 0.15);
-      border-radius: 16px;
-      padding: 20px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 260px;
+      max-height: 80vh;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-left: 1px solid rgba(167, 139, 250, 0.2);
+      border-top: 1px solid rgba(167, 139, 250, 0.15);
+      border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+      border-radius: 16px 0 0 16px;
+      padding: 16px;
       font-family: 'Segoe UI', system-ui, sans-serif;
       color: #e4e4e7;
       pointer-events: auto;
       cursor: default;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
 
-    /* 特工标题区 */
-    .cs-header {
+    .overlay-panel.has-scroll {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* 自定义滚动条 */
+    .overlay-panel::-webkit-scrollbar {
+      width: 4px;
+    }
+    .overlay-panel::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .overlay-panel::-webkit-scrollbar-thumb {
+      background: rgba(167, 139, 250, 0.25);
+      border-radius: 2px;
+    }
+
+    /* 特工信息区 */
+    .agent-section {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 12px;
+      flex-shrink: 0;
     }
 
-    .cs-agent-icon {
+    .agent-icon {
       width: 36px;
       height: 36px;
       border-radius: 8px;
@@ -66,129 +78,321 @@
       flex-shrink: 0;
     }
 
-    .cs-agent-info {
+    .agent-info {
       display: flex;
       flex-direction: column;
       gap: 2px;
+      min-width: 0;
     }
 
-    .cs-agent-name {
-      font-size: 16px;
+    .agent-name {
+      font-size: 15px;
       font-weight: 700;
       color: #fff;
       line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .cs-map-name {
-      font-size: 13px;
-      color: rgba(228, 228, 231, 0.7);
-      line-height: 1.2;
-    }
-
-    .cs-map-name .map-en {
-      color: rgba(228, 228, 231, 0.4);
+    .map-name {
       font-size: 12px;
-      margin-left: 4px;
+      color: rgba(228, 228, 231, 0.6);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* 分隔线 */
-    .cs-divider {
-      height: 1px;
-      background: rgba(167, 139, 250, 0.15);
-      margin: 10px 0;
+    .map-name .map-en {
+      color: rgba(228, 228, 231, 0.35);
+      font-size: 11px;
+      margin-left: 3px;
     }
 
-    /* 技能列表 */
-    .cs-abilities {
+    /* 技能标签区 */
+    .abilities-row {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      margin-bottom: 12px;
     }
 
-    .cs-ability {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.3;
-    }
-
-    .cs-ability-key {
-      width: 24px;
-      height: 24px;
-      border-radius: 6px;
+    .ability-tag {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 600;
       color: #fff;
-      flex-shrink: 0;
-      text-transform: uppercase;
-      margin-top: 1px;
+      line-height: 1.2;
     }
 
-    /* 技能颜色：C=蓝 Q=绿 E=黄 X=红 */
-    .cs-ability-key.key-c { background: rgba(59, 130, 246, 0.8); }
-    .cs-ability-key.key-q { background: rgba(34, 197, 94, 0.8); }
-    .cs-ability-key.key-e { background: rgba(234, 179, 8, 0.8); }
-    .cs-ability-key.key-x { background: rgba(239, 68, 68, 0.8); }
+    .ability-tag .tag-key {
+      font-size: 11px;
+      opacity: 0.7;
+    }
 
-    .cs-ability-name {
-      font-size: 14px;
+    .ability-tag.key-c { background: rgba(16, 185, 129, 0.25); color: #6ee7b7; }
+    .ability-tag.key-q { background: rgba(59, 130, 246, 0.25); color: #93c5fd; }
+    .ability-tag.key-e { background: rgba(168, 85, 247, 0.25); color: #c4b5fd; }
+    .ability-tag.key-x { background: rgba(245, 158, 11, 0.25); color: #fcd34d; }
+
+    /* 分隔线 */
+    .divider {
+      height: 1px;
+      background: rgba(167, 139, 250, 0.15);
+      margin: 8px 0;
+      flex-shrink: 0;
+    }
+
+    /* 收藏点位标题 */
+    .fav-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(228, 228, 231, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+
+    .fav-title .star {
+      color: #facc15;
+      font-size: 13px;
+    }
+
+    /* 收藏点位列表 */
+    .lineup-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .lineup-item {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: rgba(255, 255, 255, 0.03);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .lineup-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .lineup-item.active {
+      border-color: rgba(167, 139, 250, 0.5);
+      background: rgba(167, 139, 250, 0.08);
+    }
+
+    .lineup-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .lineup-item-title {
+      font-size: 13px;
       font-weight: 600;
       color: #e4e4e7;
+      line-height: 1.3;
+      flex: 1;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .cs-ability-desc {
-      font-size: 12px;
+    .lineup-item-tags {
+      display: flex;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .lineup-tag {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 4px;
+      line-height: 1.4;
+    }
+
+    .lineup-tag.side-attack {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+    }
+
+    .lineup-tag.side-defense {
+      background: rgba(59, 130, 246, 0.2);
+      color: #93c5fd;
+    }
+
+    .lineup-tag.side-unknown {
+      background: rgba(255, 255, 255, 0.1);
       color: rgba(228, 228, 231, 0.5);
     }
 
-    /* 底部关闭提示 */
-    .cs-footer {
-      text-align: center;
-      margin-top: 12px;
+    .lineup-tag.ability-tag-sm {
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 4px;
     }
 
-    .cs-close-btn {
-      display: inline-block;
-      padding: 4px 16px;
+    .lineup-tag.ability-tag-sm.key-c { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
+    .lineup-tag.ability-tag-sm.key-q { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+    .lineup-tag.ability-tag-sm.key-e { background: rgba(168, 85, 247, 0.2); color: #c4b5fd; }
+    .lineup-tag.ability-tag-sm.key-x { background: rgba(245, 158, 11, 0.2); color: #fcd34d; }
+
+    /* 点位描述 */
+    .lineup-item-desc {
+      font-size: 11px;
+      color: rgba(228, 228, 231, 0.4);
+      line-height: 1.3;
+      margin-top: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* 步骤列表（展开） */
+    .lineup-steps {
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(167, 139, 250, 0.1);
+    }
+
+    .step {
+      font-size: 12px;
+      color: rgba(228, 228, 231, 0.6);
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .step::before {
+      content: attr(data-index);
+      position: absolute;
+      left: 0;
+      color: rgba(167, 139, 250, 0.6);
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    /* 上/下导航箭头 */
+    .nav-arrows {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .nav-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border: 1px solid rgba(167, 139, 250, 0.2);
+      background: rgba(167, 139, 250, 0.05);
+      color: rgba(167, 139, 250, 0.6);
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+      line-height: 1;
+    }
+
+    .nav-arrow:hover {
+      border-color: rgba(167, 139, 250, 0.4);
+      background: rgba(167, 139, 250, 0.12);
+      color: rgba(167, 139, 250, 0.9);
+    }
+
+    .nav-counter {
+      font-size: 11px;
+      color: rgba(228, 228, 231, 0.4);
+      min-width: 30px;
+      text-align: center;
+    }
+
+    /* 空状态 */
+    .empty-state {
+      text-align: center;
+      padding: 16px 0;
+    }
+
+    .empty-icon {
+      font-size: 24px;
+      opacity: 0.3;
+      margin-bottom: 6px;
+    }
+
+    .empty-text {
+      font-size: 12px;
+      color: rgba(228, 228, 231, 0.4);
+      line-height: 1.5;
+    }
+
+    /* 底部关闭按钮 */
+    .footer {
+      margin-top: 10px;
+      flex-shrink: 0;
+    }
+
+    .close-btn {
+      display: block;
+      width: 100%;
+      padding: 6px 0;
       font-size: 11px;
       font-weight: 600;
-      color: rgba(167, 139, 250, 0.6);
-      border: 1px solid rgba(167, 139, 250, 0.2);
-      border-radius: 6px;
+      color: rgba(167, 139, 250, 0.5);
+      border: 1px solid rgba(167, 139, 250, 0.15);
+      border-radius: 8px;
       background: transparent;
       cursor: pointer;
       transition: all 0.15s ease;
       letter-spacing: 0.5px;
-    }
-
-    .cs-close-btn:hover {
-      color: rgba(167, 139, 250, 0.9);
-      border-color: rgba(167, 139, 250, 0.4);
-      background: rgba(167, 139, 250, 0.08);
-    }
-
-    /* 空状态 */
-    .cs-placeholder {
       text-align: center;
-      padding: 20px 0;
     }
 
-    .cs-placeholder-icon {
+    .close-btn:hover {
+      color: rgba(167, 139, 250, 0.8);
+      border-color: rgba(167, 139, 250, 0.35);
+      background: rgba(167, 139, 250, 0.06);
+    }
+
+    /* placeholder 状态 */
+    .placeholder {
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .placeholder-icon {
       font-size: 28px;
+      opacity: 0.3;
       margin-bottom: 8px;
-      opacity: 0.4;
     }
 
-    .cs-placeholder-text {
+    .placeholder-text {
       font-size: 13px;
       color: rgba(228, 228, 231, 0.5);
       line-height: 1.5;
     }
 
-    .cs-placeholder-hint {
+    .placeholder-hint {
       font-size: 11px;
       color: rgba(228, 228, 231, 0.3);
       margin-top: 4px;
@@ -197,20 +401,16 @@
 </head>
 <body>
 
-  <!-- 右上角水印 -->
-  <div class="watermark">Valorant Tactics</div>
-
-  <!-- 左下角速查面板 -->
-  <div class="cheatsheet" id="cheatsheet">
-    <!-- 由 JS 动态渲染 -->
+  <div class="overlay-panel" id="panel">
+    <div id="content"></div>
   </div>
 
   <script>
     /**
-     * Overlay 速查卡渲染逻辑
+     * Overlay 右侧贴边速查卡
      * - 通过 window.electronAPI.getOverlayData() 从主窗口读取数据
-     * - 数据结构: { agent, abilities, map }
-     * - 无 electronAPI 时显示 placeholder
+     * - 数据结构: { agent, abilities, map, lineups[], favoriteIds[] }
+     * - 支持收藏点位切换、滚轮切换、步骤展开
      */
 
     const slotClassMap = {
@@ -220,63 +420,18 @@
       'X': 'key-x',
     };
 
-    function renderPlaceholder() {
-      var el = document.getElementById('cheatsheet');
-      el.innerHTML =
-        '<div class="cs-placeholder">' +
-          '<div class="cs-placeholder-icon">&#9881;</div>' +
-          '<div class="cs-placeholder-text">请在主界面选择特工和地图</div>' +
-          '<div class="cs-placeholder-hint">F4 关闭</div>' +
-        '</div>';
-    }
+    const sideClassMap = {
+      'attack': 'side-attack',
+      'defense': 'side-defense',
+    };
 
-    function renderOverlay(data) {
-      if (!data || !data.agent || !data.abilities || !data.map) {
-        renderPlaceholder();
-        return;
-      }
+    let currentLineupIndex = 0;
+    let lineupData = [];
+    let overlayData = null;
+    let pollTimer = null;
 
-      var abilitiesHtml = data.abilities.map(function(ab) {
-        var keyClass = slotClassMap[ab.key] || 'key-c';
-        return '<div class="cs-ability">' +
-          '<div class="cs-ability-key ' + keyClass + '">' + ab.key + '</div>' +
-          '<div>' +
-            '<div class="cs-ability-name">' + escapeHtml(ab.name_cn) + '</div>' +
-          '</div>' +
-        '</div>';
-      }).join('');
-
-      var mapNameHtml = escapeHtml(data.map.name);
-      if (data.map.name_en) {
-        mapNameHtml += ' <span class="map-en">' + escapeHtml(data.map.name_en) + '</span>';
-      }
-
-      var el = document.getElementById('cheatsheet');
-      el.innerHTML =
-        '<div class="cs-header">' +
-          '<img class="cs-agent-icon" src="' + escapeAttr(data.agent.iconPath) + '" alt="agent" onerror="this.style.display=\'none\'">' +
-          '<div class="cs-agent-info">' +
-            '<div class="cs-agent-name">' + escapeHtml(data.agent.name) + '</div>' +
-            '<div class="cs-map-name">' + mapNameHtml + '</div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="cs-divider"></div>' +
-        '<div class="cs-abilities">' +
-          abilitiesHtml +
-        '</div>' +
-        '<div class="cs-divider"></div>' +
-        '<div class="cs-footer">' +
-          '<button class="cs-close-btn" id="closeBtn">F4 关闭</button>' +
-        '</div>';
-
-      document.getElementById('closeBtn').addEventListener('click', function() {
-        if (window.electronAPI && window.electronAPI.closeOverlay) {
-          window.electronAPI.closeOverlay();
-        }
-      });
-    }
-
-    function escapeHtml(str) {
+    // 安全的 HTML 转义
+    function esc(str) {
       if (!str) return '';
       return String(str)
         .replace(/&/g, '&amp;')
@@ -285,7 +440,7 @@
         .replace(/"/g, '&quot;');
     }
 
-    function escapeAttr(str) {
+    function escAttr(str) {
       if (!str) return '';
       return String(str)
         .replace(/&/g, '&amp;')
@@ -294,6 +449,189 @@
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
     }
+
+    function renderPlaceholder() {
+      document.getElementById('content').innerHTML =
+        '<div class="placeholder">' +
+          '<div class="placeholder-icon">&#9881;</div>' +
+          '<div class="placeholder-text">请在主界面选择特工和地图</div>' +
+          '<div class="placeholder-hint">F4 关闭</div>' +
+        '</div>';
+    }
+
+    function renderOverlay(data) {
+      overlayData = data;
+      if (!data || !data.agent || !data.abilities || !data.map) {
+        renderPlaceholder();
+        return;
+      }
+
+      // 构建特工信息区
+      var mapNameHtml = esc(data.map.name);
+      if (data.map.name_en) {
+        mapNameHtml += ' <span class="map-en">' + esc(data.map.name_en) + '</span>';
+      }
+
+      // 技能标签
+      var abilitiesHtml = data.abilities.map(function(ab) {
+        var keyClass = slotClassMap[ab.key] || 'key-c';
+        return '<span class="ability-tag ' + keyClass + '">' +
+          '<span class="tag-key">' + esc(ab.key) + '</span> ' +
+          esc(ab.name_cn) +
+        '</span>';
+      }).join('');
+
+      // 收藏点位
+      lineupData = data.lineups || [];
+      if (currentLineupIndex >= lineupData.length) {
+        currentLineupIndex = Math.max(0, lineupData.length - 1);
+      }
+
+      var favSectionHtml = '';
+      if (lineupData.length === 0) {
+        favSectionHtml =
+          '<div class="fav-title"><span class="star">&#9733;</span> 收藏点位</div>' +
+          '<div class="empty-state">' +
+            '<div class="empty-icon">&#9734;</div>' +
+            '<div class="empty-text">暂无收藏<br>请在主界面收藏点位</div>' +
+          '</div>';
+      } else {
+        var itemsHtml = lineupData.map(function(l, idx) {
+          var isActive = idx === currentLineupIndex;
+          var sideClass = sideClassMap[l.side] || 'side-unknown';
+          var abilityClass = slotClassMap[l.abilityKey] || 'key-c';
+          var sideLabel = l.side_cn || l.side || '';
+          var descHtml = l.description ? '<div class="lineup-item-desc">' + esc(l.description) + '</div>' : '';
+
+          // 步骤（仅展开当前选中项）
+          var stepsHtml = '';
+          if (isActive && l.steps && l.steps.length > 0) {
+            stepsHtml = '<div class="lineup-steps">';
+            for (var s = 0; s < l.steps.length; s++) {
+              stepsHtml += '<div class="step" data-index="' + (s + 1) + '.">' + esc(l.steps[s]) + '</div>';
+            }
+            stepsHtml += '</div>';
+          }
+
+          return '<div class="lineup-item' + (isActive ? ' active' : '') + '" data-idx="' + idx + '">' +
+            '<div class="lineup-item-header">' +
+              '<div class="lineup-item-title">' + esc(l.title) + '</div>' +
+              '<div class="lineup-item-tags">' +
+                '<span class="lineup-tag ability-tag-sm ' + abilityClass + '">' + esc(l.abilityKey || '?') + '</span>' +
+                '<span class="lineup-tag ' + sideClass + '">' + esc(sideLabel) + '</span>' +
+              '</div>' +
+            '</div>' +
+            descHtml +
+            stepsHtml +
+          '</div>';
+        }).join('');
+
+        // 导航箭头（多于 1 个点位时显示）
+        var navHtml = '';
+        if (lineupData.length > 1) {
+          navHtml =
+            '<div class="nav-arrows">' +
+              '<button class="nav-arrow" id="navUp">&#9650;</button>' +
+              '<span class="nav-counter">' + (currentLineupIndex + 1) + ' / ' + lineupData.length + '</span>' +
+              '<button class="nav-arrow" id="navDown">&#9660;</button>' +
+            '</div>';
+        }
+
+        favSectionHtml =
+          '<div class="fav-title"><span class="star">&#9733;</span> 收藏点位 (' + lineupData.length + ')</div>' +
+          '<div class="lineup-list">' + itemsHtml + '</div>' +
+          navHtml;
+      }
+
+      var panel = document.getElementById('content');
+      panel.innerHTML =
+        '<div class="agent-section">' +
+          '<img class="agent-icon" src="' + escAttr(data.agent.iconPath) + '" alt="agent" onerror="this.style.display=\'none\'">' +
+          '<div class="agent-info">' +
+            '<div class="agent-name">' + esc(data.agent.name) + '</div>' +
+            '<div class="map-name">' + mapNameHtml + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="abilities-row">' + abilitiesHtml + '</div>' +
+        '<div class="divider"></div>' +
+        favSectionHtml +
+        '<div class="divider"></div>' +
+        '<div class="footer">' +
+          '<button class="close-btn" id="closeBtn">F4 关闭</button>' +
+        '</div>';
+
+      // 绑定事件
+      bindEvents();
+      updateScrollClass();
+    }
+
+    function bindEvents() {
+      // 关闭按钮
+      var closeBtn = document.getElementById('closeBtn');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          if (window.electronAPI && window.electronAPI.closeOverlay) {
+            window.electronAPI.closeOverlay();
+          }
+        });
+      }
+
+      // 点位点击
+      var items = document.querySelectorAll('.lineup-item');
+      items.forEach(function(item) {
+        item.addEventListener('click', function() {
+          var idx = parseInt(this.getAttribute('data-idx'), 10);
+          if (!isNaN(idx) && idx !== currentLineupIndex) {
+            currentLineupIndex = idx;
+            if (overlayData) renderOverlay(overlayData);
+          }
+        });
+      });
+
+      // 上/下导航
+      var navUp = document.getElementById('navUp');
+      var navDown = document.getElementById('navDown');
+      if (navUp) {
+        navUp.addEventListener('click', function(e) {
+          e.stopPropagation();
+          switchLineup(-1);
+        });
+      }
+      if (navDown) {
+        navDown.addEventListener('click', function(e) {
+          e.stopPropagation();
+          switchLineup(1);
+        });
+      }
+    }
+
+    function switchLineup(direction) {
+      if (lineupData.length === 0) return;
+      currentLineupIndex = (currentLineupIndex + direction + lineupData.length) % lineupData.length;
+      if (overlayData) renderOverlay(overlayData);
+      // 滚动选中项到可见区域
+      var activeItem = document.querySelector('.lineup-item.active');
+      if (activeItem) {
+        activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+
+    function updateScrollClass() {
+      var panel = document.getElementById('panel');
+      if (panel.scrollHeight > panel.clientHeight) {
+        panel.classList.add('has-scroll');
+      } else {
+        panel.classList.remove('has-scroll');
+      }
+    }
+
+    // 滚轮切换点位
+    document.getElementById('panel').addEventListener('wheel', function(e) {
+      if (lineupData.length > 1) {
+        e.preventDefault();
+        switchLineup(e.deltaY > 0 ? 1 : -1);
+      }
+    }, { passive: false });
 
     // 加载数据
     async function loadOverlayData() {
@@ -306,7 +644,7 @@
             renderPlaceholder();
           }
         } else {
-          // 非 Electron 环境（如浏览器直接打开）显示 placeholder
+          // 非 Electron 环境
           renderPlaceholder();
         }
       } catch (e) {
@@ -315,8 +653,18 @@
       }
     }
 
-    // 页面加载后立即获取数据
-    loadOverlayData();
+    // 定期轮询数据更新（每 2 秒）
+    function startPolling() {
+      if (pollTimer) clearInterval(pollTimer);
+      pollTimer = setInterval(function() {
+        loadOverlayData();
+      }, 2000);
+    }
+
+    // 初始化
+    loadOverlayData().then(function() {
+      startPolling();
+    });
   </script>
 
 </body>

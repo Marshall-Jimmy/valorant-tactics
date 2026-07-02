@@ -72,6 +72,21 @@ export interface TempLineupData {
   detailImages?: string[]; // base64 data URLs
 }
 
+// Overlay 收藏点位精简信息（由 LineupPanel 同步）
+export interface OverlayLineupInfo {
+  id: number;
+  title: string;
+  side: string;
+  side_cn: string;
+  abilityKey: string;
+  description: string;
+  coordinates: {
+    start: [number, number]; // normalized
+    end: [number, number];
+  };
+  steps: string[];
+}
+
 interface TacticsState {
   // Current Map & Mode
   currentMap: MapValue;
@@ -123,6 +138,7 @@ interface TacticsState {
   editingLineupId: number | null; // For editing existing lineup
   customLineups: Lineup[]; // User-created lineups
   favoriteLineups: number[]; // IDs of favorited lineups (both built-in and custom)
+  overlayFavoriteLineups: OverlayLineupInfo[]; // 精简的收藏点位数据，供 overlay 使用
 
   // Lineup coordinate overrides
   lineupCoordinateOverrides: Record<number, { start: [number, number]; end: [number, number] }>;
@@ -176,6 +192,7 @@ interface TacticsState {
   exportCustomLineups: () => string;
   toggleFavorite: (lineupId: number) => void;
   isFavorite: (lineupId: number) => boolean;
+  syncOverlayFavoriteLineups: (lineups: OverlayLineupInfo[]) => void;
   setDrawColor: (color: string) => void;
   setDrawStrokeWidth: (width: number) => void;
   setDrawMode: (mode: 'freehand' | 'line' | 'arrow') => void;
@@ -268,6 +285,7 @@ export const useTacticsStore = create<TacticsState>()(
       editingLineupId: null,
       customLineups: [],
       favoriteLineups: [],
+      overlayFavoriteLineups: [],
       lineupCoordinateOverrides: {} as Record<number, { start: [number, number]; end: [number, number] }>,
       drawColor: useSettingsStore.getState().drawColor,
       drawStrokeWidth: useSettingsStore.getState().drawStrokeWidth,
@@ -495,6 +513,7 @@ export const useTacticsStore = create<TacticsState>()(
           : [...state.favoriteLineups, lineupId],
       })),
       isFavorite: (lineupId) => get().favoriteLineups.includes(lineupId),
+      syncOverlayFavoriteLineups: (lineups) => set({ overlayFavoriteLineups: lineups }),
       setDrawColor: (color) => {
         set({ drawColor: color });
         useSettingsStore.getState().setDrawColor(color);
@@ -1019,6 +1038,36 @@ function buildOverlayData(state: TacticsState): object | null {
     iconPath: ab.iconPath,
   }));
 
+  // 收集收藏点位：从 overlayFavoriteLineups（原始数据同步）和 customLineups 中获取
+  const favIds = new Set(state.favoriteLineups);
+
+  // 原始数据中的收藏点位（由 LineupPanel 同步到 overlayFavoriteLineups）
+  const builtinFavs = state.overlayFavoriteLineups.filter(l => favIds.has(l.id));
+
+  // 自定义点位中的收藏点位（自定义点位与当前 agent+map 绑定）
+  const customFavs = state.customLineups
+    .filter(l => favIds.has(l.id))
+    .map(l => ({
+      id: l.id,
+      title: l.title,
+      side: l.side,
+      side_cn: l.side_cn || (l.side === 'attack' ? '进攻方' : '防守方'),
+      abilityKey: l.abilityKey || '?',
+      description: '',
+      coordinates: {
+        start: l.coordinates.start.normalized as [number, number],
+        end: l.coordinates.end.normalized as [number, number],
+      },
+      steps: [],
+    }));
+
+  // 合并（去重：如果 ID 重合优先保留 builtinFavs）
+  const customFavIds = new Set(customFavs.map(l => l.id));
+  const allLineups = [
+    ...builtinFavs,
+    ...customFavs.filter(l => !customFavIds.has(l.id) || !builtinFavs.some(b => b.id === l.id)),
+  ];
+
   return {
     agent: {
       type: agentInfo.type,
@@ -1031,6 +1080,8 @@ function buildOverlayData(state: TacticsState): object | null {
       name: mapInfo.name,
       name_en: mapInfo.name_en,
     },
+    lineups: allLineups,
+    favoriteIds: state.favoriteLineups,
   };
 }
 

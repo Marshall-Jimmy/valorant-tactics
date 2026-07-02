@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { createPortal } from 'react-dom';
-import { useTacticsStore, type TempLineupData } from '@/store/tacticsStore';
+import { useTacticsStore, type TempLineupData, type OverlayLineupInfo } from '@/store/tacticsStore';
 import { useSettingsStore } from '@/store/settingsStore';
 import { useLanguage } from './I18nProvider';
 import { useDebounce } from '@/hooks/useDebounce';
@@ -56,6 +56,7 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
     deleteCustomLineup, exportCustomLineups,
     exportCoordinateOverrides, importCoordinateOverrides,
     favoriteLineups, toggleFavorite, isFavorite,
+    syncOverlayFavoriteLineups,
     lineupCoordinateOverrides, saveLineupCoordinateOverride,
   } = useTacticsStore();
   const { t } = useLanguage();
@@ -95,6 +96,40 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
       }
     });
   }, [lineupAgentId, currentMap, setSelectedLineupId]);
+
+  // 同步收藏点位精简数据到 overlay（供 overlay 速查卡使用）
+  useEffect(() => {
+    if (!loadedData || favoriteLineups.length === 0) {
+      syncOverlayFavoriteLineups([]);
+      return;
+    }
+    const mapData = getLineupsForMap(loadedData, currentMap);
+    if (!mapData) {
+      syncOverlayFavoriteLineups([]);
+      return;
+    }
+    const favIds = new Set(favoriteLineups);
+    const allLineups: OverlayLineupInfo[] = [];
+    for (const [abilityKey, ability] of Object.entries(mapData.abilities)) {
+      for (const l of ability.lineups) {
+        if (!favIds.has(l.id)) continue;
+        allLineups.push({
+          id: l.id,
+          title: l.title,
+          side: l.side,
+          side_cn: l.side_cn,
+          abilityKey,
+          description: (l as any).description || '',
+          coordinates: {
+            start: l.coordinates.start.normalized as [number, number],
+            end: l.coordinates.end.normalized as [number, number],
+          },
+          steps: (l as any).steps || [],
+        });
+      }
+    }
+    syncOverlayFavoriteLineups(allLineups);
+  }, [loadedData, currentMap, favoriteLineups, syncOverlayFavoriteLineups]);
 
   // Get current map lineup data
   const mapLineupData = useMemo(() => {

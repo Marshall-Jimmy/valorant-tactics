@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, globalShortcut, Tray, nativeImage, ipcMain } = require('electron');
+const { app, BrowserWindow, Menu, globalShortcut, Tray, nativeImage, ipcMain, screen } = require('electron');
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
@@ -36,9 +36,15 @@ function toggleOverlay() {
     console.log('[Overlay] 关闭');
   } else {
     // 不存在 → 创建
+    // 计算右侧贴边位置
+    const primaryDisplay = screen.getPrimaryDisplay();
+    const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
+    const overlayWidth = 280;
+    const overlayHeight = Math.min(600, Math.round(screenHeight * 0.8));
+
     overlayWindow = new BrowserWindow({
-      width: 800,
-      height: 600,
+      width: overlayWidth,
+      height: overlayHeight,
       transparent: true,
       frame: false,
       alwaysOnTop: true,
@@ -46,6 +52,8 @@ function toggleOverlay() {
       hasShadow: false,
       resizable: true,
       enableLargerThanScreen: true,
+      x: screenWidth - overlayWidth,
+      y: Math.round((screenHeight - overlayHeight) / 2),
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
