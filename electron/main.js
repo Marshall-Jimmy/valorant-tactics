@@ -72,6 +72,8 @@ function toggleOverlay() {
       overlayWindow.show();
       overlayWindow.setAlwaysOnTop(true, 'pop-up-menu');
       overlayWindow.moveTop();
+      // 默认开启鼠标穿透：面板区域接收事件，面板外穿透到游戏
+      overlayWindow.setIgnoreMouseEvents(true, { forward: true });
       const ts = new Date().toLocaleTimeString();
       console.log(`[Overlay] 窗口显示 @ ${ts} | alwaysOnTop=pop-up-menu | size=${screenWidth}x${screenHeight}`);
     });
@@ -115,6 +117,19 @@ ipcMain.on('close-overlay', () => {
     overlayWindow.close();
     overlayWindow = null;
     console.log('[Overlay] 窗口通过 IPC 关闭');
+  }
+});
+
+// 设置鼠标穿透：panel 模式时穿透（forward 使面板区域仍可交互），preview 模式时不穿透
+ipcMain.on('set-ignore-mouse-events', (event, ignore) => {
+  if (overlayWindow && !overlayWindow.isDestroyed()) {
+    if (ignore) {
+      overlayWindow.setIgnoreMouseEvents(true, { forward: true });
+      console.log('[Overlay] 鼠标穿透开启（面板区域仍接收事件）');
+    } else {
+      overlayWindow.setIgnoreMouseEvents(false);
+      console.log('[Overlay] 鼠标穿透关闭');
+    }
   }
 });
 
