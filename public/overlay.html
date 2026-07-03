@@ -655,10 +655,8 @@
         }
         console.log('[Overlay] showPreview, coordinates=', JSON.stringify(lineupCopy.coordinates));
 
-        // 关闭鼠标穿透，让预览区域可交互
-        if (window.electronAPI && window.electronAPI.setIgnoreMouseEvents) {
-          window.electronAPI.setIgnoreMouseEvents(false);
-        }
+        // 不再切换 setIgnoreMouseEvents，保持 forward:true 模式
+        // CSS pointer-events: auto 会让预览区域接收事件，其余区域穿透
 
         // 隐藏面板
         document.getElementById('panelRoot').style.display = 'none';
@@ -762,10 +760,6 @@
       lbPages = [];
       lbIndex = 0;
       lbTitle = '';
-      // 恢复鼠标穿透：面板区域接收事件，面板外穿透到游戏
-      if (window.electronAPI && window.electronAPI.setIgnoreMouseEvents) {
-        window.electronAPI.setIgnoreMouseEvents(true);
-      }
     }
 
     /* =============================================

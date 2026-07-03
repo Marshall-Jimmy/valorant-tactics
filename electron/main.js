@@ -50,7 +50,7 @@ function toggleOverlay() {
       skipTaskbar: true,
       hasShadow: false,
       resizable: false,
-      focusable: false,
+      focusable: true,
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
@@ -69,13 +69,13 @@ function toggleOverlay() {
     }
 
     overlayWindow.once('ready-to-show', () => {
-      overlayWindow.show();
+      overlayWindow.showInactive(); // 不抢焦点
       overlayWindow.setAlwaysOnTop(true, 'pop-up-menu');
       overlayWindow.moveTop();
-      // 默认开启鼠标穿透：面板区域接收事件，面板外穿透到游戏
+      // 开启鼠标穿透（forward 模式：CSS pointer-events:auto 区域仍拦截事件）
       overlayWindow.setIgnoreMouseEvents(true, { forward: true });
       const ts = new Date().toLocaleTimeString();
-      console.log(`[Overlay] 窗口显示 @ ${ts} | alwaysOnTop=pop-up-menu | size=${screenWidth}x${screenHeight}`);
+      console.log(`[Overlay] 窗口显示 @ ${ts} | alwaysOnTop=pop-up-menu | size=${screenWidth}x${screenHeight} | focusable=true | showInactive`);
     });
 
     overlayWindow.on('closed', () => {
