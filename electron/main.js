@@ -94,8 +94,7 @@ function toggleOverlay() {
       console.log('[Overlay] 窗口销毁');
     });
 
-    // 游戏退出时自动关闭 overlay
-    startValorantWatcher();
+    // 不再自动监视 Valorant 进程，overlay 只通过 F4 手动关闭
   }
 }
 
