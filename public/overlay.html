@@ -12,28 +12,27 @@
       background: transparent;
       overflow: hidden;
       user-select: none;
+      font-family: 'Segoe UI', system-ui, sans-serif;
     }
 
-    /* 全局鼠标穿透 */
-    body { pointer-events: none; }
+    /* ============================================ */
+    /*            Panel 模式：右侧面板               */
+    /* ============================================ */
+    .panel-mode body {
+      pointer-events: none;
+    }
 
-    /* 右侧贴边速查面板 */
-    .overlay-panel {
+    .panel-mode .overlay-panel {
       position: fixed;
       right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 260px;
-      max-height: 80vh;
+      top: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(0, 0, 0, 0.75);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-left: 1px solid rgba(167, 139, 250, 0.2);
-      border-top: 1px solid rgba(167, 139, 250, 0.15);
-      border-bottom: 1px solid rgba(167, 139, 250, 0.15);
-      border-radius: 16px 0 0 16px;
       padding: 16px;
-      font-family: 'Segoe UI', system-ui, sans-serif;
       color: #e4e4e7;
       pointer-events: auto;
       cursor: default;
@@ -42,14 +41,14 @@
       overflow: hidden;
     }
 
-    .overlay-panel.has-scroll {
+    .panel-mode .overlay-panel.has-scroll {
       overflow-y: auto;
       overflow-x: hidden;
     }
 
-    .overlay-panel::-webkit-scrollbar { width: 4px; }
-    .overlay-panel::-webkit-scrollbar-track { background: transparent; }
-    .overlay-panel::-webkit-scrollbar-thumb { background: rgba(167, 139, 250, 0.25); border-radius: 2px; }
+    .panel-mode .overlay-panel::-webkit-scrollbar { width: 4px; }
+    .panel-mode .overlay-panel::-webkit-scrollbar-track { background: transparent; }
+    .panel-mode .overlay-panel::-webkit-scrollbar-thumb { background: rgba(167, 139, 250, 0.25); border-radius: 2px; }
 
     /* 特工信息区 */
     .agent-section {
@@ -131,7 +130,6 @@
     }
 
     .lineup-tag.side-tag { margin-left: 4px; }
-    .lineup-tag.ability-tag-sm { }
 
     .lineup-item-desc {
       font-size: 11px; color: rgba(228, 228, 231, 0.4);
@@ -231,49 +229,29 @@
     .placeholder-hint { font-size: 11px; color: rgba(228, 228, 231, 0.3); margin-top: 4px; }
 
     /* ============================================ */
-    /*            中央图片展示 Lightbox            */
+    /*            Preview 模式：全屏预览             */
     /* ============================================ */
-    .lightbox {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      z-index: 9999;
+    .preview-mode .preview-overlay {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
       display: flex; align-items: center; justify-content: center;
-      flex-direction: column;
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
-      pointer-events: auto;
-      opacity: 0;
-      transition: opacity 0.2s ease;
     }
 
-    .lightbox.visible { opacity: 1; }
-
-    /* 内容容器 - 固定大小居中 */
-    .lightbox-content {
-      position: relative;
+    .preview-mode .preview-content {
       width: 45vw;
       height: 40vh;
       min-width: 320px;
       min-height: 240px;
       max-width: 700px;
       max-height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
       border-radius: 8px;
+      position: relative;
     }
 
-    .lightbox-img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .lightbox-close {
+    .preview-mode .preview-close {
       position: absolute;
       top: 16px; right: 20px;
       width: 36px; height: 36px;
@@ -285,14 +263,15 @@
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       transition: all 0.15s ease;
+      z-index: 10;
     }
 
-    .lightbox-close:hover {
+    .preview-mode .preview-close:hover {
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
     }
 
-    .lightbox-nav {
+    .preview-mode .preview-nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -305,17 +284,18 @@
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       transition: all 0.15s ease;
+      z-index: 10;
     }
 
-    .lightbox-nav:hover {
+    .preview-mode .preview-nav:hover {
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
     }
 
-    .lightbox-nav.prev { left: 8px; }
-    .lightbox-nav.next { right: 8px; }
+    .preview-mode .preview-nav.prev { left: 8px; }
+    .preview-mode .preview-nav.next { right: 8px; }
 
-    .lightbox-counter {
+    .preview-mode .preview-counter {
       position: absolute;
       bottom: 16px; left: 50%;
       transform: translateX(-50%);
@@ -324,9 +304,10 @@
       background: rgba(0, 0, 0, 0.5);
       padding: 4px 12px;
       border-radius: 12px;
+      z-index: 10;
     }
 
-    .lightbox-title {
+    .preview-mode .preview-title {
       position: absolute;
       bottom: 48px; left: 50%;
       transform: translateX(-50%);
@@ -337,6 +318,14 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      z-index: 10;
+    }
+
+    .preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.3);
     }
 
     /* 点位坐标预览页 */
@@ -420,352 +409,386 @@
       border-radius: 8px;
       pointer-events: none;
     }
-
-    /* 右上角水印 */
-    .watermark {
-      position: fixed;
-      top: 16px; right: 20px;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      font-size: 12px; font-weight: 600;
-      color: rgba(167, 139, 250, 0.35);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
   </style>
 </head>
 <body>
 
-  <!-- 右上角水印 -->
-  <div class="watermark">Valorant Tactics</div>
-
-  <!-- 右侧面板 -->
-  <div class="overlay-panel" id="panel">
-    <div id="content"></div>
+  <!-- ==================== Panel 模式 ==================== -->
+  <div id="panelRoot" style="display:none;">
+    <div class="overlay-panel" id="panel">
+      <div id="content"></div>
+    </div>
   </div>
 
-  <!-- 中央图片展示 -->
-  <div class="lightbox" id="lightbox" style="display:none;">
-    <button class="lightbox-close" id="lbClose">&times;</button>
-    <button class="lightbox-nav prev" id="lbPrev">&#9664;</button>
-    <button class="lightbox-nav next" id="lbNext">&#9654;</button>
-    <div class="lightbox-content" id="lbContent"></div>
-    <div class="lightbox-title" id="lbTitle"></div>
-    <div class="lightbox-counter" id="lbCounter"></div>
+  <!-- ==================== Preview 模式 ==================== -->
+  <div id="previewRoot" style="display:none;">
+    <div class="preview-overlay" id="previewOverlay">
+      <button class="preview-close" id="previewClose">&times;</button>
+      <button class="preview-nav prev" id="previewPrev">&#9664;</button>
+      <button class="preview-nav next" id="previewNext">&#9654;</button>
+      <div class="preview-content" id="previewContent"></div>
+      <div class="preview-title" id="previewTitle"></div>
+      <div class="preview-counter" id="previewCounter"></div>
+    </div>
   </div>
 
   <script>
     /* =============================================
-     *  Overlay 右侧速查卡 + 中央图片 Lightbox
+     *  Overlay - 支持 Panel 和 Preview 两种模式
      * ============================================= */
 
+    const params = new URLSearchParams(location.search);
+    const mode = params.get('mode') || 'panel';
+    const previewData = (function() {
+      var d = params.get('data');
+      if (!d) return null;
+      try { return JSON.parse(atob(d)); } catch(e) { return null; }
+    })();
 
-
-    var currentLineupIndex = 0;
-    var lineupData = [];
-    var overlayData = null;
-    var pollTimer = null;
-
-    // Lightbox state
-    var lbPages = [];  // { type: 'coords', data: lineup } or { type: 'image', src: url }
-    var lbIndex = 0;
-    var lbTitle = '';
-
-    function esc(str) {
-      if (!str) return '';
-      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    // 根据模式初始化
+    if (mode === 'panel') {
+      document.documentElement.classList.add('panel-mode');
+      document.getElementById('panelRoot').style.display = '';
+      initPanel();
+    } else if (mode === 'preview') {
+      document.documentElement.classList.add('preview-mode');
+      document.getElementById('previewRoot').style.display = '';
+      initPreview();
     }
 
-    function escAttr(str) {
-      if (!str) return '';
-      return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    }
+    /* =============================================
+     *  Panel 模式
+     * ============================================= */
+    function initPanel() {
+      var currentLineupIndex = 0;
+      var lineupData = [];
+      var overlayData = null;
+      var pollTimer = null;
 
-    /* ---------- Lightbox ---------- */
-
-    function openLightbox(lineup) {
-      lbTitle = lineup.title || '';
-
-      // 构建页面列表：第0页是坐标预览，后面是图片
-      lbPages = [];
-
-      // 第0页：坐标预览（如果有坐标）
-      if (lineup.coordinates) {
-        lbPages.push({ type: 'coords', data: lineup });
+      function esc(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
       }
 
-      // 图片页
-      var images = [];
-      if (lineup.standImage) images.push(lineup.standImage);
-      if (lineup.detailImages) images = images.concat(lineup.detailImages);
-      images.forEach(function(url) {
-        if (url) lbPages.push({ type: 'image', src: url });
-      });
+      function escAttr(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
 
-      if (lbPages.length === 0) return;
-      lbIndex = 0;
-      renderLightboxPage();
-      var lb = document.getElementById('lightbox');
-      lb.style.display = 'flex';
-      // 触发 reflow 后添加 visible class（用于动画）
-      requestAnimationFrame(function() { lb.classList.add('visible'); });
-    }
-
-    function closeLightbox() {
-      var lb = document.getElementById('lightbox');
-      lb.classList.remove('visible');
-      setTimeout(function() { lb.style.display = 'none'; }, 200);
-    }
-
-    function navigateLightbox(dir) {
-      lbIndex = (lbIndex + dir + lbPages.length) % lbPages.length;
-      renderLightboxPage();
-    }
-
-    function renderLightboxPage() {
-      var page = lbPages[lbIndex];
-      var content = document.getElementById('lbContent');
-
-      if (page.type === 'coords') {
-        // 渲染坐标预览
-        var coords = page.data.coordinates;
-        var x1 = coords.start[0] * 100, y1 = coords.start[1] * 100;
-        var x2 = coords.end[0] * 100, y2 = coords.end[1] * 100;
-        var mapKey = (overlayData && overlayData.map && overlayData.map.key) || '';
-        var mapSvg = mapKey ? '/maps/' + mapKey + '_map.svg' : '';
-
-        var mapBgHtml = mapSvg
-          ? '<img class="map-bg" src="' + escAttr(mapSvg) + '" alt="" onerror="this.style.display=\'none\'">'
-          : '';
-
-        content.innerHTML =
-          '<div class="lineup-preview">' +
-            mapBgHtml +
-            '<svg class="coord-line" viewBox="0 0 100 100" preserveAspectRatio="none">' +
-              '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="rgba(167,139,250,0.4)" stroke-width="0.4" stroke-dasharray="1,1"/>' +
-            '</svg>' +
-            '<div class="coord-marker start" style="left:' + x1 + '%;top:' + y1 + '%"><div class="coord-label">站位</div></div>' +
-            '<div class="coord-marker end" style="left:' + x2 + '%;top:' + y2 + '%"><div class="coord-label">落点</div></div>' +
-            '<div class="lightbox-page-label">坐标预览</div>' +
+      function renderPlaceholder() {
+        document.getElementById('content').innerHTML =
+          '<div class="placeholder">' +
+            '<div class="placeholder-icon">&#9881;</div>' +
+            '<div class="placeholder-text">请在主界面选择特工和地图</div>' +
+            '<div class="placeholder-hint">F4 关闭</div>' +
           '</div>';
-      } else if (page.type === 'image') {
-        content.innerHTML = '<img class="lightbox-img" src="' + escAttr(page.src) + '" alt="' + escAttr(lbTitle) + '">';
       }
 
-      // 更新标题和计数器
-      document.getElementById('lbTitle').textContent = lbTitle;
-      var total = lbPages.length;
-      if (total > 1) {
-        document.getElementById('lbCounter').textContent = (lbIndex + 1) + ' / ' + total;
-        document.getElementById('lbCounter').style.display = '';
-        document.getElementById('lbPrev').style.display = '';
-        document.getElementById('lbNext').style.display = '';
-      } else {
-        document.getElementById('lbCounter').style.display = 'none';
-        document.getElementById('lbPrev').style.display = 'none';
-        document.getElementById('lbNext').style.display = 'none';
-      }
-    }
+      function renderOverlay(data) {
+        overlayData = data;
+        if (!data || !data.agent || !data.abilities || !data.map) {
+          renderPlaceholder();
+          return;
+        }
 
-    // Lightbox events
-    document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    document.getElementById('lbPrev').addEventListener('click', function() { navigateLightbox(-1); });
-    document.getElementById('lbNext').addEventListener('click', function() { navigateLightbox(1); });
-    document.getElementById('lightbox').addEventListener('click', function(e) {
-      if (e.target === this) closeLightbox();
-    });
+        var mapNameHtml = esc(data.map.name);
+        if (data.map.name_en) mapNameHtml += ' <span class="map-en">' + esc(data.map.name_en) + '</span>';
 
-    // 键盘: Esc 关闭, 左右切换
-    document.addEventListener('keydown', function(e) {
-      var lb = document.getElementById('lightbox');
-      if (lb.style.display === 'none') return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') navigateLightbox(-1);
-      if (e.key === 'ArrowRight') navigateLightbox(1);
-    });
-
-    /* ---------- Overlay 渲染 ---------- */
-
-    function renderPlaceholder() {
-      document.getElementById('content').innerHTML =
-        '<div class="placeholder">' +
-          '<div class="placeholder-icon">&#9881;</div>' +
-          '<div class="placeholder-text">请在主界面选择特工和地图</div>' +
-          '<div class="placeholder-hint">F4 关闭</div>' +
-        '</div>';
-    }
-
-    function renderOverlay(data) {
-      overlayData = data;
-      if (!data || !data.agent || !data.abilities || !data.map) {
-        renderPlaceholder();
-        return;
-      }
-
-      var mapNameHtml = esc(data.map.name);
-      if (data.map.name_en) mapNameHtml += ' <span class="map-en">' + esc(data.map.name_en) + '</span>';
-
-      var abilitiesHtml = data.abilities.map(function(ab) {
-        return '<span class="ability-tag"><span class="tag-key">' + esc(ab.key) + '</span> ' + esc(ab.name_cn) + '</span>';
-      }).join('');
-
-      lineupData = data.lineups || [];
-      if (currentLineupIndex >= lineupData.length) currentLineupIndex = Math.max(0, lineupData.length - 1);
-
-      var favSectionHtml = '';
-      if (lineupData.length === 0) {
-        favSectionHtml =
-          '<div class="fav-title"><span class="star">&#9733;</span> 收藏点位</div>' +
-          '<div class="empty-state"><div class="empty-icon">&#9734;</div><div class="empty-text">暂无收藏<br>请在主界面收藏点位</div></div>';
-      } else {
-        var itemsHtml = lineupData.map(function(l, idx) {
-          var isActive = idx === currentLineupIndex;
-
-          var sideLabel = l.side_cn || l.side || '';
-          var descHtml = l.description ? '<div class="lineup-item-desc">' + esc(l.description) + '</div>' : '';
-
-          // 步骤（仅展开当前选中项）
-          var stepsHtml = '';
-          if (isActive && l.steps && l.steps.length > 0) {
-            stepsHtml = '<div class="lineup-steps">';
-            for (var s = 0; s < l.steps.length; s++) {
-              stepsHtml += '<div class="step" data-index="' + (s + 1) + '.">' + esc(l.steps[s]) + '</div>';
-            }
-            stepsHtml += '</div>';
-          }
-
-          // 查看图片按钮
-          var imgBtnHtml = '';
-          var hasImages = !!(l.standImage || (l.detailImages && l.detailImages.length > 0));
-          if (hasImages) {
-            imgBtnHtml = '<button class="view-img-btn" data-idx="' + idx + '">查看图片</button>';
-          }
-
-          return '<div class="lineup-item' + (isActive ? ' active' : '') + '" data-idx="' + idx + '">' +
-            '<div class="lineup-item-header">' +
-              '<div class="lineup-item-title">' + esc(l.title) + '</div>' +
-              '<div class="lineup-item-tags">' +
-                '<span class="lineup-tag">' + esc(l.abilityKey || '?') + '</span>' +
-                '<span class="lineup-tag">' + esc(sideLabel) + '</span>' +
-              '</div>' +
-            '</div>' +
-            descHtml + imgBtnHtml + stepsHtml +
-          '</div>';
+        var abilitiesHtml = data.abilities.map(function(ab) {
+          return '<span class="ability-tag"><span class="tag-key">' + esc(ab.key) + '</span> ' + esc(ab.name_cn) + '</span>';
         }).join('');
 
-        var navHtml = '';
-        if (lineupData.length > 1) {
-          navHtml =
-            '<div class="nav-arrows">' +
-              '<button class="nav-arrow" id="navUp">&#9650;</button>' +
-              '<span class="nav-counter">' + (currentLineupIndex + 1) + ' / ' + lineupData.length + '</span>' +
-              '<button class="nav-arrow" id="navDown">&#9660;</button>' +
+        lineupData = data.lineups || [];
+        if (currentLineupIndex >= lineupData.length) currentLineupIndex = Math.max(0, lineupData.length - 1);
+
+        var favSectionHtml = '';
+        if (lineupData.length === 0) {
+          favSectionHtml =
+            '<div class="fav-title"><span class="star">&#9733;</span> 收藏点位</div>' +
+            '<div class="empty-state"><div class="empty-icon">&#9734;</div><div class="empty-text">暂无收藏<br>请在主界面收藏点位</div></div>';
+        } else {
+          var itemsHtml = lineupData.map(function(l, idx) {
+            var isActive = idx === currentLineupIndex;
+
+            var sideLabel = l.side_cn || l.side || '';
+            var descHtml = l.description ? '<div class="lineup-item-desc">' + esc(l.description) + '</div>' : '';
+
+            // 步骤（仅展开当前选中项）
+            var stepsHtml = '';
+            if (isActive && l.steps && l.steps.length > 0) {
+              stepsHtml = '<div class="lineup-steps">';
+              for (var s = 0; s < l.steps.length; s++) {
+                stepsHtml += '<div class="step" data-index="' + (s + 1) + '.">' + esc(l.steps[s]) + '</div>';
+              }
+              stepsHtml += '</div>';
+            }
+
+            // 查看图片按钮 — 改为调用 openPreview
+            var imgBtnHtml = '';
+            var hasMedia = !!(l.standImage || (l.detailImages && l.detailImages.length > 0) || l.coordinates);
+            if (hasMedia) {
+              imgBtnHtml = '<button class="view-img-btn" data-idx="' + idx + '">查看图片</button>';
+            }
+
+            return '<div class="lineup-item' + (isActive ? ' active' : '') + '" data-idx="' + idx + '">' +
+              '<div class="lineup-item-header">' +
+                '<div class="lineup-item-title">' + esc(l.title) + '</div>' +
+                '<div class="lineup-item-tags">' +
+                  '<span class="lineup-tag">' + esc(l.abilityKey || '?') + '</span>' +
+                  '<span class="lineup-tag">' + esc(sideLabel) + '</span>' +
+                '</div>' +
+              '</div>' +
+              descHtml + imgBtnHtml + stepsHtml +
             '</div>';
+          }).join('');
+
+          var navHtml = '';
+          if (lineupData.length > 1) {
+            navHtml =
+              '<div class="nav-arrows">' +
+                '<button class="nav-arrow" id="navUp">&#9650;</button>' +
+                '<span class="nav-counter">' + (currentLineupIndex + 1) + ' / ' + lineupData.length + '</span>' +
+                '<button class="nav-arrow" id="navDown">&#9660;</button>' +
+              '</div>';
+          }
+
+          favSectionHtml =
+            '<div class="fav-title"><span class="star">&#9733;</span> 收藏点位 (' + lineupData.length + ')</div>' +
+            '<div class="lineup-list">' + itemsHtml + '</div>' +
+            navHtml;
         }
 
-        favSectionHtml =
-          '<div class="fav-title"><span class="star">&#9733;</span> 收藏点位 (' + lineupData.length + ')</div>' +
-          '<div class="lineup-list">' + itemsHtml + '</div>' +
-          navHtml;
+        document.getElementById('content').innerHTML =
+          '<div class="agent-section">' +
+            '<img class="agent-icon" src="' + escAttr(data.agent.iconPath) + '" alt="agent" onerror="this.style.display=\'none\'">' +
+            '<div class="agent-info">' +
+              '<div class="agent-name">' + esc(data.agent.name) + '</div>' +
+              '<div class="map-name">' + mapNameHtml + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="abilities-row">' + abilitiesHtml + '</div>' +
+          '<div class="divider"></div>' +
+          favSectionHtml +
+          '<div class="divider"></div>' +
+          '<div class="footer"><button class="close-btn" id="closeBtn">F4 关闭</button></div>';
+
+        bindEvents();
+        updateScrollClass();
       }
 
-      document.getElementById('content').innerHTML =
-        '<div class="agent-section">' +
-          '<img class="agent-icon" src="' + escAttr(data.agent.iconPath) + '" alt="agent" onerror="this.style.display=\'none\'">' +
-          '<div class="agent-info">' +
-            '<div class="agent-name">' + esc(data.agent.name) + '</div>' +
-            '<div class="map-name">' + mapNameHtml + '</div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="abilities-row">' + abilitiesHtml + '</div>' +
-        '<div class="divider"></div>' +
-        favSectionHtml +
-        '<div class="divider"></div>' +
-        '<div class="footer"><button class="close-btn" id="closeBtn">F4 关闭</button></div>';
-
-      bindEvents();
-      updateScrollClass();
-    }
-
-    function bindEvents() {
-      var closeBtn = document.getElementById('closeBtn');
-      if (closeBtn) closeBtn.addEventListener('click', function() {
-        if (window.electronAPI && window.electronAPI.closeOverlay) window.electronAPI.closeOverlay();
-      });
-
-      // 点位点击
-      document.querySelectorAll('.lineup-item').forEach(function(item) {
-        item.addEventListener('click', function(e) {
-          // 如果点击的是查看图片按钮，不切换点位
-          if (e.target.classList.contains('view-img-btn')) return;
-          var idx = parseInt(this.getAttribute('data-idx'), 10);
-          if (!isNaN(idx) && idx !== currentLineupIndex) {
-            currentLineupIndex = idx;
-            if (overlayData) renderOverlay(overlayData);
-          }
+      function bindEvents() {
+        var closeBtn = document.getElementById('closeBtn');
+        if (closeBtn) closeBtn.addEventListener('click', function() {
+          if (window.electronAPI && window.electronAPI.closeOverlay) window.electronAPI.closeOverlay();
         });
-      });
 
-      // 查看图片按钮
-      document.querySelectorAll('.view-img-btn').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          var idx = parseInt(this.getAttribute('data-idx'), 10);
-          if (!isNaN(idx) && lineupData[idx]) {
-            openLightbox(lineupData[idx]);
-          }
+        // 点位点击
+        document.querySelectorAll('.lineup-item').forEach(function(item) {
+          item.addEventListener('click', function(e) {
+            // 如果点击的是查看图片按钮，不切换点位
+            if (e.target.classList.contains('view-img-btn')) return;
+            var idx = parseInt(this.getAttribute('data-idx'), 10);
+            if (!isNaN(idx) && idx !== currentLineupIndex) {
+              currentLineupIndex = idx;
+              if (overlayData) renderOverlay(overlayData);
+            }
+          });
         });
-      });
 
-      // 导航
-      var navUp = document.getElementById('navUp');
-      var navDown = document.getElementById('navDown');
-      if (navUp) navUp.addEventListener('click', function(e) { e.stopPropagation(); switchLineup(-1); });
-      if (navDown) navDown.addEventListener('click', function(e) { e.stopPropagation(); switchLineup(1); });
-    }
+        // 查看图片按钮 — 调用 openPreview 打开预览窗口
+        document.querySelectorAll('.view-img-btn').forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var idx = parseInt(this.getAttribute('data-idx'), 10);
+            if (!isNaN(idx) && lineupData[idx]) {
+              if (window.electronAPI && window.electronAPI.openPreview) {
+                // 将当前地图 key 注入到 lineup 数据中，供预览模式使用
+                var lineupToSend = Object.assign({}, lineupData[idx]);
+                if (overlayData && overlayData.map && overlayData.map.key) {
+                  lineupToSend.mapKey = overlayData.map.key;
+                }
+                window.electronAPI.openPreview(lineupToSend);
+              }
+            }
+          });
+        });
 
-    function switchLineup(direction) {
-      if (lineupData.length === 0) return;
-      currentLineupIndex = (currentLineupIndex + direction + lineupData.length) % lineupData.length;
-      if (overlayData) renderOverlay(overlayData);
-      var activeItem = document.querySelector('.lineup-item.active');
-      if (activeItem) activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    }
+        // 导航
+        var navUp = document.getElementById('navUp');
+        var navDown = document.getElementById('navDown');
+        if (navUp) navUp.addEventListener('click', function(e) { e.stopPropagation(); switchLineup(-1); });
+        if (navDown) navDown.addEventListener('click', function(e) { e.stopPropagation(); switchLineup(1); });
+      }
 
-    function updateScrollClass() {
-      var panel = document.getElementById('panel');
-      if (panel.scrollHeight > panel.clientHeight) panel.classList.add('has-scroll');
-      else panel.classList.remove('has-scroll');
-    }
+      function switchLineup(direction) {
+        if (lineupData.length === 0) return;
+        currentLineupIndex = (currentLineupIndex + direction + lineupData.length) % lineupData.length;
+        if (overlayData) renderOverlay(overlayData);
+        var activeItem = document.querySelector('.lineup-item.active');
+        if (activeItem) activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
 
-    // 滚轮切换点位（仅在面板上）
-    document.getElementById('panel').addEventListener('wheel', function(e) {
-      if (lineupData.length > 1) { e.preventDefault(); switchLineup(e.deltaY > 0 ? 1 : -1); }
-    }, { passive: false });
+      function updateScrollClass() {
+        var panel = document.getElementById('panel');
+        if (panel.scrollHeight > panel.clientHeight) panel.classList.add('has-scroll');
+        else panel.classList.remove('has-scroll');
+      }
 
-    /* ---------- 数据加载 ---------- */
+      // 滚轮切换点位（仅在面板上）
+      document.getElementById('panel').addEventListener('wheel', function(e) {
+        if (lineupData.length > 1) { e.preventDefault(); switchLineup(e.deltaY > 0 ? 1 : -1); }
+      }, { passive: false });
 
-    async function loadOverlayData() {
-      try {
-        if (window.electronAPI && window.electronAPI.getOverlayData) {
-          var data = await window.electronAPI.getOverlayData();
-          if (data) renderOverlay(data);
-          else renderPlaceholder();
-        } else {
+      /* ---------- 数据加载 ---------- */
+      async function loadOverlayData() {
+        try {
+          if (window.electronAPI && window.electronAPI.getOverlayData) {
+            var data = await window.electronAPI.getOverlayData();
+            if (data) renderOverlay(data);
+            else renderPlaceholder();
+          } else {
+            renderPlaceholder();
+          }
+        } catch (e) {
+          console.error('[Overlay] 数据加载失败:', e);
           renderPlaceholder();
         }
-      } catch (e) {
-        console.error('[Overlay] 数据加载失败:', e);
-        renderPlaceholder();
       }
+
+      function startPolling() {
+        if (pollTimer) clearInterval(pollTimer);
+        pollTimer = setInterval(loadOverlayData, 2000);
+      }
+
+      // 初始化
+      loadOverlayData().then(startPolling);
     }
 
-    function startPolling() {
-      if (pollTimer) clearInterval(pollTimer);
-      pollTimer = setInterval(loadOverlayData, 2000);
-    }
+    /* =============================================
+     *  Preview 模式
+     * ============================================= */
+    function initPreview() {
+      var lbPages = [];
+      var lbIndex = 0;
+      var lbTitle = '';
 
-    // 初始化
-    loadOverlayData().then(startPolling);
+      function esc(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function escAttr(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
+
+      function buildPages(lineup) {
+        lbTitle = lineup.title || '';
+        var pages = [];
+
+        // 第0页：坐标预览（如果有坐标）
+        if (lineup.coordinates) {
+          pages.push({ type: 'coords', data: lineup });
+        }
+
+        // 图片页
+        var images = [];
+        if (lineup.standImage) images.push(lineup.standImage);
+        if (lineup.detailImages) images = images.concat(lineup.detailImages);
+        images.forEach(function(url) {
+          if (url) pages.push({ type: 'image', src: url });
+        });
+
+        return pages;
+      }
+
+      function renderPage() {
+        var page = lbPages[lbIndex];
+        var content = document.getElementById('previewContent');
+
+        if (!page) {
+          content.innerHTML = '<div style="color:rgba(255,255,255,0.5);text-align:center;">无预览内容</div>';
+          return;
+        }
+
+        if (page.type === 'coords') {
+          var coords = page.data.coordinates;
+          var x1 = coords.start[0] * 100, y1 = coords.start[1] * 100;
+          var x2 = coords.end[0] * 100, y2 = coords.end[1] * 100;
+          var mapKey = (previewData && previewData.mapKey) || '';
+          var mapSvg = mapKey ? '/maps/' + mapKey + '_map.svg' : '';
+
+          var mapBgHtml = mapSvg
+            ? '<img class="map-bg" src="' + escAttr(mapSvg) + '" alt="" onerror="this.style.display=\'none\'">'
+            : '';
+
+          content.innerHTML =
+            '<div class="lineup-preview">' +
+              mapBgHtml +
+              '<svg class="coord-line" viewBox="0 0 100 100" preserveAspectRatio="none">' +
+                '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="rgba(167,139,250,0.4)" stroke-width="0.4" stroke-dasharray="1,1"/>' +
+              '</svg>' +
+              '<div class="coord-marker start" style="left:' + x1 + '%;top:' + y1 + '%"><div class="coord-label">站位</div></div>' +
+              '<div class="coord-marker end" style="left:' + x2 + '%;top:' + y2 + '%"><div class="coord-label">落点</div></div>' +
+              '<div class="lightbox-page-label">坐标预览</div>' +
+            '</div>';
+        } else if (page.type === 'image') {
+          content.innerHTML = '<img class="preview-img" src="' + escAttr(page.src) + '" alt="' + escAttr(lbTitle) + '">';
+        }
+
+        // 更新标题和计数器
+        document.getElementById('previewTitle').textContent = lbTitle;
+        var total = lbPages.length;
+        if (total > 1) {
+          document.getElementById('previewCounter').textContent = (lbIndex + 1) + ' / ' + total;
+          document.getElementById('previewCounter').style.display = '';
+          document.getElementById('previewPrev').style.display = '';
+          document.getElementById('previewNext').style.display = '';
+        } else {
+          document.getElementById('previewCounter').style.display = 'none';
+          document.getElementById('previewPrev').style.display = 'none';
+          document.getElementById('previewNext').style.display = 'none';
+        }
+      }
+
+      function navigate(dir) {
+        lbIndex = (lbIndex + dir + lbPages.length) % lbPages.length;
+        renderPage();
+      }
+
+      function closePreview() {
+        if (window.electronAPI && window.electronAPI.closePreview) {
+          window.electronAPI.closePreview();
+        }
+      }
+
+      // 初始化
+      if (previewData) {
+        lbPages = buildPages(previewData);
+        if (lbPages.length > 0) {
+          lbIndex = 0;
+          renderPage();
+        } else {
+          document.getElementById('previewContent').innerHTML = '<div style="color:rgba(255,255,255,0.5);text-align:center;">无预览内容</div>';
+        }
+      } else {
+        document.getElementById('previewContent').innerHTML = '<div style="color:rgba(255,255,255,0.5);text-align:center;">未收到数据</div>';
+      }
+
+      // 事件绑定
+      document.getElementById('previewClose').addEventListener('click', closePreview);
+      document.getElementById('previewPrev').addEventListener('click', function() { navigate(-1); });
+      document.getElementById('previewNext').addEventListener('click', function() { navigate(1); });
+      document.getElementById('previewOverlay').addEventListener('click', function(e) {
+        if (e.target === this) closePreview();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closePreview();
+        if (e.key === 'ArrowLeft') navigate(-1);
+        if (e.key === 'ArrowRight') navigate(1);
+      });
+    }
   </script>
 </body>
 </html>

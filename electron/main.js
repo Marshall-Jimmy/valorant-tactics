@@ -12,7 +12,8 @@ let tray = null;
 let lastPort = null;
 
 // ============ Overlay 功能 ============
-let overlayWindow = null;
+let overlayPanelWindow = null;
+let overlayPreviewWindow = null;
 let valorantProcessWatcher = null;
 
 // 检查 Valorant 是否在运行
@@ -27,30 +28,39 @@ function isValorantRunning() {
   }
 }
 
-// 创建/切换 Overlay 窗口
+// 创建/切换面板 Overlay 窗口
 function toggleOverlay() {
-  if (overlayWindow && !overlayWindow.isDestroyed()) {
-    // 已存在 → 销毁
-    overlayWindow.close();
-    overlayWindow = null;
-    console.log('[Overlay] 关闭');
+  if (overlayPanelWindow && !overlayPanelWindow.isDestroyed()) {
+    // 已存在 → 销毁面板 + 预览
+    overlayPanelWindow.close();
+    overlayPanelWindow = null;
+    if (overlayPreviewWindow && !overlayPreviewWindow.isDestroyed()) {
+      overlayPreviewWindow.close();
+      overlayPreviewWindow = null;
+    }
+    console.log('[Overlay] 面板关闭');
   } else {
-    // 不存在 → 创建
-    // 计算右侧贴边位置
+    // 不存在 → 创建面板窗口
     const primaryDisplay = screen.getPrimaryDisplay();
     const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
 
-    overlayWindow = new BrowserWindow({
-      width: screenWidth,
-      height: screenHeight,
+    const panelWidth = 260;
+    const panelHeight = Math.min(600, Math.floor(screenHeight * 0.8));
+    const x = screenWidth - panelWidth;
+    const y = Math.floor((screenHeight - panelHeight) / 2);
+
+    overlayPanelWindow = new BrowserWindow({
+      width: panelWidth,
+      height: panelHeight,
+      x: x,
+      y: y,
       transparent: true,
       frame: false,
       alwaysOnTop: true,
       skipTaskbar: true,
       hasShadow: false,
       resizable: false,
-      x: 0,
-      y: 0,
+      focusable: false,
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
@@ -60,26 +70,96 @@ function toggleOverlay() {
       show: false,
     });
 
-    // 加载 overlay 页面（始终通过 HTTP 服务器，确保资源路径正常）
-    if (server) {
-      overlayWindow.loadURL(`http://127.0.0.1:${server.address().port}/overlay.html`);
+    // 加载 overlay 页面（panel 模式）
+    const port = server ? server.address().port : lastPort;
+    if (port) {
+      overlayPanelWindow.loadURL(`http://127.0.0.1:${port}/overlay.html?mode=panel`);
     } else {
-      overlayWindow.loadFile(path.join(DIST_DIR, 'overlay.html'));
+      overlayPanelWindow.loadFile(path.join(DIST_DIR, 'overlay.html'), { query: { mode: 'panel' } });
     }
 
-    overlayWindow.once('ready-to-show', () => {
-      overlayWindow.show();
-      console.log('[Overlay] 显示');
+    overlayPanelWindow.once('ready-to-show', () => {
+      overlayPanelWindow.show();
+      // 强制置顶到最高级别（抢过游戏的 topmost 窗口）
+      overlayPanelWindow.setAlwaysOnTop(true, 'pop-up-menu');
+      overlayPanelWindow.moveTop();
+      const ts = new Date().toLocaleTimeString();
+      console.log(`[Overlay] 面板显示 @ ${ts} | alwaysOnTop=pop-up-menu | pos=(${x},${y}) | size=${panelWidth}x${panelHeight}`);
     });
 
-    overlayWindow.on('closed', () => {
-      overlayWindow = null;
-      console.log('[Overlay] 销毁');
+    overlayPanelWindow.on('closed', () => {
+      overlayPanelWindow = null;
+      console.log('[Overlay] 面板销毁');
     });
 
-    // 游戏退出时自动关闭 overlay
+    // 游戏退出时自动关闭所有 overlay
     startValorantWatcher();
   }
+}
+
+// 创建/显示预览窗口
+function togglePreview(lineupData) {
+  // 如果已存在，先关闭旧的
+  if (overlayPreviewWindow && !overlayPreviewWindow.isDestroyed()) {
+    overlayPreviewWindow.close();
+    overlayPreviewWindow = null;
+  }
+
+  const primaryDisplay = screen.getPrimaryDisplay();
+  const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
+
+  overlayPreviewWindow = new BrowserWindow({
+    width: screenWidth,
+    height: screenHeight,
+    x: 0,
+    y: 0,
+    transparent: true,
+    frame: false,
+    alwaysOnTop: true,
+    skipTaskbar: true,
+    hasShadow: false,
+    resizable: false,
+    focusable: false,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+      webSecurity: false,
+      preload: path.join(__dirname, 'preload.js'),
+    },
+    show: false,
+  });
+
+  // 鼠标穿透
+  overlayPreviewWindow.setIgnoreMouseEvents(true);
+
+  // 通过 URL query string 传递数据
+  let dataStr = '';
+  try {
+    dataStr = Buffer.from(JSON.stringify(lineupData)).toString('base64');
+  } catch (e) {
+    console.error('[Overlay] 序列化预览数据失败:', e);
+  }
+
+  const port = server ? server.address().port : lastPort;
+  if (port) {
+    overlayPreviewWindow.loadURL(
+      `http://127.0.0.1:${port}/overlay.html?mode=preview&data=${encodeURIComponent(dataStr)}`
+    );
+  } else {
+    overlayPreviewWindow.loadFile(path.join(DIST_DIR, 'overlay.html'), { query: { mode: 'preview' } });
+  }
+
+  overlayPreviewWindow.once('ready-to-show', () => {
+    overlayPreviewWindow.show();
+    overlayPreviewWindow.setAlwaysOnTop(true, 'pop-up-menu');
+    overlayPreviewWindow.moveTop();
+    console.log('[Overlay] 预览窗口显示');
+  });
+
+  overlayPreviewWindow.on('closed', () => {
+    overlayPreviewWindow = null;
+    console.log('[Overlay] 预览窗口销毁');
+  });
 }
 
 // ============ Overlay IPC Handlers ============
@@ -105,23 +185,55 @@ ipcMain.handle('get-overlay-data', async () => {
   return null;
 });
 
-// 关闭 overlay 窗口
+// 关闭面板 overlay 窗口
 ipcMain.on('close-overlay', () => {
-  if (overlayWindow && !overlayWindow.isDestroyed()) {
-    overlayWindow.close();
-    overlayWindow = null;
-    console.log('[Overlay] 通过 IPC 关闭');
+  if (overlayPanelWindow && !overlayPanelWindow.isDestroyed()) {
+    overlayPanelWindow.close();
+    overlayPanelWindow = null;
+    console.log('[Overlay] 面板通过 IPC 关闭');
   }
 });
+
+// 打开预览窗口
+ipcMain.on('open-preview', (event, lineupData) => {
+  if (lineupData) {
+    togglePreview(lineupData);
+  } else {
+    console.warn('[Overlay] open-preview 未收到 lineupData');
+  }
+});
+
+// 关闭预览窗口
+ipcMain.on('close-preview', () => {
+  if (overlayPreviewWindow && !overlayPreviewWindow.isDestroyed()) {
+    overlayPreviewWindow.close();
+    overlayPreviewWindow = null;
+    console.log('[Overlay] 预览窗口通过 IPC 关闭');
+  }
+});
+
+// 关闭所有 overlay 窗口
+function closeAllOverlays() {
+  if (overlayPanelWindow && !overlayPanelWindow.isDestroyed()) {
+    overlayPanelWindow.close();
+    overlayPanelWindow = null;
+  }
+  if (overlayPreviewWindow && !overlayPreviewWindow.isDestroyed()) {
+    overlayPreviewWindow.close();
+    overlayPreviewWindow = null;
+  }
+}
 
 // 监视 Valorant 进程，退出时自动关闭 overlay
 function startValorantWatcher() {
   if (valorantProcessWatcher) clearInterval(valorantProcessWatcher);
   valorantProcessWatcher = setInterval(() => {
-    if (!isValorantRunning() && overlayWindow && !overlayWindow.isDestroyed()) {
-      console.log('[Overlay] 检测到 Valorant 退出，自动关闭 overlay');
-      overlayWindow.close();
-      overlayWindow = null;
+    if (!isValorantRunning()) {
+      if ((overlayPanelWindow && !overlayPanelWindow.isDestroyed()) ||
+          (overlayPreviewWindow && !overlayPreviewWindow.isDestroyed())) {
+        console.log('[Overlay] 检测到 Valorant 退出，自动关闭 overlay');
+        closeAllOverlays();
+      }
       clearInterval(valorantProcessWatcher);
       valorantProcessWatcher = null;
     }
@@ -155,6 +267,8 @@ function createTray() {
 // 注册 F4 全局快捷键
 function registerShortcuts() {
   const ret = globalShortcut.register('F4', () => {
+    const ts = new Date().toLocaleTimeString();
+    console.log(`[Overlay] F4 按下 @ ${ts}`);
     toggleOverlay();
   });
 
