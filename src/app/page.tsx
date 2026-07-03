@@ -14,7 +14,7 @@ import { MapLayerToggles } from '@/components/MapLayerToggles';
 import { ZoomControls } from '@/components/ZoomControls';
 import { SettingsPanel } from '@/components/SettingsPanel';
 import { useLanguage } from '@/components/I18nProvider';
-import { Menu, X, Settings } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { ModeToggle } from '@/components/ModeToggle';
 
 export default function Home() {
@@ -25,6 +25,11 @@ export default function Home() {
   const appMode = useTacticsStore((state) => state.appMode);
   const setAppMode = useTacticsStore((state) => state.setAppMode);
   const sidebarPosition = useSettingsStore((s) => s.sidebarPosition);
+  const showDebugPanel = useSettingsStore((s) => s.showDebugPanel);
+  const currentMap = useTacticsStore((s) => s.currentMap);
+  const lineupAgentId = useTacticsStore((s) => s.lineupAgentId);
+  const isAttack = useTacticsStore((s) => s.isAttack);
+  const favoriteLineups = useTacticsStore((s) => s.favoriteLineups);
   const { t } = useLanguage();
 
   return (
@@ -107,7 +112,10 @@ export default function Home() {
               className="btn btn-icon btn-ghost"
               title="设置"
             >
-              <Settings className="w-4 h-4" />
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
             </button>
           </div>
         </div>
@@ -163,6 +171,19 @@ export default function Home() {
       {/* Settings Panel */}
       {showSettingsPanel && (
         <SettingsPanel onClose={() => setShowSettingsPanel(false)} />
+      )}
+
+      {/* Debug Info Panel */}
+      {showDebugPanel && (
+        <div className="absolute bottom-4 right-4 z-50 bg-zinc-900/90 backdrop-blur-sm border border-zinc-700 rounded-lg p-3 text-xs text-zinc-400 font-mono max-w-[300px]">
+          <div className="text-zinc-200 font-semibold mb-1">调试信息</div>
+          <div>地图: {currentMap}</div>
+          <div>特工: {lineupAgentId || 'none'}</div>
+          <div>攻守: {isAttack ? '进攻' : '防守'}</div>
+          <div>收藏数: {favoriteLineups.length}</div>
+          <div>模式: {appMode}</div>
+          <div>侧边栏: {sidebarPosition}</div>
+        </div>
       )}
     </div>
   );

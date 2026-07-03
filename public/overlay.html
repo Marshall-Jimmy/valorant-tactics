@@ -243,8 +243,8 @@
     }
 
     .preview-content {
-      width: 35vw;
-      height: 30vh;
+      width: 30vw;
+      height: 25vh;
       min-width: 260px;
       min-height: 200px;
       max-width: 540px;
@@ -252,7 +252,7 @@
       overflow: hidden;
       border-radius: 8px;
       position: relative;
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(0, 0, 0, 0.08);
     }
 
     .preview-img {
@@ -477,6 +477,8 @@
         return;
       }
 
+      console.log('[Overlay] renderOverlay: agent=', data.agent.name, 'map=', data.map.name, 'lineups=', data.lineups ? data.lineups.length : 0, 'lineups content=', data.lineups);
+
       var mapNameHtml = esc(data.map.name);
       if (data.map.name_en) mapNameHtml += ' <span class="map-en">' + esc(data.map.name_en) + '</span>';
 
@@ -546,7 +548,7 @@
 
       document.getElementById('content').innerHTML =
         '<div class="agent-section">' +
-          '<img class="agent-icon" src="' + escAttr(data.agent.iconPath) + '" alt="agent" onerror="this.style.display=\'none\'">' +
+          '<img class="agent-icon" src="' + escAttr(data.agent.iconPath) + '" alt="agent" onerror="this.src=\'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23333%22 width=%22100%22 height=%22100%22 rx=%2215%22/><text fill=%22%23a78bfa%22 x=%2250%22 y=%2265%22 text-anchor=%22middle%22 font-size=%2240%22>?</text></svg>\'">' +
           '<div class="agent-info">' +
             '<div class="agent-name">' + esc(data.agent.name) + '</div>' +
             '<div class="map-name">' + mapNameHtml + '</div>' +
@@ -585,8 +587,12 @@
         btn.addEventListener('click', function(e) {
           e.stopPropagation();
           var idx = parseInt(this.getAttribute('data-idx'), 10);
+          console.log('[Overlay] 查看图片按钮点击, idx=', idx, 'lineupData[idx]=', !!lineupData[idx], 'lineupData.length=', lineupData.length);
           if (!isNaN(idx) && lineupData[idx]) {
+            console.log('[Overlay] 调用 showPreview, lineup=', lineupData[idx].title);
             showPreview(lineupData[idx]);
+          } else {
+            console.warn('[Overlay] 无法打开预览: idx=', idx, 'isNaN=', isNaN(idx), 'hasLineup=', !!lineupData[idx]);
           }
         });
       });
@@ -640,52 +646,57 @@
     var lbTitle = '';
 
     function showPreview(lineup) {
-      // 注入 mapKey
-      var lineupCopy = Object.assign({}, lineup);
-      if (overlayData && overlayData.map && overlayData.map.key) {
-        lineupCopy.mapKey = overlayData.map.key;
-      }
-      console.log('[Overlay] showPreview, coordinates=', JSON.stringify(lineupCopy.coordinates));
+      console.log('[Overlay] showPreview 被调用, lineup=', lineup ? lineup.title : 'null');
+      try {
+        // 注入 mapKey
+        var lineupCopy = Object.assign({}, lineup);
+        if (overlayData && overlayData.map && overlayData.map.key) {
+          lineupCopy.mapKey = overlayData.map.key;
+        }
+        console.log('[Overlay] showPreview, coordinates=', JSON.stringify(lineupCopy.coordinates));
 
-      // 关闭鼠标穿透，让预览区域可交互
-      if (window.electronAPI && window.electronAPI.setIgnoreMouseEvents) {
-        window.electronAPI.setIgnoreMouseEvents(false);
-      }
+        // 关闭鼠标穿透，让预览区域可交互
+        if (window.electronAPI && window.electronAPI.setIgnoreMouseEvents) {
+          window.electronAPI.setIgnoreMouseEvents(false);
+        }
 
-      // 隐藏面板
-      document.getElementById('panelRoot').style.display = 'none';
+        // 隐藏面板
+        document.getElementById('panelRoot').style.display = 'none';
 
-      // 显示预览
-      var previewRoot = document.getElementById('previewRoot');
-      previewRoot.style.display = '';
-      document.body.classList.add('preview-active');
+        // 显示预览
+        var previewRoot = document.getElementById('previewRoot');
+        previewRoot.style.display = '';
+        document.body.classList.add('preview-active');
 
-      // 构建预览页
-      lbTitle = lineupCopy.title || '';
-      lbPages = [];
-      lbIndex = 0;
+        // 构建预览页
+        lbTitle = lineupCopy.title || '';
+        lbPages = [];
+        lbIndex = 0;
 
-      // 第0页：坐标预览
-      if (lineupCopy.coordinates) {
-        lbPages.push({ type: 'coords', data: lineupCopy });
-      }
+        // 第0页：坐标预览
+        if (lineupCopy.coordinates) {
+          lbPages.push({ type: 'coords', data: lineupCopy });
+        }
 
-      // 图片页
-      var images = [];
-      if (lineupCopy.standImage) images.push(lineupCopy.standImage);
-      if (lineupCopy.detailImages) images = images.concat(lineupCopy.detailImages);
-      images.forEach(function(url) {
-        if (url) lbPages.push({ type: 'image', src: url });
-      });
+        // 图片页
+        var images = [];
+        if (lineupCopy.standImage) images.push(lineupCopy.standImage);
+        if (lineupCopy.detailImages) images = images.concat(lineupCopy.detailImages);
+        images.forEach(function(url) {
+          if (url) lbPages.push({ type: 'image', src: url });
+        });
 
-      if (lbPages.length > 0) {
-        renderPreviewPage();
-      } else {
-        document.getElementById('previewContent').innerHTML = '<div style="color:rgba(255,255,255,0.5);text-align:center;">无预览内容</div>';
-        document.getElementById('previewTitle').textContent = lbTitle;
-        document.getElementById('previewCounter').style.display = 'none';
-        document.getElementById('previewPrev').style.display = 'none';
-        document.getElementById('previewNext').style.display = 'none';
+        if (lbPages.length > 0) {
+          renderPreviewPage();
+        } else {
+          document.getElementById('previewContent').innerHTML = '<div style="color:rgba(255,255,255,0.5);text-align:center;">无预览内容</div>';
+          document.getElementById('previewTitle').textContent = lbTitle;
+          document.getElementById('previewCounter').style.display = 'none';
+          document.getElementById('previewPrev').style.display = 'none';
+          document.getElementById('previewNext').style.display = 'none';
+        }
+      } catch(e) {
+        console.error('[Overlay] showPreview 错误:', e);
       }
     }
 
