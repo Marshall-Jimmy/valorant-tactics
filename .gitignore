@@ -49,6 +49,7 @@ next-env.d.ts
 /release2/
 /release3/
 /release4/
+/release5/
 *.exe
 *.blockmap
 

@@ -310,7 +310,7 @@ const PORT = process.env.VT_PORT ? parseInt(process.env.VT_PORT, 10) : 3777;
 function startServer() {
   return new Promise((resolve) => {
     server = http.createServer((req, res) => {
-      let filePath = decodeURIComponent(req.url).replace(/^\//, '') || 'index.html';
+      let filePath = decodeURIComponent(req.url).replace(/^\//, '').split('?')[0] || 'index.html';
       const fullPath = path.join(DIST_DIR, filePath);
 
       // 如果文件不存在，返回 index.html（SPA fallback）
