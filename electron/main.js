@@ -27,7 +27,9 @@ function isValorantRunning() {
   }
 }
 
-// 创建/切换 Overlay 窗口（单窗口方案）
+// 创建/切换 Overlay 窗口（小窗口方案：窗口只覆盖面板区域，预览时扩展到全屏）
+const PANEL_WIDTH = 280;
+
 function toggleOverlay() {
   if (overlayWindow && !overlayWindow.isDestroyed()) {
     // 已存在 → 销毁
@@ -35,22 +37,24 @@ function toggleOverlay() {
     overlayWindow = null;
     console.log('[Overlay] 窗口关闭');
   } else {
-    // 不存在 → 创建全屏窗口
+    // 不存在 → 创建面板大小的小窗口
     const primaryDisplay = screen.getPrimaryDisplay();
     const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
+    const panelHeight = Math.floor(screenHeight * 0.8);
+    const panelY = Math.floor((screenHeight - panelHeight) / 2);
 
     overlayWindow = new BrowserWindow({
-      width: screenWidth,
-      height: screenHeight,
-      x: 0,
-      y: 0,
+      width: PANEL_WIDTH,
+      height: panelHeight,
+      x: screenWidth - PANEL_WIDTH,
+      y: panelY,
       transparent: true,
       frame: false,
       alwaysOnTop: true,
       skipTaskbar: true,
       hasShadow: false,
       resizable: false,
-      focusable: true,
+      focusable: false,
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
@@ -60,7 +64,7 @@ function toggleOverlay() {
       show: false,
     });
 
-    // 加载 overlay 页面（不再传 mode 参数，面板和预览在同一页面内切换）
+    // 加载 overlay 页面
     const port = server ? server.address().port : lastPort;
     if (port) {
       overlayWindow.loadURL(`http://127.0.0.1:${port}/overlay.html`);
@@ -69,13 +73,11 @@ function toggleOverlay() {
     }
 
     overlayWindow.once('ready-to-show', () => {
-      overlayWindow.showInactive(); // 不抢焦点
+      overlayWindow.showInactive();
       overlayWindow.setAlwaysOnTop(true, 'pop-up-menu');
       overlayWindow.moveTop();
-      // 开启鼠标穿透（forward 模式：CSS pointer-events:auto 区域仍拦截事件）
-      overlayWindow.setIgnoreMouseEvents(true, { forward: true });
       const ts = new Date().toLocaleTimeString();
-      console.log(`[Overlay] 窗口显示 @ ${ts} | alwaysOnTop=pop-up-menu | size=${screenWidth}x${screenHeight} | focusable=true | showInactive`);
+      console.log(`[Overlay] 窗口显示 @ ${ts} | panel ${PANEL_WIDTH}x${panelHeight} @ (${screenWidth - PANEL_WIDTH}, ${panelY})`);
     });
 
     overlayWindow.on('closed', () => {
@@ -120,16 +122,25 @@ ipcMain.on('close-overlay', () => {
   }
 });
 
-// 设置鼠标穿透：panel 模式时穿透（forward 使面板区域仍可交互），preview 模式时不穿透
-ipcMain.on('set-ignore-mouse-events', (event, ignore) => {
+// 扩展窗口到全屏（预览模式）
+ipcMain.on('expand-window', () => {
   if (overlayWindow && !overlayWindow.isDestroyed()) {
-    if (ignore) {
-      overlayWindow.setIgnoreMouseEvents(true, { forward: true });
-      console.log('[Overlay] 鼠标穿透开启（面板区域仍接收事件）');
-    } else {
-      overlayWindow.setIgnoreMouseEvents(false);
-      console.log('[Overlay] 鼠标穿透关闭');
-    }
+    const primaryDisplay = screen.getPrimaryDisplay();
+    const { width: w, height: h } = primaryDisplay.workAreaSize;
+    overlayWindow.setBounds({ x: 0, y: 0, width: w, height: h });
+    console.log(`[Overlay] 窗口扩展到全屏 ${w}x${h}`);
+  }
+});
+
+// 缩小窗口回面板大小
+ipcMain.on('shrink-window', () => {
+  if (overlayWindow && !overlayWindow.isDestroyed()) {
+    const primaryDisplay = screen.getPrimaryDisplay();
+    const { width: sw, height: sh } = primaryDisplay.workAreaSize;
+    const panelHeight = Math.floor(sh * 0.8);
+    const panelY = Math.floor((sh - panelHeight) / 2);
+    overlayWindow.setBounds({ x: sw - PANEL_WIDTH, y: panelY, width: PANEL_WIDTH, height: panelHeight });
+    console.log(`[Overlay] 窗口缩回面板 ${PANEL_WIDTH}x${panelHeight}`);
   }
 });
 

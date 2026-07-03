@@ -1,11 +1,8 @@
 /**
  * @agent Native/Overlay 开发专家
- * @last-modified 2026-07-03
+ * @last-modified 2026-07-04
  * @description Preload script for overlay BrowserWindow.
  *   通过 contextBridge 暴露安全的 IPC API 给 overlay 渲染进程。
- *   - getOverlayData: 从主窗口 localStorage 读取 vt-overlay-data
- *   - closeOverlay: 通知 main 进程关闭 overlay 窗口
- *   - setIgnoreMouseEvents: 设置窗口鼠标穿透（panel 模式穿透，preview 模式不穿透）
  */
 
 const { contextBridge, ipcRenderer } = require('electron');
@@ -18,13 +15,17 @@ contextBridge.exposeInMainWorld('electronAPI', {
   getOverlayData: () => ipcRenderer.invoke('get-overlay-data'),
 
   /**
-   * 请求关闭 overlay 窗口（销毁，不是 hide）
+   * 请求关闭 overlay 窗口
    */
   closeOverlay: () => ipcRenderer.send('close-overlay'),
 
   /**
-   * 设置窗口鼠标穿透
-   * @param {boolean} ignore - true 时面板外区域穿透到游戏，false 时正常接收
+   * 扩展窗口到全屏（预览模式）
    */
-  setIgnoreMouseEvents: (ignore) => ipcRenderer.send('set-ignore-mouse-events', ignore),
+  expandWindow: () => ipcRenderer.send('expand-window'),
+
+  /**
+   * 缩小窗口回面板大小
+   */
+  shrinkWindow: () => ipcRenderer.send('shrink-window'),
 });
