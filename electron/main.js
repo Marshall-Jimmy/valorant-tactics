@@ -99,6 +99,8 @@ function toggleOverlay() {
 
 // 创建/显示预览窗口
 function togglePreview(lineupData) {
+  console.log('[Overlay] togglePreview 被调用', lineupData ? lineupData.title : '无数据');
+
   // 如果已存在，先关闭旧的
   if (overlayPreviewWindow && !overlayPreviewWindow.isDestroyed()) {
     overlayPreviewWindow.close();
@@ -107,6 +109,7 @@ function togglePreview(lineupData) {
 
   const primaryDisplay = screen.getPrimaryDisplay();
   const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
+  console.log(`[Overlay] 预览窗口尺寸: ${screenWidth}x${screenHeight}`);
 
   overlayPreviewWindow = new BrowserWindow({
     width: screenWidth,
@@ -136,15 +139,19 @@ function togglePreview(lineupData) {
   let dataStr = '';
   try {
     dataStr = Buffer.from(JSON.stringify(lineupData)).toString('base64');
+    console.log('[Overlay] 预览数据 base64 长度:', dataStr.length);
   } catch (e) {
     console.error('[Overlay] 序列化预览数据失败:', e);
   }
 
   const port = server ? server.address().port : lastPort;
+  const previewUrl = port
+    ? `http://127.0.0.1:${port}/overlay.html?mode=preview&data=${encodeURIComponent(dataStr)}`
+    : '';
+  console.log('[Overlay] 预览窗口加载 URL:', previewUrl.substring(0, 120) + '...');
+
   if (port) {
-    overlayPreviewWindow.loadURL(
-      `http://127.0.0.1:${port}/overlay.html?mode=preview&data=${encodeURIComponent(dataStr)}`
-    );
+    overlayPreviewWindow.loadURL(previewUrl);
   } else {
     overlayPreviewWindow.loadFile(path.join(DIST_DIR, 'overlay.html'), { query: { mode: 'preview' } });
   }
@@ -153,7 +160,7 @@ function togglePreview(lineupData) {
     overlayPreviewWindow.show();
     overlayPreviewWindow.setAlwaysOnTop(true, 'pop-up-menu');
     overlayPreviewWindow.moveTop();
-    console.log('[Overlay] 预览窗口显示');
+    console.log('[Overlay] 预览窗口显示完成');
   });
 
   overlayPreviewWindow.on('closed', () => {
@@ -196,6 +203,7 @@ ipcMain.on('close-overlay', () => {
 
 // 打开预览窗口
 ipcMain.on('open-preview', (event, lineupData) => {
+  console.log('[Overlay] open-preview IPC 收到', lineupData ? ('id=' + lineupData.id + ' title=' + lineupData.title) : '无数据');
   if (lineupData) {
     togglePreview(lineupData);
   } else {
@@ -264,18 +272,30 @@ function createTray() {
   });
 }
 
-// 注册 F4 全局快捷键
+// 注册全局快捷键
 function registerShortcuts() {
-  const ret = globalShortcut.register('F4', () => {
+  // F4
+  const retF4 = globalShortcut.register('F4', () => {
     const ts = new Date().toLocaleTimeString();
     console.log(`[Overlay] F4 按下 @ ${ts}`);
     toggleOverlay();
   });
-
-  if (!ret) {
-    console.error('[Overlay] F4 快捷键注册失败，可能被其他程序占用');
+  if (!retF4) {
+    console.error('[Overlay] F4 快捷键注册失败');
   } else {
-    console.log('[Overlay] F4 快捷键已注册，按 F4 切换 Overlay');
+    console.log('[Overlay] F4 已注册');
+  }
+
+  // 备用快捷键 Ctrl+Shift+O
+  const retCSO = globalShortcut.register('Ctrl+Shift+O', () => {
+    const ts = new Date().toLocaleTimeString();
+    console.log(`[Overlay] Ctrl+Shift+O 按下 @ ${ts}`);
+    toggleOverlay();
+  });
+  if (!retCSO) {
+    console.error('[Overlay] Ctrl+Shift+O 快捷键注册失败');
+  } else {
+    console.log('[Overlay] Ctrl+Shift+O 已注册');
   }
 }
 

@@ -600,6 +600,7 @@
           btn.addEventListener('click', function(e) {
             e.stopPropagation();
             var idx = parseInt(this.getAttribute('data-idx'), 10);
+            console.log('[Overlay] 查看图片按钮点击, idx=', idx, 'lineupData=', !!lineupData[idx], 'electronAPI=', !!window.electronAPI);
             if (!isNaN(idx) && lineupData[idx]) {
               if (window.electronAPI && window.electronAPI.openPreview) {
                 // 将当前地图 key 注入到 lineup 数据中，供预览模式使用
@@ -607,7 +608,10 @@
                 if (overlayData && overlayData.map && overlayData.map.key) {
                   lineupToSend.mapKey = overlayData.map.key;
                 }
+                console.log('[Overlay] 调用 openPreview, title=', lineupToSend.title);
                 window.electronAPI.openPreview(lineupToSend);
+              } else {
+                console.error('[Overlay] electronAPI.openPreview 不可用');
               }
             }
           });
