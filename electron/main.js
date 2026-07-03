@@ -18,13 +18,22 @@ let valorantProcessWatcher = null;
 // 检查 Valorant 是否在运行
 function isValorantRunning() {
   try {
-    // 通过 PowerShell 检查 VALORANT-Win64-Shipping 进程
+    // 通过 tasklist 检查 VALORANT-Win64-Shipping 进程
     const { execSync } = require('child_process');
-    const result = execSync('tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" /NH', { encoding: 'utf-8' });
+    const result = execSync('tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" /NH', { encoding: 'utf-8', timeout: 5000 });
     return result.includes('VALORANT-Win64-Shipping');
   } catch {
     return false;
   }
+}
+
+// 异步检查 Valorant 是否在运行（不阻塞主线程）
+function isValorantRunningAsync(cb) {
+  const { exec } = require('child_process');
+  exec('tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" /NH', { encoding: 'utf-8', timeout: 5000 }, (err, stdout) => {
+    if (err) { cb(false); return; }
+    cb(stdout.includes('VALORANT-Win64-Shipping'));
+  });
 }
 
 // 创建/切换 Overlay 窗口（小窗口方案：窗口只覆盖面板区域，预览时扩展到全屏）
@@ -128,7 +137,10 @@ ipcMain.on('expand-window', () => {
     const primaryDisplay = screen.getPrimaryDisplay();
     const { width: w, height: h } = primaryDisplay.workAreaSize;
     overlayWindow.setBounds({ x: 0, y: 0, width: w, height: h });
-    console.log(`[Overlay] 窗口扩展到全屏 ${w}x${h}`);
+    // 重新置顶确保在游戏上方
+    overlayWindow.setAlwaysOnTop(true, 'screen-saver');
+    overlayWindow.moveTop();
+    console.log(`[Overlay] 窗口扩展到全屏 ${w}x${h} | alwaysOnTop=screen-saver`);
   }
 });
 
@@ -140,7 +152,9 @@ ipcMain.on('shrink-window', () => {
     const panelHeight = Math.floor(sh * 0.8);
     const panelY = Math.floor((sh - panelHeight) / 2);
     overlayWindow.setBounds({ x: sw - PANEL_WIDTH, y: panelY, width: PANEL_WIDTH, height: panelHeight });
-    console.log(`[Overlay] 窗口缩回面板 ${PANEL_WIDTH}x${panelHeight}`);
+    overlayWindow.setAlwaysOnTop(true, 'pop-up-menu');
+    overlayWindow.moveTop();
+    console.log(`[Overlay] 窗口缩回面板 ${PANEL_WIDTH}x${panelHeight} | alwaysOnTop=pop-up-menu`);
   }
 });
 
@@ -152,19 +166,29 @@ function closeAllOverlays() {
   }
 }
 
-// 监视 Valorant 进程，退出时自动关闭 overlay
+// 监视 Valorant 进程，退出时自动关闭 overlay（异步 + 连续多次检测才确认退出）
+let valorantMissCount = 0;
 function startValorantWatcher() {
   if (valorantProcessWatcher) clearInterval(valorantProcessWatcher);
+  valorantMissCount = 0;
   valorantProcessWatcher = setInterval(() => {
-    if (!isValorantRunning()) {
-      if (overlayWindow && !overlayWindow.isDestroyed()) {
-        console.log('[Overlay] 检测到 Valorant 退出，自动关闭 overlay');
-        closeAllOverlays();
+    isValorantRunningAsync((running) => {
+      if (running) {
+        valorantMissCount = 0;
+      } else {
+        valorantMissCount++;
+        console.log(`[Overlay] Valorant 未检测到 (${valorantMissCount}/3)`);
+        if (valorantMissCount >= 3) {
+          if (overlayWindow && !overlayWindow.isDestroyed()) {
+            console.log('[Overlay] 连续 3 次未检测到 Valorant，自动关闭 overlay');
+            closeAllOverlays();
+          }
+          clearInterval(valorantProcessWatcher);
+          valorantProcessWatcher = null;
+        }
       }
-      clearInterval(valorantProcessWatcher);
-      valorantProcessWatcher = null;
-    }
-  }, 3000); // 每 3 秒检查一次
+    });
+  }, 5000); // 每 5 秒检查一次
 }
 
 // ============ 系统托盘 ============
