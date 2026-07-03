@@ -50,6 +50,9 @@ next-env.d.ts
 /release3/
 /release4/
 /release5/
+/release6/
+/release7/
+/_release/
 *.exe
 *.blockmap
 
