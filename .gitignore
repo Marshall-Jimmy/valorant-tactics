@@ -18,6 +18,7 @@
 
 # Production
 /build
+/app-build/
 
 # Misc
 .DS_Store
@@ -44,15 +45,11 @@ next-env.d.ts
 # TRAE workspace metadata
 .trae/
 
-# Electron release artifacts
-/release/
-/release2/
-/release3/
-/release4/
-/release5/
-/release6/
-/release7/
-/_release/
+# Electron builder output
+/build/
+/app-build/
+/dist-electron/
+/app-v*/
 *.exe
 *.blockmap
 
