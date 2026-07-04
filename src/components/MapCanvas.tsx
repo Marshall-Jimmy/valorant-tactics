@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState, useCallback, useEffect, useMemo } from 'react';
+import { useShallow } from 'zustand/react/shallow';
 import { useTacticsStore } from '@/store/tacticsStore';
 import { mapsData, getMapScale } from '@/data/maps';
 import { agentsData } from '@/data/agents';
@@ -92,29 +93,98 @@ export function MapCanvas() {
     };
   }, []);
 
+  // 状态选择器 - 按功能分组，每组用 useShallow 比较
+  const mapState = useTacticsStore(useShallow((s) => ({
+    currentMap: s.currentMap,
+    isAttack: s.isAttack,
+    showSpawnBarrier: s.showSpawnBarrier,
+    showRegionNames: s.showRegionNames,
+    showUltOrbs: s.showUltOrbs,
+    mapHue: s.mapHue,
+    mapBrightness: s.mapBrightness,
+  })));
+
+  const toolState = useTacticsStore(useShallow((s) => ({
+    currentTool: s.currentTool,
+    selectedAbility: s.selectedAbility,
+    selectedAgent: s.selectedAgent,
+    isAlly: s.isAlly,
+    drawColor: s.drawColor,
+    drawStrokeWidth: s.drawStrokeWidth,
+    drawMode: s.drawMode,
+    showGrid: s.showGrid,
+    snapToGrid: s.snapToGrid,
+    gridSize: s.gridSize,
+  })));
+
+  const elementsState = useTacticsStore(useShallow((s) => ({
+    placedAbilities: s.placedAbilities,
+    placedAgents: s.placedAgents,
+    placedUltOrbs: s.placedUltOrbs,
+    drawings: s.drawings,
+    selectedElementId: s.selectedElementId,
+    selectedElementType: s.selectedElementType,
+  })));
+
+  const lineupState = useTacticsStore(useShallow((s) => ({
+    zoom: s.zoom,
+    lineupAgentId: s.lineupAgentId,
+    selectedLineupId: s.selectedLineupId,
+    lineupEditorMode: s.lineupEditorMode,
+    tempLineupData: s.tempLineupData,
+    lineupCoordinateOverrides: s.lineupCoordinateOverrides,
+    abilityVisibilityFilter: s.abilityVisibilityFilter,
+    customLineups: s.customLineups,
+  })));
+
+  // Actions 直接获取（引用稳定，不会导致重渲染）
+  const setZoom = useTacticsStore((s) => s.setZoom);
+  const addPlacedAbility = useTacticsStore((s) => s.addPlacedAbility);
+  const addPlacedAgent = useTacticsStore((s) => s.addPlacedAgent);
+  const addPlacedUltOrb = useTacticsStore((s) => s.addPlacedUltOrb);
+  const removePlacedUltOrb = useTacticsStore((s) => s.removePlacedUltOrb);
+  const addDrawing = useTacticsStore((s) => s.addDrawing);
+  const removeDrawing = useTacticsStore((s) => s.removeDrawing);
+  const removePlacedAbility = useTacticsStore((s) => s.removePlacedAbility);
+  const removePlacedAgent = useTacticsStore((s) => s.removePlacedAgent);
+  const updatePlacedAbility = useTacticsStore((s) => s.updatePlacedAbility);
+  const updatePlacedAgent = useTacticsStore((s) => s.updatePlacedAgent);
+  const setSelectedElement = useTacticsStore((s) => s.setSelectedElement);
+  const setScreenshotMode = useTacticsStore((s) => s.setScreenshotMode);
+  const setSelectedLineupId = useTacticsStore((s) => s.setSelectedLineupId);
+  const undo = useTacticsStore((s) => s.undo);
+  const redo = useTacticsStore((s) => s.redo);
+  const flipAllElements = useTacticsStore((s) => s.flipAllElements);
+  const setIsAttack = useTacticsStore((s) => s.setIsAttack);
+  const toggleAbilityVisibility = useTacticsStore((s) => s.toggleAbilityVisibility);
+  const clearAbilityVisibilityFilter = useTacticsStore((s) => s.clearAbilityVisibilityFilter);
+  const appMode = useTacticsStore((s) => s.appMode);
+  const isScreenshotMode = useTacticsStore((s) => s.isScreenshotMode);
+  const updateTempLineupData = useTacticsStore((s) => s.updateTempLineupData);
+  const setLineupEditorMode = useTacticsStore((s) => s.setLineupEditorMode);
+  const saveLineupCoordinateOverride = useTacticsStore((s) => s.saveLineupCoordinateOverride);
+  const setSelectedAgent = useTacticsStore((s) => s.setSelectedAgent);
+
+  // 解构分组状态
   const {
     currentMap, isAttack, showSpawnBarrier, showRegionNames, showUltOrbs,
+    mapHue, mapBrightness,
+  } = mapState;
+  const {
     currentTool, selectedAbility, selectedAgent, isAlly,
-    placedAbilities, placedAgents, placedUltOrbs, drawings,
-    selectedElementId, selectedElementType, isScreenshotMode,
-    zoom, setZoom,
-    addPlacedAbility, addPlacedAgent, addPlacedUltOrb, removePlacedUltOrb, addDrawing, removeDrawing,
-    removePlacedAbility, removePlacedAgent,
-    updatePlacedAbility, updatePlacedAgent,
-    setSelectedElement, setScreenshotMode,
-    undo, redo, flipAllElements,
-    setIsAttack,
     drawColor, drawStrokeWidth, drawMode,
     showGrid, snapToGrid, gridSize,
-    mapHue, mapBrightness, abilityVisibilityFilter,
-    toggleAbilityVisibility, clearAbilityVisibilityFilter,
-    appMode,
-    lineupAgentId, selectedLineupId, setSelectedLineupId,
-    lineupEditorMode, tempLineupData, updateTempLineupData, setLineupEditorMode,
-    lineupCoordinateOverrides, saveLineupCoordinateOverride,
+  } = toolState;
+  const {
+    placedAbilities, placedAgents, placedUltOrbs, drawings,
+    selectedElementId, selectedElementType,
+  } = elementsState;
+  const {
+    zoom, lineupAgentId, selectedLineupId,
+    lineupEditorMode, tempLineupData,
+    lineupCoordinateOverrides, abilityVisibilityFilter,
     customLineups,
-    setSelectedAgent,
-  } = useTacticsStore();
+  } = lineupState;
 
   const lineupEditorModeRef = useRef(lineupEditorMode);
   useEffect(() => { lineupEditorModeRef.current = lineupEditorMode; }, [lineupEditorMode]);

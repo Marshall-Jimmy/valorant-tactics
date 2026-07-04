@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useMemo, useCallback, memo } from 'react';
+import { useState, useMemo, useCallback, memo, useRef, useEffect } from 'react';
 import { normalizedToWorld, ABILITY_COLORS, LineupWithAbility } from '@/data/lineups';
 import type { Lineup } from '@/data/lineups';
 import type { TempLineupData, LineupEditorMode } from '@/store/tacticsStore';
 
 export type MarkerVisibility = 'all' | 'stand' | 'landing' | 'none';
+
+const CANVAS_THRESHOLD = 80;
 
 interface LineupMarkersProps {
   lineups: LineupWithAbility[];
@@ -152,121 +154,247 @@ export const LineupMarkers = memo(function LineupMarkers({
     setHoveredLineup(null);
   }, []);
 
+  // === Canvas 2D 渲染模式（>80 标记时自动切换） ===
+  const useCanvasMode = markers.length > CANVAS_THRESHOLD;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Canvas 绘制 effect
+  useEffect(() => {
+    if (!useCanvasMode || !canvasRef.current) return;
+    const ctx = canvasRef.current.getContext('2d');
+    if (!ctx) return;
+    const { width, height } = canvasRef.current;
+    ctx.clearRect(0, 0, width, height);
+
+    // 绘制连线
+    if (showStand && showLanding) {
+      markers.forEach(({ startScreen, endScreen, isSelected, colors }) => {
+        ctx.beginPath();
+        ctx.moveTo(startScreen.x, startScreen.y);
+        ctx.lineTo(endScreen.x, endScreen.y);
+        ctx.strokeStyle = isSelected ? colors.primary : colors.light;
+        ctx.lineWidth = isSelected ? 2 : 1;
+        if (!isSelected) ctx.setLineDash([4, 4]);
+        else ctx.setLineDash([]);
+        ctx.stroke();
+      });
+    }
+    ctx.setLineDash([]);
+
+    // 绘制站位圆点
+    if (showStand) {
+      markers.forEach(({ startScreen, isSelected, baseSize, selectedSize, colors }) => {
+        const r = (isSelected ? selectedSize : baseSize);
+        ctx.beginPath();
+        ctx.arc(startScreen.x, startScreen.y, r, 0, Math.PI * 2);
+        ctx.fillStyle = colors.primary;
+        ctx.globalAlpha = isSelected ? 1 : 0.8;
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+      });
+    }
+
+    // 绘制落点菱形
+    if (showLanding) {
+      markers.forEach(({ endScreen, isSelected, baseSize, selectedSize }) => {
+        const r = (isSelected ? selectedSize : baseSize);
+        ctx.save();
+        ctx.translate(endScreen.x, endScreen.y);
+        ctx.rotate(Math.PI / 4);
+        ctx.fillStyle = '#ef4444';
+        ctx.globalAlpha = isSelected ? 1 : 0.8;
+        ctx.fillRect(-r, -r, r * 2, r * 2);
+        ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(-r, -r, r * 2, r * 2);
+        ctx.globalAlpha = 1;
+        ctx.restore();
+      });
+    }
+  }, [markers, showStand, showLanding, useCanvasMode]);
+
+  // Canvas 上的鼠标事件委托
+  const handleCanvasMouseMove = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    let found = false;
+    for (const m of markers) {
+      const dx = mx - m.startScreen.x;
+      const dy = my - m.startScreen.y;
+      const hitRadius = m.baseSize * 2;
+      if (dx * dx + dy * dy < hitRadius * hitRadius) {
+        handleMouseEnter(m.lineup, e.clientX, e.clientY);
+        found = true;
+        break;
+      }
+      // 也检查落点
+      const dx2 = mx - m.endScreen.x;
+      const dy2 = my - m.endScreen.y;
+      if (dx2 * dx2 + dy2 * dy2 < hitRadius * hitRadius) {
+        handleMouseEnter(m.lineup, e.clientX, e.clientY);
+        found = true;
+        break;
+      }
+    }
+    if (!found) handleMouseLeave();
+  }, [markers, handleMouseEnter, handleMouseLeave]);
+
+  const handleCanvasClick = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    for (const m of markers) {
+      // 检查站位和落点的命中
+      for (const pt of [m.startScreen, m.endScreen]) {
+        const dx = mx - pt.x;
+        const dy = my - pt.y;
+        const hitRadius = m.baseSize * 2;
+        if (dx * dx + dy * dy < hitRadius * hitRadius) {
+          onSelect(m.lineup);
+          return;
+        }
+      }
+    }
+  }, [markers, onSelect]);
+
   if (markerVisibility === 'none') return null;
 
   return (
     <>
-      {/* SVG lines layer */}
-      {showStand && showLanding && (
-        <svg
-          className="absolute inset-0 pointer-events-none"
-          style={{ width: '100%', height: '100%' }}
-        >
-          {markers.map(({ lineup, startScreen, endScreen, isSelected, colors }) => (
-            <line
-              key={`line-${lineup.id}`}
-              x1={startScreen.x}
-              y1={startScreen.y}
-              x2={endScreen.x}
-              y2={endScreen.y}
-              stroke={isSelected ? colors.primary : colors.light}
-              strokeWidth={isSelected ? 2 : 1}
-              strokeDasharray={isSelected ? 'none' : '4 4'}
-            />
-          ))}
-        </svg>
+      {useCanvasMode ? (
+        <canvas
+          ref={canvasRef}
+          width={viewportWidth || 800}
+          height={viewportHeight || 600}
+          className="absolute inset-0"
+          style={{ cursor: 'crosshair' }}
+          onMouseMove={handleCanvasMouseMove}
+          onClick={handleCanvasClick}
+          onMouseLeave={handleMouseLeave}
+        />
+      ) : (
+        <>
+          {/* SVG lines layer */}
+          {showStand && showLanding && (
+            <svg
+              className="absolute inset-0 pointer-events-none"
+              style={{ width: '100%', height: '100%' }}
+            >
+              {markers.map(({ lineup, startScreen, endScreen, isSelected, colors }) => (
+                <line
+                  key={`line-${lineup.id}`}
+                  x1={startScreen.x}
+                  y1={startScreen.y}
+                  x2={endScreen.x}
+                  y2={endScreen.y}
+                  stroke={isSelected ? colors.primary : colors.light}
+                  strokeWidth={isSelected ? 2 : 1}
+                  strokeDasharray={isSelected ? 'none' : '4 4'}
+                />
+              ))}
+            </svg>
+          )}
+
+          {/* Stand position markers (circles with ability color) */}
+          {showStand && markers.map(({ lineup, startScreen, isSelected, baseSize, selectedSize, colors }) => {
+            const size = isSelected ? selectedSize : baseSize;
+            return (
+              <div
+                key={`start-${lineup.id}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onSelect(lineup);
+                }}
+                onMouseEnter={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  handleMouseEnter(lineup, rect.left + rect.width / 2, rect.top);
+                }}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                  position: 'absolute',
+                  left: startScreen.x,
+                  top: startScreen.y,
+                  width: size * 2,
+                  height: size * 2,
+                  transform: 'translate(-50%, -50%)',
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: isSelected ? 60 : 20,
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '50%',
+                    backgroundColor: colors.primary,
+                    border: '2px solid rgba(255,255,255,0.8)',
+                    boxShadow: isSelected
+                      ? `0 0 12px ${colors.light}`
+                      : '0 0 4px rgba(0,0,0,0.5)',
+                    transition: 'all 0.15s ease',
+                    opacity: isSelected ? 1 : 0.8,
+                  }}
+                />
+              </div>
+            );
+          })}
+
+          {/* Landing position markers (diamonds, red) */}
+          {showLanding && markers.map(({ lineup, endScreen, isSelected, baseSize, selectedSize }) => {
+            const size = isSelected ? selectedSize : baseSize;
+            return (
+              <div
+                key={`end-${lineup.id}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onSelect(lineup);
+                }}
+                onMouseEnter={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  handleMouseEnter(lineup, rect.left + rect.width / 2, rect.top);
+                }}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                  position: 'absolute',
+                  left: endScreen.x,
+                  top: endScreen.y,
+                  width: size * 2,
+                  height: size * 2,
+                  transform: 'translate(-50%, -50%) rotate(45deg)',
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: isSelected ? 60 : 20,
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: '#ef4444',
+                    border: '2px solid rgba(255,255,255,0.8)',
+                    boxShadow: isSelected
+                      ? '0 0 12px rgba(248,113,113,0.8)'
+                      : '0 0 4px rgba(0,0,0,0.5)',
+                    transition: 'all 0.15s ease',
+                    opacity: isSelected ? 1 : 0.8,
+                  }}
+                />
+              </div>
+            );
+          })}
+        </>
       )}
 
-      {/* Stand position markers (circles with ability color) */}
-      {showStand && markers.map(({ lineup, startScreen, isSelected, baseSize, selectedSize, colors }) => {
-        const size = isSelected ? selectedSize : baseSize;
-        return (
-          <div
-            key={`start-${lineup.id}`}
-            onClick={(e) => {
-              e.stopPropagation();
-              onSelect(lineup);
-            }}
-            onMouseEnter={(e) => {
-              const rect = e.currentTarget.getBoundingClientRect();
-              handleMouseEnter(lineup, rect.left + rect.width / 2, rect.top);
-            }}
-            onMouseLeave={handleMouseLeave}
-            style={{
-              position: 'absolute',
-              left: startScreen.x,
-              top: startScreen.y,
-              width: size * 2,
-              height: size * 2,
-              transform: 'translate(-50%, -50%)',
-              cursor: 'pointer',
-              pointerEvents: 'auto',
-              zIndex: isSelected ? 60 : 20,
-            }}
-          >
-            <div
-              style={{
-                width: '100%',
-                height: '100%',
-                borderRadius: '50%',
-                backgroundColor: colors.primary,
-                border: '2px solid rgba(255,255,255,0.8)',
-                boxShadow: isSelected
-                  ? `0 0 12px ${colors.light}`
-                  : '0 0 4px rgba(0,0,0,0.5)',
-                transition: 'all 0.15s ease',
-                opacity: isSelected ? 1 : 0.8,
-              }}
-            />
-          </div>
-        );
-      })}
-
-      {/* Landing position markers (diamonds, red) */}
-      {showLanding && markers.map(({ lineup, endScreen, isSelected, baseSize, selectedSize }) => {
-        const size = isSelected ? selectedSize : baseSize;
-        return (
-          <div
-            key={`end-${lineup.id}`}
-            onClick={(e) => {
-              e.stopPropagation();
-              onSelect(lineup);
-            }}
-            onMouseEnter={(e) => {
-              const rect = e.currentTarget.getBoundingClientRect();
-              handleMouseEnter(lineup, rect.left + rect.width / 2, rect.top);
-            }}
-            onMouseLeave={handleMouseLeave}
-            style={{
-              position: 'absolute',
-              left: endScreen.x,
-              top: endScreen.y,
-              width: size * 2,
-              height: size * 2,
-              transform: 'translate(-50%, -50%) rotate(45deg)',
-              cursor: 'pointer',
-              pointerEvents: 'auto',
-              zIndex: isSelected ? 60 : 20,
-            }}
-          >
-            <div
-              style={{
-                width: '100%',
-                height: '100%',
-                backgroundColor: '#ef4444',
-                border: '2px solid rgba(255,255,255,0.8)',
-                boxShadow: isSelected
-                  ? '0 0 12px rgba(248,113,113,0.8)'
-                  : '0 0 4px rgba(0,0,0,0.5)',
-                transition: 'all 0.15s ease',
-                opacity: isSelected ? 1 : 0.8,
-              }}
-            />
-          </div>
-        );
-      })}
-
-      {/* Tooltip */}
+      {/* Tooltip (canvas 和 DOM 共用) */}
       {hoveredLineup && !hoveredLineup.lineup.id.toString().startsWith('hover-') && (
         <div
           style={{

@@ -41,6 +41,7 @@
       border-right: none;
       padding: 12px;
       color: #e4e4e7;
+      transition: opacity 0.15s ease;
     }
 
     .overlay-panel::-webkit-scrollbar { width: 4px; }
@@ -235,6 +236,7 @@
       align-items: center;
       justify-content: center;
       background: transparent;
+      transition: opacity 0.15s ease;
     }
 
     .preview-content {
@@ -556,6 +558,7 @@
         '<div class="footer"><button class="close-btn" id="closeBtn">F4 关闭</button></div>';
 
       bindPanelEvents();
+      preloadImages();
     }
 
     function bindPanelEvents() {
@@ -605,6 +608,22 @@
       if (overlayData) renderOverlay(overlayData);
       var activeItem = document.querySelector('.lineup-item.active');
       if (activeItem) activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      preloadImages();
+    }
+
+    // 预加载当前点位的图片
+    function preloadImages() {
+      if (!lineupData || !lineupData[currentLineupIndex]) return;
+      var item = lineupData[currentLineupIndex];
+      var urls = [];
+      if (item.standImage) urls.push(item.standImage);
+      if (item.detailImages) urls = urls.concat(item.detailImages);
+      urls.forEach(function(url) {
+        if (url && !url.startsWith('data:')) {
+          var img = new Image();
+          img.src = url;
+        }
+      });
     }
 
     // 滚轮切换点位（仅在面板可见时）
@@ -637,7 +656,16 @@
 
     function startPolling() {
       if (pollTimer) clearInterval(pollTimer);
-      pollTimer = setInterval(loadOverlayData, 2000);
+      var pollCount = 0;
+      pollTimer = setInterval(function() {
+        loadOverlayData();
+        pollCount++;
+        // 5 次成功加载后降频到 5 秒
+        if (pollCount === 5) {
+          clearInterval(pollTimer);
+          pollTimer = setInterval(loadOverlayData, 5000);
+        }
+      }, 2000);
     }
 
     /* =============================================
@@ -662,12 +690,16 @@
           window.electronAPI.expandWindow();
         }
 
-        // 隐藏面板
-        document.getElementById('panelRoot').style.display = 'none';
+        // 隐藏面板（opacity 过渡）
+        var panelRoot = document.getElementById('panelRoot');
+        panelRoot.style.opacity = '0';
+        setTimeout(function() { panelRoot.style.display = 'none'; }, 150);
 
-        // 显示预览
+        // 显示预览（opacity 过渡）
         var previewRoot = document.getElementById('previewRoot');
         previewRoot.style.display = '';
+        previewRoot.style.opacity = '0';
+        requestAnimationFrame(function() { previewRoot.style.opacity = '1'; });
 
         // 构建预览页
         lbTitle = lineupCopy.title || '';
@@ -765,9 +797,16 @@
     }
 
     function hidePreview() {
-      document.getElementById('previewRoot').style.display = 'none';
-      // 恢复面板
-      document.getElementById('panelRoot').style.display = '';
+      // 隐藏预览（opacity 过渡）
+      var previewRoot = document.getElementById('previewRoot');
+      previewRoot.style.opacity = '0';
+      setTimeout(function() { previewRoot.style.display = 'none'; }, 150);
+
+      // 恢复面板（opacity 过渡）
+      var panelRoot = document.getElementById('panelRoot');
+      panelRoot.style.display = '';
+      requestAnimationFrame(function() { panelRoot.style.opacity = '1'; });
+
       lbPages = [];
       lbIndex = 0;
       lbTitle = '';
@@ -805,6 +844,24 @@
     /* =============================================
      *  初始化
      * ============================================= */
+    // 注册即时数据推送监听
+    if (window.electronAPI && window.electronAPI.onOverlayDataUpdate) {
+      window.electronAPI.onOverlayDataUpdate(function(data) {
+        if (data) {
+          var json = JSON.stringify(data);
+          if (json !== lastOverlayDataJson) {
+            lastOverlayDataJson = json;
+            renderOverlay(data);
+          }
+        } else {
+          if (lastOverlayDataJson !== '') {
+            lastOverlayDataJson = '';
+            renderPlaceholder();
+          }
+        }
+      });
+    }
+
     loadOverlayData().then(startPolling);
   </script>
 </body>

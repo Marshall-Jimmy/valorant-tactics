@@ -14,8 +14,8 @@ let lastPort = null;
 // ============ Overlay 功能 ============
 let overlayWindow = null;
 
-// 创建/切换 Overlay 窗口（小窗口方案：窗口只覆盖面板区域，预览时扩展到全屏）
-const PANEL_WIDTH = 280;
+// Overlay 面板宽度（根据 DPI 动态计算）
+let currentPanelWidth = 280;
 
 function toggleOverlay() {
   if (overlayWindow && !overlayWindow.isDestroyed()) {
@@ -26,6 +26,9 @@ function toggleOverlay() {
   } else {
     // 不存在 → 创建面板大小的小窗口
     const primaryDisplay = screen.getPrimaryDisplay();
+    const scaleFactor = primaryDisplay.scaleFactor || 1;
+    const PANEL_WIDTH = Math.round(280 * scaleFactor);
+    currentPanelWidth = PANEL_WIDTH;
     const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
     const panelHeight = Math.floor(screenHeight * 0.8);
     const panelY = Math.floor((screenHeight - panelHeight) / 2);
@@ -128,10 +131,10 @@ ipcMain.on('shrink-window', () => {
     const { width: sw, height: sh } = primaryDisplay.workAreaSize;
     const panelHeight = Math.floor(sh * 0.8);
     const panelY = Math.floor((sh - panelHeight) / 2);
-    overlayWindow.setBounds({ x: sw - PANEL_WIDTH, y: panelY, width: PANEL_WIDTH, height: panelHeight });
+    overlayWindow.setBounds({ x: sw - currentPanelWidth, y: panelY, width: currentPanelWidth, height: panelHeight });
     overlayWindow.setAlwaysOnTop(true, 'pop-up-menu');
     overlayWindow.moveTop();
-    console.log(`[Overlay] 窗口缩回面板 ${PANEL_WIDTH}x${panelHeight} | alwaysOnTop=pop-up-menu`);
+    console.log(`[Overlay] 窗口缩回面板 ${currentPanelWidth}x${panelHeight} | alwaysOnTop=pop-up-menu`);
   }
 });
 

@@ -28,4 +28,12 @@ contextBridge.exposeInMainWorld('electronAPI', {
    * 缩小窗口回面板大小
    */
   shrinkWindow: () => ipcRenderer.send('shrink-window'),
+
+  /**
+   * 监听主进程推送的 overlay 数据更新（即时更新，无需等待轮询）
+   * @param {function} callback - 接收数据的回调 (data) => void
+   */
+  onOverlayDataUpdate: (callback) => {
+    ipcRenderer.on('overlay-data-push', (event, data) => callback(data));
+  },
 });
