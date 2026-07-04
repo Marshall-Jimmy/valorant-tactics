@@ -255,6 +255,13 @@
       max-height: 100%;
       object-fit: contain;
       border-radius: 8px;
+      transition: transform 0.2s ease;
+      cursor: zoom-in;
+      transform-origin: center center;
+    }
+    .preview-img.zoomed {
+      transform: scale(1.75);
+      cursor: zoom-out;
     }
 
     /* 预览关闭按钮 */
@@ -652,6 +659,29 @@
       if (lineupData.length > 1) { e.preventDefault(); switchLineup(e.deltaY > 0 ? 1 : -1); }
     }, { passive: false });
 
+    /* ---------- 坐标转换（与主应用 normalizedToWorld 一致） ---------- */
+    // 仿射变换系数，来自 src/data/lineups.ts
+    var NORMALIZED_HEIGHT = 1000;
+    var WORLD_ASPECT_RATIO = 16 / 9;
+    var WORLD_WIDTH = NORMALIZED_HEIGHT * WORLD_ASPECT_RATIO; // 1777.78
+    var MAP_DISPLAY_WIDTH = 1240;
+    var MAP_DISPLAY_HEIGHT = 1000;
+    var MAP_PADDING_X = (WORLD_WIDTH - MAP_DISPLAY_WIDTH) / 2; // ~268.89
+
+    function normalizedToWorld(nx, ny) {
+      var x = -24.8055 * nx + 917.7683 * ny + 441.5591;
+      var y = -940.7984 * nx + -6.6050 * ny + 969.9544;
+      return { x: x, y: y };
+    }
+
+    // normalized [0,1] → 地图图片百分比 [0,100]
+    function normalizedToMapPercent(nx, ny) {
+      var w = normalizedToWorld(nx, ny);
+      var px = ((w.x - MAP_PADDING_X) / MAP_DISPLAY_WIDTH) * 100;
+      var py = (w.y / MAP_DISPLAY_HEIGHT) * 100;
+      return { x: px, y: py };
+    }
+
     /* ---------- 数据加载 ---------- */
     var lastOverlayDataJson = '';
     var currentPanelPosition = 'right';
@@ -768,10 +798,13 @@
           document.getElementById('previewTitle').textContent = lbTitle;
           return;
         }
-        var x1 = Math.max(0, Math.min(100, (1 - coords.start[0]) * 100));
-        var y1 = Math.max(0, Math.min(100, coords.start[1] * 100));
-        var x2 = Math.max(0, Math.min(100, (1 - coords.end[0]) * 100));
-        var y2 = Math.max(0, Math.min(100, coords.end[1] * 100));
+        // 使用与主应用一致的仿射变换将 normalized 转为地图图片百分比
+        var startPercent = normalizedToMapPercent(coords.start[0], coords.start[1]);
+        var endPercent = normalizedToMapPercent(coords.end[0], coords.end[1]);
+        var x1 = Math.max(0, Math.min(100, startPercent.x));
+        var y1 = Math.max(0, Math.min(100, startPercent.y));
+        var x2 = Math.max(0, Math.min(100, endPercent.x));
+        var y2 = Math.max(0, Math.min(100, endPercent.y));
         var mapKey = page.data.mapKey || '';
         var mapSvg = mapKey ? '/maps/' + mapKey + '_map.svg' : '';
 
@@ -790,7 +823,7 @@
             '<div class="lightbox-page-label">坐标预览</div>' +
           '</div>';
       } else if (page.type === 'image') {
-        content.innerHTML = '<img class="preview-img" src="' + escAttr(page.src) + '" alt="' + escAttr(lbTitle) + '">';
+        content.innerHTML = '<img class="preview-img" src="' + escAttr(page.src) + '" alt="' + escAttr(lbTitle) + '" onclick="event.stopPropagation(); this.classList.toggle(\'zoomed\')">';
       }
 
       // 更新标题和计数器
