@@ -26,6 +26,8 @@ interface LineupOverlayProps {
   abilityVisibilityFilter?: string[];
   onToggleAbilityVisibility?: (key: string) => void;
   onClearAbilityVisibility?: () => void;
+  viewportWidth?: number;
+  viewportHeight?: number;
 }
 
 /** Renders lineup markers, loading indicator, visibility toggle, and debug info */
@@ -48,6 +50,8 @@ export const LineupOverlay = React.memo(function LineupOverlay({
   abilityVisibilityFilter = [],
   onToggleAbilityVisibility,
   onClearAbilityVisibility,
+  viewportWidth = 0,
+  viewportHeight = 0,
 }: LineupOverlayProps) {
   if (appMode !== 'lineup') return null;
 
@@ -69,6 +73,8 @@ export const LineupOverlay = React.memo(function LineupOverlay({
           coordinateOverrides={coordinateOverrides}
           lineupEditorMode={lineupEditorMode}
           abilityVisibilityFilter={abilityVisibilityFilter}
+          viewportWidth={viewportWidth}
+          viewportHeight={viewportHeight}
         />
       )}
 

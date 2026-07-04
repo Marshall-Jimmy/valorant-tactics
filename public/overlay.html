@@ -607,16 +607,23 @@
       if (activeItem) activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }
 
-    // 滚轮切换点位（仅在面板上）
+    // 滚轮切换点位（仅在面板可见时）
     document.getElementById('panel').addEventListener('wheel', function(e) {
+      if (document.getElementById('panelRoot').style.display === 'none') return;
       if (lineupData.length > 1) { e.preventDefault(); switchLineup(e.deltaY > 0 ? 1 : -1); }
     }, { passive: false });
 
     /* ---------- 数据加载 ---------- */
+    var lastOverlayDataJson = '';
+
     async function loadOverlayData() {
       try {
         if (window.electronAPI && window.electronAPI.getOverlayData) {
           var data = await window.electronAPI.getOverlayData();
+          // 序列化比较，数据未变化时跳过重渲染
+          var json = data ? JSON.stringify(data) : '';
+          if (json === lastOverlayDataJson) return;
+          lastOverlayDataJson = json;
           if (data) renderOverlay(data);
           else renderPlaceholder();
         } else {
@@ -661,7 +668,6 @@
         // 显示预览
         var previewRoot = document.getElementById('previewRoot');
         previewRoot.style.display = '';
-        document.body.classList.add('preview-active');
 
         // 构建预览页
         lbTitle = lineupCopy.title || '';
@@ -706,8 +712,17 @@
 
       if (page.type === 'coords') {
         var coords = page.data.coordinates;
-        var x1 = coords.start[0] * 100, y1 = coords.start[1] * 100;
-        var x2 = coords.end[0] * 100, y2 = coords.end[1] * 100;
+        // 防御性检查
+        if (!coords || !Array.isArray(coords.start) || coords.start.length < 2 ||
+            !Array.isArray(coords.end) || coords.end.length < 2) {
+          content.innerHTML = '<div style="color:rgba(255,255,255,0.5);text-align:center;">坐标数据缺失</div>';
+          document.getElementById('previewTitle').textContent = lbTitle;
+          return;
+        }
+        var x1 = Math.max(0, Math.min(100, coords.start[0] * 100));
+        var y1 = Math.max(0, Math.min(100, coords.start[1] * 100));
+        var x2 = Math.max(0, Math.min(100, coords.end[0] * 100));
+        var y2 = Math.max(0, Math.min(100, coords.end[1] * 100));
         var mapKey = page.data.mapKey || '';
         var mapSvg = mapKey ? '/maps/' + mapKey + '_map.svg' : '';
 
@@ -751,7 +766,6 @@
 
     function hidePreview() {
       document.getElementById('previewRoot').style.display = 'none';
-      document.body.classList.remove('preview-active');
       // 恢复面板
       document.getElementById('panelRoot').style.display = '';
       lbPages = [];
@@ -770,7 +784,9 @@
     document.getElementById('previewPrev').addEventListener('click', function() { navigatePreview(-1); });
     document.getElementById('previewNext').addEventListener('click', function() { navigatePreview(1); });
     document.getElementById('previewOverlay').addEventListener('click', function(e) {
-      if (e.target === this) hidePreview();
+      // 点击预览内容外部或遮罩层关闭预览
+      var content = document.getElementById('previewContent');
+      if (e.target === this || !content.contains(e.target)) hidePreview();
     });
 
     // Esc 关闭预览恢复面板

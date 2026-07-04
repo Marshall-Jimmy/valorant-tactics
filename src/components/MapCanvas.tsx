@@ -134,6 +134,15 @@ export function MapCanvas() {
     dimensions.height, pan, zoom
   );
 
+  // 稳定的回调，避免穿透子组件 memo
+  const handleSelectLineup = useCallback((lineup: any) => {
+    setSelectedLineupId(lineup.id);
+  }, [setSelectedLineupId]);
+
+  const handleSetMarkerVisibility = useCallback((v: 'all' | 'stand' | 'landing' | 'none') => {
+    setMarkerVisibility(v);
+  }, []);
+
   // Memoize the transform object for child components
   const transform = useMemo(() => ({ worldToScreen, screenToWorld, worldWidth, worldHeight, scaleFactor }), [worldToScreen, screenToWorld, worldWidth, worldHeight, scaleFactor]);
 
@@ -707,11 +716,13 @@ export function MapCanvas() {
               tempLineupData={tempLineupData}
               transform={transform}
               t={t}
-              onSelectLineup={(lineup) => setSelectedLineupId(lineup.id)}
-              onSetMarkerVisibility={setMarkerVisibility}
+              onSelectLineup={handleSelectLineup}
+              onSetMarkerVisibility={handleSetMarkerVisibility}
               coordinateOverrides={lineupCoordinateOverrides}
               lineupEditorMode={lineupEditorMode}
               abilityVisibilityFilter={abilityVisibilityFilter}
+              viewportWidth={dimensions.width}
+              viewportHeight={dimensions.height}
               onToggleAbilityVisibility={toggleAbilityVisibility}
               onClearAbilityVisibility={clearAbilityVisibilityFilter}
             />

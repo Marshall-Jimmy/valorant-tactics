@@ -1064,10 +1064,9 @@ function buildOverlayData(state: TacticsState): object | null {
     }));
 
   // 合并（去重：如果 ID 重合优先保留 builtinFavs）
-  const customFavIds = new Set(customFavs.map(l => l.id));
   const allLineups = [
     ...builtinFavs,
-    ...customFavs.filter(l => !customFavIds.has(l.id) || !builtinFavs.some(b => b.id === l.id)),
+    ...customFavs.filter(l => !builtinFavs.some(b => b.id === l.id)),
   ];
 
   return {

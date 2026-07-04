@@ -19,6 +19,9 @@ interface LineupMarkersProps {
   coordinateOverrides?: Record<number, { start: [number, number]; end: [number, number] }>;
   lineupEditorMode?: LineupEditorMode;
   abilityVisibilityFilter?: string[];
+  // 视口尺寸，用于裁剪屏幕外标记
+  viewportWidth?: number;
+  viewportHeight?: number;
 }
 
 export const LineupMarkers = memo(function LineupMarkers({
@@ -33,6 +36,8 @@ export const LineupMarkers = memo(function LineupMarkers({
   coordinateOverrides = {},
   lineupEditorMode = 'idle',
   abilityVisibilityFilter = [],
+  viewportWidth = 0,
+  viewportHeight = 0,
 }: LineupMarkersProps) {
   const [hoveredLineup, setHoveredLineup] = useState<{
     lineup: LineupWithAbility;
@@ -43,10 +48,18 @@ export const LineupMarkers = memo(function LineupMarkers({
   const showStand = markerVisibility === 'all' || markerVisibility === 'stand';
   const showLanding = markerVisibility === 'all' || markerVisibility === 'landing';
 
-  // Cache marker calculations - 过滤掉没有坐标的数据
+  // Cache marker calculations - 过滤掉没有坐标的数据 + 视口裁剪
   const markers = useMemo(() => {
     const baseSize = 6 * zoom;
     const selectedSize = baseSize * 1.5;
+    const hasViewport = viewportWidth > 0 && viewportHeight > 0;
+    // 视口裁剪边界（留 50px 缓冲区）
+    const buffer = 50;
+    const vxMin = hasViewport ? -buffer : -Infinity;
+    const vyMin = hasViewport ? -buffer : -Infinity;
+    const vxMax = hasViewport ? viewportWidth + buffer : Infinity;
+    const vyMax = hasViewport ? viewportHeight + buffer : Infinity;
+
     return lineups
       .filter((lineup) => {
         // 技能可见性筛选
@@ -94,8 +107,17 @@ export const LineupMarkers = memo(function LineupMarkers({
           selectedSize,
           colors,
         };
+      })
+      // 视口裁剪：只保留屏幕内（含缓冲区）的标记
+      .filter((m) => {
+        if (!hasViewport) return true;
+        const inView =
+          (m.startScreen.x >= vxMin && m.startScreen.x <= vxMax && m.startScreen.y >= vyMin && m.startScreen.y <= vyMax) ||
+          (m.endScreen.x >= vxMin && m.endScreen.x <= vxMax && m.endScreen.y >= vyMin && m.endScreen.y <= vyMax) ||
+          m.isSelected; // 选中的始终保留
+        return inView;
       });
-  }, [lineups, selectedLineup, worldToScreen, zoom, isFlipped, coordinateOverrides]);
+  }, [lineups, selectedLineup, worldToScreen, zoom, isFlipped, coordinateOverrides, abilityVisibilityFilter, viewportWidth, viewportHeight]);
 
   // Cache temp lineup preview calculations
   const tempPreview = useMemo(() => {

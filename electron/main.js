@@ -13,28 +13,6 @@ let lastPort = null;
 
 // ============ Overlay 功能 ============
 let overlayWindow = null;
-let valorantProcessWatcher = null;
-
-// 检查 Valorant 是否在运行
-function isValorantRunning() {
-  try {
-    // 通过 tasklist 检查 VALORANT-Win64-Shipping 进程
-    const { execSync } = require('child_process');
-    const result = execSync('tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" /NH', { encoding: 'utf-8', timeout: 5000 });
-    return result.includes('VALORANT-Win64-Shipping');
-  } catch {
-    return false;
-  }
-}
-
-// 异步检查 Valorant 是否在运行（不阻塞主线程）
-function isValorantRunningAsync(cb) {
-  const { exec } = require('child_process');
-  exec('tasklist /FI "IMAGENAME eq VALORANT-Win64-Shipping.exe" /NH', { encoding: 'utf-8', timeout: 5000 }, (err, stdout) => {
-    if (err) { cb(false); return; }
-    cb(stdout.includes('VALORANT-Win64-Shipping'));
-  });
-}
 
 // 创建/切换 Overlay 窗口（小窗口方案：窗口只覆盖面板区域，预览时扩展到全屏）
 const PANEL_WIDTH = 280;
@@ -163,31 +141,6 @@ function closeAllOverlays() {
     overlayWindow.close();
     overlayWindow = null;
   }
-}
-
-// 监视 Valorant 进程，退出时自动关闭 overlay（异步 + 连续多次检测才确认退出）
-let valorantMissCount = 0;
-function startValorantWatcher() {
-  if (valorantProcessWatcher) clearInterval(valorantProcessWatcher);
-  valorantMissCount = 0;
-  valorantProcessWatcher = setInterval(() => {
-    isValorantRunningAsync((running) => {
-      if (running) {
-        valorantMissCount = 0;
-      } else {
-        valorantMissCount++;
-        console.log(`[Overlay] Valorant 未检测到 (${valorantMissCount}/3)`);
-        if (valorantMissCount >= 3) {
-          if (overlayWindow && !overlayWindow.isDestroyed()) {
-            console.log('[Overlay] 连续 3 次未检测到 Valorant，自动关闭 overlay');
-            closeAllOverlays();
-          }
-          clearInterval(valorantProcessWatcher);
-          valorantProcessWatcher = null;
-        }
-      }
-    });
-  }, 5000); // 每 5 秒检查一次
 }
 
 // ============ 系统托盘 ============
