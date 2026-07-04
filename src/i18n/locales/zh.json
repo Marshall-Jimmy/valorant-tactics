@@ -133,6 +133,7 @@
     "sidebarPosition": "侧边栏位置",
     "sidebarPositionLeft": "左侧",
     "sidebarPositionRight": "右侧",
+    "overlayPanelPosition": "局内面板位置",
     "showDebugPanel": "显示调试信息",
     "resetToDefault": "恢复默认",
     "autoSaveHint": "设置会自动保存"

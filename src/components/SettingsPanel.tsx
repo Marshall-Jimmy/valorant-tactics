@@ -28,10 +28,12 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
     showDebugPanel,
     language,
     sidebarPosition,
+    overlayPanelPosition,
     defaultLayers,
     setShowDebugPanel,
     setLanguage,
     setSidebarPosition,
+    setOverlayPanelPosition,
     resetToDefaults,
   } = useSettingsStore();
 
@@ -282,6 +284,32 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
                     onClick={() => setSidebarPosition('right')}
                     className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
                       sidebarPosition === 'right'
+                        ? 'bg-blue-500/20 text-blue-400 border-blue-500/50'
+                        : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    <PanelRight className="w-3.5 h-3.5" />
+                    {t('settings.sidebarPositionRight')}
+                  </button>
+                </div>
+              </SettingRow>
+              <SettingRow label={t('settings.overlayPanelPosition')}>
+                <div className="flex gap-1">
+                  <button
+                    onClick={() => setOverlayPanelPosition('left')}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
+                      overlayPanelPosition === 'left'
+                        ? 'bg-blue-500/20 text-blue-400 border-blue-500/50'
+                        : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    <PanelLeft className="w-3.5 h-3.5" />
+                    {t('settings.sidebarPositionLeft')}
+                  </button>
+                  <button
+                    onClick={() => setOverlayPanelPosition('right')}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
+                      overlayPanelPosition === 'right'
                         ? 'bg-blue-500/20 text-blue-400 border-blue-500/50'
                         : 'bg-zinc-800 text-zinc-400 border-zinc-700 hover:border-zinc-500 hover:text-white'
                     }`}

@@ -41,7 +41,6 @@
       border-right: none;
       padding: 12px;
       color: #e4e4e7;
-      transition: opacity 0.15s ease;
     }
 
     .overlay-panel::-webkit-scrollbar { width: 4px; }
@@ -236,7 +235,6 @@
       align-items: center;
       justify-content: center;
       background: transparent;
-      transition: opacity 0.15s ease;
     }
 
     .preview-content {
@@ -559,6 +557,28 @@
 
       bindPanelEvents();
       preloadImages();
+
+      // 根据面板位置调整圆角和边框
+      var panelEl = document.querySelector('.overlay-panel');
+      if (panelEl) {
+        if (data.panelPosition === 'left') {
+          panelEl.style.borderRadius = '0 12px 12px 0';
+          panelEl.style.borderRight = '1px solid rgba(167, 139, 250, 0.15)';
+          panelEl.style.borderLeft = 'none';
+        } else {
+          panelEl.style.borderRadius = '12px 0 0 12px';
+          panelEl.style.borderRight = 'none';
+          panelEl.style.borderLeft = '1px solid rgba(167, 139, 250, 0.15)';
+        }
+      }
+
+      // 检测面板位置变化，通知主进程
+      if (data.panelPosition && data.panelPosition !== currentPanelPosition) {
+        currentPanelPosition = data.panelPosition;
+        if (window.electronAPI && window.electronAPI.setPanelPosition) {
+          window.electronAPI.setPanelPosition(data.panelPosition);
+        }
+      }
     }
 
     function bindPanelEvents() {
@@ -634,6 +654,7 @@
 
     /* ---------- 数据加载 ---------- */
     var lastOverlayDataJson = '';
+    var currentPanelPosition = 'right';
 
     async function loadOverlayData() {
       try {
@@ -690,16 +711,12 @@
           window.electronAPI.expandWindow();
         }
 
-        // 隐藏面板（opacity 过渡）
-        var panelRoot = document.getElementById('panelRoot');
-        panelRoot.style.opacity = '0';
-        setTimeout(function() { panelRoot.style.display = 'none'; }, 150);
+        // 隐藏面板
+        document.getElementById('panelRoot').style.display = 'none';
 
-        // 显示预览（opacity 过渡）
+        // 显示预览
         var previewRoot = document.getElementById('previewRoot');
         previewRoot.style.display = '';
-        previewRoot.style.opacity = '0';
-        requestAnimationFrame(function() { previewRoot.style.opacity = '1'; });
 
         // 构建预览页
         lbTitle = lineupCopy.title || '';
@@ -751,9 +768,9 @@
           document.getElementById('previewTitle').textContent = lbTitle;
           return;
         }
-        var x1 = Math.max(0, Math.min(100, coords.start[0] * 100));
+        var x1 = Math.max(0, Math.min(100, (1 - coords.start[0]) * 100));
         var y1 = Math.max(0, Math.min(100, coords.start[1] * 100));
-        var x2 = Math.max(0, Math.min(100, coords.end[0] * 100));
+        var x2 = Math.max(0, Math.min(100, (1 - coords.end[0]) * 100));
         var y2 = Math.max(0, Math.min(100, coords.end[1] * 100));
         var mapKey = page.data.mapKey || '';
         var mapSvg = mapKey ? '/maps/' + mapKey + '_map.svg' : '';
@@ -797,15 +814,9 @@
     }
 
     function hidePreview() {
-      // 隐藏预览（opacity 过渡）
-      var previewRoot = document.getElementById('previewRoot');
-      previewRoot.style.opacity = '0';
-      setTimeout(function() { previewRoot.style.display = 'none'; }, 150);
-
-      // 恢复面板（opacity 过渡）
-      var panelRoot = document.getElementById('panelRoot');
-      panelRoot.style.display = '';
-      requestAnimationFrame(function() { panelRoot.style.opacity = '1'; });
+      document.getElementById('previewRoot').style.display = 'none';
+      // 恢复面板
+      document.getElementById('panelRoot').style.display = '';
 
       lbPages = [];
       lbIndex = 0;
@@ -819,11 +830,11 @@
     /* =============================================
      *  预览事件绑定
      * ============================================= */
-    document.getElementById('previewClose').addEventListener('click', hidePreview);
-    document.getElementById('previewPrev').addEventListener('click', function() { navigatePreview(-1); });
-    document.getElementById('previewNext').addEventListener('click', function() { navigatePreview(1); });
+    document.getElementById('previewClose').addEventListener('click', function(e) { e.stopPropagation(); hidePreview(); });
+    document.getElementById('previewPrev').addEventListener('click', function(e) { e.stopPropagation(); navigatePreview(-1); });
+    document.getElementById('previewNext').addEventListener('click', function(e) { e.stopPropagation(); navigatePreview(1); });
     document.getElementById('previewOverlay').addEventListener('click', function(e) {
-      // 点击预览内容外部或遮罩层关闭预览
+      // 点击预览内容外部或遮罩层关闭预览（导航按钮已 stopPropagation）
       var content = document.getElementById('previewContent');
       if (e.target === this || !content.contains(e.target)) hidePreview();
     });

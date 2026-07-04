@@ -48,6 +48,7 @@ next-env.d.ts
 # Electron builder output
 /build/
 /app-build/
+/out-dist/
 /dist-electron/
 /app-v*/
 *.exe

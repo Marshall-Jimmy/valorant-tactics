@@ -221,6 +221,13 @@ npm run electron:build:mac   # macOS
 npm run electron:build:linux # Linux
 ```
 
+**打包输出目录规范**（严格遵守）：
+- `package.json` 中 `directories.output` 当前值为 `out-dist`
+- 输出目录由 `package.json` 配置决定，**不要在命令行中传 `--config.directories.output=xxx` 覆盖**
+- 每次打包前先确认输出目录不存在或未被占用，被占用时换配置值而非命令行参数
+- **绝对不要**每次新建文件夹（如 app-v2, app-v3, app-v4, build-exe 等），统一用配置中的目录
+- `.gitignore` 已忽略 `/out-dist/`、`/build/`、`/app-build/`、`/app-v*/`、`/release*/`、`/dist-electron/`
+
 ---
 
 ## 7. 维护注意事项

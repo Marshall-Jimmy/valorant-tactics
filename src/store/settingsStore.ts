@@ -26,6 +26,8 @@ export interface UserSettings {
   language: 'zh' | 'en';
   /** 侧边栏位置 */
   sidebarPosition: 'left' | 'right';
+  /** Overlay 面板位置（局内点位板） */
+  overlayPanelPosition: 'left' | 'right';
   /** 地图图层默认显示 */
   defaultLayers: {
     spawnBarrier: boolean;
@@ -48,6 +50,7 @@ interface SettingsStore extends UserSettings {
   setShowDebugPanel: (value: boolean) => void;
   setLanguage: (value: 'zh' | 'en') => void;
   setSidebarPosition: (value: 'left' | 'right') => void;
+  setOverlayPanelPosition: (value: 'left' | 'right') => void;
   setDefaultLayers: (layers: Partial<UserSettings['defaultLayers']>) => void;
   resetToDefaults: () => void;
 }
@@ -65,6 +68,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   showDebugPanel: false,
   language: 'zh',
   sidebarPosition: 'left',
+  overlayPanelPosition: 'right',
   defaultLayers: {
     spawnBarrier: true,
     regionNames: false,
@@ -89,6 +93,7 @@ export const useSettingsStore = create<SettingsStore>()(
       setShowDebugPanel: (value) => set({ showDebugPanel: value }),
       setLanguage: (value) => set({ language: value }),
       setSidebarPosition: (value) => set({ sidebarPosition: value }),
+      setOverlayPanelPosition: (value) => set({ overlayPanelPosition: value }),
       setDefaultLayers: (layers) =>
         set((state) => ({
           defaultLayers: { ...state.defaultLayers, ...layers },

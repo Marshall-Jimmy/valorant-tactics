@@ -132,6 +132,7 @@
     "sidebarPosition": "Sidebar Position",
     "sidebarPositionLeft": "Left",
     "sidebarPositionRight": "Right",
+    "overlayPanelPosition": "Overlay Panel Position",
     "showDebugPanel": "Show Debug Info",
     "resetToDefault": "Reset to Default",
     "autoSaveHint": "Settings are automatically saved"

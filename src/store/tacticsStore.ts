@@ -1083,6 +1083,9 @@ function buildOverlayData(state: TacticsState): object | null {
     },
     lineups: allLineups,
     favoriteIds: state.favoriteLineups,
+    panelPosition: (typeof window !== 'undefined' && localStorage.getItem('valorant-tactics-settings'))
+      ? (JSON.parse(localStorage.getItem('valorant-tactics-settings') || '{}').state?.overlayPanelPosition || 'right')
+      : 'right',
   };
 }
 

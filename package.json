@@ -55,7 +55,7 @@
     "appId": "com.valorant-tactics.app",
     "productName": "Valorant Tactics",
     "directories": {
-      "output": "build"
+      "output": "out-dist"
     },
     "files": [
       "out/**/*",

@@ -14,10 +14,12 @@ let lastPort = null;
 // ============ Overlay 功能 ============
 let overlayWindow = null;
 
-// Overlay 面板宽度（根据 DPI 动态计算）
-let currentPanelWidth = 280;
+// 创建/切换 Overlay 窗口（小窗口方案：窗口只覆盖面板区域，预览时扩展到全屏）
+const BASE_PANEL_WIDTH = 210;
+let currentPanelWidth = BASE_PANEL_WIDTH;
+let overlayPanelPosition = 'right'; // 'left' 或 'right'，由设置控制
 
-function toggleOverlay() {
+async function toggleOverlay() {
   if (overlayWindow && !overlayWindow.isDestroyed()) {
     // 已存在 → 销毁
     overlayWindow.close();
@@ -26,17 +28,35 @@ function toggleOverlay() {
   } else {
     // 不存在 → 创建面板大小的小窗口
     const primaryDisplay = screen.getPrimaryDisplay();
-    const scaleFactor = primaryDisplay.scaleFactor || 1;
-    const PANEL_WIDTH = Math.round(280 * scaleFactor);
-    currentPanelWidth = PANEL_WIDTH;
     const { width: screenWidth, height: screenHeight } = primaryDisplay.workAreaSize;
-    const panelHeight = Math.floor(screenHeight * 0.8);
+
+    // 从主窗口 localStorage 读取面板位置设置
+    if (mainWindow && !mainWindow.isDestroyed()) {
+      try {
+        const settingsRaw = await mainWindow.webContents.executeJavaScript(`localStorage.getItem('valorant-tactics-settings')`);
+        if (settingsRaw) {
+          const parsed = JSON.parse(settingsRaw);
+          if (parsed.state?.overlayPanelPosition) {
+            overlayPanelPosition = parsed.state.overlayPanelPosition;
+          }
+        }
+      } catch (e) {
+        // 读取失败，使用默认值
+      }
+    }
+
+    const scaleFactor = primaryDisplay.scaleFactor || 1;
+    const PANEL_WIDTH = Math.round(BASE_PANEL_WIDTH * scaleFactor);
+    currentPanelWidth = PANEL_WIDTH;
+    // 高度固定为屏幕高度的 2/3
+    const panelHeight = Math.floor(screenHeight * 2 / 3);
     const panelY = Math.floor((screenHeight - panelHeight) / 2);
+    const panelX = overlayPanelPosition === 'left' ? 0 : (screenWidth - PANEL_WIDTH);
 
     overlayWindow = new BrowserWindow({
       width: PANEL_WIDTH,
       height: panelHeight,
-      x: screenWidth - PANEL_WIDTH,
+      x: panelX,
       y: panelY,
       transparent: true,
       frame: false,
@@ -124,17 +144,35 @@ ipcMain.on('expand-window', () => {
   }
 });
 
+// 设置 Overlay 面板位置（左/右）
+ipcMain.on('set-overlay-panel-position', (event, position) => {
+  if (position === 'left' || position === 'right') {
+    overlayPanelPosition = position;
+    console.log(`[Overlay] 面板位置设置为: ${position}`);
+    // 如果窗口已存在，立即调整位置
+    if (overlayWindow && !overlayWindow.isDestroyed()) {
+      const primaryDisplay = screen.getPrimaryDisplay();
+      const { width: sw, height: sh } = primaryDisplay.workAreaSize;
+      const panelHeight = Math.floor(sh * 2 / 3);
+      const panelY = Math.floor((sh - panelHeight) / 2);
+      const panelX = position === 'left' ? 0 : (sw - currentPanelWidth);
+      overlayWindow.setBounds({ x: panelX, y: panelY, width: currentPanelWidth, height: panelHeight });
+    }
+  }
+});
+
 // 缩小窗口回面板大小
 ipcMain.on('shrink-window', () => {
   if (overlayWindow && !overlayWindow.isDestroyed()) {
     const primaryDisplay = screen.getPrimaryDisplay();
     const { width: sw, height: sh } = primaryDisplay.workAreaSize;
-    const panelHeight = Math.floor(sh * 0.8);
+    const panelHeight = Math.floor(sh * 2 / 3);
     const panelY = Math.floor((sh - panelHeight) / 2);
-    overlayWindow.setBounds({ x: sw - currentPanelWidth, y: panelY, width: currentPanelWidth, height: panelHeight });
+    const panelX = overlayPanelPosition === 'left' ? 0 : (sw - currentPanelWidth);
+    overlayWindow.setBounds({ x: panelX, y: panelY, width: currentPanelWidth, height: panelHeight });
     overlayWindow.setAlwaysOnTop(true, 'pop-up-menu');
     overlayWindow.moveTop();
-    console.log(`[Overlay] 窗口缩回面板 ${currentPanelWidth}x${panelHeight} | alwaysOnTop=pop-up-menu`);
+    console.log(`[Overlay] 窗口缩回面板 ${currentPanelWidth}x${panelHeight} @ (${panelX}, ${panelY}) | alwaysOnTop=pop-up-menu`);
   }
 });
 
