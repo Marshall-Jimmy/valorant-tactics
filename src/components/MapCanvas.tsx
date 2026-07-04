@@ -255,34 +255,54 @@ export function MapCanvas() {
 
   // Get current map lineups with ability key
   const currentMapLineups = useMemo(() => {
-    if (!lineupsData) return [];
-    const mapData = lineupsData.maps[currentMap];
-    if (!mapData) return [];
-    // 将数字 key 映射为 C/Q/E/X
-    const keyMap: Record<string, string> = { '1': 'C', '2': 'Q', '3': 'E', '4': 'X' };
-    const result = Object.entries(mapData.abilities).flatMap(([abilityKey, ability]) =>
-      ability.lineups
-        .filter((l) => {
-          // 有覆盖坐标的也保留
-          if (lineupCoordinateOverrides[l.id]) return true;
-          return l.coordinates.start.normalized && l.coordinates.end.normalized;
-        })
-        .map((l) => ({ ...l, abilityKey: keyMap[abilityKey] || ability.key || abilityKey }))
-    );
+    const result: (Lineup & { abilityKey: string })[] = [];
+    // 内置点位
+    if (lineupsData) {
+      const mapData = lineupsData.maps[currentMap];
+      if (mapData) {
+        const keyMap: Record<string, string> = { '1': 'C', '2': 'Q', '3': 'E', '4': 'X' };
+        for (const [abilityKey, ability] of Object.entries(mapData.abilities)) {
+          for (const l of ability.lineups) {
+            // 有覆盖坐标的也保留
+            if (lineupCoordinateOverrides[l.id]) {
+              result.push({ ...l, abilityKey: keyMap[abilityKey] || ability.key || abilityKey });
+            } else if (l.coordinates?.start?.normalized && l.coordinates?.end?.normalized) {
+              result.push({ ...l, abilityKey: keyMap[abilityKey] || ability.key || abilityKey });
+            }
+          }
+        }
+      }
+    }
+    // 自定义点位
+    for (const cl of customLineups) {
+      if (cl.coordinates?.start?.normalized && cl.coordinates?.end?.normalized) {
+        result.push({ ...cl, abilityKey: cl.abilityKey || 'C' });
+      } else if (lineupCoordinateOverrides[cl.id]) {
+        // 有覆盖坐标的自定义点位也加入
+        result.push({ ...cl, abilityKey: cl.abilityKey || 'C' });
+      }
+    }
     return result;
-  }, [lineupsData, currentMap, lineupCoordinateOverrides]);
+  }, [lineupsData, currentMap, lineupCoordinateOverrides, customLineups]);
 
   // Find selected lineup from data
   const selectedLineup = useMemo(() => {
-    if (!selectedLineupId || !lineupsData) return null;
-    const mapData = lineupsData.maps[currentMap];
-    if (!mapData) return null;
-    for (const ability of Object.values(mapData.abilities)) {
-      const found = ability.lineups.find((l) => l.id === selectedLineupId);
-      if (found) return found;
+    if (!selectedLineupId) return null;
+    // 先从内置数据查找
+    if (lineupsData) {
+      const mapData = lineupsData.maps[currentMap];
+      if (mapData) {
+        for (const ability of Object.values(mapData.abilities)) {
+          const found = ability.lineups.find((l) => l.id === selectedLineupId);
+          if (found) return found;
+        }
+      }
     }
+    // 再从自定义点位查找
+    const customFound = customLineups.find((l) => l.id === selectedLineupId);
+    if (customFound) return customFound;
     return null;
-  }, [selectedLineupId, lineupsData, currentMap]);
+  }, [selectedLineupId, lineupsData, currentMap, customLineups]);
 
   // Handle wheel zoom - zoom toward mouse position
   const handleWheel = useCallback((e: React.WheelEvent) => {

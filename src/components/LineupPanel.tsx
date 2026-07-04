@@ -53,7 +53,7 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
     lineupEditorMode, tempLineupData, customLineups,
     startNewLineup, startPlaceCoordinates, updateTempLineupData, saveTempLineup, cancelLineupEdit,
     setLineupEditorMode, editingLineupId,
-    deleteCustomLineup, exportCustomLineups,
+    deleteCustomLineup, exportCustomLineups, importCustomLineups,
     exportCoordinateOverrides, importCoordinateOverrides,
     favoriteLineups, toggleFavorite, isFavorite,
     syncOverlayFavoriteLineups,
@@ -433,6 +433,22 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
             <Download className="w-3.5 h-3.5" />
           </button>
         )}
+        <button
+          onClick={() => {
+            importJsonFile((text) => {
+              const ok = importCustomLineups(text);
+              if (ok) {
+                addToast('自定义点位已导入', 'success');
+              } else {
+                addToast('导入失败：JSON 格式错误或数据无效', 'error');
+              }
+            });
+          }}
+          className="flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-medium rounded-md bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 border border-emerald-500/50 transition-colors"
+          title="导入自定义点位 (JSON)"
+        >
+          <UploadCloud className="w-3.5 h-3.5" />
+        </button>
         {Object.keys(lineupCoordinateOverrides).length > 0 && (
           <button
             onClick={() => {

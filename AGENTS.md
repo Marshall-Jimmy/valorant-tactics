@@ -61,6 +61,7 @@
 - 表单控件使用 Radix UI 封装组件（`CustomSelect` / `CustomSlider` / `ToggleSwitch`），禁止使用原生 `<select>` / `<input type="range">`
 - 状态修改遵循"单写入口"原则：绘图画布的运行时设置通过 `tacticsStore` 修改，setter 内部自动同步到 `settingsStore` 持久化
 - 坐标常量统一从 `src/data/lineups.ts` 导入（如 `WORLD_WIDTH`、`NORMALIZED_HEIGHT` 等），不在组件或 store 中重复定义
+- **坐标映射必须使用仿射变换**：`normalizedToWorld()` 函数定义在 `src/data/lineups.ts` 中，禁止用 `x*100` / `(1-x)*100` 等简单映射替代；禁止修改仿射变换系数（详见 CLAUDE.md §4.3.1）
 
 ---
 
@@ -209,6 +210,7 @@
 - 国服版本不使用 Riot Local API
 - overlay 窗口设置鼠标穿透（WS_EX_TRANSPARENT）
 - exe 文件名和 product 名称不含 overlay/aim/trigger 等敏感词
+- **Overlay 坐标预览必须使用仿射变换**：`overlay.html` 中的 `normalizedToMapPercent()` 函数复制了主应用的仿射变换系数，禁止用 `x*100` / `(1-x)*100` 替代；修改时必须与 `src/data/lineups.ts` 的 `normalizedToWorld()` 保持一致（详见 CLAUDE.md §4.3.1）
 
 ---
 

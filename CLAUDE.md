@@ -145,6 +145,52 @@ valorant-tactics/
 - **Screen**：基于容器高度的像素坐标
 - 转换函数在 `src/data/lineups.ts` 中
 
+#### 4.3.1 仿射变换规则（核心，禁止修改）
+
+点位坐标从 Normalized `[0,1]` 到 World 的转换使用**仿射变换**（基于 Icebox 4 个参考点推导），**不是简单的线性映射**。所有坐标渲染（主应用画布、Overlay 预览）必须使用同一套系数：
+
+```typescript
+// 常量
+const NORMALIZED_HEIGHT = 1000;
+const WORLD_ASPECT_RATIO = 16 / 9;
+const WORLD_WIDTH = NORMALIZED_HEIGHT * WORLD_ASPECT_RATIO; // 1777.78
+const MAP_SVG_WIDTH = 416;
+const MAP_SVG_HEIGHT = 474;
+const MAP_DISPLAY_WIDTH = 1240;
+const MAP_DISPLAY_HEIGHT = 1000;
+const MAP_PADDING_X = (WORLD_WIDTH - MAP_DISPLAY_WIDTH) / 2; // ~268.89
+
+// Normalized → World（仿射变换）
+function normalizedToWorld(nx: number, ny: number, flip = false): { x: number; y: number } {
+  let x = -24.8055 * nx + 917.7683 * ny + 441.5591;
+  let y = -940.7984 * nx + -6.6050 * ny + 969.9544;
+  if (flip) {
+    x = WORLD_WIDTH - x;
+    y = NORMALIZED_HEIGHT - y;
+  }
+  return { x, y };
+}
+
+// World → 地图图片百分比 [0,100]（用于 Overlay 等小预览容器）
+function worldToMapPercent(wx: number, wy: number): { x: number; y: number } {
+  return {
+    x: ((wx - MAP_PADDING_X) / MAP_DISPLAY_WIDTH) * 100,
+    y: (wy / MAP_DISPLAY_HEIGHT) * 100,
+  };
+}
+
+// Normalized → 地图图片百分比（一步到位，Overlay 专用）
+function normalizedToMapPercent(nx: number, ny: number): { x: number; y: number } {
+  const w = normalizedToWorld(nx, ny);
+  return worldToMapPercent(w.x, w.y);
+}
+```
+
+**禁止行为**：
+- 禁止用 `x * 100` / `(1 - x) * 100` 等简单映射替代仿射变换
+- 禁止修改仿射变换系数（`-24.8055` / `917.7683` / `441.5591` / `-940.7984` / `-6.6050` / `969.9544`）
+- Overlay 中的坐标预览必须与主应用 `LineupMarkers` 渲染位置完全一致
+
 ---
 
 ## 5. 开发规范

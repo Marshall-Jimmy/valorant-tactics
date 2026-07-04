@@ -192,6 +192,7 @@ interface TacticsState {
   cancelLineupEdit: () => void;
   deleteCustomLineup: (lineupId: number) => void;
   exportCustomLineups: () => string;
+  importCustomLineups: (jsonStr: string) => boolean;
   toggleFavorite: (lineupId: number) => void;
   isFavorite: (lineupId: number) => boolean;
   syncOverlayFavoriteLineups: (lineups: OverlayLineupInfo[]) => void;
@@ -467,6 +468,66 @@ export const useTacticsStore = create<TacticsState>()(
       exportCustomLineups: () => {
         const state = get();
         return JSON.stringify(state.customLineups, null, 2);
+      },
+      importCustomLineups: (jsonStr: string) => {
+        try {
+          let rawData: unknown;
+          try {
+            rawData = JSON.parse(jsonStr);
+          } catch {
+            console.error('[importCustomLineups] Invalid JSON');
+            return false;
+          }
+          if (!Array.isArray(rawData)) {
+            console.error('[importCustomLineups] Expected array');
+            return false;
+          }
+          // 验证每个点位的基本结构
+          const validLineups: Lineup[] = [];
+          for (const item of rawData) {
+            if (!item || typeof item !== 'object') continue;
+            const l = item as Record<string, unknown>;
+            // 必须有 id 和 title
+            if (typeof l.id !== 'number' || typeof l.title !== 'string') continue;
+            // 必须有 coordinates
+            if (!l.coordinates || typeof l.coordinates !== 'object') continue;
+            const coords = l.coordinates as Record<string, unknown>;
+            if (!coords.start || !coords.end) continue;
+            const start = coords.start as Record<string, unknown>;
+            const end = coords.end as Record<string, unknown>;
+            if (!Array.isArray(start.normalized) || !Array.isArray(end.normalized)) continue;
+            // 构建合法的 Lineup 对象
+            validLineups.push({
+              id: l.id as number,
+              title: l.title as string,
+              side: (l.side as 'attack' | 'defense' | 'unknown') || 'unknown',
+              side_cn: (l.side_cn as string) || '',
+              abilityKey: l.abilityKey as string | undefined,
+              coordinates: {
+                start: { normalized: start.normalized as number[], raw: (start.raw as number[]) || [] },
+                end: { normalized: end.normalized as number[], raw: (end.raw as number[]) || [] },
+              },
+              coverage_area: Array.isArray(l.coverage_area) ? l.coverage_area as number[][] : [],
+              media: (l.media as Lineup['media']) || { detail_images: [] },
+              video_url: l.video_url as string | undefined,
+              source_url: l.source_url as string | undefined,
+            });
+          }
+          if (validLineups.length === 0) {
+            console.error('[importCustomLineups] No valid lineups found');
+            return false;
+          }
+          // 合并：用新导入的覆盖同 ID 的，其余保留
+          set((state) => {
+            const existingIds = new Set(validLineups.map(l => l.id));
+            const kept = state.customLineups.filter(l => !existingIds.has(l.id));
+            return { customLineups: [...kept, ...validLineups] };
+          });
+          return true;
+        } catch (error) {
+          console.error('[importCustomLineups] Failed:', error);
+          return false;
+        }
       },
       exportCoordinateOverrides: () => {
         const state = get();
