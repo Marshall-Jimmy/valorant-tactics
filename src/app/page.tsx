@@ -109,7 +109,7 @@ export default function Home() {
               </button>
             )}
             <button
-              onClick={() => setShowSettingsPanel(true); setAnyDialogOpen(true); }
+              onClick={() => { setShowSettingsPanel(true); setAnyDialogOpen(true); }}
               className="btn btn-icon btn-ghost"
               title="设置"
             >

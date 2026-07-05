@@ -359,21 +359,20 @@ export function MapCanvas() {
         const worldPos = screenToWorld(e.clientX - rect.left, e.clientY - rect.top);
         const normalized = worldToNormalized(worldPos.x, worldPos.y, !isAttack);
 
-          if (editorMode === 'placing-coord-stand') {
-            // 为已有点位添加坐标 - 放置站位
-            updateTempLineupData({ standNormalized: [normalized.nx, normalized.ny] });
-            setLineupEditorMode('placing-coord-landing');
-          } else if (editorMode === 'placing-coord-landing') {
-            // 为已有点位添加坐标 - 放置落点后进入 coord-placed 状态显示预览
-            updateTempLineupData({ landingNormalized: [normalized.nx, normalized.ny] });
-            setLineupEditorMode('coord-placed');
-          } else if (editorMode === 'placing-stand') {
-            updateTempLineupData({ standNormalized: [normalized.nx, normalized.ny] });
-            setLineupEditorMode('placing-landing');
-          } else if (editorMode === 'placing-landing') {
-            updateTempLineupData({ landingNormalized: [normalized.nx, normalized.ny] });
-            setLineupEditorMode('editing');
-          }
+        if (editorMode === 'placing-coord-stand') {
+          // 为已有点位添加坐标 - 放置站位
+          updateTempLineupData({ standNormalized: [normalized.nx, normalized.ny] });
+          setLineupEditorMode('placing-coord-landing');
+        } else if (editorMode === 'placing-coord-landing') {
+          // 为已有点位添加坐标 - 放置落点后进入 coord-placed 状态显示预览
+          updateTempLineupData({ landingNormalized: [normalized.nx, normalized.ny] });
+          setLineupEditorMode('coord-placed');
+        } else if (editorMode === 'placing-stand') {
+          updateTempLineupData({ standNormalized: [normalized.nx, normalized.ny] });
+          setLineupEditorMode('placing-landing');
+        } else if (editorMode === 'placing-landing') {
+          updateTempLineupData({ landingNormalized: [normalized.nx, normalized.ny] });
+          setLineupEditorMode('editing');
         }
       }
       return;
