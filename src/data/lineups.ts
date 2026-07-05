@@ -171,7 +171,8 @@ export function getAvailableAgents(): { id: string; name_cn: string; name_en: st
     }));
 }
 
-// In-memory cache for lineup data
+// In-memory cache for lineup data (LRU: max 20 entries)
+const MAX_CACHE_SIZE = 20;
 const lineupCache = new Map<string, AgentLineupsData>();
 
 // Fix misclassified lineups: data source marks many Recon Bolt (E) lineups as Hunter's Fury (X)
@@ -393,6 +394,11 @@ export async function loadAgentLineups(agentId: string, signal?: AbortSignal): P
       fixed = fixIsooxAbilityKeys(fixed, agentId);
     }
     lineupCache.set(agentId, fixed);
+    // LRU 淘汰：超过上限时删除最早的条目
+    if (lineupCache.size > MAX_CACHE_SIZE) {
+      const firstKey = lineupCache.keys().next().value;
+      if (firstKey) lineupCache.delete(firstKey);
+    }
     return fixed;
   } catch (e) {
     // Ignore abort errors

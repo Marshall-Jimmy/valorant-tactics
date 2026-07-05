@@ -24,6 +24,7 @@ export default function Home() {
   const currentStrategy = useTacticsStore((state) => state.currentStrategy);
   const appMode = useTacticsStore((state) => state.appMode);
   const setAppMode = useTacticsStore((state) => state.setAppMode);
+  const setAnyDialogOpen = useTacticsStore((state) => state.setAnyDialogOpen);
   const sidebarPosition = useSettingsStore((s) => s.sidebarPosition);
   const showDebugPanel = useSettingsStore((s) => s.showDebugPanel);
   const currentMap = useTacticsStore((s) => s.currentMap);
@@ -101,14 +102,14 @@ export default function Home() {
             </div>
             {appMode === 'strategy' && (
               <button
-                onClick={() => setShowStrategyPanel(!showStrategyPanel)}
+                onClick={() => { setShowStrategyPanel(!showStrategyPanel); setAnyDialogOpen(!showStrategyPanel); }}
                 className="btn btn-secondary"
               >
                 {t('lineup.strategy')}
               </button>
             )}
             <button
-              onClick={() => setShowSettingsPanel(true)}
+              onClick={() => setShowSettingsPanel(true); setAnyDialogOpen(true); }
               className="btn btn-icon btn-ghost"
               title="设置"
             >
@@ -157,7 +158,7 @@ export default function Home() {
                 <h2 className="text-lg font-semibold text-white">{t('strategy.title')}</h2>
                 <p className="text-xs text-zinc-500 mt-0.5">{t('strategy.description')}</p>
               </div>
-              <button onClick={() => setShowStrategyPanel(false)} className="p-1.5 hover:bg-zinc-800 rounded-md transition-colors text-zinc-400 hover:text-white">
+              <button onClick={() => { setShowStrategyPanel(false); setAnyDialogOpen(false); }} className="p-1.5 hover:bg-zinc-800 rounded-md transition-colors text-zinc-400 hover:text-white">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -170,7 +171,7 @@ export default function Home() {
 
       {/* Settings Panel */}
       {showSettingsPanel && (
-        <SettingsPanel onClose={() => setShowSettingsPanel(false)} />
+        <SettingsPanel onClose={() => { setShowSettingsPanel(false); setAnyDialogOpen(false); }} />
       )}
 
       {/* Debug Info Panel */}

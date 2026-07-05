@@ -126,6 +126,8 @@ interface TacticsState {
   
   // Screenshot mode
   isScreenshotMode: boolean;
+  /** 任何 Radix Dialog 是否打开（Settings/Strategy/Export 等），用于避免选中冲突 */
+  isAnyDialogOpen: boolean;
 
   // App mode
   appMode: 'strategy' | 'lineup';
@@ -168,6 +170,7 @@ interface TacticsState {
   // Actions
   setCurrentMap: (map: MapValue) => void;
   setIsAttack: (isAttack: boolean) => void;
+  setAnyDialogOpen: (open: boolean) => void;
   setShowSpawnBarrier: (show: boolean) => void;
   setShowRegionNames: (show: boolean) => void;
   setShowUltOrbs: (show: boolean) => void;
@@ -278,6 +281,7 @@ export const useTacticsStore = create<TacticsState>()(
       undoStack: [],
       redoStack: [],
       isScreenshotMode: false,
+      isAnyDialogOpen: false,
       appMode: 'strategy',
       lineupAgentId: 'sova',
       selectedLineupId: null,
@@ -290,15 +294,16 @@ export const useTacticsStore = create<TacticsState>()(
       favoriteLineups: [],
       overlayFavoriteLineups: [],
       lineupCoordinateOverrides: {} as Record<number, { start: [number, number]; end: [number, number] }>,
-      drawColor: useSettingsStore.getState().drawColor,
-      drawStrokeWidth: useSettingsStore.getState().drawStrokeWidth,
+      // 绘图默认值（与 DEFAULT_SETTINGS 保持一致，避免循环依赖）
+      drawColor: '#60a5fa',
+      drawStrokeWidth: 3,
       drawMode: 'freehand' as 'freehand' | 'line' | 'arrow',
-      showGrid: useSettingsStore.getState().showGrid,
-      snapToGrid: useSettingsStore.getState().snapToGrid,
-      gridSize: useSettingsStore.getState().gridSize,
-      showSpawnBarrier: useSettingsStore.getState().defaultLayers.spawnBarrier,
-      showRegionNames: useSettingsStore.getState().defaultLayers.regionNames,
-      showUltOrbs: useSettingsStore.getState().defaultLayers.ultOrbs,
+      showGrid: false,
+      snapToGrid: false,
+      gridSize: 40,
+      showSpawnBarrier: true,
+      showRegionNames: false,
+      showUltOrbs: false,
       mapHue: '',
       mapBrightness: 'brightness(1.1) contrast(1.15) saturate(1.1)',
       abilityVisibilityFilter: [], // 空=全部显示
@@ -316,6 +321,7 @@ export const useTacticsStore = create<TacticsState>()(
         redoStack: [],
       })),
       setIsAttack: (isAttack) => set({ isAttack }),
+      setAnyDialogOpen: (open) => set({ isAnyDialogOpen: open }),
       setShowSpawnBarrier: (show) => {
         set({ showSpawnBarrier: show });
         useSettingsStore.getState().setDefaultLayers({ spawnBarrier: show });
@@ -1063,6 +1069,7 @@ export const useTacticsStore = create<TacticsState>()(
     }),
     {
       name: 'valorant-tactics-storage',
+      version: 1,
       partialize: (state) => ({
         strategies: state.strategies,
         currentMap: state.currentMap,
@@ -1072,6 +1079,14 @@ export const useTacticsStore = create<TacticsState>()(
         favoriteLineups: state.favoriteLineups,
         lineupCoordinateOverrides: state.lineupCoordinateOverrides,
       }),
+      migrate: (persistedState, version) => {
+        const state = persistedState as Record<string, unknown>;
+        // v0 → v1: 无需迁移，首次版本化
+        if (version === 0) {
+          console.log('[tacticsStore] Migrating from v0 to v1');
+        }
+        return state;
+      },
     }
   )
 );

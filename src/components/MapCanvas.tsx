@@ -22,7 +22,7 @@ import { useTouchGestures } from '@/hooks/useTouchGestures';
 import { pointToSegmentDistance } from '@/utils/geometry';
 import { handleImageFallback } from '@/utils/image';
 import Image from 'next/image';
-import { WORLD_ASPECT_RATIO } from '@/data/lineups';
+import { WORLD_ASPECT_RATIO, loadAgentLineups, worldToNormalized } from '@/data/lineups';
 import type { AgentLineupsData } from '@/data/lineups';
 
 type DragTarget = {
@@ -30,7 +30,7 @@ type DragTarget = {
   id: string;
 } | null;
 
-// Cache for html2canvas dynamic import to avoid repeated loading
+// Cache for html2canvas dynamic import (~500KB, intentionally cached for app lifetime)
 // Using any here is acceptable because:
 // 1. This is a module-level cache for a dynamically imported third-party library
 // 2. The type is only used internally and the return value is properly typed by the library
@@ -160,6 +160,7 @@ export function MapCanvas() {
   const clearAbilityVisibilityFilter = useTacticsStore((s) => s.clearAbilityVisibilityFilter);
   const appMode = useTacticsStore((s) => s.appMode);
   const isScreenshotMode = useTacticsStore((s) => s.isScreenshotMode);
+  const isAnyDialogOpen = useTacticsStore((s) => s.isAnyDialogOpen);
   const updateTempLineupData = useTacticsStore((s) => s.updateTempLineupData);
   const setLineupEditorMode = useTacticsStore((s) => s.setLineupEditorMode);
   const saveLineupCoordinateOverride = useTacticsStore((s) => s.saveLineupCoordinateOverride);
@@ -240,13 +241,11 @@ export function MapCanvas() {
       setSelectedLineupId(null);
 
       const abortController = new AbortController();
-      import('@/data/lineups').then(({ loadAgentLineups }) => {
-        loadAgentLineups(lineupAgentId, abortController.signal).then((data) => {
-          // Only update if not aborted
-          if (!abortController.signal.aborted && data) {
-            setLineupsData(data);
-          }
-        });
+      loadAgentLineups(lineupAgentId, abortController.signal).then((data) => {
+        // Only update if not aborted
+        if (!abortController.signal.aborted && data) {
+          setLineupsData(data);
+        }
       });
 
       return () => abortController.abort();
@@ -358,8 +357,7 @@ export function MapCanvas() {
         const rect = canvasRef.current?.getBoundingClientRect();
         if (!rect) return;
         const worldPos = screenToWorld(e.clientX - rect.left, e.clientY - rect.top);
-        import('@/data/lineups').then(({ worldToNormalized }) => {
-          const normalized = worldToNormalized(worldPos.x, worldPos.y, !isAttack);
+        const normalized = worldToNormalized(worldPos.x, worldPos.y, !isAttack);
 
           if (editorMode === 'placing-coord-stand') {
             // 为已有点位添加坐标 - 放置站位
@@ -376,7 +374,7 @@ export function MapCanvas() {
             updateTempLineupData({ landingNormalized: [normalized.nx, normalized.ny] });
             setLineupEditorMode('editing');
           }
-        });
+        }
       }
       return;
     }
@@ -733,10 +731,10 @@ export function MapCanvas() {
             {/* Abilities and Agents - rendered at canvas level using memo components */}
             {/* Hide selection highlight when any Radix Dialog is open (e.g. Settings) */}
             {placedAbilities.map((placed) => (
-              <AbilityMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id && !document.querySelector('[data-radix-dialog-content]')} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} scaleFactor={scaleFactor} transform={transform} onDragStart={onAbilityDragStart} onClick={onAbilityClick} />
+              <AbilityMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id && !isAnyDialogOpen} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} scaleFactor={scaleFactor} transform={transform} onDragStart={onAbilityDragStart} onClick={onAbilityClick} />
             ))}
             {placedAgents.map((placed) => (
-              <AgentMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id && !document.querySelector('[data-radix-dialog-content]')} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} transform={transform} displayName={getAgentName(placed.agentType)} onDragStart={onAgentDragStart} onClick={onAgentClick} />
+              <AgentMarker key={placed.id} placed={placed} isSelected={selectedElementId === placed.id && !isAnyDialogOpen} isScreenshotMode={isScreenshotMode} currentTool={currentTool} zoom={zoom} transform={transform} displayName={getAgentName(placed.agentType)} onDragStart={onAgentDragStart} onClick={onAgentClick} />
             ))}
 
             {/* Placed Ult Orbs */}

@@ -84,9 +84,10 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
     setExpandedAbilities(new Set());
     setDetailImageIndex(0);
     setImageErrors(new Set());
-    loadAgentLineups(lineupAgentId).then((data) => {
+    const abortController = new AbortController();
+    loadAgentLineups(lineupAgentId, abortController.signal).then((data) => {
       setIsLoading(false);
-      if (data) {
+      if (data && !abortController.signal.aborted) {
         setLoadedData(data);
         // Auto-expand all abilities
         const mapData = data.maps[currentMap];
@@ -95,6 +96,7 @@ export function LineupPanel({ onClose }: LineupPanelProps) {
         }
       }
     });
+    return () => abortController.abort();
   }, [lineupAgentId, currentMap, setSelectedLineupId]);
 
   // 同步收藏点位精简数据到 overlay（供 overlay 速查卡使用）

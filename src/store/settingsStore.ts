@@ -116,6 +116,16 @@ export const useSettingsStore = create<SettingsStore>()(
     }),
     {
       name: 'valorant-tactics-settings',
+      version: 1,
+      migrate: (persistedState, version) => {
+        const state = persistedState as Record<string, unknown>;
+        // v0 → v1: 添加 overlayPanelPosition 字段
+        if (version === 0 && !('overlayPanelPosition' in state)) {
+          (state as Record<string, unknown>).overlayPanelPosition = 'right';
+          console.log('[settingsStore] Migrated v0→v1: added overlayPanelPosition');
+        }
+        return state;
+      },
     }
   )
 );
