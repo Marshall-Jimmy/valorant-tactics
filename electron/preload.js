@@ -39,6 +39,16 @@ contextBridge.exposeInMainWorld('electronAPI', {
    * @param {function} callback - 接收数据的回调 (data) => void
    */
   onOverlayDataUpdate: (callback) => {
-    ipcRenderer.on('overlay-data-push', (event, data) => callback(data));
+    const handler = (event, data) => callback(data);
+    ipcRenderer.on('overlay-data-push', handler);
+    return handler;
+  },
+
+  /**
+   * 取消监听 overlay 数据更新，防止重复注册导致内存泄漏
+   * @param {function} handler - onOverlayDataUpdate 返回的 handler
+   */
+  offOverlayDataUpdate: (handler) => {
+    ipcRenderer.removeListener('overlay-data-push', handler);
   },
 });

@@ -354,12 +354,19 @@ app.on('before-quit', () => {
 
 app.on('activate', async () => {
   if (BrowserWindow.getAllWindows().length === 0) {
-    const port = await startServer();
+    const port = server ? lastPort : await startServer();
     createWindow(port);
   }
 });
 
 app.on('window-all-closed', () => {
+  // 关闭 HTTP server 释放端口
+  if (server) {
+    server.close(() => {
+      console.log('[Server] HTTP server 已关闭');
+    });
+    server = null;
+  }
   // 不退出 app，保持在后台运行（托盘 + F4）
   // 只在显式退出时才 quit
 });

@@ -347,19 +347,19 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
 }
 
 // Helper components
-function SettingSection({ 
-  icon, 
-  title, 
-  children 
-}: { 
-  icon: React.ReactNode; 
-  title: string; 
+function SettingSection({
+  icon,
+  title,
+  children
+}: {
+  icon?: React.ReactNode;
+  title: string;
   children: React.ReactNode;
 }) {
   return (
     <section className="bg-zinc-800/30 rounded-xl p-4 border border-zinc-800/50">
       <div className="flex items-center gap-2 mb-3">
-        <span className="text-blue-400">{icon}</span>
+        {icon && <span className="text-blue-400">{icon}</span>}
         <h3 className="text-sm font-semibold text-zinc-200">{title}</h3>
       </div>
       {children}

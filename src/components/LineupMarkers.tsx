@@ -158,13 +158,23 @@ export const LineupMarkers = memo(function LineupMarkers({
   const useCanvasMode = markers.length > CANVAS_THRESHOLD;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Canvas 绘制 effect
+  // Canvas 绘制 effect（支持 DPR 适配）
   useEffect(() => {
     if (!useCanvasMode || !canvasRef.current) return;
-    const ctx = canvasRef.current.getContext('2d');
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    const { width, height } = canvasRef.current;
-    ctx.clearRect(0, 0, width, height);
+
+    // DPR 适配：物理像素 = CSS 像素 × devicePixelRatio
+    const dpr = window.devicePixelRatio || 1;
+    const cssWidth = viewportWidth || 800;
+    const cssHeight = viewportHeight || 600;
+    canvas.width = cssWidth * dpr;
+    canvas.height = cssHeight * dpr;
+    canvas.style.width = cssWidth + 'px';
+    canvas.style.height = cssHeight + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, cssWidth, cssHeight);
 
     // 绘制连线
     if (showStand && showLanding) {
@@ -214,7 +224,7 @@ export const LineupMarkers = memo(function LineupMarkers({
         ctx.restore();
       });
     }
-  }, [markers, showStand, showLanding, useCanvasMode]);
+  }, [markers, showStand, showLanding, useCanvasMode, canvasRef, viewportWidth, viewportHeight]);
 
   // Canvas 上的鼠标事件委托
   const handleCanvasMouseMove = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -272,10 +282,8 @@ export const LineupMarkers = memo(function LineupMarkers({
       {useCanvasMode ? (
         <canvas
           ref={canvasRef}
-          width={viewportWidth || 800}
-          height={viewportHeight || 600}
           className="absolute inset-0"
-          style={{ cursor: 'crosshair' }}
+          style={{ cursor: 'crosshair', width: '100%', height: '100%' }}
           onMouseMove={handleCanvasMouseMove}
           onClick={handleCanvasClick}
           onMouseLeave={handleMouseLeave}

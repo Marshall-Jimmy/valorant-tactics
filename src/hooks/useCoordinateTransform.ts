@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
 import { NORMALIZED_HEIGHT, WORLD_ASPECT_RATIO } from '@/data/lineups';
 
 export interface CoordinateTransform {
@@ -11,7 +11,8 @@ export interface CoordinateTransform {
 
 /**
  * Hook that provides world-to-screen and screen-to-world coordinate conversion.
- * Memoizes the conversion functions to avoid unnecessary re-renders.
+ * Uses useRef to cache pan/zoom values so function references stay stable,
+ * preventing unnecessary child component re-renders.
  *
  * @param containerHeight - The height of the canvas container in pixels
  * @param pan - Current pan offset { x, y }
@@ -28,8 +29,16 @@ export function useCoordinateTransform(
   const worldHeight = containerHeight;
   const scaleFactor = containerHeight / BASE_HEIGHT;
 
+  // 用 ref 缓存 pan/zoom，使函数引用保持稳定，避免穿透子组件 memo
+  const panRef = useRef(pan);
+  const zoomRef = useRef(zoom);
+  panRef.current = pan;
+  zoomRef.current = zoom;
+
   const worldToScreen = useCallback(
     (worldX: number, worldY: number) => {
+      const pan = panRef.current;
+      const zoom = zoomRef.current;
       const containerX = (worldX / (NORMALIZED_HEIGHT * WORLD_ASPECT_RATIO)) * worldWidth;
       const containerY = (worldY / NORMALIZED_HEIGHT) * worldHeight;
       return {
@@ -37,18 +46,20 @@ export function useCoordinateTransform(
         y: pan.y + containerY * zoom,
       };
     },
-    [pan, zoom, worldWidth, worldHeight]
+    [worldWidth, worldHeight]
   );
 
   const screenToWorld = useCallback(
     (screenX: number, screenY: number) => {
+      const pan = panRef.current;
+      const zoom = zoomRef.current;
       const containerX = (screenX - pan.x) / zoom;
       const containerY = (screenY - pan.y) / zoom;
       const worldX = (containerX / worldWidth) * (NORMALIZED_HEIGHT * WORLD_ASPECT_RATIO);
       const worldY = (containerY / worldHeight) * NORMALIZED_HEIGHT;
       return { x: worldX, y: worldY };
     },
-    [pan, zoom, worldWidth, worldHeight]
+    [worldWidth, worldHeight]
   );
 
   return useMemo(
